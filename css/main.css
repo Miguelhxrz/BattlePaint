@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(271.97deg, rgba(98, 36, 98, 0.8) -10.08%, #CB96F4 44.02%, #8FC7CA 78.21%);
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    background-image: url('../source/img/logoBattlePaint1.svg');
+    background-size: 76px, 72px;
+    background-repeat: no-repeat;
+    margin-left: 1%;
+    margin-top: 5px;
+}
+
+header .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+}
+
+header .links a {
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+header .links a:hover {
+    text-decoration: underline;
+}
+
+header .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+
+header .boton__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 207px;
+    height: 71px;
+    left: 1094px;
+    top: 19px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+header .boton__container .boton__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+
+/* Fin del Header */
+
+
+/* Home */
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .home__divisor--up {
+    display: flex;
+    flex-direction: row;
+}
+
+.home__divisor--up .home__logo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home__divisor--up .home__logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 528px;
+    height: 407px;
+}
+
+.home__divisor--up .hashtag {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #212F45;
+    font-size: 2rem;
+}
+
+.home__divisor--up .home__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    background-image: url("../source/img/figure2.svg");
+    background-repeat: no-repeat;
+    background-position: right, bottom;
+    background-position-x: 340px;
+    background-size: 350px;
+}
+
+.home__divisor--up .home__description p {
+    width: 65%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.home .home__divisor--down {
+    display: flex;
+    flex-direction: row;
+}
+
+.home__divisor--down .home__players {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.home__divisor--down .home__players .home_players--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 515px;
+    height: 82px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.line {
+    display: flex;
+    width: 11px;
+    height: 102px;
+    background: #FFFFFF;
+}
+
+.home__players--number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.home__divisor--down .home__marketplace {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    padding: 10px;
+}
+
+.home__divisor--down .home__marketplace img {
+    display: flex;
+    width: 80px;
+}
