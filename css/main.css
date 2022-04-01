@@ -1,325 +1,463 @@
-    @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-    * {
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        text-decoration: none;
-    }
-    
-    html {
-        font-size: 62.5%;
-    }
-    
-    body {
-        font-family: 'Righteous', cursive;
-        background: linear-gradient(271.97deg, rgba(98, 36, 98, 0.8) -10.08%, #CB96F4 44.02%, #8FC7CA 78.21%);
-    }
-    /* Header */
-    
-    header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 90px;
-    }
-    
-    header .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20%;
-        height: 100%;
-        background-image: url('../source/img/logoBattlePaint1.svg');
-        background-size: 76px, 72px;
-        background-repeat: no-repeat;
-        margin-left: 1%;
-        margin-top: 5px;
-    }
-    
-    header .links {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 60%;
-        height: 100%;
-    }
-    
-    header .links a {
-        font-size: 2.2rem;
-        color: #FFFFFF;
-    }
-    
-    header .links a:hover {
-        text-decoration: underline;
-    }
-    
-    header .boton {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20%;
-        height: 100%;
-    }
-    
-    header .boton__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 207px;
-        height: 71px;
-        left: 1094px;
-        top: 19px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-    }
-    
-    header .boton__container .boton__titulo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.2rem;
-        color: #FFFFFF;
-    }
-    /* Fin del Header */
-    /* Home */
-    
-    .home {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .home .home__divisor--up {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .home__divisor--up .home__logo {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .home__divisor--up .home__logo img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 528px;
-        height: 407px;
-    }
-    
-    .home__divisor--up .hashtag {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #212F45;
-        font-size: 2rem;
-    }
-    
-    .home__divisor--up .home__description {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 50%;
-        background-image: url("../source/img/figure2.svg");
-        background-repeat: no-repeat;
-        background-position: right, bottom;
-        background-position-x: 340px;
-        background-size: 350px;
-    }
-    
-    .home__divisor--up .home__description p {
-        width: 65%;
-        color: rgba(255, 255, 255, 1);
-        font-size: 3rem;
-        text-align: center;
-    }
-    
-    .home .home__divisor--down {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .home__divisor--down .home__players {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-    }
-    
-    .home__divisor--down .home__players .home_players--container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 515px;
-        height: 82px;
-        background: rgba(255, 255, 255, 0.2);
-    }
-    
-    .line {
-        display: flex;
-        width: 11px;
-        height: 102px;
-        background: #FFFFFF;
-    }
-    
-    .home__players--number {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 70%;
-        font-size: 2rem;
-        color: rgba(255, 255, 255, 1);
-    }
-    
-    .home__divisor--down .home__marketplace {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 50%;
-        padding: 10px;
-    }
-    
-    .home__divisor--down .home__marketplace img {
-        display: flex;
-        width: 80px;
-    }
-    /*Fin de Home*/
-    /*Gameplay*/
-    
-    .gameplay {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-image: url('../source/img/fondo3.svg');
-        background-size: 1366px, 882px;
-        background-position-y: -120px;
-        background-repeat: no-repeat;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-    
-    .gameplay__title h3 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #FFFFFF;
-        font-size: 4rem;
-        text-shadow: 0px 4px 4px #000000;
-    }
-    
-    .gameplay__text {
-        width: 400px;
-        color: #FFFFFF;
-        font-size: 2rem;
-        text-align: center;
-        margin: auto 0;
-    }
-    
-    .gameplay__description {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        margin-top: 30px;
-    }
-    
-    .gameplay__description--video {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        margin-right: 50px;
-    }
-    
-    .video {
-        width: 482px;
-        height: 274px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #C4C4C4;
-        background-blend-mode: saturation;
-        border-radius: 10px;
-        mix-blend-mode: luminosity;
-    }
-    
-    .video__icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .videotext {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        margin-right: 180px;
-        font-size: 3rem;
-    }
-    /*Fin de Gameplay*/
-    /*Developers*/
-    
-    .developers {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .developers__title h3 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #FFFFFF;
-        font-size: 4rem;
-        text-shadow: 0px 4px 4px #000000;
-    }
-    
-    .developers__imagenes {
-        display: flex;
-        flex-direction: row;
-        margin-right: 10px;
-    }
-    
-    .developers__imagenes img {
-        width: 325px;
-        height: 325px;
-    }
-    /*Fin de Developers*/
-    /*partners*/
-    
-    .partners {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .partners__title h3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #FFFFFF;
-        font-size: 4rem;
-        text-shadow: 0px 4px 4px #000000;
-    }
-    
-    .partners__imagenes {
-        display: flex;
-        flex-direction: row;
-        margin-right: 10px;
-    }
-    
-    .partners__imagenes img {
-        width: 320px;
-        height: 320px;
-    }
-    /*Fin de Developers*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(271.97deg, rgba(98, 36, 98, 0.8) -10.08%, #CB96F4 44.02%, #8FC7CA 78.21%);
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    background-image: url('../source/img/logoBattlePaint1.svg');
+    background-size: 76px, 72px;
+    background-repeat: no-repeat;
+    margin-left: 1%;
+    margin-top: 5px;
+}
+
+header .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+}
+
+header .links a {
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+header .links a:hover {
+    text-decoration: underline;
+}
+
+header .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+
+header .boton__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 207px;
+    height: 71px;
+    left: 1094px;
+    top: 19px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+header .boton__container .boton__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+
+/* Fin del Header */
+
+
+/* Home */
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .home__divisor--up {
+    display: flex;
+    flex-direction: row;
+}
+
+.home__divisor--up .home__logo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home__divisor--up .home__logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 528px;
+    height: 407px;
+}
+
+.home__divisor--up .hashtag {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #212F45;
+    font-size: 2rem;
+}
+
+.home__divisor--up .home__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    background-image: url("../source/img/figure2.svg");
+    background-repeat: no-repeat;
+    background-position: right, bottom;
+    background-position-x: 340px;
+    background-size: 350px;
+}
+
+.home__divisor--up .home__description p {
+    width: 65%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.home .home__divisor--down {
+    display: flex;
+    flex-direction: row;
+}
+
+.home__divisor--down .home__players {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.home__divisor--down .home__players .home_players--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 515px;
+    height: 82px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.line {
+    display: flex;
+    width: 11px;
+    height: 102px;
+    background: #FFFFFF;
+}
+
+.home__players--number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.home__divisor--down .home__marketplace {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    padding: 10px;
+}
+
+.home__divisor--down .home__marketplace img {
+    display: flex;
+    width: 80px;
+}
+
+
+/*Fin de Home*/
+
+
+/*Gameplay*/
+
+.gameplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../source/img/fondo3.svg');
+    background-size: 1366px, 882px;
+    background-position-y: -120px;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gameplay__title h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #000000;
+}
+
+.gameplay__text {
+    width: 400px;
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-align: center;
+    margin: auto 0;
+}
+
+.gameplay__description {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.gameplay__description--video {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 50px;
+}
+
+.video {
+    width: 482px;
+    height: 274px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C4C4C4;
+    background-blend-mode: saturation;
+    border-radius: 10px;
+    mix-blend-mode: luminosity;
+}
+
+.video__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videotext {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 180px;
+    font-size: 3rem;
+}
+
+
+/*Fin de Gameplay*/
+
+
+/*Coins*/
+
+.coins {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coins__title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #000000;
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.botones:target-within .coins__slider li {
+    opacity: 1;
+}
+
+.li {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    width: 247px;
+    height: 73px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+}
+
+.a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 3rem;
+}
+
+.coins__description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coin__description--1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-1 {
+    margin-right: 50px;
+}
+
+.block-3 {
+    margin-left: 50px;
+}
+
+.card-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 131px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) -16.03%, rgba(255, 0, 0, 0) 70.99%);
+    border-radius: 5px;
+    margin-top: 80px;
+}
+
+.card-1 .titulo {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    position: relative;
+    bottom: 50px;
+}
+
+.card-1 .play {
+    position: relative;
+    bottom: 45px;
+}
+
+.card-1 img {
+    position: relative;
+    bottom: 50px;
+}
+
+.coins__description .coins__slider li {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    right: 300px;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+
+/*Fin de Coins*/
+
+
+/*Developers*/
+
+.developers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.developers__title h3 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #000000;
+}
+
+.developers__imagenes {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.developers__imagenes img {
+    width: 325px;
+    height: 325px;
+}
+
+
+/*Fin de Developers*/
+
+
+/*partners*/
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners__title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #000000;
+}
+
+.partners__imagenes {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.partners__imagenes img {
+    width: 320px;
+    height: 320px;
+}
+
+
+/*Fin de Developers*/
+
+
+/*Fin de Developers*/
