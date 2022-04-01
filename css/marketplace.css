@@ -95,7 +95,11 @@ body {
 }
 
 .menu__user {
-  
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 
@@ -191,45 +195,419 @@ a .neon4 {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
 
 .notice__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  height: 450px;
+  width: 100%;
+  height: 350px;
 }
 
 .notice__article {
- width: 60%;
- height: 40%;
- border: 1px solid #0A88C2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 80%;
+  height: 310px;
+  border: 2px solid var(--black-blue);
+  background-color: var(--indigo);
+  border-radius: 10px;
+  box-shadow: 0 0 2px var(--black-blue), 
+  0 0 4px var(--black-blue), 
+  0 0 6px var(--black-blue);
 }
 
-.search__container {
+.controls__container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 10px;
+  margin-bottom: 30px;
+}
+
+.control {
+  width: 50px;
+  height: 8px;
+  border: 1px solid var(--black-blue);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.control:hover {
+  background-image: linear-gradient(180deg, rgb(7, 0, 136) 0%, rgba(10,136,194,1) 50%, rgba(0,212,255,1) 100%);
+  box-shadow: 0 0 2px var(--black-blue), 
+  0 0 4px var(--black-blue), 
+  0 0 6px var(--black-blue);
+}
+
+.filter__container {
+  display: flex;
   align-items: center;
   width: 100%;
   height: 50px;
-  padding-left: 95px;
+}
+
+.filter {
+  align-items: center;
+}
+
+.filter__form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px 20px 0px 20px;
+}
+
+.filter__search {
+  height: 100%;
 }
 
 .search {
   outline: none;
   border: none;
-  padding: 8px 0px;
+  padding: 8px 10px;
   border-radius: 10px;
   font-size: 1.5rem;
-  width: 450px;
+  width: 300px;
   font-family: var(--font);
   background-color: var(--indigo);
   color: var(--light);
 }
 
 .search::placeholder {
- padding-left: 10px;
+ padding-left: 2px;
 }
+
+.filter__rank input[type='checkbox'] {
+  display: none;
+}
+
+.filter__rank {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form__title {
+  position: relative;
+  top: 5px;
+  font-size: 1.6rem;
+  color: var(--light);
+  margin-right: 10px;
+}
+
+.filter__rank .form__title {
+  top: -8px;
+}
+
+.filter__rank label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 25px;
+  height: 100%;
+  cursor: pointer;
+  color: var(--light);
+  margin-right: 5px;
+}
+
+.rank__check {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 5px;
+  border: 1px solid var(--blue-violet-soft);
+  transform: rotateZ(45deg);
+}
+
+.filter__rank input[type="checkbox"]:checked + label .rank__check {
+  background-color: var(--blue-violet-soft);
+  box-shadow: 0 0 25px var(--plump-violet), 
+  0 0 50px var(--plump-violet), 
+  0 0 75px var(--plump-violet);
+}
+
+.filter__level,
+.filter__battles,
+.filter__price {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.filter__level [type="number"],
+.filter__battles [type="number"] ,
+.filter__price [type="number"]{
+  border: none;
+  /* border-bottom: 1px solid var(--blue-violet-soft); */
+  outline: none;
+  /* display: flex; */
+  justify-content: center;
+  width: 75px;
+  height: 30px;
+  padding-left: 25px;
+  background-color: var(--indigo);
+  font-size: 1.5rem;
+  font-family: var(--font);
+  color: var(--light);
+  border-radius: 5px;
+}
+
+.filter__level [type="number"]:focus,
+.filter__battles [type="number"]:focus,
+.filter__price [type="number"]:focus {
+  border: 2px solid var(--blue-violet-soft);
+  box-shadow: 0 0 25px var(--blue-violet-soft), 
+  0 0 50px var(--blue-violet-soft), 
+  0 0 75px var(--blue-violet-soft);
+  overflow: hidden;
+
+}
+
+.filter__price label {
+  color: var(--light);
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+[type="submit"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.filter__search-btn {
+  align-self: flex-start;
+  border: 2px solid var(--blue-violet-soft);
+  padding: 5px 22px;
+  border-radius: 5px;
+  font-family: var(--font);
+  font-size: 1.4rem;
+  color: var(--light);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.filter__search-btn:hover {
+  background: var(--plump-violet);
+  box-shadow: 0 0 25px var(--blue-violet-soft), 
+  0 0 50px var(--blue-violet-soft), 
+  0 0 75px var(--blue-violet-soft);
+
+}
+
+.nft__container {
+  display: grid;
+  grid-template: repeat(1, 360px)/ repeat(4,290px);
+  gap: 32px;
+  width: 1255px;
+  height: auto;
+  /* border: 1px solid var(--black-blue); */
+  margin: 0px auto;
+  padding-top: 20px;
+}
+
+.nft__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--blue-violet-soft);
+  border-radius: 30px 15px;
+  background-image: linear-gradient(180deg, rgba(97,61,193,0) 0%, rgba(97,61,193,1) 100%);
+  cursor: pointer;
+}
+
+.nft__card:hover {
+  box-shadow: 0 0 25px var(--blue-violet-soft), 
+              0 0 50px var(--blue-violet-soft), 
+              0 0 75px var(--blue-violet-soft);
+}
+
+.nft__img {
+  position: absolute;
+  width: 290px;
+  z-index: 0;
+}
+
+.nft__card .nft__name {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 211px;
+  width: 100%;
+  height: 62px;
+  background-image: linear-gradient(180deg, rgba(97,61,193,0) 0%, rgba(97,61,193,1) 100%);
+}
+
+.nft__name h3 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-shadow: 2px 1px black;
+}
+
+.nft__name p {
+  color: rgb(85, 184, 241);
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-shadow: 2px 1px black;
+}
+
+.nft__card .nft__price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  top: 210px;
+  width: 100%;
+  height: 84px;
+  background-color: var(--indigo);
+  border-radius:  0px 0px 30px 15px;
+  padding: 8px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.price h4 {
+  font-size: 1.4rem;
+  color: var(--light);
+  margin-left: 10px;
+}
+
+.price__pay {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.price__pay img {
+  width: 25px;
+  height: 25px;
+}
+
+.nft__rank {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 3px solid var(--blue-violet-soft);
+  background-image: linear-gradient(180deg, rgba(97,61,193,0) 0%, rgba(97,61,193,1) 100%);
+}
+
+.nft__rank h4 {
+  color: var(--light);
+  font-size: 1.8rem;
+}
+
+
+.nft__card:nth-child(2) {
+  background-image: linear-gradient(180deg, rgba(219,165,20,0) 0%, rgba(252,194,1,1) 100%);  ;
+  border: 3px solid #dba514;
+}
+
+.nft__card:nth-child(2):hover {
+  box-shadow: 0 0 25px #dba514, 
+              0 0 50px #dba514, 
+              0 0 75px #dba514;
+}
+
+.nft__card:nth-child(2) .nft__rank {
+  border: 3px solid #dba514;
+  background-image: linear-gradient(180deg, rgba(219,165,20,0) 0%, rgba(252,194,1,1) 100%);
+}
+
+.nft__card:nth-child(2) .nft__name {
+  background-image: linear-gradient(180deg, rgba(219,165,20,0) 0%, rgba(252,194,1,1) 100%);
+}
+
+.nft__card:nth-child(2) .nft__name p {
+  color: #856a20;
+}
+
+
+.nft__card:nth-child(3) {
+  background-image: linear-gradient(180deg, rgba(203,9,9,0) 0%, rgba(132,25,34,1) 100%);
+  border: 3px solid #841922;
+}
+
+.nft__card:nth-child(3):hover {
+  box-shadow: 0 0 25px #841922, 
+              0 0 50px #841922, 
+              0 0 75px #841922; 
+}
+
+.nft__card:nth-child(3) .nft__rank {
+  background-image: linear-gradient(180deg, rgba(203,9,9,0) 0%, rgba(132,25,34,1) 100%);
+  border: 3px solid #841922;
+}
+
+.nft__card:nth-child(3) .nft__name {
+  background-image: linear-gradient(180deg, rgba(203,9,9,0) 0%, rgba(132,25,34,1) 100%);
+}
+
+.nft__card:nth-child(3) .nft__name p {
+  color: #c52634;
+}
+
+.return__container {
+  position: fixed;
+  right: 0px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--plump-violet);
+  box-shadow: 3px 5px 10px var(--indigo);
+}
+
+.return__container:hover {
+  box-shadow: 0 0 25px var(--blue-violet-soft), 
+              0 0 50px var(--blue-violet-soft), 
+              0 0 75px var(--blue-violet-soft);
+}
+
+.return__container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.return__container a img {
+  width: 80%;
+  height: 80%;
+}
+
+
+
 
 
 
