@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\Normalize.css">
+    <link rel="stylesheet" href="css\Login_Register.css">
+    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <title>Battle Paint | Login</title>
+</head>
+<body>
+    <nav class="header">
+        <img src="./source/img/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo">
+        <ul class="header__navigation">
+            <li> <a href="index.html" class="header__navigation--link"> HOME </a> </li>
+            <li> <a href="Register_Page.html" class="header__navigation--link"> Register Page </a> </li>
+            <li> <a href="#" class="header__navigation--link"> Login Page </a> </li>    
+        </ul>
+    </nav>
+
+    <div class="main">
+        <form action="">
+            <section class="login">
+                <div class="login__block">
+                    <label for="username" class="login__block--label"> Username </label>
+                    <input type="text" name="username" id="username" placeholder="Username" class="login__block--input"> <br><br>
+
+                    <label for="password" class="login__block--label"> Password </label>
+                    <input type="password" name="password" id="password" placeholder="Password" class="login__block--input"> <br><br>
+
+                    <div class="login__block--checkbox">
+                        <input type="checkbox" name="save__password" id="save__password" class="login__block--input"> 
+                        <label for="save__password" class="login__block--text"> Save Password </label>
+                    </div>
+                    
+                    <div class="login__block--cta">
+                        <input type="submit" value=" LOGIN " class="login__block--button">
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+    
+</body>
+</html>
