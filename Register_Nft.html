@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="views\css\Normalize.css">
+    <link rel="stylesheet" href="css/Login_Register.css">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <section class="logo"></section>
+            <nav class="links">
+                <a href="" class="links__1">Home</a>
+                <a href="" class="links__2">Gameplay</a>
+                <a href="" class="links__3">Battle Coins</a>
+                <a href="" class="links__4">NFT's items</a>
+                <a href="" class="links__5">Partners</a>
+                <a href="" class="links__6">Developers</a>
+            </nav>
+            <section class="boton">
+                <article class="boton__container">
+                    <a href="" class="boton__titulo">Create Account</a>
+                </article>
+            </section>
+        </header>
+        <form action="">
+            <section class="register">
+                <div class="register__title">
+                    <h2> NFTs Register </h2>
+                </div>
+                <div class="register_container">
+                <div class="register__block one">
+                    <div class="register__block--son">
+                        <label for="name">Name</label> 
+                        <input type="text" name="username" id="username"class="register__block--input"> <br><br>
+                        
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price" max="10" maxlength="10"
+                        class="register__block--input"> <br><br>
+                        
+                        <label for="email">Owner</label>
+                        <input type="text" name="email" id="email" " class="register__block--input">
+                    </div>
+                </div>
+                
+                <div class="register__block two">
+                    <div class="register__block--son">
+                        <label for="birth">Battle power</label> 
+                        <input type="text" name="birth" id="birth" class="register__block--input"> <br><br>
+                        
+                        <label for="gender">Rang</label> 
+                        <select name="gender" id="gender" class="register__block--input">
+                            <option disabled>Select a rang</option>
+                            <option value="other">Other</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select> <br><br>
+                        
+                        <label for="address">
+                        <p>Imagen del NFT</p>
+                        <input type="file" name="nft_image" accept="image/png,image/jpeg" class="register__block--input">
+                        </label> 
+                    </div>
+                </div>
+                </div>
+                <div class="register__block--cta">
+                    <input type="submit" value="Create NFT" class="register__block--button"> <br><br>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+</html>

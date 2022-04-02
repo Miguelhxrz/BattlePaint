@@ -1,0 +1,235 @@
+/* |---- Imporatando la fuente ----| */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px
+}
+/* a {
+  color: white;
+  text-decoration: none;
+} */
+html{
+  font-size: 62.5%
+}
+
+:root {
+  --font: 'Righteous', cursive;
+  --black-blue: #0A88C2;
+  --soft-blue: #858AE3;
+  --plump-violet: #613DC1;
+  --blue-violet-soft: #4E148C;
+  --blue-violet-dark: #5B0D6D;
+  --blue-violet-shadow: #2c0036;
+  --light: #ffffff;
+  --dark-violet: #171629;
+  --indigo: #1f1d35;
+  --grey: #202c33;
+  --gradient: linear-gradient(135deg, #613DC1, #0A88C2);
+}
+
+body {
+    font-family: var(--font);
+    background-position: center;
+    background-size: cover;
+    width: 1366px;
+    height: 768px;
+    color: var(--light);
+    background: linear-gradient(135deg, #613DC1, #0A88C2);
+}
+
+.main {
+    background-position: center;
+    background-size: cover;
+    height: 768px;
+    width: 1366px;
+    background-image: url("../source/img/svg/fondo3.svg");
+    background-repeat: no-repeat;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    background-image: url('../source/img/logoBattlePaint1.svg');
+    background-size: 76px, 72px;
+    background-repeat: no-repeat;
+    margin-left: 1%;
+    margin-top: 5px;
+}
+
+header .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 100%;
+}
+
+header .links a {
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+header .links a:hover {
+    text-decoration: underline;
+}
+
+header .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+
+header .boton__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 207px;
+    height: 71px;
+    left: 1094px;
+    top: 19px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+header .boton__container .boton__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+
+
+/* Fin del Header */
+
+
+
+.register {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    margin-top: 100px;
+}
+
+.register__title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.register_container {
+    display: flex;
+    justify-content: center;
+}
+
+.register__block {
+    height: 25rem;
+    width: 30%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+.one {
+    padding-top: 3rem;
+    margin-left: 5rem;
+}
+
+.two {
+    padding-top: 3rem;
+    margin-right: 5rem;
+}
+
+.register__block--son {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    width: 50%;
+    padding: .5rem;
+    background-color: transparent;
+}
+
+.register__block--input[type='text'],
+.register__block--input[type='number'],
+.register__block--input[type='text'],
+.register__block--input[type='text'],
+.register__block--input[type='file'] {
+    width: 20rem;
+    height: 4rem;
+    padding: 0.5rem;
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 2rem;
+    border-color: white;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border-radius: .3rem;
+}
+
+select {
+    width: 20rem;
+    height: 4rem;
+    padding: 0.5rem;
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 20%);
+    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
+    border-radius: 2rem;
+    border-color: white;
+}
+
+select option {
+    padding: 0.5rem;
+    color: black;
+}
+
+select::placeholder {
+    color: white;
+}
+
+
+.register__block--cta {
+    text-align: center;
+    align-items: center;
+}
+
+.register__block--link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--light);
+    background-color: transparent;
+}
+
+.register__block--button {
+    width: 20rem;
+    height: 5rem;
+    padding: 0.5rem;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 20%);
+    border: none;
+    border-left: 8px solid var(--light);
+    margin-top: 25px;
+    font-size: 20px;
+}
