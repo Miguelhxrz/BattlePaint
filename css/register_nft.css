@@ -35,7 +35,7 @@ body {
     width: 1366px;
     height: 768px;
     color: var(--light);
-    background: linear-gradient(135deg, #613DC1, #0A88C2);
+    background-color: var(--dark-violet);
 }
 
 .main {
@@ -120,15 +120,19 @@ header .boton__container .boton__titulo {
 
 
 .register {
-    width: 100%;
+    width: 60%;
     height: 80%;
-    background-color: transparent;
+    margin:auto;
     margin-top: 100px;
+    border: 3px solid var(--blue-violet-soft);
+    border-radius: 50px 15px;
+    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
 }
 
 .register__title {
     text-align: center;
     font-size: 18px;
+    margin-top: 25px;
 }
 
 .register_container {
@@ -156,7 +160,7 @@ header .boton__container .boton__titulo {
 }
 
 .register__block--son {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
@@ -165,7 +169,7 @@ header .boton__container .boton__titulo {
 
 label {
     display: block;
-    width: 50%;
+    width: 60%;
     padding: .5rem;
     background-color: transparent;
 }
@@ -230,6 +234,6 @@ select::placeholder {
     background-color: rgba(255, 255, 255, 20%);
     border: none;
     border-left: 8px solid var(--light);
-    margin-top: 25px;
+    margin-top: 75px;
     font-size: 20px;
 }
