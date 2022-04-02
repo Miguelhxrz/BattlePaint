@@ -335,12 +335,16 @@ header .boton__container .boton__titulo {
 }
 
 .coins__slider {
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: radial-gradient(57.77% 57.77% at 50% 50%, #FFFFFF 0.01%, #413E3E 0.02%, rgba(113, 113, 113, 0) 85.42%);
+    border: 2px solid #0A88C2;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #0A88C2, 0 0 4px #0A88C2, 0 0 6px #0A88C2;
+    margin-top: 20px;
 }
 
 .coin__description--1 {
@@ -388,12 +392,22 @@ header .boton__container .boton__titulo {
     bottom: 50px;
 }
 
+.slidersc {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+}
+
 .sliders {
     display: flex;
     align-content: center;
     justify-content: center;
+    margin: 40px;
+}
+
+.slidersc img {
     margin: 10px;
-    margin-top: 40px;
 }
 
 .sliders img {
