@@ -176,6 +176,10 @@
     }
     
     .home__divisor--down .home__marketplace {
+        position: fixed;
+        z-index: 3;
+        right: 0px;
+        margin-right: 20px;
         display: flex;
         align-items: center;
         justify-content: flex-end;

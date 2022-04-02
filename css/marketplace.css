@@ -589,8 +589,8 @@ a .neon4 {
 
 .return__container:hover {
   box-shadow: 0 0 25px var(--blue-violet-soft), 
-  0 0 50px var(--blue-violet-soft), 
-  0 0 75px var(--blue-violet-soft);
+              0 0 50px var(--blue-violet-soft), 
+              0 0 75px var(--blue-violet-soft);
 }
 
 .return__container a {
