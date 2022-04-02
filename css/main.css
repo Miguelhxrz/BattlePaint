@@ -217,11 +217,15 @@ header .boton__container .boton__titulo {
     margin-top: 50px;
 }
 
-.baldes img {
-    width: 98%;
+.baldes {
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+.baldes img {
+    width: 60%;
 }
 
 .gameplay__title h3 {
@@ -237,7 +241,7 @@ header .boton__container .boton__titulo {
 
 .gameplay__text {
     width: 400px;
-    color: #FFFFFF;
+    color: #000000;
     font-size: 2rem;
     text-align: center;
     margin: auto 0;
@@ -266,9 +270,7 @@ header .boton__container .boton__titulo {
     justify-content: center;
     align-items: center;
     background: #C4C4C4;
-    background-blend-mode: saturation;
     border-radius: 10px;
-    mix-blend-mode: luminosity;
 }
 
 .video__icon {
