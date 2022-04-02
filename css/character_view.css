@@ -1,0 +1,428 @@
+/* |---- Imporatando la fuente ----| */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px
+}
+/* a {
+  color: white;
+  text-decoration: none;
+} */
+html{
+  font-size: 62.5%
+}
+
+:root {
+  --font: 'Righteous', cursive;
+  --black-blue: #0A88C2;
+  --soft-blue: #858AE3;
+  --plump-violet: #613DC1;
+  --blue-violet-soft: #4E148C;
+  --blue-violet-dark: #5B0D6D;
+  --blue-violet-shadow: #2c0036;
+  --light: #ffffff;
+  --dark-violet: #171629;
+  --indigo: #1f1d35;
+  --grey: #202c33;
+  --tier-s: #dba514;
+  --tier-a: var(--blue-violet-soft);
+  --tier-b: #841922;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--dark-violet);
+}
+
+.container {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.header__name {
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px var(--blue-violet-soft),
+               0 0 40px var(--blue-violet-soft),
+               0 0 80px var(--blue-violet-soft);
+  width: 50%;
+  height: 100%;
+}
+
+.menu__user {
+  width: 50%;
+  height: 100%;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menu__select {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu__user {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.menu__item a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 22px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+.menu__item a:hover{
+  background-color: var(--blue-violet-soft);
+  box-shadow:  0 0 25px var(--blue-violet-soft), 
+               0 0 50px var(--blue-violet-soft), 
+               0 0 75px var(--blue-violet-soft);
+  transition-delay: 1s;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a .neon1 {
+  top: 0%;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon1 {
+  left: 100%;
+  transition: 1s;
+}
+
+a .neon2 {
+  top: -100%;
+  right: 0%;
+  width: 2px;
+  height: 100%;
+  background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: .25s;
+}
+
+a .neon3 {
+  bottom: 0%;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: .5s;
+}
+
+a .neon4 {
+  bottom: -100%;
+  left: 0%;
+  width: 2px;
+  height: 100%;
+  background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: .75s;
+}
+
+.menu__container {
+  width: 100%;
+  height: 100%;
+}
+
+
+.menu__item a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+/* |---- Fin del menu ----| */
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.nft__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 520px;
+  margin-bottom: 20px;
+}
+
+.nft__container h2 {
+  position: absolute;
+  left: 125px;
+  top: 66px;
+  color: var(--light);
+  font-size: 7.2rem;
+  text-shadow: 0 0 50px #841922, 
+               0 0 75px #841922, 
+               0 0 100px #841922;
+  letter-spacing: 5px;
+}
+
+.nft__container p {
+  position: absolute;
+  right: 125px;
+  bottom: 116px;
+  color: var(--light);
+  font-size: 5.2rem;
+  text-shadow: 0 0 50px #841922, 
+               0 0 75px #841922, 
+               0 0 100px #841922;
+  letter-spacing: 5px;
+}
+
+.nft__neon {
+  width: 90%;
+  height: 170px;
+  border: 3px solid var(--tier-b);
+  box-shadow: 0 0 25px #841922, 
+              0 0 50px #841922, 
+              0 0 75px #841922;
+  border-radius: 20px;
+}
+
+.nft__decoration {
+  position: relative;
+  bottom: 189px;
+  width: 100%;
+  height: 160px;
+  border-top: 3px solid var(--tier-b);
+  border-bottom: 3px solid var(--tier-b);
+  border-left: 3px solid var(--dark-violet);
+}
+
+.nft__complete {
+  position: absolute;
+  margin: 0px auto;
+  width: 90%;
+  height: 90%;
+}
+
+.nft__img {
+  position: absolute;
+  left: 395px;
+  top: 5px;
+  width: 300px;
+  height: 336px;
+}
+
+.nft__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.nft__stats {
+  position: absolute;
+  right: 166px;
+  top: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 260px;
+  border: 3px solid var(--tier-b);
+  box-shadow: 0 0 25px #841922, 
+              0 0 50px #841922, 
+              0 0 75px #841922;
+  background-color: var(--dark-violet);
+  border-radius: 10px;
+}
+
+.nft__stats h4 {
+  color: var(--light);
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+
+.nft__data {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.data {
+  width: 100%;
+  height: 25%;   
+  margin-bottom: 2px;
+  border-bottom: 2px solid var(--tier-b);
+}
+
+.nft__data--battles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft__data--battles .battles__title {
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.win {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
+.win h5 {
+  font-size: 1.4rem;
+  color: var(--light);
+}
+
+.nft__data--bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft__data--bonus h5 {
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.nft__data--daily_battles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft__data--daily_battles h5 {
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.nft__data--daily_paint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nft__data--daily_paint h5 {
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.illustrations__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0px auto;
+  width: 90%;
+  height: 285px;
+  padding: 5px;
+}
+
+.illustration {
+  width: 250px; 
+  height: 150px;
+  border-radius: 5px;
+  background-color: var(--indigo);
+  border: 3px solid var(--tier-b);
+  box-shadow: 0 0 25px #841922, 
+              0 0 50px #841922, 
+              0 0 75px #841922;
+}
+
+.illustrations__container h3 {
+  position: absolute;
+  font-size: 7.5rem;
+  bottom: 280px;
+  left: 398px;
+  color: var(--light);
+
+}
+
+
+
+
+
+

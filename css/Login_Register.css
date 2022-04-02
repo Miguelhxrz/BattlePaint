@@ -1,0 +1,252 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* color palette */
+:root {
+    --color1: #5b0d6d;
+    --color2: #4e148c;
+    --color3: #613dc1;
+    --color4: #858ae3;
+    --color5: #0a88c2;
+    --cta: #ffffff;
+    --gradient: linear-gradient(135deg, var(--color1), var(--color5));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+    width: 1366px;
+    height: 768px;
+    color: var(--cta);
+    font-family: 'Righteous', cursive;
+    background: var(--gradient);
+}
+
+/* header */
+.header {
+    align-items: center;
+    width: 1366px;
+    height: 7rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: .5rem;
+    color: var(--cta);
+    background-color: transparent;
+}
+
+.header__logo {
+    float: left;
+    width: 8rem;
+    height: 7rem;
+}
+
+.header__navigation {
+    float: right;
+    width: 30%;
+    list-style: none;
+    background-color: transparent;
+}
+
+.header__navigation--link {
+    float: left;
+    margin-left: 2rem;
+    padding: 1.6rem 0;
+    color: inherit;
+    text-decoration: none;
+}
+/* end header */
+
+.main {
+    background-position: center;
+    background-size: cover;
+    height: 636px;
+    width: 1366px;
+    background-image: url("../source/img/fondo3.svg");
+    background-repeat: no-repeat;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+.register, .login {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+}
+
+.register__title {
+    text-align: center;
+}
+
+.register__block, .login__block {
+    height: 25rem;
+    width: 40%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+.one {
+    float: left;
+    padding-top: 3rem;
+    margin-left: 5rem;
+}
+
+.two {
+    float: right;
+    padding-top: 3rem;
+    margin-right: 5rem;
+}
+
+.register__block--son {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.register__block--label, .login__block--label {
+    display: block;
+    width: 50%;
+    padding: .5rem;
+    background-color: transparent;
+}
+
+.register__block--input[type='text'],
+.register__block--input[type='password'],
+.register__block--input[type='email'],
+.register__block--input[type='date'],
+.login__block--input[type='text'],
+.login__block--input[type='password'] {
+    width: 20rem;
+    height: 3rem;
+    padding: 0.5rem;
+    color: var(--cta);
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 1rem;
+    border-color: white;
+}
+
+.register__block--input[type='text']::placeholder,
+.register__block--input[type='password']::placeholder,
+.register__block--input[type='email']::placeholder,
+.register__block--input[type='date']::placeholder,
+.login__block--input[type='text']::placeholder,
+.login__block--input[type='password']::placeholder {
+    color: var(--cta);
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border-radius: .3rem;
+}
+
+select {
+    width: 20rem;
+    height: 3rem;
+    padding: 0.5rem;
+    color: var(--cta);
+    background-color: rgba(255, 255, 255, 20%);
+    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
+    border-radius: 1rem;
+    border-color: white;
+}
+
+select option {
+    padding: 0.5rem;
+    color: black;
+}
+
+select::placeholder {
+    color: white;
+}
+
+textarea {
+    width: 20rem;
+    height: 5rem;
+    color: var(--cta);
+    background-color: rgba(255, 255, 255, 20%);
+    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
+    border-radius: 1rem;
+    border-color: white;
+}
+
+textarea::placeholder {
+    padding: 0.5rem;
+    color: white;
+}
+
+.register__block--cta, .login__block--cta {
+    text-align: center;
+    align-items: center;
+}
+
+.register__block--link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--cta);
+    background-color: transparent;
+}
+
+.register__block--button, .login__block--button {
+    width: 15rem;
+    height: 3rem;
+    padding: 0.5rem;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 20%);
+    border: none;
+    border-left: 8px solid var(--cta);
+}
+
+/* ************************************************************************************ */
+
+.login {
+    margin-top: 1.3rem;
+}
+
+.login__block {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: rgba(0, 0, 0, 20%);
+}
+
+.login__block--checkbox {
+    display: block;
+    width: 70%;
+    height: 3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 3.5rem;
+    padding-left: 7.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: transparent;
+    align-items: center;
+}
+
+.login__block--input[type='checkbox'] {
+    display: block;
+    float: left;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .5rem;
+}
+
+.login__block--text {
+    display: block;
+    float: right;
+    height: 2rem;
+    width: 10rem;
+    padding: .5rem;
+    background-color: transparent;
+}
+
