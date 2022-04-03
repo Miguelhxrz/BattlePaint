@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -56,7 +57,7 @@ header .links a {
 }
 
 header .links a:hover {
-    color: #0a88c2;
+    color: #858ae3;
 }
 
 header .boton {
@@ -305,7 +306,7 @@ header .boton__container .boton__titulo {
 /*Coins*/
 .coins {
     width: 100%;
-    height: 700px;
+    height: 768px;
     display: flex;
     flex-direction: column;
 }
@@ -317,6 +318,8 @@ header .boton__container .boton__titulo {
     color: #FFFFFF;
     font-size: 4rem;
     text-shadow: 0px 4px 4px #000000;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 .coins__name h5 {
@@ -324,9 +327,8 @@ header .boton__container .boton__titulo {
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-top: 50px;
-    text-decoration: underline;
 }
 
 .a {
@@ -368,6 +370,18 @@ header .boton__container .boton__titulo {
 
 .block-1 {
     margin-right: 50px;
+}
+
+.block-2 {
+    padding: .5rem;
+    width: 350px;
+    height: 350px;
+    background-color: transparent;
+}
+
+.block-2 img {
+    width: 350px;
+    height: 350px;
 }
 
 .block-3 {
@@ -424,16 +438,12 @@ header .boton__container .boton__titulo {
 .sliders img {
     margin: 10px;
 }
-
-
 /*Fin de Coins*/
 
-
 /*NFT's Items*/
-
 .items {
     width: 100%;
-    height: 100%;
+    height: 768px;
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
@@ -446,7 +456,8 @@ header .boton__container .boton__titulo {
     color: #FFFFFF;
     font-size: 4rem;
     text-shadow: 0px 4px 4px #000000;
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
 }
 
 .nft__container {
@@ -455,7 +466,6 @@ header .boton__container .boton__titulo {
     gap: 32px;
     width: 1255px;
     height: auto;
-    /* border: 1px solid var(--black-blue); */
     margin: 0px auto;
     padding-top: 20px;
 }
@@ -610,6 +620,106 @@ header .boton__container .boton__titulo {
     color: #c52634;
 }
 
+.sliders {
+    margin-top: 10rem;
+}
+/* Fin de NFT's Items */
+
+/*Developers*/
+.developers {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    height: 768px;
+    width: 100%;
+    background-image: url("../source/img/svg/fondo2-1.svg");
+    background-repeat: no-repeat;
+}
+
+.developers__title h3 {
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #000000;
+}
+
+.developers__imagenes {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+}
+
+.developers__imagenes--one {
+    align-items: center;
+    text-align: center;
+    float: left;
+    height: 65rem;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.developers__imagenes--two {
+    align-items: center;
+    text-align: center;
+    float: right;
+    height: 65rem;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.developers__imagenes img {
+    width: 325px;
+    height: 325px;
+}
+/*Fin de Developers*/
+
+/*partners*/
+.partners {
+    background-position: center;
+    background-size: cover;
+    height: 760px;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    background-image: url("../source/img/svg/fondo2-2.svg");
+    background-repeat: no-repeat;
+}
+
+.partners__title h3 {
+    color: #FFFFFF;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #000000;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.partners__imagenes {
+    background-color: transparent;
+}
+
+.partners__imagenes img {
+    width: 300px;
+    height: 300px;
+}
+/*Fin de partnets*/
+
+/* marketplace button */
 .return__container {
     z-index: 1;
     position: fixed;
@@ -641,76 +751,4 @@ header .boton__container .boton__titulo {
     width: 100%;
     height: 100%;
 }
-
-
-/*Fin de NFT's Items/
-
-
-/*Developers*/
-
-.developers {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.developers__title h3 {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-size: 4rem;
-    text-shadow: 0px 4px 4px #000000;
-}
-
-.developers__imagenes {
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px;
-}
-
-.developers__imagenes img {
-    width: 325px;
-    height: 325px;
-}
-
-
-/*Fin de Developers*/
-
-
-/*partners*/
-
-.partners {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../source/img/fondo2\ 2.svg");
-    background-repeat: no-repeat;
-    background-position-y: 60px;
-}
-
-.partners__title h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-size: 4rem;
-    text-shadow: 0px 4px 4px #000000;
-}
-
-.partners__imagenes {
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px;
-}
-
-.partners__imagenes img {
-    width: 320px;
-    height: 320px;
-}
-
-
-/*Fin de partnets*/
+/* fin marketplace button */
