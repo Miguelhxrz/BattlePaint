@@ -99,6 +99,7 @@ header .boton__container .boton__titulo {
     width: 100%;
     display: flex;
     flex-direction: column;
+    /* margin-top: 5rem; */
     margin-bottom: 10rem;
     background-color: transparent;
 }
