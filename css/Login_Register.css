@@ -19,17 +19,18 @@
 body {
     background-position: center;
     background-size: cover;
-    width: 1366px;
-    height: 768px;
+    width: 100%;
+    height: 100%;
     color: var(--cta);
     font-family: 'Righteous', cursive;
     background: var(--gradient);
+    background-repeat: no-repeat;
 }
 
 /* header */
 .header {
     align-items: center;
-    width: 1366px;
+    width: 100%;
     height: 7rem;
     padding-left: .5rem;
     padding-right: .5rem;
@@ -64,7 +65,7 @@ body {
     background-position: center;
     background-size: cover;
     height: 636px;
-    width: 1366px;
+    width: 100%;
     background-image: url("../source/img/fondo3.svg");
     background-repeat: no-repeat;
 }
