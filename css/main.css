@@ -51,10 +51,12 @@ header .links {
 header .links a {
     font-size: 2.2rem;
     color: #FFFFFF;
+    transition: all 100ms;
 }
 
 header .links a:hover {
     text-decoration: underline;
+    transform: scale(1.15);
 }
 
 header .boton {
@@ -74,6 +76,11 @@ header .boton__container {
     left: 1094px;
     top: 19px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: all 100ms;
+}
+
+header .boton__container:hover {
+    transform: scale(1.10);
 }
 
 header .boton__container .boton__titulo {
@@ -82,10 +89,6 @@ header .boton__container .boton__titulo {
     justify-content: center;
     font-size: 2.2rem;
     color: #FFFFFF;
-}
-
-.logo .links a {
-    transition: 10000s;
 }
 
 
@@ -116,7 +119,7 @@ header .boton__container .boton__titulo {
     align-items: center;
     justify-content: center;
     width: 528px;
-    height: 407px;
+    height: 422px;
 }
 
 .home__divisor--up .hashtag {
@@ -172,7 +175,7 @@ header .boton__container .boton__titulo {
 .line {
     display: flex;
     width: 11px;
-    height: 102px;
+    height: 82px;
     background: #FFFFFF;
 }
 
