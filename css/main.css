@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -18,7 +17,9 @@ body {
     background: linear-gradient(135deg, #5b0d6d, #0a88c2);
 }
 
+
 /* Header */
+
 header {
     /* position: sticky; 
     top: 0; */
@@ -35,7 +36,7 @@ header .logo {
     margin-right: 10rem;
 }
 
-header .logo  img {
+header .logo img {
     float: left;
     width: 10rem;
     height: 10rem;
@@ -58,12 +59,9 @@ header .links a {
 }
 
 header .links a:hover {
-<<<<<<< HEAD
     text-decoration: underline;
     transform: scale(1.15);
-=======
     color: #858ae3;
->>>>>>> 1511aadd05a5ab0cbddb9b9bd0d9dd3936373d85
 }
 
 header .boton {
@@ -100,16 +98,16 @@ header .boton__container .boton__titulo {
     color: #FFFFFF;
 }
 
-<<<<<<< HEAD
-
-=======
 .logo .links a {
     transition: 10000s;
 }
->>>>>>> 1511aadd05a5ab0cbddb9b9bd0d9dd3936373d85
+
+
 /* Fin del Header */
 
+
 /* Home */
+
 .home {
     width: 100%;
     display: flex;
@@ -142,21 +140,19 @@ header .boton__container .boton__titulo {
     align-items: center;
     justify-content: center;
     width: 528px;
-<<<<<<< HEAD
     height: 422px;
-=======
     height: 407px;
     animation: float 3s linear infinite;
 }
 
-@keyframes float{
-    0%, 100%{
+@keyframes float {
+    0%,
+    100% {
         transform: translateY(0rem);
     }
-    50%{
+    50% {
         transform: translateY(-3.5rem);
     }
->>>>>>> 1511aadd05a5ab0cbddb9b9bd0d9dd3936373d85
 }
 
 .home__divisor--up .hashtag {
@@ -227,13 +223,10 @@ header .boton__container .boton__titulo {
 
 .line {
     display: flex;
-<<<<<<< HEAD
     width: 11px;
     height: 82px;
-=======
     width: 5%;
     height: 80px;
->>>>>>> 1511aadd05a5ab0cbddb9b9bd0d9dd3936373d85
     background: #FFFFFF;
 }
 
@@ -259,9 +252,13 @@ header .boton__container .boton__titulo {
     display: flex;
     width: 80px;
 }
+
+
 /*Fin de Home*/
 
+
 /*Gameplay*/
+
 .main {
     background-position: center;
     background-size: cover;
@@ -326,12 +323,61 @@ header .boton__container .boton__titulo {
     color: white;
     font-size: 2rem;
 }
+
+
 /*Fin de Gameplay*/
 
+
 /*Coins*/
+
+.container-slider {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 200%;
+    margin-left: -100%;
+}
+
+.slider__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn:hover {
+    background: #FFFFFF;
+}
+
+.slider__btn--left {
+    left: 10px;
+}
+
+.slider__btn--right {
+    right: 10px;
+}
+
 .coins {
     width: 100%;
-    height: 768px;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -344,7 +390,7 @@ header .boton__container .boton__titulo {
     font-size: 4rem;
     text-shadow: 0px 4px 4px #000000;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 20px;
 }
 
 .coins__name h5 {
@@ -353,7 +399,6 @@ header .boton__container .boton__titulo {
     align-items: center;
     color: #FFFFFF;
     font-size: 4rem;
-    margin-top: 50px;
 }
 
 .a {
@@ -373,7 +418,7 @@ header .boton__container .boton__titulo {
 }
 
 .coins__slider {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,6 +443,9 @@ header .boton__container .boton__titulo {
 }
 
 .block-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: .5rem;
     width: 350px;
     height: 350px;
@@ -405,8 +453,8 @@ header .boton__container .boton__titulo {
 }
 
 .block-2 img {
-    width: 350px;
-    height: 350px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .block-3 {
@@ -463,9 +511,13 @@ header .boton__container .boton__titulo {
 .sliders img {
     margin: 10px;
 }
+
+
 /*Fin de Coins*/
 
+
 /*NFT's Items*/
+
 .items {
     width: 100%;
     height: 768px;
@@ -648,9 +700,13 @@ header .boton__container .boton__titulo {
 .sliders {
     margin-top: 10rem;
 }
+
+
 /* Fin de NFT's Items */
 
+
 /*Developers*/
+
 .developers {
     flex-direction: column;
     justify-content: center;
@@ -711,9 +767,13 @@ header .boton__container .boton__titulo {
     width: 325px;
     height: 325px;
 }
+
+
 /*Fin de Developers*/
 
+
 /*partners*/
+
 .partners {
     background-position: center;
     background-size: cover;
@@ -742,9 +802,13 @@ header .boton__container .boton__titulo {
     width: 300px;
     height: 300px;
 }
+
+
 /*Fin de partnets*/
 
+
 /* marketplace button */
+
 .return__container {
     z-index: 1;
     position: fixed;
@@ -776,4 +840,6 @@ header .boton__container .boton__titulo {
     width: 100%;
     height: 100%;
 }
+
+
 /* fin marketplace button */
