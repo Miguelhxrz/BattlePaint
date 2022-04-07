@@ -1,16 +1,18 @@
 /* |---- Imporatando la fuente ----| */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px
 }
 
+
 /* a {
   color: white;
   text-decoration: none;
 } */
+
 html {
     font-size: 62.5%
 }
@@ -58,61 +60,59 @@ body {
     height: 75px;
     padding: 0px 20px;
     margin-bottom: 10px;
-  }
-  
-  .header__name {
+}
+
+.header__name {
     display: flex;
     align-items: center;
     color: var(--light);
     font-size: 2.5rem;
     letter-spacing: 5px;
-    text-shadow: 0 0 10px var(--blue-violet-soft),
-                 0 0 40px var(--blue-violet-soft),
-                 0 0 80px var(--blue-violet-soft);
+    text-shadow: 0 0 10px var(--blue-violet-soft), 0 0 40px var(--blue-violet-soft), 0 0 80px var(--blue-violet-soft);
     width: 50%;
     height: 100%;
-  }
-  
-  .menu__user {
+    text-decoration: none;
+}
+
+.menu__user {
     width: 50%;
     height: 100%;
-  }
-  
-  .menu__container {
+}
+
+.menu__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
     list-style: none;
-  }
-  
-  .menu {
+}
+
+.menu {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     list-style: none;
-  }
-  
-  .menu__select {
+}
+
+.menu__select {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-  
-  .menu__user {
+}
+
+.menu__user {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  
-  
-  .menu__item a{
+}
+
+.menu__item a {
     position: relative;
     display: inline-block;
     padding: 10px 22px;
@@ -123,88 +123,86 @@ body {
     text-decoration: none;
     margin-right: 20px;
     transition: 0.2s;
-  }
-  
-  .menu__item a:hover{
+}
+
+.menu__item a:hover {
     background-color: var(--blue-violet-soft);
-    box-shadow:  0 0 25px var(--blue-violet-soft), 
-                 0 0 50px var(--blue-violet-soft), 
-                 0 0 75px var(--blue-violet-soft);
+    box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
     transition-delay: 1s;
-  }
-  
-  a span {
+}
+
+a span {
     position: absolute;
     display: block;
-  }
-  
-  a .neon1 {
+}
+
+a .neon1 {
     top: 0%;
     left: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon1 {
+    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon1 {
     left: 100%;
     transition: 1s;
-  }
-  
-  a .neon2 {
+}
+
+a .neon2 {
     top: -100%;
     right: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon2 {
+    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon2 {
     top: 100%;
     transition: 1s;
     transition-delay: .25s;
-  }
-  
-  a .neon3 {
+}
+
+a .neon3 {
     bottom: 0%;
     right: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon3 {
+    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon3 {
     right: 100%;
     transition: 1s;
     transition-delay: .5s;
-  }
-  
-  a .neon4 {
+}
+
+a .neon4 {
     bottom: -100%;
     left: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon4 {
+    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon4 {
     bottom: 100%;
     transition: 1s;
     transition-delay: .75s;
-  }
-  
-  .menu__container {
+}
+
+.menu__container {
     width: 100%;
     height: 100%;
-  }
-  
-  
-  .menu__item a {
+}
+
+.menu__item a {
     color: var(--light);
     text-decoration: none;
-  }
-  
-  /* |---- Fin del menu ----| */
+}
+
+
+/* end header */
 
 form {
     height: 100%;
@@ -218,7 +216,6 @@ form {
     width: 100%;
     height: 80%;
     background-color: transparent;
-
 }
 
 .register__title {
@@ -320,7 +317,6 @@ form {
     margin-top: 20px;
 }
 
-
 .my_nft {
     display: flex;
     align-items: center;
@@ -337,6 +333,7 @@ form {
 .update_info .link_update {
     color: var(--light);
 }
+
 .logout {
     display: flex;
     align-items: center;
@@ -388,8 +385,6 @@ form {
     margin-right: 35px;
 }
 
-
-
 .acount h3 {
     margin-top: 25px;
     font-size: 15px;
@@ -437,7 +432,6 @@ label {
     border-radius: 2rem;
     border-color: white;
 }
-
 
 ::-webkit-calendar-picker-indicator {
     background-color: white;
@@ -506,9 +500,7 @@ textarea::placeholder {
     background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
     font-size: 17px;
     color: var(--light);
-
 }
-
 
 .nft__container {
     display: grid;
@@ -532,9 +524,7 @@ textarea::placeholder {
 }
 
 .nft__card:hover {
-    box-shadow: 0 0 25px var(--blue-violet-soft),
-        0 0 50px var(--blue-violet-soft),
-        0 0 75px var(--blue-violet-soft);
+    box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
 }
 
 .nft__img {
@@ -626,7 +616,6 @@ textarea::placeholder {
     font-size: 1.8rem;
 }
 
-
 .nft__card:nth-child(2) {
     background-image: linear-gradient(180deg, rgba(219, 165, 20, 0) 0%, rgba(252, 194, 1, 1) 100%);
     ;
@@ -634,9 +623,7 @@ textarea::placeholder {
 }
 
 .nft__card:nth-child(2):hover {
-    box-shadow: 0 0 25px #dba514,
-        0 0 50px #dba514,
-        0 0 75px #dba514;
+    box-shadow: 0 0 25px #dba514, 0 0 50px #dba514, 0 0 75px #dba514;
 }
 
 .nft__card:nth-child(2) .nft__rank {
@@ -652,16 +639,13 @@ textarea::placeholder {
     color: #856a20;
 }
 
-
 .nft__card:nth-child(3) {
     background-image: linear-gradient(180deg, rgba(203, 9, 9, 0) 0%, rgba(132, 25, 34, 1) 100%);
     border: 3px solid #841922;
 }
 
 .nft__card:nth-child(3):hover {
-    box-shadow: 0 0 25px #841922,
-        0 0 50px #841922,
-        0 0 75px #841922;
+    box-shadow: 0 0 25px #841922, 0 0 50px #841922, 0 0 75px #841922;
 }
 
 .nft__card:nth-child(3) .nft__rank {
