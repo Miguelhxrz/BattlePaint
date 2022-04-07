@@ -38,6 +38,7 @@ body {
     height: 768px;
     color: var(--light);
     background-color: var(--dark-violet);
+    overflow-x: hidden;
 }
 
 .main {
