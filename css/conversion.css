@@ -1,0 +1,309 @@
+/* |---- Imporatando la fuente ----| */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px
+}
+/* a {
+  color: white;
+  text-decoration: none;
+} */
+html{
+  font-size: 62.5%
+}
+
+:root {
+  --font: 'Righteous', cursive;
+  --black-blue: #0A88C2;
+  --soft-blue: #858AE3;
+  --plump-violet: #613DC1;
+  --blue-violet-soft: #4E148C;
+  --blue-violet-dark: #5B0D6D;
+  --blue-violet-shadow: #2c0036;
+  --light: #ffffff;
+  --dark-violet: #171629;
+  --indigo: #1f1d35;
+  --grey: #202c33;
+  --tier-s: #dba514;
+  --tier-a: var(--blue-violet-soft);
+  --tier-b: #841922;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--dark-violet);
+}
+
+.container {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.header__name {
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px var(--blue-violet-soft),
+               0 0 40px var(--blue-violet-soft),
+               0 0 80px var(--blue-violet-soft);
+  width: 50%;
+  height: 100%;
+}
+
+.menu__user {
+  width: 50%;
+  height: 100%;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menu__select {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu__user {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.menu__item a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 22px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+.menu__item a:hover{
+  background-color: var(--blue-violet-soft);
+  box-shadow:  0 0 25px var(--blue-violet-soft), 
+               0 0 50px var(--blue-violet-soft), 
+               0 0 75px var(--blue-violet-soft);
+  transition-delay: 1s;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a .neon1 {
+  top: 0%;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon1 {
+  left: 100%;
+  transition: 1s;
+}
+
+a .neon2 {
+  top: -100%;
+  right: 0%;
+  width: 2px;
+  height: 100%;
+  background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: .25s;
+}
+
+a .neon3 {
+  bottom: 0%;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: .5s;
+}
+
+a .neon4 {
+  bottom: -100%;
+  left: 0%;
+  width: 2px;
+  height: 100%;
+  background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
+}
+
+.menu__item a:hover .neon4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: .75s;
+}
+
+.menu__container {
+  width: 100%;
+  height: 100%;
+}
+
+
+.menu__item a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+/* |---- Fin del menu ----| */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 530px;
+  margin-top: 20px;
+}
+
+.explain__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.explain__title {
+  font-size: 3.2rem;
+  color: var(--light);
+}
+
+.explain__utility {
+  color: var(--light);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.buy__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 560px;
+}
+
+.buy__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 258px;
+  height: 310px;
+  background-color: #0c0524;
+  border: 3px solid var(--blue-violet-dark);
+  border-top: 0px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px var(--blue-violet-soft),
+              0px 0px 25px var(--blue-violet-soft),
+              0px 0px 30px var(--blue-violet-soft);
+  cursor: pointer;
+}
+
+.buy__background--img {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 275px;
+  height: 176px;
+}
+
+.buy__img {
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+}
+
+.card__title {
+  align-self: flex-start;
+  font-size: 1.8rem;
+  text-align: right;
+  color: var(--light);
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.buy__price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: #0f0013;
+  border-radius: 0px 0px 15px 15px;
+  padding: 10px;
+}
+
+.buy__price .title__price,
+.price__amount {
+  width: 50%;
+  font-size: 1.4rem;
+  color: var(--light);
+}
+
+.buy__price .price,
+.amount {
+  width: 50%;
+  text-align: right;
+  font-size: 1.4rem;
+  color: var(--light);
+}
+
+
+
