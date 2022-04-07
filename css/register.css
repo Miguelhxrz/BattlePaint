@@ -40,16 +40,46 @@ body {
     height: 768px;
     color: var(--light);
     background-color: var(--dark-violet);
-    overflow-x: hidden;
 }
 
-.main {
-    background-position: center;
-    background-size: cover;
-    height: 768px;
-    width: 1366px;
-    background-image: url("../source/img/svg/fondo3.svg");
-    background-repeat: no-repeat;
+
+/* |---- Imporatando la fuente ----| */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px
+}
+
+
+/* a {
+  color: white;
+  text-decoration: none;
+} */
+
+html {
+    font-size: 62.5%
+}
+
+:root {
+    --font: 'Righteous', cursive;
+    --black-blue: #0A88C2;
+    --soft-blue: #858AE3;
+    --plump-violet: #613DC1;
+    --blue-violet-soft: #4E148C;
+    --blue-violet-dark: #5B0D6D;
+    --blue-violet-shadow: #2c0036;
+    --light: #ffffff;
+    --dark-violet: #171629;
+    --indigo: #1f1d35;
+    --grey: #202c33;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--dark-violet);
+    overflow-x: hidden;
 }
 
 .header {
@@ -204,233 +234,78 @@ a .neon4 {
 
 /* end header */
 
-form {
-    height: 100%;
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 685px;
+    background-image: url('../source/img/fondo3.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -129px;
+    margin-top: 30px;
 }
 
 .register {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 80%;
-    background-color: transparent;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 488px;
+    border: 3px solid var(--blue-violet-soft);
+    border-radius: 50px 15px;
+    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
 }
 
 .register__title {
+    width: 100%;
     text-align: center;
-    font-size: 18px;
-    padding-bottom: 20px;
+    font-size: 1.8rem;
+    margin-top: 25px;
 }
 
 .register__block {
-    height: 25rem;
-    width: 40%;
-    padding: 1rem;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
     margin-bottom: 1rem;
     text-align: center;
     background-color: transparent;
 }
 
-.one {
-    width: 271.74px;
-    height: 580px;
-    left: 20px;
-    top: 21px;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: var(--indigo);
-    border: 2px solid var(--black-blue);
-    border-radius: 10px;
-    box-shadow: 0 0 2px var(--black-blue), 0 0 4px var(--black-blue), 0 0 6px var(--black-blue);
-}
-
-.header__logo {
-    height: 100px;
-    width: 100px;
-    margin-right: 100px;
-}
-
-.line {
-    height: 1px;
-    width: 250px;
-    left: 20px;
-    top: 100px;
-    background: var(--light);
-}
-
-.info__user {
-    height: 160px;
-    width: 240px;
-    border-radius: 5px;
-    margin: auto;
-    margin-top: 15px;
-    border: 3px solid var(--blue-violet-soft);
-    border-radius: 30px 15px;
-    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
-}
-
-.info__user .icon_user {
-    height: 40px;
-    width: 40px;
-}
-
-.username {
-    display: flex;
-    align-items: center;
-}
-
-.username .icon_user {
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-.username .icon_pb {
-    width: 30px;
-    height: 32px;
-    margin-left: 35px;
-    margin-right: 25px;
-    margin-top: 10px;
-}
-
-.username .icon_pp {
-    width: 30px;
-    height: 32px;
-    margin-left: 35px;
-    margin-right: 25px;
-    margin-top: 10px;
-}
-
-.username h3 {
-    font-size: 15px;
-}
-
-.update_info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 240px;
-    border-radius: 5px;
-    margin-top: 20px;
-    border: 3px solid var(--black-blue);
-    border-radius: 30px 15px;
-    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--black-blue) 100%);
-}
-
-.my_nft {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 240px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.update_info .link_update {
-    color: var(--light);
-}
-
-.logout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 240px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.logout .link_update {
-    text-decoration: none;
-    font-size: 15px;
-    color: var(--light);
-}
-
-.logout .icon_logout {
-    width: 40px;
-    height: 42px;
-    margin-right: 25px;
-}
-
-.update_info .icon_update {
-    width: 40px;
-    height: 42px;
-    margin-right: 25px;
-}
-
-.update_info .link_update {
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.my_nft .icon_update {
-    width: 40px;
-    height: 42px;
-    margin-right: 25px;
-}
-
-.my_nft .link_update {
-    text-decoration: none;
-    font-size: 15px;
-    color: var(--light);
-}
-
-.update_info .icon_logout {
-    width: 35px;
-    height: 37px;
-    margin-right: 35px;
-}
-
-.acount h3 {
-    margin-top: 25px;
-    font-size: 15px;
-    margin-right: 150px;
-    margin-bottom: 10px;
-}
-
-.two {
-    padding-top: 3rem;
-    background-color: transparent;
-    height: 500px;
-    width: 1031px;
-    left: 311px;
-    margin-right: 35px;
-    border: 2px solid var(--black-blue);
-    border-radius: 10px;
-    box-shadow: 0 0 2px var(--black-blue), 0 0 4px var(--black-blue), 0 0 6px var(--black-blue);
-}
-
 .register__block--son {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     background-color: transparent;
-    margin-top: 20px;
+    font-size: 15px;
 }
 
 label {
     display: block;
-    width: 50%;
+    width: 65%;
     padding: .5rem;
     background-color: transparent;
-    font-size: 15px;
 }
 
-.register__block--input[type='text'],
-.register__block--input[type='password'],
-.register__block--input[type='email'],
-.register__block--input[type='date'] {
-    width: 300px;
-    height: 45px;
+[type='text'],
+[type='number'],
+[type='password'],
+[type='email'],
+[type='date'] {
+    width: 20rem;
+    height: 4rem;
     padding: 0.5rem;
     color: var(--light);
     background-color: rgba(255, 255, 255, 20%);
     border-radius: 2rem;
     border-color: white;
+}
+
+textarea {
+    width: 195px;
+    height: 90px;
+    padding: 5px;
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 5px;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -440,12 +315,12 @@ label {
 
 select {
     width: 20rem;
-    height: 3rem;
+    height: 4rem;
     padding: 0.5rem;
-    color: var(--cta);
+    color: var(--light);
     background-color: rgba(255, 255, 255, 20%);
     box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
-    border-radius: 1rem;
+    border-radius: 2rem;
     border-color: white;
 }
 
@@ -458,46 +333,30 @@ select::placeholder {
     color: white;
 }
 
-textarea {
-    width: 20rem;
-    height: 5rem;
-    color: var(--cta);
-    background-color: rgba(255, 255, 255, 20%);
-    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
-    border-radius: 1rem;
-    border-color: white;
-}
-
-textarea::placeholder {
-    padding: 0.5rem;
-    color: white;
-}
-
 .register__block--cta {
+    width: 100%;
+    height: 50%;
     text-align: center;
     align-items: center;
 }
 
 .register__block--link {
+    font-size: 1.5rem;
     color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid var(--cta);
+    text-decoration: underline;
     background-color: transparent;
-}
-
-.user_update {
-    display: flex;
-    margin-top: 30px;
+    font-weight: 200;
 }
 
 .register__block--button {
-    height: 40px;
-    width: 400px;
-    left: 576px;
-    top: 599px;
-    border-radius: 20px;
-    margin-top: 65px;
-    background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
-    font-size: 17px;
-    color: var(--light);
+    width: 20rem;
+    height: 5rem;
+    padding: 0.5rem;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 20%);
+    border: none;
+    border-left: 8px solid var(--light);
+    margin-top: 75px;
+    font-size: 20px;
+    cursor: pointer;
 }
