@@ -245,62 +245,49 @@ a .neon4 {
 }
 
 .register {
-    width: 100%;
-    height: 488px;
-    border: 3px solid var(--blue-violet-soft);
-    border-radius: 50px 15px;
-    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 488px;
+  border: 3px solid var(--blue-violet-soft);
+  border-radius: 50px 15px;
+  background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
 }
 
 .register__title {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 25px;
-}
-
-.register_container {
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 25px;
 }
 
 .register__block {
-    height: 25rem;
-    width: 30%;
-    padding: 1rem;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
     margin-bottom: 1rem;
     text-align: center;
     background-color: transparent;
 }
 
-.one {
-    padding-top: 3rem;
-    margin-left: 5rem;
-}
-
-.two {
-    padding-top: 3rem;
-    margin-right: 5rem;
-}
-
 .register__block--son {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     background-color: transparent;
     font-size: 15px;
 }
 
 label {
     display: block;
-    width: 60%;
+    width: 65%;
     padding: .5rem;
     background-color: transparent;
 }
 
-.register__block--input[type='text'],
-.register__block--input[type='number'],
-.register__block--input[type='text'],
-.register__block--input[type='text'] {
+[type='text'],
+[type='number'],
+[type='password'],
+[type='email'],
+[type='date']
+ {
     width: 20rem;
     height: 4rem;
     padding: 0.5rem;
@@ -310,9 +297,13 @@ label {
     border-color: white;
 }
 
-[type='file'] {
-  margin-top: 15px;
-  background-color: transparent;  
+textarea {
+  width: 195px;
+  height: 90px;
+  padding: 5px;
+  color: var(--light);
+  background-color: rgba(255, 255, 255, 20%);
+  border-radius: 5px;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -342,15 +333,18 @@ select::placeholder {
 
 
 .register__block--cta {
+    width: 100%;
+    height: 50%;
     text-align: center;
     align-items: center;
 }
 
 .register__block--link {
+    font-size: 1.5rem;
     color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid var(--light);
+    text-decoration: underline;
     background-color: transparent;
+    font-weight: 200;
 }
 
 .register__block--button {
@@ -363,4 +357,5 @@ select::placeholder {
     border-left: 8px solid var(--light);
     margin-top: 75px;
     font-size: 20px;
+    cursor: pointer;
 }
