@@ -246,7 +246,6 @@ a .neon4 {
 
 .register {
     width: 60%;
-    height: 488px;
     border: 3px solid var(--blue-violet-soft);
     border-radius: 50px 15px;
     background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
@@ -363,4 +362,62 @@ select::placeholder {
     border-left: 8px solid var(--light);
     margin-top: 75px;
     font-size: 20px;
+}
+
+.correcto {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 96%;
+  height: 100%;
+  background-color: #3FA846;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  font-size: 1.4rem;
+  width: 90%;
+  height: 30%;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: #df1526;
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+  border-radius: 50px 15px;
+}
+
+.error figure {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.error figure img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.correcto {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 96%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: #3FA846;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  border-radius: 50px 15px;
+  padding: 12px;
 }
