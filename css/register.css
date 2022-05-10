@@ -1,62 +1,9 @@
-/* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px
 }
-
-
-/* a {
-  color: white;
-  text-decoration: none;
-} */
-
-html {
-    font-size: 62.5%
-}
-
-:root {
-    --font: 'Righteous', cursive;
-    --black-blue: #0A88C2;
-    --soft-blue: #858AE3;
-    --plump-violet: #613DC1;
-    --blue-violet-soft: #4E148C;
-    --blue-violet-dark: #5B0D6D;
-    --blue-violet-shadow: #2c0036;
-    --light: #ffffff;
-    --dark-violet: #171629;
-    --indigo: #1f1d35;
-    --grey: #202c33;
-    --gradient: linear-gradient(135deg, #613DC1, #0A88C2);
-}
-
-body {
-    font-family: var(--font);
-    background-position: center;
-    background-size: cover;
-    width: 1366px;
-    height: 768px;
-    color: var(--light);
-    background-color: var(--dark-violet);
-}
-
-
-/* |---- Imporatando la fuente ----| */
-
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px
-}
-
-
-/* a {
-  color: white;
-  text-decoration: none;
-} */
 
 html {
     font-size: 62.5%
@@ -82,6 +29,7 @@ body {
     overflow-x: hidden;
 }
 
+/* header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -230,98 +178,94 @@ a .neon4 {
     color: var(--light);
     text-decoration: none;
 }
-
-
 /* end header */
 
+/* main */
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 685px;
+    height: 686px;
+    margin-top: 30px;
+    font-size: 15px;
+    color: var(--light);
     background-image: url('../source/img/fondo3.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -129px;
-    margin-top: 30px;
 }
 
 .register {
-    display: flex;
-    flex-wrap: wrap;
     width: 60%;
-    height: 488px;
+    height: 560px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
     border: 3px solid var(--blue-violet-soft);
     border-radius: 50px 15px;
-    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
 }
 
 .register__title {
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
     text-align: center;
-    font-size: 1.8rem;
-    margin-top: 25px;
 }
 
 .register__block {
     width: 50%;
-    height: 50%;
-    padding: 10px;
-    margin-bottom: 1rem;
-    text-align: center;
-    background-color: transparent;
 }
 
-.register__block--son {
-    background-color: transparent;
-    font-size: 15px;
+.one {
+    float: left;
+}
+
+.two {
+    float: right;
+}
+
+.three {
+    margin-top: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.register__group {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
 }
 
 label {
-    display: block;
-    width: 65%;
-    padding: .5rem;
-    background-color: transparent;
+    display: flex;
+    padding: 5px 10px 10px 60px;
+    cursor: pointer;
+}
+
+.group__input {
+    position: relative;
 }
 
 [type='text'],
 [type='number'],
 [type='password'],
 [type='email'],
-[type='date'] {
-    width: 20rem;
+[type='date'],
+select {
+    width: 80%;
     height: 4rem;
-    padding: 0.5rem;
+    line-height: 4rem;
+    padding: 0 20px;
     color: var(--light);
     background-color: rgba(255, 255, 255, 20%);
     border-radius: 2rem;
     border-color: white;
-}
-
-textarea {
-    width: 195px;
-    height: 90px;
-    padding: 5px;
-    color: var(--light);
-    background-color: rgba(255, 255, 255, 20%);
-    border-radius: 5px;
 }
 
 ::-webkit-calendar-picker-indicator {
+    display: flex;
+    margin-right: auto;
     background-color: white;
     border-radius: .3rem;
-}
-
-select {
-    width: 20rem;
-    height: 4rem;
-    padding: 0.5rem;
-    color: var(--light);
-    background-color: rgba(255, 255, 255, 20%);
-    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
-    border-radius: 2rem;
-    border-color: white;
 }
 
 select option {
@@ -333,30 +277,95 @@ select::placeholder {
     color: white;
 }
 
-.register__block--cta {
-    width: 100%;
-    height: 50%;
-    text-align: center;
-    align-items: center;
+.register__input--error {
+    margin-top: 10px;
+    font-size: 12px;
+    display: none;
 }
 
-.register__block--link {
-    font-size: 1.5rem;
-    color: inherit;
-    text-decoration: underline;
-    background-color: transparent;
-    font-weight: 200;
+.register__input--error-active {
+    display: block;
+}
+
+.form__validation--state {
+    position: relative;
+	right: 35px;
+	z-index: 100;
+	font-size: 16px;
+    opacity: 0;
+}
+
+.register__message {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px auto;
+    background-color: #bb2929;
+    border-radius: 5px;
+    display: none;
+}
+
+.register__message-active {
+    display: block;
+}
+
+.register__block--cta {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
 }
 
 .register__block--button {
     width: 20rem;
     height: 5rem;
-    padding: 0.5rem;
+    margin-bottom: 5px;
     color: inherit;
     background-color: rgba(255, 255, 255, 20%);
     border: none;
     border-left: 8px solid var(--light);
-    margin-top: 75px;
-    font-size: 20px;
     cursor: pointer;
 }
+
+.register__block--link {
+    display: block;
+    margin-bottom: 15px;
+    color: inherit;
+}
+
+.register__complete {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-color: #1ed12d;
+    border-radius: 5px;
+    display: none;
+}
+
+.register__complete-active {
+    display: block;
+}
+
+/* styles for validations */
+.register__group--correct .form__validation--state {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.register__group--incorrect .register__block--label {
+    color: #bb2929;
+}
+
+.register__group--incorrect .form__validation--state {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.prueba {
+    grid-column: span 2;
+}
+
+/* mediaqueries */
+
+/* end main */
