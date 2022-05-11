@@ -13,7 +13,7 @@
 <body>
     <header class="header">
     
-        <h1 class="header__name">Battle Paint</h1>
+        <h1 class="header__name"><a href="./index.html">Battle Paint</a></h1>
         
         <nav class="menu__container">
           
