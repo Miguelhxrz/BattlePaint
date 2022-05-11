@@ -125,11 +125,12 @@
       <div class="register__block--cta">
         <input type="submit" name="nft_register" value="Create NFT" class="register__block--button"> <br><br>
       </div>
-      <?php require_once('./controllers/register-Nft-controller.php');
-      error_reporting(0);
-      ?>
     </form>
     </div>
+
+    <script src="../js/register_nft-validations.js"></script>
+    <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
