@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="../css/Normalize.css">
     <link rel="stylesheet" href="../css/register.css">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <title>Battle Paint | Register</title>
 </head>
 
 <body>
     <header class="header">
-        <a class="header__name" href="./index.html">
+        <a class="header__name" href="../index.php">
             <h1 class="header__name">Battle Paint</h1>
         </a>
 
@@ -21,7 +21,7 @@
             <ul class="menu">
                 <div class="menu__select">
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Buy">
+                        <a href="marketplace.php" title="Buy">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Rent">
+                        <a href="marketplace.php" title="Rent">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -39,7 +39,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="#" title="Points">
+                        <a href="points.php" title="Points">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Connect">
+                        <a href="marketplace.php" title="Connect">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -141,7 +141,7 @@
 
                 <div class="register__block--cta">
                     <input type="submit" value="Create Account" class="register__block--button">
-                    <a href="./login_page.html" class="register__block--link">Already have an account?</a>
+                    <a href="login_page.php" class="register__block--link">Already have an account?</a>
                     <!-- registration complete -->
                     <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
                 </div>
@@ -153,7 +153,7 @@
 
     </footer>
 
-    <script src="../js/register_validations.js"></script>
+    <script src="../js/register_page.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 

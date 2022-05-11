@@ -5,16 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/register_nft.css">
-  <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
-  <script src="./js/redirect.js"></script>
+  <link rel="stylesheet" href="../css/register_nft.css">
+  <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
+  <script src="../js/redirect.js"></script>
   <title>Battle Paint | Register NTF</title>
 </head>
 
 <body>
   <header class="header">
 
-    <h1 class="header__name">Battle Paint</h1>
+    <a class="header__name" href="../index.php">
+      <h1 class="header__name">Battle Paint</h1>
+    </a>
 
     <nav class="menu__container">
 
@@ -23,7 +25,7 @@
         <div class="menu__select">
 
           <li class="menu__item">
-            <a href="./marketplace.html" title="Buy">
+            <a href="marketplace.php" title="Buy">
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -33,7 +35,7 @@
           </li>
 
           <li class="menu__item">
-            <a href="./marketplace.html" title="Rent">
+            <a href="marketplace.php" title="Rent">
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -43,7 +45,7 @@
           </li>
 
           <li class="menu__item">
-            <a href="./points.html" title="Conversion">
+            <a href="points.php" title="Conversion">
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -66,7 +68,7 @@
           </li>
 
           <li class="menu__item">
-            <a href="./Login_Page.html" title="Connect">
+            <a href="Login_Page.php" title="Connect">
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -130,7 +132,6 @@
 
     <script src="../js/register_nft-validations.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

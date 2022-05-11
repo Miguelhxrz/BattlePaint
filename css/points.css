@@ -5,10 +5,7 @@
   margin: 0px;
   padding: 0px
 }
-/* a {
-  color: white;
-  text-decoration: none;
-} */
+
 html{
   font-size: 62.5%
 }
@@ -60,11 +57,10 @@ body {
   color: var(--light);
   font-size: 2.5rem;
   letter-spacing: 5px;
-  text-shadow: 0 0 10px var(--blue-violet-soft),
-               0 0 40px var(--blue-violet-soft),
-               0 0 80px var(--blue-violet-soft);
+  text-shadow: 0 0 10px var(--blue-violet-soft), 0 0 40px var(--blue-violet-soft), 0 0 80px var(--blue-violet-soft);
   width: 50%;
   height: 100%;
+  text-decoration: none;
 }
 
 .menu__user {
@@ -197,7 +193,6 @@ a .neon4 {
   color: var(--light);
   text-decoration: none;
 }
-
 /* |---- Fin del menu ----| */
 
 .container {
