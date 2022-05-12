@@ -317,7 +317,6 @@ form {
     margin-top: 20px;
 }
 
-
 .my_nft {
     display: flex;
     align-items: center;
@@ -375,11 +374,10 @@ form {
     color: var(--light);
 }
 
-
-
 .update_info .link_update {
     color: var(--light);
 }
+
 .logout {
     display: flex;
     align-items: center;
@@ -417,7 +415,6 @@ form {
     width: 40px;
     height: 42px;
     margin-right: 40px;
-
 }
 
 .my_nft .link_update {
@@ -467,7 +464,6 @@ label {
     font-size: 15px;
 }
 
-
 ::-webkit-calendar-picker-indicator {
     background-color: white;
     border-radius: .3rem;
@@ -493,8 +489,6 @@ select::placeholder {
     color: white;
 }
 
-
-
 .user_update {
     display: flex;
     margin-top: 30px;
@@ -509,22 +503,27 @@ select::placeholder {
     height: 20px;
     width: 20px;
 }
+
 .modeda_3 {
     height: 20px;
     width: 20px;
 }
+
 .modeda_4 {
     height: 20px;
     width: 20px;
 }
+
 .modeda_5 {
     height: 20px;
     width: 20px;
 }
+
 .modeda_6 {
     height: 20px;
     width: 20px;
 }
+
 .modeda_7 {
     height: 20px;
     width: 20px;
