@@ -58,66 +58,66 @@ body {
     height: 75px;
     padding: 0px 20px;
     margin-bottom: 10px;
-  }
-  
-  .header__name {
+}
+
+.header__name {
     display: flex;
     align-items: center;
     color: var(--light);
     font-size: 2.5rem;
     letter-spacing: 5px;
     text-shadow: 0 0 10px var(--blue-violet-soft),
-                 0 0 40px var(--blue-violet-soft),
-                 0 0 80px var(--blue-violet-soft);
+        0 0 40px var(--blue-violet-soft),
+        0 0 80px var(--blue-violet-soft);
     width: 50%;
     height: 100%;
-  }
+}
 
-  .header__name a {
+.header__name a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  .menu__user {
+}
+
+.menu__user {
     width: 50%;
     height: 100%;
-  }
-  
-  .menu__container {
+}
+
+.menu__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
     list-style: none;
-  }
-  
-  .menu {
+}
+
+.menu {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     list-style: none;
-  }
-  
-  .menu__select {
+}
+
+.menu__select {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-  
-  .menu__user {
+}
+
+.menu__user {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  
-  
-  .menu__item a{
+}
+
+
+.menu__item a {
     position: relative;
     display: inline-block;
     padding: 10px 22px;
@@ -128,88 +128,88 @@ body {
     text-decoration: none;
     margin-right: 20px;
     transition: 0.2s;
-  }
-  
-  .menu__item a:hover{
+}
+
+.menu__item a:hover {
     background-color: var(--blue-violet-soft);
-    box-shadow:  0 0 25px var(--blue-violet-soft), 
-                 0 0 50px var(--blue-violet-soft), 
-                 0 0 75px var(--blue-violet-soft);
+    box-shadow: 0 0 25px var(--blue-violet-soft),
+        0 0 50px var(--blue-violet-soft),
+        0 0 75px var(--blue-violet-soft);
     transition-delay: 1s;
-  }
-  
-  a span {
+}
+
+a span {
     position: absolute;
     display: block;
-  }
-  
-  a .neon1 {
+}
+
+a .neon1 {
     top: 0%;
     left: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon1 {
+    background-image: linear-gradient(90deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon1 {
     left: 100%;
     transition: 1s;
-  }
-  
-  a .neon2 {
+}
+
+a .neon2 {
     top: -100%;
     right: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon2 {
+    background-image: linear-gradient(180deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon2 {
     top: 100%;
     transition: 1s;
     transition-delay: .25s;
-  }
-  
-  a .neon3 {
+}
+
+a .neon3 {
     bottom: 0%;
     right: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon3 {
+    background-image: linear-gradient(2700deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon3 {
     right: 100%;
     transition: 1s;
     transition-delay: .5s;
-  }
-  
-  a .neon4 {
+}
+
+a .neon4 {
     bottom: -100%;
     left: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon4 {
+    background-image: linear-gradient(360deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon4 {
     bottom: 100%;
     transition: 1s;
     transition-delay: .75s;
-  }
-  
-  .menu__container {
+}
+
+.menu__container {
     width: 100%;
     height: 100%;
-  }
-  
-  
-  .menu__item a {
+}
+
+
+.menu__item a {
     color: var(--light);
     text-decoration: none;
-  }
-  
-  /* |---- Fin del menu ----| */
+}
+
+/* |---- Fin del menu ----| */
 
 form {
     height: 100%;
@@ -243,7 +243,7 @@ form {
 
 .one {
     width: 271.74px;
-    height: 650px;
+    height: 710px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
@@ -340,6 +340,29 @@ form {
     margin-top: 20px;
 }
 
+.my_balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 240px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-radius: 30px 15px;
+}
+
+.my_balance .icon_update {
+    width: 40px;
+    height: 42px;
+    margin-right: 71px;
+}
+
+.my_balance .link_update {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--light);
+}
+
 .report {
     display: flex;
     align-items: center;
@@ -389,6 +412,7 @@ form {
 .update_info .link_update {
     color: var(--light);
 }
+
 .logout {
     display: flex;
     align-items: center;
@@ -532,9 +556,9 @@ select::placeholder {
 
 .form__validation--state {
     position: relative;
-	right: 35px;
-	z-index: 100;
-	font-size: 16px;
+    right: 35px;
+    z-index: 100;
+    font-size: 16px;
     opacity: 0;
 }
 

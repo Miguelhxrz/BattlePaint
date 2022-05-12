@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/converter.css">
     <link rel="shortcut icon" href="../source/img/logoBattlePaint1.png" type="image/x-icon">
     <script src="../js/redirect.js"></script>
-    <title>Battle Paint | My NFTs</title>
+    <title>Battle Paint | Balance</title>
 </head>
 
 <body>

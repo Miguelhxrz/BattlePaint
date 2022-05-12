@@ -1,6 +1,7 @@
 /* |---- Imporatando la fuente ----| */
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -141,7 +142,7 @@ a .neon1 {
     left: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(90deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon1 {
@@ -154,7 +155,7 @@ a .neon2 {
     right: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(180deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon2 {
@@ -168,7 +169,7 @@ a .neon3 {
     right: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(2700deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon3 {
@@ -182,7 +183,7 @@ a .neon4 {
     left: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(360deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon4 {
@@ -232,7 +233,7 @@ a .neon4 {
 
 .one {
     width: 271.74px;
-    height: 520px;
+    height: 580px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
@@ -327,6 +328,29 @@ a .neon4 {
     margin-top: 20px;
 }
 
+
+.my_balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 240px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-radius: 30px 15px;
+}
+
+.my_balance .icon_update {
+    width: 40px;
+    height: 42px;
+    margin-right: 41px;
+}
+
+.my_balance .link_update {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--light);
+}
 
 .update_info .link_update {
     color: var(--light);
@@ -479,9 +503,9 @@ select::placeholder {
 
 .form__validation--state {
     position: relative;
-	right: 35px;
-	z-index: 100;
-	font-size: 16px;
+    right: 35px;
+    z-index: 100;
+    font-size: 16px;
     opacity: 0;
 }
 
