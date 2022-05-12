@@ -317,7 +317,6 @@ form {
     margin-top: 20px;
 }
 
-
 .my_nft {
     display: flex;
     align-items: center;
@@ -375,11 +374,10 @@ form {
     color: var(--light);
 }
 
-
-
 .update_info .link_update {
     color: var(--light);
 }
+
 .logout {
     display: flex;
     align-items: center;
@@ -417,7 +415,6 @@ form {
     width: 40px;
     height: 42px;
     margin-right: 40px;
-
 }
 
 .my_nft .link_update {
@@ -467,7 +464,6 @@ label {
     font-size: 15px;
 }
 
-
 ::-webkit-calendar-picker-indicator {
     background-color: white;
     border-radius: .3rem;
@@ -493,39 +489,110 @@ select::placeholder {
     color: white;
 }
 
-
-
 .user_update {
     display: flex;
     margin-top: 30px;
-}
-
-.moneda_1 {
-    height: 40px;
-    width: 40px;
 }
 
 .moneda_2 {
     height: 40px;
     width: 40px;
 }
+
 .moneda_3 {
     height: 40px;
     width: 40px;
 }
+
 .moneda_4 {
     height: 40px;
     width: 40px;
 }
+
 .moneda_5 {
     height: 40px;
     width: 40px;
 }
+
 .moneda_6 {
     height: 40px;
     width: 40px;
 }
+
 .moneda_7 {
     height: 40px;
     width: 40px;
+}
+
+.nft__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container_balance {
+    width: 70%;
+}
+
+.converter {
+    width: 30%;
+}
+
+.balance {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: darkgrey;
+    display: flex;
+    margin-left: 10%;
+}
+
+.balance_a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 8px;
+}
+
+.balance_a h4 {
+    font-size: 6rem;
+}
+
+.your_coins {
+    font-size: 2rem;
+    color: black;
+}
+
+.moneda_1 {
+    height: 60px;
+    width: 60px;
+}
+
+.balance_b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 8px;
+}
+
+.balance_b h4 {
+    display: flex;
+}
+
+.valor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.valor h4 {
+    font-size: 6rem;
+}
+
+.valor img {
+    height: 60px;
+    width: 60px;
 }
