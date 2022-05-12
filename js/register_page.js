@@ -69,13 +69,14 @@ const validateForm = (event) => {
     }
 }
 
+
 inputs.forEach((input) => {
     input.addEventListener('keyup', validateForm);
     input.addEventListener('blur', validateForm);
 });
 
 register.addEventListener('submit', (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     if(fields.username && fields.birth && fields.gender && fields.email && fields.password) {
 
@@ -94,7 +95,13 @@ register.addEventListener('submit', (event) => {
         birth_hidden.value = input_birth.value;
         gender_hidden.value = input_gender.value;
 
-        document.php_form.submit();
+        console.group(
+            console.log(user_hidden.value),
+            console.log(pass_hidden.value),
+            console.log(email_hidden.value),
+            console.log(birth_hidden.value),
+            console.log(gender_hidden.value)
+        );
 
         setTimeout(() => { 
 

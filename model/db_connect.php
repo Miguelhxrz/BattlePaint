@@ -7,7 +7,7 @@ class db_connect {
   function __construct(){
     $server_connect = 'localhost';
     $username = 'root';
-    $password = '28021899'; #<- cambiar la contraseña
+    $password = ''; #<- cambiar la contraseña
     $db = 'battlepaint';
 
     $this->conn = new mysqli($server_connect, $username, $password, $db);
@@ -19,7 +19,7 @@ class db_connect {
 
   }
 
-  private function sendQuery($query) {
+   function sendQuery($query) {
     return $this->conn->query($query);
   }
 
