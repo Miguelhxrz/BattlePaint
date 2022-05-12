@@ -101,7 +101,7 @@
                   <a href="./User_Update.php" class="link_update">Update info</a>
               </div>
               <div class="my_nft">
-                  <img src="source/img/buy.svg" alt="nft" class="icon_update">
+                  <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
                   <a href="./user.php" class="link_update">My NFTs</a>
               </div>
               <div class="logout">
@@ -121,7 +121,7 @@
 
                         <article class="nft__card">
                             <figure class="nft__img">
-                                <img src="../source/img/test.png" alt="Shanna">
+                                <img src="../source/img/Characters/test3.png" alt="Shanna">
                             </figure>
                             <div class="nft__rank a">
                                 <h4>A</h4>
@@ -150,7 +150,7 @@
 
                         <article class="nft__card">
                             <figure class="nft__img">
-                                <img src="../source/img/test.png" alt="Raidon">
+                                <img src="../source/img/Characters/test2.png" alt="Raidon">
                             </figure>
                             <div class="nft__rank ">
                                 <h4>S</h4>
@@ -179,7 +179,7 @@
 
                         <article class="nft__card">
                             <figure class="nft__img">
-                                <img src="../source/img /source/img/test3.png" alt="Veinka">
+                                <img src="../source/img/Characters/test4.png" alt="Veinka">
                             </figure>
                             <div class="nft__rank ">
                                 <h4>B</h4>
