@@ -114,24 +114,33 @@
             </div>
 
             <div class="register__block two">
-                <div class="register__title">
-                    <h2>Converter</h2>
-                </div>
                 <div class="user_update">
 
                     <section class="nft__container">
                         <article class="container_balance">
+                            <div class="conta_balance">
                             <div class="balance">
-                                <img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="Paint Backets">
-                                <h4>10</h4>
-                                <h4>100 <img src="../source/img/usd.png" alt=""></h4>
+                                <div class="your_coins">
+                                    <h3 class="your_coins">
+                                        Your Coins
+                                    </h3>
+                                </div>
+                                <div class="balance_a">
+                                    <h4>10</h4>
+                                    <img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="Paint Backets">
+                                </div>
+                                <div class="balance_b">
+                                    <h4>100</h4>
+                                    <img src="../source/img/usd.png" alt="">
+                                </div>
                             </div>
                             <div class="valor">
-                                <h4>1</h4><img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="">
-                                <h4>= 100</h4><img src="../source/img/svg/paint-point.svg" class="moneda_2" alt="">
+                                <h4>1 </h4><img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="">
+                                <h4> = 100</h4><img src="../source/img/svg/paint-point.svg" class="moneda_2" alt="">
                             </div>
                             <div class="compra">
                                 <h4>Buy</h4><img src="../source/img/svg/paint-backets.svg" class="moneda_4" alt="">
+                            </div>
                             </div>
                         </article>
 
