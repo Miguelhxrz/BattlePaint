@@ -149,7 +149,7 @@
         <div class="register__group" id="register__image">
           <label for="nft">
               <p>Imagen del NFT</p>
-              <input type="file" name="nft_image" id="nft_image" accept="image/png,image/jpeg" class="register__block--input">
+              <input type="file" name="nft_image" id="nft_image" class="register__block--input" accept=".jpg,.png" required onchange="validateImage()">
             </label>
           </div>
       </section>
