@@ -11,9 +11,13 @@ class User {
   private $birth;
   private $gender;
 
+  #data base
+  private $db;
+
+
   function __construct() {
 
-    $db = new db_connect();
+    $this->db = new db_connect();
   
   }
 
@@ -47,10 +51,10 @@ class User {
 
    function addUser() {
 
-    $query = "INSERT INTO `nft`(`token`, `name`, `skin`, `class`, `rank`, `owner`, `price`) VALUES ('".$this->token."','".$this->name."','".$this->skin."','".$this->nft_class."','".$this->nft_rank."','".$this->owner."','".$this->price."')";
+    $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `birth`, `gender`) VALUES ('".$this->id."','".$this->username."','".$this->password."','".$this->email."','".$this->birth."','".$this->gender."')";
 
     $send = $this->db->sendQuery($query);
-
+    
     if(isset( $send )) {
       return 1;
     }else {

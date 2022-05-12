@@ -56,6 +56,15 @@ const validateFieldsNFT = (expressionNFT, inputNFT, fieldNFT) => {
     }
 }
 
+function validateImage() {
+    let archive = document.getElementById('nft_image').value,
+        extension = archive.substring(archive.lastIndexOf('.'), archivo.length);
+
+    if(document.getElementById('nft_image').getAttribute('accept').split(',').indexOf(extension) < 0) {
+        alert('Archivo inválido. No se permite la extensión ' + extension);
+    }
+}
+
 inputsNft.forEach((input) => {
     input.addEventListener('keyup', validateFormNfts);
     input.addEventListener('blur', validateFormNfts);

@@ -74,7 +74,7 @@
     </header>
 
     <main class="main">
-        <form action="" class="register" id="register">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" class="register" id="register">
 
             <section class="register__title">
                 <h2> Create Account </h2>
@@ -135,6 +135,24 @@
                     </div>
                     <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                 </div>
+
+                <!-- group id -->                   
+                <div class="register__group" id="register__id">
+                    <label for="password" class="register__block--label">assigned id</label>
+                    <div id="group__input">
+                        <input type="text" name="id" id="id" readonly value='Holi' onmousedown="return false" class="register__block--input">
+                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                </div>
+
+                <section class="php__hidden">
+                    <input type="text" name='user_username' class="username__hidden">
+                    <input type="password" name='user_pass' class="password__hidden">
+                    <input type="text" name='user_email' class="email__hidden">
+                    <input type="date" name='user_birth' class="birth__hidden">
+                    <input type="text" name='user_gender' class="gender_hidden">
+                </section>
                 
                 <!-- error message -->
                 <div class="register__message" id="register__message">
@@ -142,42 +160,41 @@
                 </div>
 
                 <div class="register__block--cta">
-                    <button onclick="registerData()" class="register__block--button">Create Account</button>
-                    <!-- <input type="submit" value="Create Account" onclick="getData()" class="register__block--button"> -->
+                    <!-- Boton submit -->
+                    <input type="submit" name="btn_submit" class="register__block--button" value="Create Account">
+                    
                     <a href="login_page.php" class="register__block--link">Already have an account?</a>
                     <!-- registration complete -->
                     <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
                 </div>
             </section>
+
         </form>
-        <form action="POST" name="php_form" id="register_hidden">
-
-            <input type="text" name='user_username' class="username__hidden">
-            <input type="password" name='user_pass' class="password__hidden">
-            <input type="text" name='user_email' class="email__hidden">
-            <input type="date" name='user_birth' class="birth__hidden">
-            <input type="text" name='user_gender' class="gender_hidden">
-
-            <input type="submit" name="submit">
-
             <?php
+                    
+                if(isset($_POST['btn_submit'])){
 
                     $user = new User();
 
-                    $user->setUsername($_POST['user_username']);
-                    $user->setPassword($_POST['user_pass']);
-                    $user->setEmail($_POST['user_email']);
-                    $user->setBirth($_POST['user_birth']);
-                    $user->setGender($_POST['user_gender']);
+                    $user_username = $_POST['user_username'];
+                    $user_pass = $_POST['user_pass'];
+                    $user_email = $_POST['user_email'];
+                    $user_birth = $_POST['user_birth'];
+                    $user_gender = $_POST['user_gender'];
+
+                    $user->setUsername($user_username);
+                    $user->setPassword($user_pass);
+                    $user->setEmail($user_email);
+                    $user->setBirth($user_birth);
+                    $user->setGender($user_gender);
 
                     $result = $user->addUser();
 
-                    echo "<script>console.log('".$result."')</script>";
+                    var_dump($result);
+                }        
 
 
             ?>
-
-        </form>
 
 
     </main>

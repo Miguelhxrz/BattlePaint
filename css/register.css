@@ -366,10 +366,10 @@ select::placeholder {
     grid-column: span 2;
 }
 
-/* #register_hidden {
+.php__hidden {
     
     display: none;
-} */
+}
 
 /* mediaqueries */
 
