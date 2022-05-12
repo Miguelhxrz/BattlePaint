@@ -94,7 +94,7 @@
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                         <!-- <img class="form__validation--state"  alt="circle-xmark-solid"> -->
                     </div>
-                    <p class="register__input--error">Asawe</p>
+                    <p class="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
                 </div>
 
                 <!-- password -->
@@ -104,7 +104,7 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="login__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="register__input--error">Mensage</p>
+                    <p class="register__input--error">The password must be from 4 to 15 digits.</p>
                 </div>
             </section>
 
@@ -112,14 +112,11 @@
                 <div class="login__block--cta">
                     <!-- error message -->
                     <div class="register__message" id="register__message">
-                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> ¡Access error!</p>
                     </div>
 
                     <input type="submit" value=" LOGIN " class="login__block--button">
                     <p class="login__register">You don't have an account yet? <a href="register_page.php"> Resgister now</a></p>
-
-                    <!-- registration complete -->
-                    <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
                 </div>
             </section>
         </form>

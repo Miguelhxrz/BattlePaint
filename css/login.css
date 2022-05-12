@@ -328,35 +328,21 @@ a .neon4 {
     text-shadow: 1px 1px 0px black;
     letter-spacing: 2px;
 }
-
-.register__complete {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    margin: 10px auto;
-    background-color: #1ed12d;
-    border-radius: 5px;
-    display: none;
-  }
   
-  .register__complete-active {
-    display: block;
-  }
-  
-  /* styles for validations */
-  .register__group--correct .form__validation--state {
+/* styles for validations */
+.register__group--correct .form__validation--state {
     color: #1ed12d;
     opacity: 1;
-  }
+}
   
-  .register__group--incorrect .register__block--label {
+.register__group--incorrect .register__block--label {
     color: #bb2929;
-  }
+}
   
-  .register__group--incorrect .form__validation--state {
+.register__group--incorrect .form__validation--state {
     color: #bb2929;
     opacity: 1;
-  }
+}
 
 /* icons */
 /* .circle-xmark-solid {
