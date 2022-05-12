@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="#" title="Points">
+                        <a href="points.php" title="Points">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -65,11 +65,16 @@
                     </li>
 
                     <li class="menu__item">
+<<<<<<< HEAD:marketplace.html
+                        <a href="./user.html" title="Connect">
+=======
                         <a href="login_page.php" title="Connect">
+>>>>>>> bd16f3d55f36566fe5aab88afff8a087355cfb94:view/marketplace.php
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
-                            <span class="neon4"></span> Login
+                            <span class="neon4"></span>
+                            <img src="source/img/user.svg" alt="User" class="icon_logout">
                         </a>
                     </li>
 

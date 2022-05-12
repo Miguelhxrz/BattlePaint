@@ -193,6 +193,10 @@ a .neon4 {
     text-decoration: none;
 }
 
+a .icon_logout {
+    width: 35px;
+    height: 37px;
+}
 
 /* |---- Fin del menu ----| */
 

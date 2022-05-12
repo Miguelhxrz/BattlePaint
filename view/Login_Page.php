@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/Normalize.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
-    <script src="./js/redirect.js"></script>
     <title>Battle Paint | Login</title>
 </head>
 
@@ -79,27 +78,55 @@
 
     </header>
 
-    <main class="container">
-        <form action="" class="login__container">
+    <main class="main">
+        <form action="" class="login__container" id="login__container">
 
-            <h3 class="form__title">Login</h3>
+            <section class="register__title">
+                <h2> Login </h2>
+            </section>
 
-            <label for="username" class="login__username--label"> Username </label>
-            <input type="text" name="username" id="username" placeholder="Username" class="login__block--input">
+            <section class="register__block one">
+                <!-- username -->
+                <div class="register__group" id="register__username">
+                    <label for="username" class="register__block--label"> Username </label>
+                    <div class="group__input">
+                        <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
+                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                        <!-- <img class="form__validation--state"  alt="circle-xmark-solid"> -->
+                    </div>
+                    <p class="register__input--error">Asawe</p>
+                </div>
 
+                <!-- password -->
+                <div class="register__group" id="register__password">
+                    <label for="password" class="register__block--label"> Password </label>
+                    <div class="group__input">
+                        <input type="password" name="password" id="password" placeholder="Password" class="login__block--input">
+                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="register__input--error">Mensage</p>
+                </div>
+            </section>
 
-            <br><br>
+            <section class="register__block two">
+                <div class="login__block--cta">
+                    <!-- error message -->
+                    <div class="register__message" id="register__message">
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+                    </div>
 
-            <label for="password" class="login__password--label"> Password </label>
-            <input type="password" name="password" id="password" placeholder="Password" class="login__block--input"> <br><br>
+                    <input type="submit" value=" LOGIN " class="login__block--button">
+                    <p class="login__register">You don't have an account yet? <a href="register_page.php"> Resgister now</a></p>
 
-            <div class="login__block--cta">
-                <input type="submit" value=" LOGIN " class="login__block--button">
-            </div>
-            <p class="login__register">You don't have an account yet? <a href="register_page.php"> Resgister now</a></p>
+                    <!-- registration complete -->
+                    <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+                </div>
+            </section>
         </form>
     </main>
 
+    <script src="../js/redirect.js"></script>
+    <script src="../js/login_page.js"></script>
+    <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
