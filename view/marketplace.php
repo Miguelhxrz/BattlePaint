@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/marketplace.css">
+    <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/marketplace.css">
     <script src="./js/redirect.js"></script>
     <title>Battle Paint | Marketplace</title>
 </head>
@@ -14,7 +14,7 @@
 <body>
     <header class="header">
 
-        <a class="header__name" href="./index.html">
+        <a class="header__name" href="../index.php">
             <h1 class="header__name">Battle Paint</h1>
         </a>
 
@@ -26,7 +26,7 @@
                 <div class="menu__select">
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Buy">
+                        <a href="#" title="Buy">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Rent">
+                        <a href="#" title="Rent">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -65,7 +65,11 @@
                     </li>
 
                     <li class="menu__item">
+<<<<<<< HEAD:marketplace.html
                         <a href="./user.html" title="Connect">
+=======
+                        <a href="login_page.php" title="Connect">
+>>>>>>> bd16f3d55f36566fe5aab88afff8a087355cfb94:view/marketplace.php
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -160,7 +164,7 @@
 
             <article class="nft__card">
                 <figure class="nft__img">
-                    <img src="./source/img/test.png" alt="Shanna">
+                    <img src="../source/img/Characters/test.png" alt="Shanna">
                 </figure>
                 <div class="nft__rank a">
                     <h4>A</h4>
@@ -173,14 +177,14 @@
                     <article class="price">
                         <h4>Price PB:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/paint-backets2.png" alt="paint bucket icon">
+                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
                     <article class="price">
                         <h4>Price USD:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/usd.png" alt="paint bucket icon">
+                            <img src="../source/img/usd.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
@@ -189,7 +193,7 @@
 
             <article class="nft__card">
                 <figure class="nft__img">
-                    <img src="./source/img/test2.png" alt="Raidon">
+                    <img src="../source/img/Characters/test2.png" alt="Raidon">
                 </figure>
                 <div class="nft__rank ">
                     <h4>S</h4>
@@ -202,14 +206,14 @@
                     <article class="price">
                         <h4>Price PB:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/paint-backets2.png" alt="paint bucket icon">
+                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
                     <article class="price">
                         <h4>Price USD:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/usd.png" alt="paint bucket icon">
+                            <img src="../source/img/usd.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
@@ -218,7 +222,7 @@
 
             <article class="nft__card">
                 <figure class="nft__img">
-                    <img src="./source/img/test3.png" alt="Veinka">
+                    <img src="../source/img/Characters/test3.png" alt="Veinka">
                 </figure>
                 <div class="nft__rank ">
                     <h4>B</h4>
@@ -231,14 +235,14 @@
                     <article class="price">
                         <h4>Price PB:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/paint-backets2.png" alt="paint bucket icon">
+                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
                     <article class="price">
                         <h4>Price USD:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/usd.png" alt="paint bucket icon">
+                            <img src="../source/img/usd.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
@@ -248,7 +252,7 @@
 
             <article class="nft__card">
                 <figure class="nft__img">
-                    <img src="./source/img/test4.png" alt="Mary">
+                    <img src="../source/img/Characters/test4.png" alt="Mary">
                 </figure>
                 <div class="nft__rank ">
                     <h4>A</h4>
@@ -261,14 +265,14 @@
                     <article class="price">
                         <h4>Price PB:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/paint-backets2.png" alt="paint bucket icon">
+                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
                     <article class="price">
                         <h4>Price USD:</h4>
                         <div class="price__pay">
-                            <img src="./source/img/usd.png" alt="paint bucket icon">
+                            <img src="../source/img/usd.png" alt="paint bucket icon">
                             <h4>????</h4>
                         </div>
                     </article>
@@ -276,8 +280,8 @@
             </article>
         </section>
         <section class="return__container">
-            <a href="./index.html">
-                <img src="./source/img/home.svg" alt="" title="return home">
+            <a href="../index.php">
+                <img src="../source/img/svg/home.svg" alt="" title="return home">
             </a>
         </section>
     </main>

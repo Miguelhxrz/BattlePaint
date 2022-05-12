@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   card_arr.forEach(card => {
     card.addEventListener('click', () => {
-      window.location = '../character_view.html'
+      window.location = '../view/character_view.php'
     })
   })
 

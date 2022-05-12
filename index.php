@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <script src="./js/redirect.js"></script>
     <title>Battle Paint</title>
 </head>
 
 <body>
     <header>
-        <section class="logo"> <img src="./source/img/logoBattlePaint1.svg" alt=""> </section>
+        <section class="logo"> 
+            <img src="./source/img/svg/logoBattlePaint1.svg" alt=""> 
+        </section>
         <nav class="links">
             <a href="#home" class="links__1">Home</a>
             <a href="#gameplay" class="links__2 ">Gameplay</a>
@@ -24,14 +26,14 @@
         </nav>
         <section class="boton ">
             <article class="boton__container ">
-                <a href="register_page.html" class="boton__titulo ">Create Account</a>
+                <a href="view/register_page.php" class="boton__titulo ">Create Account</a>
             </article>
         </section>
     </header>
 
     <section class="return__container">
-        <a href="./marketplace.html">
-            <img src="./source/img/marketplace.svg" alt="" title="marketplace">
+        <a href="view/marketplace.php">
+            <img src="./source/img/svg/marketplace.svg" alt="" title="marketplace">
         </a>
     </section>
 
@@ -39,14 +41,14 @@
         <section class="home" id="home">
             <div class="home__divisor--up">
                 <article class="home__logo">
-                    <img src="./source/img/logoBattlePaint2.svg " alt="LogoBattlePaint">
+                    <img src="./source/img/svg/logoBattlePaint2.svg " alt="LogoBattlePaint">
                     <div class="hashtag">
                         <h3>#BattlePaint #PaintPoint #PaintBucket #P2E</h3>
                     </div>
                 </article>
                 <article class="home__description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim ac arcu molestie maximus. Proin gravida.</p>
-                    <img src="./source/img/figure2.svg" alt="imgBattlePaint">
+                    <img src="./source/img/svg/figure2.svg" alt="imgBattlePaint">
                 </article>
             </div>
             <div class="home__divisor--down ">
@@ -74,7 +76,7 @@
 
                 <div class="gameplay__block two">
                     <div class="gameplay__block--video">
-                        <img src="./source/img/Polygon 1.svg" alt="playVideo">
+                        <img src="./source/img/svg/Polygon 1.svg" alt="playVideo">
                     </div>
                     <h2 class="gameplay__block--text"> Watch Video </h2>
                 </div>
@@ -95,11 +97,11 @@
                             <div class="coin__description--1 ">
                                 <div class="block-1">
                                     <div class="card-1">
-                                        <img class="play" src="./source/img/14485861891536063363 1.svg" alt="">
+                                        <img class="play" src="./source/img/svg/14485861891536063363 1.svg" alt="">
                                         <h6 class="titulo">Play to Earn</h6>
                                     </div>
                                     <div class="card-1">
-                                        <img src="./source/img/marketplace 3.svg" alt="">
+                                        <img src="./source/img/svg/marketplace 3.svg" alt="">
                                         <h6 class="titulo">Get it with PB</h6>
                                     </div>
                                 </div>
@@ -110,11 +112,11 @@
                                 </div>
                                 <div class="block-3">
                                     <div class="card-1">
-                                        <img src="./source/img/3723023471637820077 1.svg" alt="">
+                                        <img src="./source/img/svg/3723023471637820077 1.svg" alt="">
                                         <h6 class="titulo">Easy to Earn</h6>
                                     </div>
                                     <div class="card-1">
-                                        <img src="./source/img/5254420031586787250 1.svg" alt="">
+                                        <img src="./source/img/svg/5254420031586787250 1.svg" alt="">
                                         <h6 class="titulo">Change it for PB</h6>
                                     </div>
                                 </div>
@@ -129,11 +131,11 @@
                             <div class="coin__description--1 ">
                                 <div class="block-1">
                                     <div class="card-1">
-                                        <img class="play" src="./source/img/14485861891536063363 1.svg" alt="">
-                                        <h6 class="titulo">Free to Earn</h6>
+                                        <img class="play" src="./source/img/svg/14485861891536063363 1.svg" alt="">
+                                        <h6 class="titulo">Change to Earn</h6>
                                     </div>
                                     <div class="card-1">
-                                        <img src="./source/img/marketplace 3.svg" alt="">
+                                        <img src="./source/img/svg/marketplace 3.svg" alt="">
                                         <h6 class="titulo">Buy it in market</h6>
                                     </div>
                                 </div>
@@ -144,11 +146,11 @@
                                 </div>
                                 <div class="block-3">
                                     <div class="card-1">
-                                        <img src="./source/img/3723023471637820077 1.svg" alt="">
+                                        <img src="./source/img/svg/3723023471637820077 1.svg" alt="">
                                         <h6 class="titulo">Buy Skins</h6>
                                     </div>
                                     <div class="card-1">
-                                        <img src="./source/img/5254420031586787250 1.svg" alt="">
+                                        <img src="./source/img/svg/5254420031586787250 1.svg" alt="">
                                         <h6 class="titulo">Save-Exchange</h6>
                                     </div>
                                 </div>
@@ -170,7 +172,7 @@
 
                 <article class="nft__card">
                     <figure class="nft__img">
-                        <img src="./source/img/test.png" alt="Shanna">
+                        <img src="./source/img/characters/test.png" alt="Shanna">
                     </figure>
                     <div class="nft__rank a">
                         <h4>A</h4>
@@ -199,7 +201,7 @@
 
                 <article class="nft__card">
                     <figure class="nft__img">
-                        <img src="./source/img/test2.png" alt="Raidon">
+                        <img src="./source/img/characters/test2.png" alt="Raidon">
                     </figure>
                     <div class="nft__rank ">
                         <h4>S</h4>
@@ -228,7 +230,7 @@
 
                 <article class="nft__card">
                     <figure class="nft__img">
-                        <img src="./source/img/test3.png" alt="Veinka">
+                        <img src="./source/img/characters/test3.png" alt="Veinka">
                     </figure>
                     <div class="nft__rank ">
                         <h4>B</h4>
@@ -258,7 +260,7 @@
 
                 <article class="nft__card">
                     <figure class="nft__img">
-                        <img src="./source/img/test4.png" alt="Mary">
+                        <img src="./source/img/characters/test4.png" alt="Mary">
                     </figure>
                     <div class="nft__rank ">
                         <h4>A</h4>
@@ -287,9 +289,9 @@
             </section>
 
             <div class="sliders">
-                <img src="./source/img/Ellipse 4.svg" alt="">
-                <img src="./source/img/Ellipse 4.svg" alt="">
-                <img src="./source/img/Ellipse 4.svg" alt="">
+                <img src="./source/img/svg/Ellipse 4.svg" alt="">
+                <img src="./source/img/svg/Ellipse 4.svg" alt="">
+                <img src="./source/img/svg/Ellipse 4.svg" alt="">
             </div>
             </article>
         </section>
@@ -301,12 +303,12 @@
             <article class="developers__container ">
                 <div class="developers__imagenes">
                     <div class="developers__imagenes--one">
-                        <img src="./source/img/mariavalen.svg " alt=" ">
-                        <img src="./source/img/fabi.svg " alt=" ">
+                        <img src="./source/img/svg/mariavalen.svg " alt=" ">
+                        <img src="./source/img/svg/fabi.svg " alt=" ">
                     </div>
                     <div class="developers__imagenes--two">
-                        <img src="./source/img/vanessa.svg " alt=" ">
-                        <img src="./source/img/miguel.svg " alt=" ">
+                        <img src="./source/img/svg/vanessa.svg " alt=" ">
+                        <img src="./source/img/svg/miguel.svg " alt=" ">
                     </div>
                 </div>
             </article>
@@ -318,16 +320,16 @@
                     <h3>Partners - Sponsors</h3>
                 </div>
                 <div class="partners__imagenes ">
-                    <img src="./source/img/Sponsor arca games.svg " alt=" ">
-                    <img src="./source/img/Sponsor studio audl.svg " alt=" ">
-                    <img src="./source/img/Sponsor maria vp.svg " alt=" ">
-                    <img src="./source/img/Sponsor vanesa m.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor arca games.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor studio audl.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor maria vp.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor vanesa m.svg " alt=" ">
                 </div>
                 <div class="partners__imagenes ">
-                    <img src="./source/img/Sponsor berw.svg " alt=" ">
-                    <img src="./source/img/Sponsor game store.svg " alt=" ">
-                    <img src="./source/img/Sponsor fabimar.svg " alt=" ">
-                    <img src="./source/img/Sponsor miguelon.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor berw.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor game store.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor fabimar.svg " alt=" ">
+                    <img src="./source/img/svg/Sponsor miguelon.svg " alt=" ">
                 </div>
             </article>
         </section>

@@ -1,3 +1,5 @@
+<?php require_once('../model/User.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,15 +7,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Normalize.css">
-    <link rel="stylesheet" href="css/register.css">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Normalize.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <title>Battle Paint | Register</title>
 </head>
 
 <body>
     <header class="header">
-        <a class="header__name" href="./index.html">
+        <a class="header__name" href="../index.php">
             <h1 class="header__name">Battle Paint</h1>
         </a>
 
@@ -21,7 +23,7 @@
             <ul class="menu">
                 <div class="menu__select">
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Buy">
+                        <a href="marketplace.php" title="Buy">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -30,7 +32,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Rent">
+                        <a href="marketplace.php" title="Rent">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -39,7 +41,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="#" title="Points">
+                        <a href="points.php" title="Points">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -59,7 +61,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Connect">
+                        <a href="marketplace.php" title="Connect">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -106,8 +108,8 @@
                         <select name="gender" id="gender" class="register__block--input">
                             <option disabled>Select a gender</option>
                             <option value="other">Other</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
                         </select>
                     </div>
                 </div>
@@ -140,21 +142,51 @@
                 </div>
 
                 <div class="register__block--cta">
-                    <input type="submit" value="Create Account" class="register__block--button">
-                    <a href="./login_page.html" class="register__block--link">Already have an account?</a>
+                    <button onclick="registerData()" class="register__block--button">Create Account</button>
+                    <!-- <input type="submit" value="Create Account" onclick="getData()" class="register__block--button"> -->
+                    <a href="login_page.php" class="register__block--link">Already have an account?</a>
                     <!-- registration complete -->
                     <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
                 </div>
             </section>
         </form>
+        <form action="POST" name="php_form" id="register_hidden">
+
+            <input type="text" name='user_username' class="username__hidden">
+            <input type="password" name='user_pass' class="password__hidden">
+            <input type="text" name='user_email' class="email__hidden">
+            <input type="date" name='user_birth' class="birth__hidden">
+            <input type="text" name='user_gender' class="gender_hidden">
+
+            <input type="submit" name="submit">
+
+            <?php
+
+                    $user = new User();
+
+                    $user->setUsername($_POST['user_username']);
+                    $user->setPassword($_POST['user_pass']);
+                    $user->setEmail($_POST['user_email']);
+                    $user->setBirth($_POST['user_birth']);
+                    $user->setGender($_POST['user_gender']);
+
+                    $result = $user->addUser();
+
+                    echo "<script>console.log('".$result."')</script>";
+
+
+            ?>
+
+        </form>
+
+
     </main>
 
     <footer>
 
     </footer>
 
-    <script src="./js/redirect.js"></script>
-    <script src="./js/register_validations.js"></script>
+    <script src="../js/register_page.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 

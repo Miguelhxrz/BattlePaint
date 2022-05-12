@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/character_view.css">
-  <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
-  <script src="./js/redirect.js"></script>
+  <link rel="stylesheet" href="../css/character_view.css">
+  <link rel="shortcut icon" href="../source/img/logoBattlePaint1.svg" type="image/x-icon">
+  <script src="../js/redirect.js"></script>
   <title>Battle Paint | Marketplace</title>
 </head>
 <body>
@@ -80,75 +80,16 @@
   </header>
   <main class="container">
 
-    <section class="nft__container">
-      
-      <article class="nft__neon"></article>
-
-      <article class="nft__neon"></article>
-
-      <h2>Veinka</h2>
-      <p>The portective gunner</p>
-
-      <article class="nft__complete">
-        
-        <figure class="nft__img">
-          <img src="./source/img/test5.png" alt="">
-        </figure>
-
-        <div class="nft__stats">
-          <h4 class="nft__stats--title">P2E Info</h4>
-          <div class="nft__data">
-            <div class="nft__data--battles data">
-              <h5 class="battles__title">Basic battles rewards</h5>
-              <article class="wrap">
-                <div class="win">
-                  <h5>win: + 4</h5>
-                </div>
-                <div class="win">
-                  <h5>Draw: + 2</h5>
-                </div>
-                <div class="win">
-                  <h5>Lose: + 1</h5>
-                </div>
-              </article>
-            </div>
-
-            <div class="nft__data--bonus data">
-              <h5>Win bonus</h5>
-              <div class="win">
-                <h5>+ 1.2</h5>
-              </div>
-            </div>
-
-            <div class="nft__data--daily_battles data">
-              <h5>Daily battles</h5>
-              <div class="d-battles">
-                <h5>0 / 60</h5>
-              </div>
-            </div>
-
-            <div class="nft__data--daily_paint data">
-              <h5>Daily Paint Points</h5>
-            <div class="d__pp"><h5>10</h5></div>
-        </div>
-
+    <section class="character__container">
+      <img src="../source/img/test5-shadow.png" alt="" class="character__img">
+      <article class="character__stats">
+        <h5 class="character__name">Nft-name</h5>
       </article>
-      
-      <figure class="controller">
-        <img src="" alt="">
-      </figure>
-
     </section>
-
-    <section class="illustrations__container">
-      <h3>Illustrations</h3>
-      <article class="illustration"></article>
-      <article class="illustration"></article>
-      <article class="illustration"></article>
-      <article class="illustration"></article>
-      
-    </section>
-      
+        
   </main>
+  <footer>
+
+  </footer>
 </body>
 </html>
