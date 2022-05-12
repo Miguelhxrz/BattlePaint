@@ -59,7 +59,7 @@ inputs.forEach((input) => {
 register.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    if(fields.username && fields.birth && fields.gender && fields.email && fields.password) {
+    if(fields.username && fields.email && fields.password) {
         register.reset();
 
         document.getElementById('register__complete').classList.add('register__complete-active');
