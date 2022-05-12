@@ -81,7 +81,7 @@
       </header>
     <main class="main">
         
-        <form action="">
+        <form action="" class="update" id="update">
             <section class="register">
 
                 <div class="register__block one">
@@ -110,6 +110,10 @@
                     <img src="source/img/buy.svg" alt="nft" class="icon_update">
                     <a href="admin.html" class="link_update">My NFTs</a>
                 </div>
+                <div class="register_nft">
+                  <img src="source/img/buy.svg" alt="nft" class="icon_update">
+                  <a href="Register_Nft.php" class="link_update">NFT registration</a>
+              </div>
                 <div class="report">
                     <img src="source/img/buy.svg" alt="nft" class="icon_update">
                     <a href="report.html" class="link_update">Reports</a>
@@ -122,33 +126,64 @@
                 </div>
 
                 <div class="register__block two">
-                    <div class="register__title">
-                        <h2>Update info</h2>
-                    </div>
-                    <div class="user_update">
-                        <div class="register__block--son">
-                            <label for="name">Username</label>
-                            <input type="text" name="username" id="username" class="register__block--input"> <br><br>
+                  <div class="register__title">
+                      <h2>Update info</h2>
+                  </div>
+                  <div class="user_update">
+<!-- group username -->
+<div class="register__group" id="register__username">
+  <label for="username" class="register__block--label">Username</label>
+  <div id="group__input">
+      <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
+      <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+  </div>
+  <p class="register__input--error" id="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
+</div>
 
-                            <label for="Email">Email</label>
-                            <input type="email" name="email" id="email" class="register__block--input"> <br><br>
-                        </div>
-                        <div class="register__block--son">
-                            <label for="Password">Password</label>
-                            <input type="Password" name="password" id="password" class="register__block--input">  <br><br>
 
-                            <label for="email">Owner</label>
-                            <input type="text" name="email" id="email" class="register__block--input">
-                        </div>
-                    </div>
-                    <div class="register__block--cta">
-                        <input type="submit" value="SAVE NEW CHANGES" class="register__block--button"> <br><br>
-                    </div>
-                </div>
+              <!-- group email -->
+              <div class="register__group" id="register__email">
+                  <label for="email" class="register__block--label">Email</label>
+                  <div id="group__input">
+                      <input type="email" name="email" id="email" placeholder="Email" class="register__block--input">
+                      <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                  </div>
+                  <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
+              </div>
+
+               <!-- group password -->                   
+               <div class="register__group" id="register__password">
+                  <label for="password" class="register__block--label">Password</label>
+                  <div id="group__input">
+                      <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
+                      <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                  </div>
+                  <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+              </div>
+
+                  </div>
+
+                  
+
+                  <!-- error message -->
+              <div class="register__message" id="register__message">
+                  <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+              </div>
+
+              <div class="register__block--cta">
+                  <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
+                  
+                  <!-- registration complete -->
+                  <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+              </div>
+              </div>
 
             </section>
         </form>
     </div>
+    <script src="./js/redirect.js"></script>
+    <script src="./js/admin_update-validations.js"></script>
+    <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

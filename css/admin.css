@@ -238,11 +238,12 @@ form {
 
 .one {
     width: 271.74px;
-    height: 580px;
+    height: 650px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 46px;
     background-color: var(--indigo);
     border: 2px solid var(--black-blue);
     border-radius: 10px;
@@ -347,7 +348,7 @@ form {
 .report .icon_update {
     width: 40px;
     height: 42px;
-    margin-right: 25px;
+    margin-right: 70px;
 }
 
 .report .link_update {
@@ -355,6 +356,29 @@ form {
     font-size: 15px;
     color: var(--light);
 }
+
+.register_nft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 240px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.register_nft .icon_update {
+    width: 40px;
+    height: 42px;
+    margin-right: 12px;
+}
+
+.register_nft .link_update {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--light);
+}
+
 
 
 .update_info .link_update {
@@ -377,15 +401,15 @@ form {
 }
 
 .logout .icon_logout {
-    width: 40px;
-    height: 42px;
-    margin-right: 25px;
+    width: 35px;
+    height: 37px;
+    margin-right: 65px;
 }
 
 .update_info .icon_update {
     width: 40px;
     height: 42px;
-    margin-right: 25px;
+    margin-right: 40px;
 }
 
 .update_info .link_update {
@@ -396,7 +420,7 @@ form {
 .my_nft .icon_update {
     width: 40px;
     height: 42px;
-    margin-right: 25px;
+    margin-right: 67px;
 }
 
 .my_nft .link_update {
