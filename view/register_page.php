@@ -74,7 +74,7 @@
     </header>
 
     <main class="main">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" class="register" id="register">
+        <form action="" method="" class="register" id="register">
 
             <section class="register__title">
                 <h2> Create Account </h2>
@@ -83,7 +83,7 @@
             <section class="register__block one">
                 <!-- group username -->
                 <div class="register__group" id="register__username">
-                    <label for="username" class="register__block--label">Username</label>
+                    <label for="username" name="username" class="register__block--label">Username</label>
                     <div id="group__input">
                         <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
@@ -140,19 +140,11 @@
                 <div class="register__group" id="register__id">
                     <label for="password" class="register__block--label">assigned id</label>
                     <div id="group__input">
-                        <input type="text" name="id" id="id" readonly value='Holi' onmousedown="return false" class="register__block--input">
+                        <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
                     <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                 </div>
-
-                <section class="php__hidden">
-                    <input type="text" name='user_username' class="username__hidden">
-                    <input type="password" name='user_pass' class="password__hidden">
-                    <input type="text" name='user_email' class="email__hidden">
-                    <input type="date" name='user_birth' class="birth__hidden">
-                    <input type="text" name='user_gender' class="gender_hidden">
-                </section>
                 
                 <!-- error message -->
                 <div class="register__message" id="register__message">
@@ -170,31 +162,44 @@
             </section>
 
         </form>
-            <?php
-                    
-                if(isset($_POST['btn_submit'])){
+        <form name='form_hidden' method="POST" class="form__hidden">
+            <input type="text" name="user_id" id="user_id">
+            <input type="text" name="user_username" id="user_username">
+            <input type="text" name="user_password" id="user_password">
+            <input type="text" name="user_email" id="user_email">
+            <input type="text" name="user_birth" id="user_birth">
+            <input type="text" name="user_gender" id="user_gender">
+        </form>   
+        
+        <?php 
+            if( isset($_POST['user_id']) && isset($_POST['user_username']) && isset($_POST['user_password']) && isset($_POST['user_email']) && isset($_POST['user_birth']) && isset($_POST['user_gender']) ) {
+                
+                $user = new User();
+                
+                $user_id = $_POST['user_id'];
+                $user_username = $_POST['user_username'];
+                $user_password = $_POST['user_password'];
+                $user_email = $_POST['user_email'];
+                $user_birth = $_POST['user_birth'];
+                $user_gender = $_POST['user_gender'];
 
-                    $user = new User();
+                $user->setID($user_id);
+                $user->setUsername($user_username);
+                $user->setPassword($user_password);
+                $user->setEmail($user_email);
+                $user->setBirth($user_birth);
+                $user->setGender($user_gender);
 
-                    $user_username = $_POST['user_username'];
-                    $user_pass = $_POST['user_pass'];
-                    $user_email = $_POST['user_email'];
-                    $user_birth = $_POST['user_birth'];
-                    $user_gender = $_POST['user_gender'];
+                $result = $user->addUser();
 
-                    $user->setUsername($user_username);
-                    $user->setPassword($user_pass);
-                    $user->setEmail($user_email);
-                    $user->setBirth($user_birth);
-                    $user->setGender($user_gender);
+                var_dump($result);
+                
 
-                    $result = $user->addUser();
-
-                    var_dump($result);
-                }        
+            }
+                
 
 
-            ?>
+        ?>
 
 
     </main>

@@ -19,7 +19,7 @@ class db_connect {
 
   }
 
-   function sendQuery($query) {
+  function sendQuery($query) {
     return $this->conn->query($query);
   }
 

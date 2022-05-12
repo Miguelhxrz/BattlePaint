@@ -1,20 +1,47 @@
 const register = document.getElementById('register');
 const inputs = document.querySelectorAll('#register input');
+const input_id = document.getElementById('id');
 const input_username = document.getElementById('username');
 const input_password = document.getElementById('password');
 const input_email = document.getElementById('email');
 const input_birth = document.getElementById('birth')
 const input_gender = document.getElementById('gender');
 
-//for php
-const register_hidden = document.getElementById('register_hidden');
-const user_hidden = document.querySelector('.username__hidden');
-const pass_hidden = document.querySelector('.password__hidden');
-const email_hidden = document.querySelector('.email__hidden');
-const birth_hidden = document.querySelector('.birth__hidden');
-const gender_hidden = document.querySelector('.gender_hidden');
+/* |---- PHP Inputs----|*/
 
-// console.log(register_hidden);
+const form_hidden = document.querySelector('.form__hidden'); //-> form
+
+const user_id = document.querySelector('#user_id');
+const user_username = document.querySelector('#user_username');
+const user_password = document.querySelector('#user_password');
+const user_email = document.querySelector('#user_email');
+const user_birth = document.querySelector('#user_birth');
+const user_gender = document.querySelector('#user_gender');
+
+
+
+
+/* |---- Function id ----|*/
+
+const GenerateID = () => {
+
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    let id = '';
+
+    for (let i = 0; i < 16; i++) {
+        id += characters.charAt(Math.floor(Math.random() * characters.length))
+    }
+    
+    return id;
+
+}
+
+let id_user = GenerateID();
+
+
+input_id.value = id_user;
+
 
 const expressions = {
     username: /^[a-zA-Z0-9\_\-]{4,15}$/,
@@ -76,7 +103,7 @@ inputs.forEach((input) => {
 });
 
 register.addEventListener('submit', (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     if(fields.username && fields.birth && fields.gender && fields.email && fields.password) {
 
@@ -89,25 +116,20 @@ register.addEventListener('submit', (event) => {
             icon.classList.remove('register__group--correct');
         });
 
-        user_hidden.value = input_username.value;
-        pass_hidden.value = input_password.value;
-        email_hidden.value = input_email.value;
-        birth_hidden.value = input_birth.value;
-        gender_hidden.value = input_gender.value;
-
-        console.group(
-            console.log(user_hidden.value),
-            console.log(pass_hidden.value),
-            console.log(email_hidden.value),
-            console.log(birth_hidden.value),
-            console.log(gender_hidden.value)
-        );
+        user_id.value = input_id.value;
+        user_username.value = input_username.value;
+        user_password.value = input_password.value;
+        user_email.value = input_email.value;
+        user_birth.value = input_birth.value;
+        user_gender.value = input_gender.value;
 
         setTimeout(() => { 
 
-            // window.location.href = '../view/marketplace.php';
+            document.querySelector('.form__hidden').submit();
 
-        }, 3000)
+            window.location.href = '../view/marketplace.php';
+        
+        },3000)
 
     } else {
         document.getElementById('register__message').classList.add('register__message-active');

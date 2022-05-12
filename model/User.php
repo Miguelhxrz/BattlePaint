@@ -23,7 +23,7 @@ class User {
 
   #setters
 
-  private function setID( $id ) {
+  function setID( $id ) {
     $this->id = $id;
   }
   

@@ -366,7 +366,7 @@ select::placeholder {
     grid-column: span 2;
 }
 
-.php__hidden {
+.form__hidden {
     
     display: none;
 }
