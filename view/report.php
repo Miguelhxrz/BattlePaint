@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/report.css">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/report.css">
+    <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <title>Battle Paint | Reports</title>
 </head>
 
@@ -22,7 +22,7 @@
                 <div class="menu__select">
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Buy">
+                        <a href="marketplace.php" title="Buy">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -31,7 +31,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Rent">
+                        <a href="marketplace.php" title="Rent">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./points.html" title="Conversion">
+                        <a href="points.php" title="Conversion">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -61,7 +61,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./Login_Page.html" title="Connect">
+                        <a href="Login_Page.php" title="Connect">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -80,16 +80,16 @@
             <section class="register">
 
                 <div class="register__block one">
-                <img src="source/img/svg/logoBattlePaint2.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
+                <img src="../source/img/svg/logoBattlePaint2.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
                 
                 <div class="line"></div>
                 <div class="info__user">
                     <div class="username">
-                    <img src="source/img/user.svg" alt="user" class="icon_user">
+                    <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
                     <h3>Username</h3>
                 </div>
                 <div class="username">
-                    <img src="source/img/paint-backets2.png" alt="user" class="icon_pb">
+                    <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
                     <h3>Balance</h3>
                 </div>
                 </div>
@@ -98,20 +98,20 @@
                 </div>
                 <div class="line"></div>
                 <div class="update_info">
-                    <img src="source/img/update.svg" alt="update" class="icon_update">
-                    <a href="admin_update.html" class="link_update">Update info</a>
+                    <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
+                    <a href="admin_update.php" class="link_update">Update info</a>
                 </div>
                 <div class="my_nft">
-                    <img src="source/img/buy.svg" alt="nft" class="icon_update">
-                    <a href="admin.html" class="link_update">My NFTs</a>
+                    <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                    <a href="admin.php" class="link_update">My NFTs</a>
                 </div>
                 <div class="report">
-                    <img src="source/img/buy.svg" alt="nft" class="icon_update">
-                    <a href="report.html" class="link_update">Reports</a>
+                    <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                    <a href="#" class="link_update">Reports</a>
                 </div>
                 <div class="logout">
-                    <img src="source/img/logout_white_24dp.svg" alt="logout" class="icon_logout">
-                    <a href="index.html" class="link_update">Logouts</a>
+                    <img src="../source/img/svg/logout_white_24dp.svg" alt="logout" class="icon_logout">
+                    <a href="../index.php" class="link_update">Logouts</a>
                 </div>
 
                 </div>
