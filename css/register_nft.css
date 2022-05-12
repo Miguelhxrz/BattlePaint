@@ -42,7 +42,6 @@ body {
   width: 100%;
   height: 75px;
   padding: 0px 20px;
-  margin-bottom: 10px;
 }
 
 .header__name {
@@ -182,7 +181,6 @@ a .neon4 {
   height: 100%;
 }
 
-
 .menu__item a {
   color: var(--light);
   text-decoration: none;
@@ -195,6 +193,7 @@ a .neon4 {
     align-items: center;
     width: 100%;
     height: 685px;
+    font-size: 15px;
     background-image: url('../source/img/svg/fondo3.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -205,6 +204,8 @@ a .neon4 {
 
 .register {
     width: 60%;
+    height: 550px;
+    padding: 20px;
     border: 3px solid var(--blue-violet-soft);
     border-radius: 50px 15px;
     background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
@@ -213,53 +214,42 @@ a .neon4 {
 .register__title {
     text-align: center;
     font-size: 18px;
-    margin-top: 25px;
-}
-
-.register_container {
-    display: flex;
-    justify-content: center;
+    margin-top: 10px;
 }
 
 .register__block {
-    height: 25rem;
-    width: 30%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    background-color: transparent;
+  width: 50%;
 }
 
 .one {
-    padding-top: 3rem;
-    margin-left: 5rem;
+  float: left;
 }
 
 .two {
-    padding-top: 3rem;
-    margin-right: 5rem;
+  float: right;
 }
 
-.register__block--son {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: transparent;
-    font-size: 15px;
+.register__group {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
 }
 
 label {
-    display: block;
-    width: 60%;
-    padding: .5rem;
-    background-color: transparent;
+  display: flex;
+  padding: 5px 10px 10px 60px;
+  cursor: pointer;
+}
+
+.group__input {
+  position: relative;
 }
 
 .register__block--input[type='text'],
 .register__block--input[type='number'],
 .register__block--input[type='text'],
 .register__block--input[type='text'] {
-    width: 20rem;
+    width: 80%;
     height: 4rem;
     padding: 0.5rem;
     color: var(--light);
@@ -273,13 +263,8 @@ label {
   background-color: transparent;  
 }
 
-::-webkit-calendar-picker-indicator {
-    background-color: white;
-    border-radius: .3rem;
-}
-
 select {
-    width: 20rem;
+    width: 80%;
     height: 4rem;
     padding: 0.5rem;
     color: var(--light);
@@ -298,85 +283,88 @@ select::placeholder {
     color: white;
 }
 
-
-.register__block--cta {
-    text-align: center;
-    align-items: center;
+.register__input--error {
+  margin-top: 10px;
+  font-size: 12px;
+  display: none;
 }
 
-.register__block--link {
+.register__input--error-active {
+  display: block;
+}
+
+.form__validation--state {
+  position: relative;
+right: 35px;
+z-index: 100;
+font-size: 16px;
+  opacity: 0;
+}
+
+.register__message {
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  background-color: #bb2929;
+  border-radius: 5px;
+  display: none;
+}
+
+.register__message-active {
+  display: block;
+}
+
+.register__block--cta {
+    float: right;
+    width: 55%;
+    text-align: center;
+  }
+  
+  .register__block--link {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px solid var(--light);
     background-color: transparent;
-}
-
-.register__block--button {
+  }
+  
+  .register__block--button {
     width: 20rem;
     height: 5rem;
     padding: 0.5rem;
+    margin-bottom: 10px;
     color: inherit;
     background-color: rgba(255, 255, 255, 20%);
     border: none;
     border-left: 8px solid var(--light);
-    margin-top: 75px;
     font-size: 20px;
 }
 
-.correcto {
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-  width: 96%;
-  height: 100%;
-  background-color: #3FA846;
-  color: white;
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
-  border-radius: 15px;
-  padding: 10px;
+.register__complete {
+  width: 80%;
+  height: 50px;
+  line-height: 40px;
+  margin: 0 auto;
+  background-color: #1ed12d;
+  border-radius: 5px;
+  display: none;
 }
 
-.error {
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-  font-size: 1.4rem;
-  width: 90%;
-  height: 30%;
-  margin: auto;
-  margin-bottom: 15px;
-  background-color: #df1526;
-  color: white;
-  border-radius: 15px;
-  padding: 10px;
-  border-radius: 50px 15px;
+.register__complete-active {
+  display: block;
 }
 
-.error figure {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+/* styles for validations */
+.register__group--correct .form__validation--state {
+  color: #1ed12d;
+  opacity: 1;
 }
 
-.error figure img {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
+.register__group--incorrect .register__block--label {
+  color: #bb2929;
 }
 
-.correcto {
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-  width: 96%;
-  height: 100%;
-  margin: auto;
-  margin-bottom: 15px;
-  background-color: #3FA846;
-  color: white;
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
-  border-radius: 50px 15px;
-  padding: 12px;
+.register__group--incorrect .form__validation--state {
+  color: #bb2929;
+  opacity: 1;
 }

@@ -2,7 +2,7 @@ const register = document.getElementById('register');
 const inputs = document.querySelectorAll('#register input');
 
 const expressions = {
-    username: /^[a-zA-Z0-9\_\-]{4,16}$/,
+    username: /^[a-zA-Z0-9\_\-]{4,15}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^.{4,12}$/
 }
@@ -79,3 +79,12 @@ register.addEventListener('submit', (event) => {
         }, 3000);
     }
 });
+
+var registerData = function () {
+    var usernameData = document.getElementById('username').value;
+    var genderData = document.getElementById('gender').value;
+    var birthData = document.getElementById('birth').value;
+    var emailData = document.getElementById('email').value;
+    var passwordData = document.getElementById('password').value;
+    console.log(usernameData+" "+genderData+" "+birthData+" "+emailData+" "+passwordData+".");
+}

@@ -140,7 +140,8 @@
                 </div>
 
                 <div class="register__block--cta">
-                    <input type="submit" value="Create Account" class="register__block--button">
+                    <button onclick="registerData()" class="register__block--button">Create Account</button>
+                    <!-- <input type="submit" value="Create Account" onclick="getData()" class="register__block--button"> -->
                     <a href="login_page.php" class="register__block--link">Already have an account?</a>
                     <!-- registration complete -->
                     <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>

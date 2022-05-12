@@ -362,10 +362,6 @@ select::placeholder {
     opacity: 1;
 }
 
-.prueba {
-    grid-column: span 2;
-}
-
 /* mediaqueries */
 
 /* end main */
