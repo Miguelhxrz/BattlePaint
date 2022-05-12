@@ -81,7 +81,7 @@
             <section class="register">
 
                 <div class="register__block one">
-                <img src="../source/img/svg/logoBattlePaint2.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
+                <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
                 
                 <div class="line"></div>
                 <div class="info__user">
@@ -107,7 +107,7 @@
                   <a href="#" class="link_update">My NFTs</a>
               </div>
               <div class="register_nft">
-                <img src="source/img/buy.svg" alt="nft" class="icon_update">
+                <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
                 <a href="Register_Nft.php" class="link_update">NFT registration</a>
             </div>
               <div class="report">

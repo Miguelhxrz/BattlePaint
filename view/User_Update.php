@@ -82,7 +82,7 @@
             <section class="register">
 
                 <div class="register__block one">
-                    <img src="../source/img/svg/logoBattlePaint2.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
+                    <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
                     <div class="line"></div>
                     <div class="info__user">
@@ -119,61 +119,61 @@
                         <h2>Update info</h2>
                     </div>
                     <div class="user_update">
-<!-- group username -->
-<div class="register__group" id="register__username">
-    <label for="username" class="register__block--label">Username</label>
-    <div id="group__input">
-        <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
-        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
-    </div>
-    <p class="register__input--error" id="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
-</div>
+                        <!-- group username -->
+                        <div class="register__group" id="register__username">
+                            <label for="username" class="register__block--label">Username</label>
+                            <div id="group__input">
+                                <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
+                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="register__input--error" id="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
+                        </div>
 
 
-                <!-- group email -->
-                <div class="register__group" id="register__email">
-                    <label for="email" class="register__block--label">Email</label>
-                    <div id="group__input">
-                        <input type="email" name="email" id="email" placeholder="Email" class="register__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                        <!-- group email -->
+                        <div class="register__group" id="register__email">
+                            <label for="email" class="register__block--label">Email</label>
+                            <div id="group__input">
+                                <input type="email" name="email" id="email" placeholder="Email" class="register__block--input">
+                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
+                        </div>
+
+                        <!-- group password -->
+                        <div class="register__group" id="register__password">
+                            <label for="password" class="register__block--label">Password</label>
+                            <div id="group__input">
+                                <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
+                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                        </div>
+
                     </div>
-                    <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
-                </div>
 
-                 <!-- group password -->                   
-                 <div class="register__group" id="register__password">
-                    <label for="password" class="register__block--label">Password</label>
-                    <div id="group__input">
-                        <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
-                </div>
 
-                    </div>
-
-                    
 
                     <!-- error message -->
-                <div class="register__message" id="register__message">
-                    <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
-                </div>
+                    <div class="register__message" id="register__message">
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+                    </div>
 
-                <div class="register__block--cta">
-                    <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
-                    
-                    <!-- registration complete -->
-                    <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
-                </div>
+                    <div class="register__block--cta">
+                        <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
+
+                        <!-- registration complete -->
+                        <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+                    </div>
                 </div>
 
             </section>
         </form>
         </div>
-        
-    <script src="./js/redirect.js"></script>
-    <script src="./js/user_update-validations.js"></script>
-    <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
+
+        <script src="./js/redirect.js"></script>
+        <script src="../js/user_update-validations.js"></script>
+        <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
