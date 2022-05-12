@@ -26,13 +26,13 @@
         </nav>
         <section class="boton ">
             <article class="boton__container ">
-                <a href="register_page.html" class="boton__titulo ">Create Account</a>
+                <a href="view/register_page.php" class="boton__titulo ">Create Account</a>
             </article>
         </section>
     </header>
 
     <section class="return__container">
-        <a href="./marketplace.html">
+        <a href="view/marketplace.php">
             <img src="./source/img/svg/marketplace.svg" alt="" title="marketplace">
         </a>
     </section>

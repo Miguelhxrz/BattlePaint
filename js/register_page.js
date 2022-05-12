@@ -17,7 +17,7 @@ const gender_hidden = document.querySelector('.gender_hidden');
 // console.log(register_hidden);
 
 const expressions = {
-    username: /^[a-zA-Z0-9\_\-]{4,16}$/,
+    username: /^[a-zA-Z0-9\_\-]{4,15}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^.{4,12}$/
 }

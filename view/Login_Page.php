@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\Normalize.css">
-    <link rel="stylesheet" href="css\login.css">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Normalize.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <script src="./js/redirect.js"></script>
     <title>Battle Paint | Login</title>
 </head>
@@ -15,7 +15,7 @@
 <body>
     <header class="header">
 
-        <a class="header__name" href="./index.html">
+        <a class="header__name" href="../index.php">
             <h1 class="header__name">Battle Paint</h1>
         </a>
 
@@ -26,7 +26,7 @@
                 <div class="menu__select">
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Buy">
+                        <a href="marketplace.php" title="Buy">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Rent">
+                        <a href="marketplace.php" title="Rent">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="#" title="Points">
+                        <a href="points.php" title="Points">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -65,7 +65,7 @@
                     </li>
 
                     <li class="menu__item">
-                        <a href="./marketplace.html" title="Connect">
+                        <a href="marketplace.php" title="Connect">
                             <span class="neon1"></span>
                             <span class="neon2"></span>
                             <span class="neon3"></span>
@@ -96,7 +96,7 @@
             <div class="login__block--cta">
                 <input type="submit" value=" LOGIN " class="login__block--button">
             </div>
-            <p class="login__register">You don't have an account yet? <a href="./register_page.html"> Resgister now</a></p>
+            <p class="login__register">You don't have an account yet? <a href="register_page.php"> Resgister now</a></p>
         </form>
     </main>
 
