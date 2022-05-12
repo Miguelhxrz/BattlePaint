@@ -366,6 +366,11 @@ select::placeholder {
     grid-column: span 2;
 }
 
+/* #register_hidden {
+    
+    display: none;
+} */
+
 /* mediaqueries */
 
 /* end main */

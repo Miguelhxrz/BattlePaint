@@ -1,3 +1,5 @@
+<?php require_once('../model/User.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Normalize.css">
     <link rel="stylesheet" href="../css/register.css">
-    <link rel="shortcut icon" href="./source/img/logoBattlePaint1.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <title>Battle Paint | Register</title>
 </head>
 
@@ -106,8 +108,8 @@
                         <select name="gender" id="gender" class="register__block--input">
                             <option disabled>Select a gender</option>
                             <option value="other">Other</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
                         </select>
                     </div>
                 </div>
@@ -147,13 +149,43 @@
                 </div>
             </section>
         </form>
+        <form action="POST" name="php_form" id="register_hidden">
+
+            <input type="text" name='user_username' class="username__hidden">
+            <input type="password" name='user_pass' class="password__hidden">
+            <input type="text" name='user_email' class="email__hidden">
+            <input type="date" name='user_birth' class="birth__hidden">
+            <input type="text" name='user_gender' class="gender_hidden">
+
+            <input type="submit" name="submit">
+
+            <?php
+
+                    $user = new User();
+
+                    $user->setUsername($_POST['user_username']);
+                    $user->setPassword($_POST['user_pass']);
+                    $user->setEmail($_POST['user_email']);
+                    $user->setBirth($_POST['user_birth']);
+                    $user->setGender($_POST['user_gender']);
+
+                    $result = $user->addUser();
+
+                    echo "<script>console.log('".$result."')</script>";
+
+
+            ?>
+
+        </form>
+
+
     </main>
 
     <footer>
 
     </footer>
 
-    <script src="../js/register_validations.js"></script>
+    <script src="../js/register_page.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 
