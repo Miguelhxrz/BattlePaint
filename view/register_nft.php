@@ -96,7 +96,7 @@
         <div class="register__group" id="register__name">
           <label for="name" class="register__block--label">Name</label>
           <div id="group__input">
-            <input type="text" name="name" id="name" class="register__block--input">
+            <input type="text" name="name" id="name_nft" class="register__block--input">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
           <p class="register__input--error" id="register__input--error">The name must be from 8 to 15 characters, no special characters or numbers.</p>
@@ -149,7 +149,7 @@
         <div class="register__group" id="register__image">
           <label for="nft">
               <p>Imagen del NFT</p>
-              <input type="file" name="nft_image" id="nft_image" class="register__block--input" accept=".jpg,.png" required onchange="validateImage()">
+              <input type="file" name="nft_image" id="nft_image" class="register__block--input">
             </label>
           </div>
       </section>
@@ -172,12 +172,48 @@
           <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
         </div>
         
-        <button onclick="registerData()" class="register__block--button">Create NFT</button>
+        <input type="submit" name="btn_submit" class="register__block--button" value="Create Account">
           <!-- registration complete -->
           <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
         </div>
       </form>
     </div>
+
+    <form method="post" class="form__hidden">
+      <input type="text" name="token_nft" id="nft__token">
+      <input type="text" name="name_nft" id="nft__name">
+      <input type="text" name="power_nft" id="nft__power">
+      <input type="text" name="nft_class" id="nft__class">
+      <input type="text" name="nft_rank" id="nft__rank">
+      <input type="text" name="nft_owner" id="nft__owner">
+      <input type="text" name="nft_price" id="nft__price">
+    </form>
+
+    <?php 
+            if( isset($_POST['user_id']) && isset($_POST['user_username']) && isset($_POST['user_password']) && isset($_POST['user_email']) && isset($_POST['user_birth']) && isset($_POST['user_gender']) ) {
+                
+                $user = new User();
+                
+                $user_id = $_POST['user_id'];
+                $user_username = $_POST['user_username'];
+                $user_password = $_POST['user_password'];
+                $user_email = $_POST['user_email'];
+                $user_birth = $_POST['user_birth'];
+                $user_gender = $_POST['user_gender'];
+
+                $user->setID($user_id);
+                $user->setUsername($user_username);
+                $user->setPassword($user_password);
+                $user->setEmail($user_email);
+                $user->setBirth($user_birth);
+                $user->setGender($user_gender);
+
+                $result = $user->addUser();
+
+                var_dump($result);
+              
+            }
+        ?>
 
     <script src="../js/redirect.js"></script>
     <script src="../js/register_nft.js"></script>

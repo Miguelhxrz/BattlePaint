@@ -22,7 +22,6 @@ const user_gender = document.querySelector('#user_gender');
 
 
 /* |---- Function id ----|*/
-
 const GenerateID = () => {
 
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
