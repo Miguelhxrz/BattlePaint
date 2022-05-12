@@ -14,8 +14,10 @@
 <body>
     <header class="header">
 
-        <h1 class="header__name">Battle Paint</h1>
-    
+        <a class="header__name" href="../index.php">
+            <h1 class="header__name">Battle Paint</h1>
+        </a>
+
         <nav class="menu__container">
     
             <ul class="menu">

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/character_view.css">
-  <link rel="shortcut icon" href="../source/img/logoBattlePaint1.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
   <script src="../js/redirect.js"></script>
   <title>Battle Paint | Marketplace</title>
 </head>
@@ -21,7 +21,7 @@
         <div class="menu__select">
           
           <li class="menu__item">
-            <a href="./marketplace.html" title="Buy"> 
+            <a href="marketplace.php" title="Buy"> 
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -31,7 +31,7 @@
           </li>
 
           <li class="menu__item">
-            <a href="./marketplace.html" title="Rent"> 
+            <a href="marketplace.php" title="Rent"> 
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -41,7 +41,7 @@
           </li>
 
           <li class="menu__item">
-            <a href="./points.html" title="Points"> 
+            <a href="points.php" title="Points"> 
               <span class="neon1"></span>
               <span class="neon2"></span>
               <span class="neon3"></span>
@@ -64,7 +64,7 @@
         </li>
         
         <li class="menu__item">
-          <a href="./Login_Page.html" title="Connect"> 
+          <a href="Login_Page.php" title="Connect"> 
             <span class="neon1"></span>
             <span class="neon2"></span>
             <span class="neon3"></span>
