@@ -6,7 +6,7 @@ class Nft {
 
   private $token;
   private $name;
-  private $skin;
+  private $power;
   private $nft_class;
   private $nft_rank;
   private $owner;
@@ -20,38 +20,38 @@ class Nft {
 
   #setters
   
-  private function setToken($token) {
+  function setToken($token) {
     $this->token = $token;
   }
 
-  private function setName($name) {
+  function setName($name) {
     $this->name = $name;
   }
 
-  private function setSkin($skin) {
-    $this->skin = $skin;
+  function setPower($power) {
+    $this->power = $power;
   }
 
-  private function setClass($clas) {
+  function setClass($clas) {
     $this->nft_class = $clas;
   }
 
-  private function setRank($rank) {
+  function setRank($rank) {
     $this->nft_rank = $rank;
   }
 
-  private function setOwner($owner) {
+  function setOwner($owner) {
     $this->owner = $owner;
   }
 
-  private function setPrice($price) {
+  function setPrice($price) {
     $this->price = $price;
   }
 
 
   #DataBase Methods
 
-  private function addNft() {
+  function addNft() {
 
     $query = "INSERT INTO `nft`(`token`, `name`, `skin`, `class`, `rank`, `owner`, `price`) VALUES ('".$this->token."','".$this->name."','".$this->skin."','".$this->nft_class."','".$this->nft_rank."','".$this->owner."','".$this->price."')";
 
@@ -65,7 +65,7 @@ class Nft {
 
   }
 
-  private function showNFTS () {
+  function showNFTS () {
 
     $query = "SELECT * FROM `nft`";
 
@@ -84,7 +84,7 @@ class Nft {
 
   }
 
-  private function nftByOwner ( $owner ) {
+   function nftByOwner ( $owner ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$owner."'";
 
@@ -104,7 +104,7 @@ class Nft {
   
   }
 
-  private function nftByPrice ( $price ) {
+  function nftByPrice ( $price ) {
 
     $query = "SELECT * FROM `nft` WHERE `price` = '".$price."'";
 
@@ -125,7 +125,7 @@ class Nft {
   }
 
 
-  private function nftByRank ( $rank ) {
+  function nftByRank ( $rank ) {
 
     $query = "SELECT * FROM `nft` WHERE `rank` = '".$rank."'";
 
@@ -145,7 +145,7 @@ class Nft {
   
   }
 
-  private function nftByBattles ( $battles ) {
+  function nftByBattles ( $battles ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$battles."'";
 
@@ -165,7 +165,7 @@ class Nft {
   
   }
 
-  private function nftByLevel ( $level ) {
+  function nftByLevel ( $level ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$level."'";
 
