@@ -98,9 +98,7 @@
                         <input type="date" name="birth" id="birth" class="register__block--input">
                     </div>
                 </div>
-            </section>
 
-            <section class="register__block two">
                 <!-- group gender -->
                 <div class="register__group" id="register__gender">
                     <label for="gender" class="register__block--label">Gender</label>
@@ -113,7 +111,9 @@
                         </select>
                     </div>
                 </div>
+            </section>
 
+            <section class="register__block two">
                 <!-- group email -->
                 <div class="register__group" id="register__email">
                     <label for="email" class="register__block--label">Email</label>
@@ -122,18 +122,6 @@
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
                     <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
-                </div>
-            </section>
-                    
-            <section class="register__block three">
-                <!-- group password -->                   
-                <div class="register__group" id="register__password">
-                    <label for="password" class="register__block--label">Password</label>
-                    <div id="group__input">
-                        <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                 </div>
 
                 <!-- group id -->                   
@@ -145,7 +133,19 @@
                     </div>
                     <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                 </div>
-                
+
+                <!-- group password -->                   
+                <div class="register__group" id="register__password">
+                    <label for="password" class="register__block--label">Password</label>
+                    <div id="group__input">
+                        <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
+                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                </div>
+            </section>
+                    
+            <section class="register__block three">                
                 <!-- error message -->
                 <div class="register__message" id="register__message">
                     <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
