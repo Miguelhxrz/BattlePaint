@@ -104,11 +104,11 @@
                 <div class="line"></div>
                 <div class="update_info">
                     <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                    <a href="#" class="link_update">Update info</a>
+                    <a href="./admin_update.php" class="link_update">Update info</a>
                 </div>
                 <div class="my_nft">
                     <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                    <a href="admin.php" class="link_update">My NFTs</a>
+                    <a href="./admin.php" class="link_update">My NFTs</a>
                 </div>
                 <div class="my_balance">
                     <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
@@ -171,7 +171,7 @@
                                     <label for="You send">
                                         You sent
                                         <div class="container_select">
-                                            <input type="number" class="register__block--input">
+                                            <input type="number" min="5" max="10" step="5"  class="register__block--input">
                                             <select name="select_coin" id="rank" class="register__block--input">
                                                 <option disabled>Select a coin</option>
                                                 <option value="Paint Backets">Paint Backet<img src="" class="moneda_5" alt=""></option>
@@ -183,7 +183,7 @@
                                     <label for="You Got">
                                         You Got
                                         <div class="container_select">
-                                            <input type="number" class="register__block--input">
+                                            <input type="number" min="5" max="10" step="5"  class="register__block--input">
                                             <select name="select_coin" class="register__block--input">
                                                 <option disabled>Select a coin</option>
                                                 <option value="Paint Backets">Paint Backets
