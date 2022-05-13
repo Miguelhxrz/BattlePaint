@@ -8,12 +8,6 @@
     padding: 0px
 }
 
-
-/* a {
-  color: white;
-  text-decoration: none;
-} */
-
 html {
     font-size: 62.5%
 }
@@ -60,7 +54,7 @@ body {
     width: 100%;
     height: 75px;
     padding: 0px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
 }
 
 .header__name {
