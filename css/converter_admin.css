@@ -1,5 +1,4 @@
 /* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 
 * {
@@ -7,12 +6,6 @@
     margin: 0px;
     padding: 0px
 }
-
-
-/* a {
-  color: white;
-  text-decoration: none;
-} */
 
 html {
     font-size: 62.5%
@@ -60,7 +53,7 @@ body {
     width: 100%;
     height: 75px;
     padding: 0px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
 }
 
 .header__name {
@@ -558,8 +551,19 @@ select::placeholder {
     width: 50%;
 }
 
+.container_converter {
+    width: 40%;
+    height: 400px;
+    margin-left: 50px;
+    padding-top: 30px;
+    color: var(--cta);
+    border: 3px solid var(--blue-violet-soft);
+    border-radius: 30px 15px;
+    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
+}
+
 .converter {
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 
@@ -669,20 +673,20 @@ select::placeholder {
 .line_converter {
     width: 3px;
     height: 400px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     background-color: #fff;
 }
 
 .converter h3 {
     font-size: 30px;
     color: var(--light);
-    margin: auto;
+    /* margin: auto; */
     margin-bottom: 40px;
 }
 
 .container_select {
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 20px;
 }
 
