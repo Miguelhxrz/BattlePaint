@@ -55,11 +55,6 @@ login.addEventListener('submit', (event) => {
     if(fieldsInit.username && fieldsInit.password) {
         login.reset();
 
-        document.getElementById('register__complete').classList.add('register__complete-active');
-        setTimeout(() => {
-            document.getElementById('register__complete').classList.remove('register__complete-active');
-        }, 3000);
-
         document.querySelectorAll('.register__group--correct').forEach((icon) => {
             icon.classList.remove('register__group--correct');
         });

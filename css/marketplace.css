@@ -1,17 +1,11 @@
 /* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px
 }
-
-
-/* a {
-  color: white;
-  text-decoration: none;
-} */
 
 html {
     font-size: 62.5%
@@ -406,7 +400,6 @@ a .icon_logout {
     gap: 32px;
     width: 1255px;
     height: auto;
-    /* border: 1px solid var(--black-blue); */
     margin: 0px auto;
     padding-top: 20px;
 }

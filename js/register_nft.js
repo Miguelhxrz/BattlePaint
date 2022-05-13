@@ -38,10 +38,10 @@ let token = GenerateID();
 
 
 const expressionsNFT = {
-    name: /^[a-zA-Z]{4,15}$/,
-    power: /^[a-zA-Z]{4,15}$/,
-    price: /^[0-9].+$/,
-    owner: /^[a-zA-Z0-9\_\-]{4,15}$/
+    name: /^[a-zA-Z]{8,15}$/,
+    power: /^[0-9]{3,3}$/,
+    price: /^[0-9]{2,5}$/,
+    owner: /^[a-zA-Z0-9]{8,15}$/
 }
 
 const fieldsInitial = {

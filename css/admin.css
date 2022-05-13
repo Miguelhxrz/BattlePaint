@@ -7,10 +7,6 @@
     padding: 0px
 }
 
-/* a {
-  color: white;
-  text-decoration: none;
-} */
 html {
     font-size: 62.5%
 }
@@ -27,29 +23,14 @@ html {
     --dark-violet: #171629;
     --indigo: #1f1d35;
     --grey: #202c33;
-    --gradient: linear-gradient(135deg, #613DC1, #0A88C2);
 }
 
 body {
     font-family: var(--font);
-    background-position: center;
-    background-size: cover;
-    width: 1366px;
-    height: 768px;
-    color: var(--light);
     background-color: var(--dark-violet);
-    overflow-x: hidden;
 }
 
-.main {
-    background-position: center;
-    background-size: cover;
-    height: 768px;
-    width: 1366px;
-    background-image: url("../source/img/svg/fondo3.svg");
-    background-repeat: no-repeat;
-}
-
+/* header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -57,62 +38,60 @@ body {
     width: 100%;
     height: 75px;
     padding: 0px 20px;
-    margin-bottom: 10px;
-  }
-  
-  .header__name {
+    margin-bottom: 50px;
+}
+
+.header__name {
     display: flex;
     align-items: center;
     color: var(--light);
     font-size: 2.5rem;
     letter-spacing: 5px;
-    text-shadow: 0 0 10px var(--blue-violet-soft),
-                 0 0 40px var(--blue-violet-soft),
-                 0 0 80px var(--blue-violet-soft);
+    text-shadow: 0 0 10px var(--blue-violet-soft), 0 0 40px var(--blue-violet-soft), 0 0 80px var(--blue-violet-soft);
     width: 50%;
     height: 100%;
-  }
-  
-  .menu__user {
+    text-decoration: none;
+}
+
+.menu__user {
     width: 50%;
     height: 100%;
-  }
-  
-  .menu__container {
+}
+
+.menu__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
     list-style: none;
-  }
-  
-  .menu {
+}
+
+.menu {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     list-style: none;
-  }
-  
-  .menu__select {
+}
+
+.menu__select {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-  
-  .menu__user {
+}
+
+.menu__user {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  
-  
-  .menu__item a{
+}
+
+.menu__item a {
     position: relative;
     display: inline-block;
     padding: 10px 22px;
@@ -123,88 +102,95 @@ body {
     text-decoration: none;
     margin-right: 20px;
     transition: 0.2s;
-  }
-  
-  .menu__item a:hover{
+}
+
+.menu__item a:hover {
     background-color: var(--blue-violet-soft);
-    box-shadow:  0 0 25px var(--blue-violet-soft), 
-                 0 0 50px var(--blue-violet-soft), 
-                 0 0 75px var(--blue-violet-soft);
+    box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
     transition-delay: 1s;
-  }
-  
-  a span {
+}
+
+a span {
     position: absolute;
     display: block;
-  }
-  
-  a .neon1 {
+}
+
+a .neon1 {
     top: 0%;
     left: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon1 {
+    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon1 {
     left: 100%;
     transition: 1s;
-  }
-  
-  a .neon2 {
+}
+
+a .neon2 {
     top: -100%;
     right: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon2 {
+    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon2 {
     top: 100%;
     transition: 1s;
     transition-delay: .25s;
-  }
-  
-  a .neon3 {
+}
+
+a .neon3 {
     bottom: 0%;
     right: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon3 {
+    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon3 {
     right: 100%;
     transition: 1s;
     transition-delay: .5s;
-  }
-  
-  a .neon4 {
+}
+
+a .neon4 {
     bottom: -100%;
     left: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
-  }
-  
-  .menu__item a:hover .neon4 {
+    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon4 {
     bottom: 100%;
     transition: 1s;
     transition-delay: .75s;
-  }
-  
-  .menu__container {
+}
+
+.menu__container {
     width: 100%;
     height: 100%;
-  }
-  
-  
-  .menu__item a {
+}
+
+.menu__item a {
     color: var(--light);
     text-decoration: none;
-  }
-  
-  /* |---- Fin del menu ----| */
+}
+/* end header */
+
+.main {
+    width: 100%;
+    height: 786px;
+    font-size: 15px;
+    color: var(--light);
+    background-image: url('../source/img/svg/fondo3.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -29px;
+}
 
 form {
     height: 100%;
@@ -224,7 +210,6 @@ form {
 .register__title {
     text-align: center;
     font-size: 18px;
-    padding-bottom: 20px;
 }
 
 .register__block {
@@ -379,11 +364,10 @@ form {
     color: var(--light);
 }
 
-
-
 .update_info .link_update {
     color: var(--light);
 }
+
 .logout {
     display: flex;
     align-items: center;
@@ -434,8 +418,6 @@ form {
     height: 37px;
     margin-right: 35px;
 }
-
-
 
 .acount h3 {
     margin-top: 25px;
@@ -511,8 +493,6 @@ select::placeholder {
     color: white;
 }
 
-
-
 .register__block--cta {
     text-align: center;
     align-items: center;
@@ -543,16 +523,15 @@ select::placeholder {
 
 }
 
-
+/* cards NFTs */
 .nft__container {
     display: grid;
     grid-template: repeat(1, 360px)/ repeat(4, 290px);
     gap: 32px;
-    width: 1255px;
+    width: 100%;
     height: auto;
-    /* border: 1px solid var(--black-blue); */
     margin: 0px auto;
-    margin-left: 35px;
+    padding: 20px 35px;
 }
 
 .nft__card {
@@ -566,14 +545,12 @@ select::placeholder {
 }
 
 .nft__card:hover {
-    box-shadow: 0 0 25px var(--blue-violet-soft),
-        0 0 50px var(--blue-violet-soft),
-        0 0 75px var(--blue-violet-soft);
+    box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
 }
 
 .nft__img {
     position: absolute;
-    width: 290px;
+    width: 100%;
     z-index: 0;
 }
 
@@ -660,7 +637,6 @@ select::placeholder {
     font-size: 1.8rem;
 }
 
-
 .nft__card:nth-child(2) {
     background-image: linear-gradient(180deg, rgba(219, 165, 20, 0) 0%, rgba(252, 194, 1, 1) 100%);
     ;
@@ -668,9 +644,7 @@ select::placeholder {
 }
 
 .nft__card:nth-child(2):hover {
-    box-shadow: 0 0 25px #dba514,
-        0 0 50px #dba514,
-        0 0 75px #dba514;
+    box-shadow: 0 0 25px #dba514, 0 0 50px #dba514, 0 0 75px #dba514;
 }
 
 .nft__card:nth-child(2) .nft__rank {
@@ -686,16 +660,13 @@ select::placeholder {
     color: #856a20;
 }
 
-
 .nft__card:nth-child(3) {
     background-image: linear-gradient(180deg, rgba(203, 9, 9, 0) 0%, rgba(132, 25, 34, 1) 100%);
     border: 3px solid #841922;
 }
 
 .nft__card:nth-child(3):hover {
-    box-shadow: 0 0 25px #841922,
-        0 0 50px #841922,
-        0 0 75px #841922;
+    box-shadow: 0 0 25px #841922, 0 0 50px #841922, 0 0 75px #841922;
 }
 
 .nft__card:nth-child(3) .nft__rank {
@@ -710,3 +681,4 @@ select::placeholder {
 .nft__card:nth-child(3) .nft__name p {
     color: #c52634;
 }
+/* fin cards NFTs */

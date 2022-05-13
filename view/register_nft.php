@@ -99,17 +99,17 @@
             <input type="text" name="name" id="name_nft" class="register__block--input">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
-          <p class="register__input--error" id="register__input--error">The name must be from 4 to 15 characters, no special characters or numbers.</p>
+          <p class="register__input--error" id="register__input--error">The name must be from 8 to 15 characters, no special characters or numbers.</p>
         </div>
 
         <!-- power -->
         <div class="register__group" id="register__power">
           <label for="battle_power" class="register__block--label">Battle power</label>
           <div id="group__input">
-            <input type="text" name="power" id="power" class="register__block--input">
+            <input type="number" name="power" id="power" class="register__block--input">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
-          <p class="register__input--error" id="register__input--error">The power of attorney must be 4 to 15 characters long, without special characters or numbers.</p>
+          <p class="register__input--error" id="register__input--error">You must enter a valid power of attorney.</p>
         </div>
         
         <!-- rank -->
