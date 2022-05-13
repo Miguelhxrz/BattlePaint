@@ -248,7 +248,7 @@ form {
     top: 21px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 46px;
+    margin-top: 56px;
     background-color: var(--indigo);
     border: 2px solid var(--black-blue);
     border-radius: 10px;
@@ -270,7 +270,7 @@ form {
 }
 
 .info__user {
-    height: 100px;
+    height: 156px;
     width: 240px;
     border-radius: 5px;
     margin: auto;
@@ -278,6 +278,20 @@ form {
     border: 3px solid var(--blue-violet-soft);
     border-radius: 30px 15px;
     background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
+}
+
+.one {
+    width: 271.74px;
+    height: 760px;
+    left: 20px;
+    top: 21px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 56px;
+    background-color: var(--indigo);
+    border: 2px solid var(--black-blue);
+    border-radius: 10px;
+    box-shadow: 0 0 2px var(--black-blue), 0 0 4px var(--black-blue), 0 0 6px var(--black-blue);
 }
 
 .info__user .icon_user {

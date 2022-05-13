@@ -89,6 +89,10 @@
                             <h3>Username</h3>
                         </div>
                         <div class="username">
+                            <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
+                            <h3>ID de usuario</h3>
+                        </div>
+                        <div class="username">
                             <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
                             <h3>Balance</h3>
                         </div>
@@ -107,7 +111,7 @@
                     </div>
                     <div class="my_balance">
                         <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                        <a href="./converter.php" class="link_update">Balance</a>
+                        <a href="./converter_admin.php" class="link_update">Balance</a>
                     </div>
                     <div class="register_nft">
                         <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">

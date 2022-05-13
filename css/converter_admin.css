@@ -1,6 +1,7 @@
 /* |---- Imporatando la fuente ----| */
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -141,7 +142,7 @@ a .neon1 {
     left: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(90deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon1 {
@@ -154,7 +155,7 @@ a .neon2 {
     right: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(180deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon2 {
@@ -168,7 +169,7 @@ a .neon3 {
     right: -100%;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(2700deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon3 {
@@ -182,7 +183,7 @@ a .neon4 {
     left: 0%;
     width: 2px;
     height: 100%;
-    background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft));
+    background-image: linear-gradient(360deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon4 {
@@ -235,11 +236,12 @@ form {
 
 .one {
     width: 271.74px;
-    height: 520px;
+    height: 760px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 56px;
     background-color: var(--indigo);
     border: 2px solid var(--black-blue);
     border-radius: 10px;
@@ -261,7 +263,7 @@ form {
 }
 
 .info__user {
-    height: 100px;
+    height: 156px;
     width: 240px;
     border-radius: 5px;
     margin: auto;
@@ -325,9 +327,30 @@ form {
     width: 240px;
     border-radius: 5px;
     margin-top: 20px;
-    border: 3px solid var(--black-blue);
+}
+
+.my_balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 240px;
+    margin-top: 20px;
     border-radius: 30px 15px;
     background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--black-blue) 100%);
+    border: 3px solid var(--black-blue);
+}
+
+.my_balance .icon_update {
+    width: 40px;
+    height: 42px;
+    margin-right: 71px;
+}
+
+.my_balance .link_update {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--light);
 }
 
 .report {
@@ -365,7 +388,7 @@ form {
 .register_nft .icon_update {
     width: 40px;
     height: 42px;
-    margin-right: 25px;
+    margin-right: 12px;
 }
 
 .register_nft .link_update {
@@ -397,13 +420,13 @@ form {
 .logout .icon_logout {
     width: 35px;
     height: 37px;
-    margin-right: 35px;
+    margin-right: 65px;
 }
 
 .update_info .icon_update {
     width: 40px;
     height: 42px;
-    margin-right: 15px;
+    margin-right: 40px;
 }
 
 .update_info .link_update {
@@ -414,7 +437,7 @@ form {
 .my_nft .icon_update {
     width: 40px;
     height: 42px;
-    margin-right: 40px;
+    margin-right: 67px;
 }
 
 .my_nft .link_update {
@@ -476,7 +499,6 @@ select {
     color: var(--cta);
     background-color: rgba(255, 255, 255, 20%);
     box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
-    border-radius: 1rem;
     border-color: white;
 }
 
@@ -507,6 +529,8 @@ select::placeholder {
 .moneda_4 {
     height: 40px;
     width: 40px;
+    margin-top: 5px;
+    margin: auto
 }
 
 .moneda_5 {
@@ -531,20 +555,24 @@ select::placeholder {
 }
 
 .container_balance {
-    width: 70%;
+    width: 50%;
 }
 
 .converter {
-    width: 30%;
+    width: 50%;
+    margin: auto;
 }
 
 .balance {
     display: flex;
     flex-direction: column;
     width: 40%;
-    background-color: darkgrey;
+    color: var(--cta);
+    border: 3px solid var(--blue-violet-soft);
+    border-radius: 30px 15px;
+    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
     display: flex;
-    margin-left: 10%;
+    margin: auto;
 }
 
 .balance_a {
@@ -561,7 +589,7 @@ select::placeholder {
 
 .your_coins {
     font-size: 2rem;
-    color: black;
+    color: var(--cta);
 }
 
 .moneda_1 {
@@ -579,20 +607,82 @@ select::placeholder {
 
 .balance_b h4 {
     display: flex;
+    font-size: 6rem;
 }
 
 .valor {
+    width: 350px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 10%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #613DC1;
+    opacity: 0.8;
+    border-radius: 5px;
 }
 
 .valor h4 {
     font-size: 6rem;
+    color: var(--cta);
+    margin: auto;
 }
 
 .valor img {
     height: 60px;
     width: 60px;
+}
+
+.button_converter {
+    background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
+    font-size: 30px;
+    height: 50px;
+    width: 250px;
+    color: var(--light);
+    border: none;
+    margin-top: 30px;
+    border-radius: 30px 10px;
+}
+
+.compra {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
+    height: 50px;
+    width: 300px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 30px 10px;
+}
+
+.compra h4 {
+    font-size: 30px;
+    color: var(--light);
+    margin: auto;
+}
+
+.line_converter {
+    width: 3px;
+    height: 400px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.converter h3 {
+    font-size: 30px;
+    color: var(--light);
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.container_select {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.register__block--input {
+    background-color: rgba(255, 255, 255, 20%);
+    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
+    border-color: white;
 }

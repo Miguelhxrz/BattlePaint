@@ -238,12 +238,12 @@ form {
 
 .one {
     width: 271.74px;
-    height: 710px;
+    height: 760px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 46px;
+    margin-top: 56px;
     background-color: var(--indigo);
     border: 2px solid var(--black-blue);
     border-radius: 10px;
@@ -265,7 +265,7 @@ form {
 }
 
 .info__user {
-    height: 100px;
+    height: 156px;
     width: 240px;
     border-radius: 5px;
     margin: auto;

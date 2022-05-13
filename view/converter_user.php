@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/converter_user.css">
     <link rel="shortcut icon" href="../source/img/logoBattlePaint1.png" type="image/x-icon">
     <script src="../js/redirect.js"></script>
-    <title>Battle Paint | My NFTs</title>
+    <title>Battle Paint | Balance</title>
 </head>
 
 <body>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="my_balance">
                     <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                    <a href="./converter_user.php" class="link_update">Balance</a>
+                    <a href="./converter.php" class="link_update">Balance</a>
                 </div>
                 <div class="logout">
                     <img src="../source/img/svg/logout_white_24dp.svg" alt="logout" class="icon_logout">
@@ -122,99 +122,74 @@
             </div>
 
             <div class="register__block two">
-                <div class="register__title">
-                    <h2>My NFTs</h2>
-                </div>
                 <div class="user_update">
 
                     <section class="nft__container">
-
-                        <article class="nft__card">
-                            <figure class="nft__img">
-                                <img src="../source/img/Characters/test3.png" alt="Shanna">
-                            </figure>
-                            <div class="nft__rank a">
-                                <h4>A</h4>
-                            </div>
-                            <div class="nft__name a">
-                                <h3>Shanna</h3>
-                                <p>• Dinasty's Ranger •</p>
-                            </div>
-                            <div class="nft__price">
-                                <article class="price">
-                                    <h4>Price PB:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                                        <h4>????</h4>
+                        <article class="container_balance">
+                            <div class="conta_balance">
+                                <div class="balance">
+                                    <div class="your_coins">
+                                        <h3 class="your_coins">
+                                            Your Coins
+                                        </h3>
                                     </div>
-                                </article>
-                                <article class="price">
-                                    <h4>Price USD:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/usd.png" alt="paint bucket icon">
-                                        <h4>????</h4>
+                                    <div class="balance_a">
+                                        <h4>10</h4>
+                                        <img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="Paint Backets">
                                     </div>
-                                </article>
+                                    <div class="balance_b">
+                                        <h4>1000</h4>
+                                        <img src="../source/img/usd.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="valor">
+                                    <h4>1 </h4><img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="">
+                                    <h4> = 100</h4><img src="../source/img/svg/paint-point.svg" class="moneda_2" alt="">
+                                </div>
+                                <div class="compra">
+                                    <h4>Buy</h4>
+                                    <img src="../source/img/svg/paint-backets.svg" class="moneda_4" alt="">
+                                </div>
                             </div>
                         </article>
 
-                        <article class="nft__card">
-                            <figure class="nft__img">
-                                <img src="../source/img/Characters/test2.png" alt="Raidon">
-                            </figure>
-                            <div class="nft__rank ">
-                                <h4>S</h4>
-                            </div>
-                            <div class="nft__name">
-                                <h3>Raidon</h3>
-                                <p>• Galaxy Ranger •</p>
-                            </div>
-                            <div class="nft__price">
-                                <article class="price">
-                                    <h4>Price PB:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                                <article class="price">
-                                    <h4>Price USD:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/usd.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
+                        <article class="line_converter"></article>
+
+                        <article class="container_converter">
+                            <div class="converter">
+                                <h3>Converter</h3>
+                                <form action="">
+                                    <label for="You send">
+                                        You sent
+                                        <div class="container_select">
+                                            <input type="number" class="register__block--input">
+                                            <select name="select_coin" id="rank" class="register__block--input">
+                                                <option disabled>Select a coin</option>
+                                                <option value="Paint Backets">Paint Backet<img src="" class="moneda_5" alt=""></option>
+                                                <option value="Paint Points">Paint Points<img src="" class="moneda_6" alt=""></option>
+                                            </select>
+                                        </div>
+                                    </label>
+
+                                    <label for="You Got">
+                                        You Got
+                                        <div class="container_select">
+                                            <input type="number" class="register__block--input">
+                                            <select name="select_coin" class="register__block--input">
+                                                <option disabled>Select a coin</option>
+                                                <option value="Paint Backets">Paint Backets
+                                                    <img src="../source/img/svg/paint-backets.svg" class="moneda_7" alt="">
+                                                </option>
+                                                <option value="Paint Points">Paint Points
+                                                    <img src="../source/img/svg/paint-point.svg" class="moneda_8" alt="">
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </label>
+                                    <input type="submit" value="Converter" class="button_converter">
                             </div>
                         </article>
 
-                        <article class="nft__card">
-                            <figure class="nft__img">
-                                <img src="../source/img/Characters/test4.png" alt="Veinka">
-                            </figure>
-                            <div class="nft__rank ">
-                                <h4>B</h4>
-                            </div>
-                            <div class="nft__name">
-                                <h3>Veinka</h3>
-                                <p>• The protective gunner •</p>
-                            </div>
-                            <div class="nft__price">
-                                <article class="price">
-                                    <h4>Price PB:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                                <article class="price">
-                                    <h4>Price USD:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/usd.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                            </div>
-                        </article>
                     </section>
 
                 </div>
