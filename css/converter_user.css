@@ -654,6 +654,11 @@ select::placeholder {
     border-radius: 30px 10px;
 }
 
+.compra a {
+    text-decoration: none;
+    margin: auto;
+}
+
 .compra h4 {
     font-size: 30px;
     color: var(--light);
