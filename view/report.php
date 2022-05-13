@@ -135,14 +135,15 @@
                     <div class="user_update">
                         <div class="register__block--son">
                             <div class="register__block--cta">
-                                <input type="submit" value="usuarios registrados" class="register__block--button"> <br><br>
+                                <a href="../source/reports/report-users.pdf" target="_blank" class="register__block--button">usuarios registrados</a>
                             </div>
 
                             <div class="register__block--cta">
-                                <input type="submit" value="NFTs registradas" class="register__block--button"> <br><br>
+                                <a href="../source/reports/report-nfts.pdf" target="_blank" class="register__block--button">NFTs registradas</a>
                             </div>
+                            
                             <div class="register__block--cta">
-                                <input type="submit" value="Monedas compradas" class="register__block--button"> <br><br>
+                                <a href="../source/reports/report-points.pdf" target="_blank" class="register__block--button">Monedas compradas</a>
                             </div>
                         </div>
 
