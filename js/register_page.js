@@ -43,9 +43,9 @@ input_id.value = id_user;
 
 
 const expressions = {
-    username: /^[a-zA-Z0-9\_\-]{4,15}$/,
+    username: /^[a-zA-Z0-9\_\-]{8,15}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password: /^.{4,12}$/
+    password: /^.{8,12}$/
 }
 
 const fields = {
