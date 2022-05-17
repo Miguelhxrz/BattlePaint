@@ -673,20 +673,17 @@ select::placeholder {
 .line_converter {
     width: 3px;
     height: 400px;
-    /* margin-right: 10px; */
     background-color: #fff;
 }
 
 .converter h3 {
     font-size: 30px;
     color: var(--light);
-    /* margin: auto; */
     margin-bottom: 40px;
 }
 
 .container_select {
     display: flex;
-    /* margin: auto; */
     margin-top: 20px;
 }
 
