@@ -1,7 +1,6 @@
 /* |---- Imporatando la fuente ----| */
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -53,6 +52,9 @@ body {
     background-repeat: no-repeat;
 }
 
+
+/* header */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -60,7 +62,7 @@ body {
     width: 100%;
     height: 75px;
     padding: 0px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .header__name {
@@ -106,11 +108,12 @@ body {
 }
 
 .menu__user {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 
 .menu__item a {
@@ -202,9 +205,26 @@ a .neon4 {
     text-decoration: none;
 }
 
+.logo_admin {
+    width: 50px;
+    height: 50px;
+}
+
+.menu__item_admin {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__item_admin h5 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
 
 /* end header */
-
 
 .register {
     display: flex;
@@ -327,7 +347,6 @@ a .neon4 {
     border-radius: 5px;
     margin-top: 20px;
 }
-
 
 .my_balance {
     display: flex;
@@ -480,16 +499,10 @@ select::placeholder {
     color: white;
 }
 
-
-
-
 .user_update {
     display: flex;
     margin-top: 70px;
 }
-
-
-
 
 .register__input--error {
     margin-top: 10px;
@@ -528,7 +541,6 @@ select::placeholder {
     align-items: center;
 }
 
-
 .register__block--button {
     height: 40px;
     width: 400px;
@@ -562,7 +574,9 @@ select::placeholder {
     display: block;
 }
 
+
 /* styles for validations */
+
 .register__group--correct .form__validation--state {
     color: #1ed12d;
     opacity: 1;
