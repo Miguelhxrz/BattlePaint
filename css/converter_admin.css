@@ -760,7 +760,8 @@ label {
 }
 
 /* modal PP to PB */
-.modal1 {
+.modal1, .modal2, .modal3 {
+    width: 100%;
     position: fixed;
     display: flex;
     top: 0;
@@ -787,14 +788,14 @@ label {
     border-radius: 50px 15px;
 }
 
-.modal__close {
+.modal__close, .modal2__close, .modal3__close {
     float: right;
     cursor: pointer;
     transition: box-shadow .3s;
     border-radius: 100%;
 }
 
-.modal__close:hover {
+.modal__close:hover, .modal2__close:hover, .modal3__close:hover {
     box-shadow: 0 0 20px var(--black-blue);
 }
 
