@@ -41,10 +41,9 @@
                     <div id="group__input">
                         <input type="date" name="birth" id="birth" class="register__block--input">
                     </div>
+                    <p class="register__input--error" id="register__input--error">Must be over 18 years of age.</p>
                 </div>
-            </section>
 
-            <section class="register__block two">
                 <!-- group gender -->
                 <div class="register__group" id="register__gender">
                     <label for="gender" class="register__block--label">Gender</label>
@@ -57,7 +56,9 @@
                         </select>
                     </div>
                 </div>
+            </section>
 
+            <section class="register__block two">
                 <!-- group email -->
                 <div class="register__group" id="register__email">
                     <label for="email" class="register__block--label">Email</label>
@@ -67,9 +68,7 @@
                     </div>
                     <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
                 </div>
-            </section>
-                    
-            <section class="register__block three">
+
                 <!-- group password -->                   
                 <div class="register__group" id="register__password">
                     <label for="password" class="register__block--label">Password</label>
@@ -77,19 +76,27 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
+<<<<<<< HEAD
                     <p class="register__input--error" id="register__input--error">The password must be from 8 to 20 digits.</p>
+=======
+                    <p class="register__input--error" id="register__input--error">The password must be from 8 to 15 digits.</p>
+>>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
                 </div>
 
                 <!-- group id -->                   
                 <div class="register__group" id="register__id">
-                    <label for="password" class="register__block--label">assigned id</label>
+                    <label for="id" class="register__block--label">Assigned ID</label>
                     <div id="group__input">
                         <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
+<<<<<<< HEAD
                     <!-- <p class="register__input--error" id="register__input--error">The password must be from 8 to 20 digits.</p> -->
+=======
+>>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
                 </div>
-                
+            </section>
+                    
+            <section class="register__block three">                
                 <!-- error message -->
                 <div class="register__message" id="register__message">
                     <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
