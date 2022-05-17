@@ -22,6 +22,7 @@ const user_gender = document.querySelector('#user_gender');
 
 
 /* |---- Function id ----|*/
+
 const GenerateID = () => {
 
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -43,9 +44,9 @@ input_id.value = id_user;
 
 
 const expressions = {
-    username: /^[a-zA-Z0-9\_\-]{4,15}$/,
+    username: /^[a-zA-Z0-9\_\-]{6,16}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password: /^.{4,12}$/
+    password: /^.{8,20}$/
 }
 
 const fields = {
@@ -126,7 +127,7 @@ register.addEventListener('submit', (event) => {
 
             document.querySelector('.form__hidden').submit();
 
-            window.location.href = '../view/marketplace.php';
+            window.location.href = '../view/login_page.php';
         
         },3000)
 

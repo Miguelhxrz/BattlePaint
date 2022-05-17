@@ -2,11 +2,11 @@
 const registerNft = document.getElementById('register');
 const inputsNft = document.querySelectorAll('#register input');
 const input_name = document.getElementById('name_nft');
-const input_power = document.getElementById('power');
-const input_rank = document.getElementById('rank');
-const input_class = document.getElementById('class');
-const input_price = document.getElementById('price');
-const input_owner = document.getElementById('owner');
+const input_power = document.getElementById('power_nft');
+const input_rank = document.getElementById('rank_nft');
+const input_class = document.getElementById('class_nft');
+const input_price = document.getElementById('price_nft');
+const input_owner = document.getElementById('owner_nft');
 
 /* |---- for PHP ----|*/
 const nft_token = document.querySelector('#nft__token');
@@ -17,7 +17,7 @@ const nft_rank = document.querySelector('#nft__rank');
 const nft_owner = document.querySelector('#nft__owner');
 const nft_price = document.querySelector('#nft__price');
 
-// console.log(input_price);
+console.log(input_price.value);
 
 /* |---- Function token ----|*/
 const GenerateID = () => {
@@ -38,10 +38,10 @@ let token = GenerateID();
 
 
 const expressionsNFT = {
-    name: /^[a-zA-Z]{8,15}$/,
-    power: /^[0-9]{3,3}$/,
+    name: /^[a-zA-Z]{4,15}$/,
+    power: /^[0-9]{3,4}$/,
     price: /^[0-9]{2,5}$/,
-    owner: /^[a-zA-Z0-9]{8,15}$/
+    owner: /^[a-zA-Z0-9]{4,15}$/
 }
 
 const fieldsInitial = {
@@ -92,14 +92,14 @@ const validateFieldsNFT = (expressionNFT, inputNFT, fieldNFT) => {
     }
 }
 
-/* function validateImage() {
+function validateImage() {
     let archive = document.getElementById('nft_image').value,
         extension = archive.substring(archive.lastIndexOf('.'), archivo.length);
 
     if(document.getElementById('nft_image').getAttribute('accept').split(',').indexOf(extension) < 0) {
         alert('Archivo inválido. No se permite la extensión ' + extension);
     }
-} */
+}
 
 inputsNft.forEach((input) => {
     input.addEventListener('keyup', validateFormNfts);
@@ -121,27 +121,9 @@ registerNft.addEventListener('submit', (event) => {
             icon.classList.remove('register__group--correct');
         });
 
-
-        nft_token.value = token;
-        nft_name.value = input_name.value;
-        nft_power.value = input_power.value;
-        nft_class.value = input_class.value;
-        nft_rank.value = input_rank.value;
-        nft_owner.value = input_owner.value;
-        nft_price.value = input_price.value;
-
-        console.log(nft_name.value); //no sirve
-        console.log(nft_power.value);
-        console.log(nft_class.value);
-        console.log(nft_rank.value);
-        console.log(nft_owner.value);
-        console.log(nft_price.value);
-
         setTimeout(() => { 
 
-            // document.querySelector('.form__hidden').submit();
-
-            // window.location.href = '../view/marketplace.php';
+            window.location.href = '../view/marketplace.php';
         
         },3000)
 
