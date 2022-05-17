@@ -195,7 +195,7 @@ a .neon4 {
 
 .register {
     width: 60%;
-    height: 560px;
+    height: 580px;
     margin: 0 auto;
     text-align: center;
     background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--blue-violet-soft) 100%);
@@ -216,15 +216,18 @@ a .neon4 {
 }
 
 .one {
+    height: 320px;
     float: left;
 }
 
 .two {
+    height: 320px;
     float: right;
 }
 
 .three {
-    margin-top: 250px;
+    height: 120px;
+    margin-top: 350px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -299,7 +302,7 @@ select::placeholder {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    margin: 10px auto;
+    margin: 10px auto 20px;
     background-color: #bb2929;
     border-radius: 5px;
     display: none;
