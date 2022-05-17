@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/admin.css">
   <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
-  <title>Battle Paint | My NFTs</title>
+  <title>Battle Paint | Admin Page</title>
 </head>
 
 <body>
@@ -49,22 +49,9 @@
         </div>
 
         <div class="menu__user">
-          <li class="menu__item">
-            <a href="#" title="Support">
-              <span class="neon1"></span>
-              <span class="neon2"></span>
-              <span class="neon3"></span>
-              <span class="neon4"></span> Support
-            </a>
-          </li>
-
-          <li class="menu__item">
-            <a href="Login_Page.php" title="Connect">
-              <span class="neon1"></span>
-              <span class="neon2"></span>
-              <span class="neon3"></span>
-              <span class="neon4"></span> Login
-            </a>
+          <li class="menu__item_admin" >
+            <a href="./admin.php"><img src="../source/img/svg/admin.svg" alt="Logo Admin" class="logo_admin"></a>
+            <h5>Admin</h5>
           </li>
         </div>
       </ul>
@@ -79,11 +66,11 @@
           <div class="line"></div>
           <div class="info__user">
             <div class="username">
-              <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-              <h3>Username</h3>
+              <img src="../source/img/svg/admin.svg" alt="user" class="icon_user">
+              <h3>Admin</h3>
             </div>
             <div class="username">
-              <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
+              <img src="../source/img/svg/admin.svg" alt="user" class="icon_user">
               <h3>ID de usuario</h3>
             </div>
 

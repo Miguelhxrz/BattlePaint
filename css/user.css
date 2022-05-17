@@ -1,6 +1,6 @@
 /* |---- Imporatando la fuente ----| */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -40,6 +40,9 @@ body {
     background-size: cover;
     background-position-y: -129px;
 }
+
+
+/* header */
 
 .header {
     display: flex;
@@ -94,11 +97,12 @@ body {
 }
 
 .menu__user {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 
 .menu__item a {
@@ -189,6 +193,26 @@ a .neon4 {
     color: var(--light);
     text-decoration: none;
 }
+
+.logo_admin {
+    width: 50px;
+    height: 50px;
+}
+
+.menu__item_admin {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__item_admin h5 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
 /* end header */
 
 form {
@@ -383,8 +407,6 @@ form {
     color: var(--light);
 }
 
-
-
 .update_info .link_update {
     color: var(--light);
 }
@@ -426,7 +448,6 @@ form {
     width: 40px;
     height: 42px;
     margin-right: 40px;
-
 }
 
 .my_nft .link_update {
@@ -558,12 +579,14 @@ textarea::placeholder {
     color: var(--light);
 }
 
+
 /* cards NFTs */
+
 .nft__container {
     display: grid;
     grid-template: repeat(1, 360px)/ repeat(4, 290px);
     gap: 32px;
-    width: 1255px;
+    width: 0px;
     height: auto;
     margin: 0px auto;
     margin-left: 35px;
@@ -716,4 +739,6 @@ textarea::placeholder {
 .nft__card:nth-child(3) .nft__name p {
     color: #c52634;
 }
+
+
 /* fin cards NFTs */

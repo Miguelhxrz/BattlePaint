@@ -88,7 +88,7 @@
                         <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="register__input--error" id="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
+                    <p class="register__input--error" id="register__input--error">Username must be 8 to 15 characters (only a-z, 0-9, _).</p>
                 </div>
 
                 <!-- group birth -->
@@ -97,6 +97,7 @@
                     <div id="group__input">
                         <input type="date" name="birth" id="birth" class="register__block--input">
                     </div>
+                    <p class="register__input--error" id="register__input--error">Must be over 18 years of age.</p>
                 </div>
 
                 <!-- group gender -->
@@ -124,16 +125,6 @@
                     <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
                 </div>
 
-                <!-- group id -->                   
-                <div class="register__group" id="register__id">
-                    <label for="password" class="register__block--label">assigned id</label>
-                    <div id="group__input">
-                        <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
-                </div>
-
                 <!-- group password -->                   
                 <div class="register__group" id="register__password">
                     <label for="password" class="register__block--label">Password</label>
@@ -141,7 +132,15 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                    <p class="register__input--error" id="register__input--error">The password must be from 8 to 15 digits.</p>
+                </div>
+
+                <!-- group id -->                   
+                <div class="register__group" id="register__id">
+                    <label for="id" class="register__block--label">Assigned ID</label>
+                    <div id="group__input">
+                        <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
+                    </div>
                 </div>
             </section>
                     
