@@ -103,14 +103,16 @@ const calculateAge = (dateOfBirth) => {
 
 window.addEventListener('load', function () {
     dateOfBirth.addEventListener('change', function () {
-        if((this.value) && (calculateAge(this.value) >= 18)) {
-            document.querySelector('#register__birth .register__input--error').classList.remove('register__input--error-active');
-
-            birth = true;
-        } else {
-            document.querySelector('#register__birth .register__input--error').classList.add('register__input--error-active');
-
-            birth = false;
+        if(this.value) {
+            if(calculateAge(this.value) >= 18) {
+                document.querySelector('#register__birth .register__input--error').classList.remove('register__input--error-active');
+    
+                fields.birth = true;
+            } else {
+                document.querySelector('#register__birth .register__input--error').classList.add('register__input--error-active');
+    
+                fields.birth = false;
+            }
         }
     });
 });
