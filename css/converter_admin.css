@@ -780,9 +780,7 @@ label {
     border-color: white;
 }
 
-
-/* modal PP to PB */
-
+/* modal */
 .modal1,
 .modal2,
 .modal3 {
@@ -796,6 +794,7 @@ label {
     background-color: #111111bd;
     opacity: 0;
     pointer-events: none;
+    transition: opacity .6s;
 }
 
 .modal__container {
@@ -908,7 +907,6 @@ label {
 .modal--show {
     opacity: 1;
     pointer-events: unset;
+    transition: opacity .6s;
 }
-
-
-/* fin modal PP to PB */
+/* fin modal*/
