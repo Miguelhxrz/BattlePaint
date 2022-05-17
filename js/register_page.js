@@ -18,9 +18,6 @@ const user_email = document.querySelector('#user_email');
 const user_birth = document.querySelector('#user_birth');
 const user_gender = document.querySelector('#user_gender');
 
-
-
-
 /* |---- Function id ----|*/
 const GenerateID = () => {
 
@@ -38,10 +35,9 @@ const GenerateID = () => {
 
 let id_user = GenerateID();
 
-
 input_id.value = id_user;
 
-
+// regular expressions
 const expressions = {
     username: /^[a-zA-Z0-9\_\-]{8,15}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -50,7 +46,7 @@ const expressions = {
 
 const fields = {
     username: false,
-    birth: true,
+    birth: false,
     gender: true,
     email: false,
     password: false,
@@ -78,6 +74,45 @@ const validateFields = (expression, input, field) => {
     }
 }
 
+// validate Date
+const dateOfBirth = document.getElementById('birth');
+const age = document.getElementById('edad');
+
+const calculateAge = (dateOfBirth) => {
+    const currentDate = new Date();
+    const currentYear = parseInt(currentDate.getFullYear());
+    const currentMonth = parseInt(currentDate.getMonth()) + 1;
+    const currentDay = parseInt(currentDate.getDate());
+
+    // YYYY-MM-DD
+    const yearOfBirth = parseInt(String(dateOfBirth).substring(0,4))
+    const monthOfBirth = parseInt(String(dateOfBirth).substring(5,7))
+    const dayOfBirth = parseInt(String(dateOfBirth).substring(8,10))
+
+    let age = currentYear - yearOfBirth;
+    if(currentMonth < monthOfBirth) {
+        age--;
+    } else if(currentMonth == monthOfBirth) {
+        if(currentDay < dayOfBirth) {
+            age--;
+        }
+    }
+    return age;
+}
+
+window.addEventListener('load', function () {
+    dateOfBirth.addEventListener('change', function () {
+        if((this.value) && (calculateAge(this.value) >= 18)) {
+            document.querySelector('#register__birth .register__input--error').classList.remove('register__input--error-active');
+
+            birth = true;
+        } else {
+            document.querySelector('#register__birth .register__input--error').classList.add('register__input--error-active');
+
+            birth = false;
+        }
+    });
+});
 
 const validateForm = (event) => {
     switch (event.target.name) {
@@ -95,12 +130,12 @@ const validateForm = (event) => {
     }
 }
 
-
 inputs.forEach((input) => {
     input.addEventListener('keyup', validateForm);
     input.addEventListener('blur', validateForm);
 });
 
+// show messages
 register.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -136,9 +171,5 @@ register.addEventListener('submit', (event) => {
             document.getElementById('register__message').classList.remove('register__message-active');
             
         }, 3000);
-
-        
-
     }
-
 });

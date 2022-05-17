@@ -97,6 +97,7 @@
                     <div id="group__input">
                         <input type="date" name="birth" id="birth" class="register__block--input">
                     </div>
+                    <p class="register__input--error" id="register__input--error">Must be over 18 years of age.</p>
                 </div>
 
                 <!-- group gender -->
