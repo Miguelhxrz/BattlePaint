@@ -94,7 +94,7 @@
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                         <!-- <img class="form__validation--state"  alt="circle-xmark-solid"> -->
                     </div>
-                    <p class="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
+                    <p class="register__input--error">Username must be 6 to 16 characters (only a-z, 0-9, _).</p>
                 </div>
 
                 <!-- password -->
@@ -104,7 +104,7 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="login__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="register__input--error">The password must be from 4 to 15 digits.</p>
+                    <p class="register__input--error">The password must be from 8 to 20 digits.</p>
                 </div>
             </section>
 

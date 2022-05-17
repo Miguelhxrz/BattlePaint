@@ -1,4 +1,4 @@
-<?php require_once('../model/User.php') ?>
+<?php require_once('../controller/header_controller.php')?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,64 +14,8 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="header__name" href="../index.php">
-            <h1 class="header__name">Battle Paint</h1>
-        </a>
-
-        <nav class="menu__container">
-            <ul class="menu">
-                <div class="menu__select">
-                    <li class="menu__item">
-                        <a href="marketplace.php" title="Buy">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Buy
-                        </a>
-                    </li>
-
-                    <li class="menu__item">
-                        <a href="marketplace.php" title="Rent">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Rent
-                        </a>
-                    </li>
-
-                    <li class="menu__item">
-                        <a href="points.php" title="Points">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Points
-                        </a>
-                    </li>
-                </div>
-
-                <div class="menu__user">
-                    <li class="menu__item">
-                        <a href="#" title="Support">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Support
-                        </a>
-                    </li>
-
-                    <li class="menu__item">
-                        <a href="marketplace.php" title="Connect">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Marketplace
-                        </a>
-                    </li>
-                </div>
-            </ul>
-        </nav>
-    </header>
+    
+    <?php include($header) ?>
 
     <main class="main">
         <form action="" method="" class="register" id="register">
@@ -88,7 +32,7 @@
                         <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="register__input--error" id="register__input--error">Username must be 8 to 15 characters (only a-z, 0-9, _).</p>
+                    <p class="register__input--error" id="register__input--error">Username must be 6 to 16 characters (only a-z, 0-9, _).</p>
                 </div>
 
                 <!-- group birth -->
@@ -132,7 +76,11 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
+<<<<<<< HEAD
+                    <p class="register__input--error" id="register__input--error">The password must be from 8 to 20 digits.</p>
+=======
                     <p class="register__input--error" id="register__input--error">The password must be from 8 to 15 digits.</p>
+>>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
                 </div>
 
                 <!-- group id -->                   
@@ -141,6 +89,10 @@
                     <div id="group__input">
                         <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
                     </div>
+<<<<<<< HEAD
+                    <!-- <p class="register__input--error" id="register__input--error">The password must be from 8 to 20 digits.</p> -->
+=======
+>>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
                 </div>
             </section>
                     
@@ -173,8 +125,6 @@
         <?php 
             if( isset($_POST['user_id']) && isset($_POST['user_username']) && isset($_POST['user_password']) && isset($_POST['user_email']) && isset($_POST['user_birth']) && isset($_POST['user_gender']) ) {
                 
-                $user = new User();
-                
                 $user_id = $_POST['user_id'];
                 $user_username = $_POST['user_username'];
                 $user_password = $_POST['user_password'];
@@ -182,17 +132,15 @@
                 $user_birth = $_POST['user_birth'];
                 $user_gender = $_POST['user_gender'];
 
-                $user->setID($user_id);
-                $user->setUsername($user_username);
-                $user->setPassword($user_password);
-                $user->setEmail($user_email);
-                $user->setBirth($user_birth);
-                $user->setGender($user_gender);
+                echo $_POST['user_username'];
 
-                $result = $user->addUser();
-
-                var_dump($result);
                 
+
+                $_SESSION['username'] = $_POST['user_username'];
+                $_SESSION['password'] = $user_password;
+                $_SESSION['email'] = $user_email;
+                $_SESSION['birth'] = $user_birth;
+                $_SESSION['gender'] = $user_gender;
 
             }
                 

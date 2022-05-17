@@ -2,8 +2,8 @@ const login = document.getElementById('login__container');
 const inputs = document.querySelectorAll('#login__container input');
 
 const expressionsLogin = {
-    username: /^[a-zA-Z0-9\_\-]{4,15}$/,
-    password: /^.{4,12}$/
+    username: /^[a-zA-Z0-9\_\-]{6,16}$/,
+    password: /^.{8,20}$/
 }
 
 const fieldsInit = {
