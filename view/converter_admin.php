@@ -92,12 +92,6 @@
                                     <h4>1 </h4><img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="">
                                     <h4> = 100</h4><img src="../source/img/svg/paint-point.svg" class="moneda_2" alt="">
                                 </div>
-                                <div class="compra">
-                                    <a href="./comprar_monedas.php">
-                                        <h4>Buy</h4>
-                                    </a>
-                                    <img src="../source/img/svg/paint-backets.svg" class="moneda_4" alt="">
-                                </div>
                             </div>
                         </article>
 
