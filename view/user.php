@@ -1,4 +1,8 @@
-<?php require_once('../controller/header_controller.php') ?>
+<?php 
+    require_once('../controller/header_controller.php');
+    var_dump($_SESSION['balance']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,15 +28,15 @@
                 <div class="info__user">
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                        <h3>Username</h3>
+                        <h3><?php echo $username ?></h3>
                     </div>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                        <h3>ID de usuario</h3>
+                        <h3><?php echo $user_id ?></h3>
                     </div>
                     <div class="username">
                         <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                        <h3>Balance</h3>
+                        <h3><?php echo $user_balance ?></h3>
                     </div>
                 </div>
                 <div class="acount">

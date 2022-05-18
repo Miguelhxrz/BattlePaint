@@ -3,11 +3,4 @@
 session_start();
 
 
-
-
-
-
-
-
-
 ?>

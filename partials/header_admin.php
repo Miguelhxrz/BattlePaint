@@ -1,4 +1,4 @@
-
+<?php $username = $_SESSION['username']; ?>
 <header class="header">
 
     <a class="header__name" href="../index.php">
@@ -39,7 +39,7 @@
         <div class="menu__user">
           <li class="menu__item_admin" >
             <a href="./admin.php"><img src="../source/img/svg/admin.svg" alt="Logo Admin" class="logo_admin"></a>
-            <h5>Admin</h5>
+            <h5><?php echo $username  ?></h5>
           </li>
         </div>
       </ul>

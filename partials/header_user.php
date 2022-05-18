@@ -1,3 +1,8 @@
+<?php
+  $username = $_SESSION['username'];
+  $user_id = $_SESSION['id'];
+  $user_balance = $_SESSION['balance'];
+?>
 <header class="header">
 
 <a class="header__name" href="../index.php">
@@ -38,7 +43,7 @@
     <div class="menu__user">
       <li class="menu__item_admin" >
         <a href="./user.php"><img src="../source/img/svg/user.svg" alt="Logo Admin" class="logo_admin"></a>
-        <h5>$usuario</h5>
+        <h5><?php echo $username ?></h5>
       </li>
     </div>
   </ul>

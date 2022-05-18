@@ -26,7 +26,7 @@ const GenerateID = () => {
 
     let id = '';
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 12; i++) {
         id += characters.charAt(Math.floor(Math.random() * characters.length))
     }
     

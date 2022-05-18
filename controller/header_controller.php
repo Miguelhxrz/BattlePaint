@@ -2,8 +2,6 @@
 
 session_start();
 
-// $_SESSION['username'];
-
 function getHeader(){
   if(empty($_SESSION['username'])){
     return ('../partials/header_no-user.php');

@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    var_dump($_SESSION['username'])
+
+?>
+
 <header class="header">
 
 <a class="header__name" href="../index.php">

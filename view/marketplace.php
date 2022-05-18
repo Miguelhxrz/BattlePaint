@@ -1,4 +1,6 @@
-<?php require_once('../controller/header_controller.php'); ?>
+<?php 
+    require_once('../controller/header_controller.php'); 
+?>
       
 <!DOCTYPE html>
 <html lang="en">
