@@ -40,7 +40,6 @@ body {
   height: 100%;
 
 }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -48,7 +47,7 @@ body {
   width: 100%;
   height: 75px;
   padding: 0px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .header__name {
@@ -94,15 +93,15 @@ body {
 }
 
 .menu__user {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 20px;
 }
 
-
-.menu__item a{
+.menu__item a {
   position: relative;
   display: inline-block;
   padding: 10px 22px;
@@ -115,11 +114,9 @@ body {
   transition: 0.2s;
 }
 
-.menu__item a:hover{
+.menu__item a:hover {
   background-color: var(--blue-violet-soft);
-  box-shadow:  0 0 25px var(--blue-violet-soft), 
-               0 0 50px var(--blue-violet-soft), 
-               0 0 75px var(--blue-violet-soft);
+  box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
   transition-delay: 1s;
 }
 
@@ -133,7 +130,7 @@ a .neon1 {
   left: -100%;
   width: 100%;
   height: 2px;
-  background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
+  background-image: linear-gradient(90deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon1 {
@@ -146,7 +143,7 @@ a .neon2 {
   right: 0%;
   width: 2px;
   height: 100%;
-  background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
+  background-image: linear-gradient(180deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon2 {
@@ -160,7 +157,7 @@ a .neon3 {
   right: -100%;
   width: 100%;
   height: 2px;
-  background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
+  background-image: linear-gradient(2700deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon3 {
@@ -174,7 +171,7 @@ a .neon4 {
   left: 0%;
   width: 2px;
   height: 100%;
-  background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
+  background-image: linear-gradient(360deg, transparent, var(--blue-violet-soft));
 }
 
 .menu__item a:hover .neon4 {
@@ -188,12 +185,30 @@ a .neon4 {
   height: 100%;
 }
 
-
 .menu__item a {
   color: var(--light);
   text-decoration: none;
 }
-/* |---- Fin del menu ----| */
+
+.logo_admin {
+  width: 50px;
+  height: 50px;
+}
+
+.menu__item_admin {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item_admin h5 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* end header */
 
 .container {
   display: flex;
