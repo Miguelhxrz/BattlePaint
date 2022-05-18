@@ -1,6 +1,6 @@
 /* |---- Imporatando la fuente ----| */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -46,6 +46,9 @@ body {
     background-repeat: no-repeat;
 }
 
+
+/* header */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -53,7 +56,7 @@ body {
     width: 100%;
     height: 75px;
     padding: 0px 20px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .header__name {
@@ -99,11 +102,12 @@ body {
 }
 
 .menu__user {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 
 .menu__item a {
@@ -193,6 +197,24 @@ a .neon4 {
 .menu__item a {
     color: var(--light);
     text-decoration: none;
+}
+
+.logo_admin {
+    width: 50px;
+    height: 50px;
+}
+
+.menu__item_admin {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__item_admin h5 {
+    font-size: 2rem;
+    color: #ffffff;
 }
 
 
@@ -471,14 +493,10 @@ form {
     margin-top: 20px;
 }
 
-
 ::-webkit-calendar-picker-indicator {
     background-color: white;
     border-radius: .3rem;
 }
-
-
-
 
 .user_update {
     display: flex;
@@ -553,6 +571,7 @@ form {
     color: var(--light);
     margin: auto;
 }
+
 .select_2 {
     display: flex;
     justify-content: space-between;
@@ -575,6 +594,7 @@ form {
     color: var(--light);
     margin: auto;
 }
+
 .select_3 {
     display: flex;
     justify-content: space-between;
@@ -742,3 +762,134 @@ form {
     box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
     border-color: white;
 }
+
+/* modal */
+.modal1,
+.modal2,
+.modal3 {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #111111bd;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.modal__container {
+    display: grid;
+    grid-auto-columns: 100%;
+    gap: 1em;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    margin: auto;
+    place-items: center;
+    padding: 3em 2.5em;
+    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--black-blue) 100%);
+    border: 3px solid var(--black-blue);
+    border-radius: 50px 15px;
+}
+
+.modal__close,
+.modal2__close,
+.modal3__close {
+    float: right;
+    cursor: pointer;
+    transition: box-shadow .3s;
+    border-radius: 100%;
+}
+
+.modal__close:hover,
+.modal2__close:hover,
+.modal3__close:hover {
+    box-shadow: 0 0 20px var(--black-blue);
+}
+
+.modal-form {
+    width: 100%;
+    place-items: center;
+    text-align: center;
+}
+
+.modal__container--son {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.modal__title {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.modal__image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: auto 0;
+}
+
+.modal__container--field {
+    width: 100%;
+}
+
+.modal__container--label {
+    display: flex;
+    margin: 30px 0 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal__input--quantity {
+    display: flex;
+    width: 90%;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 2rem;
+    border-color: rgb(163, 136, 136);
+    transition: box-shadow .3s;
+}
+
+.modal__input--quantity:focus {
+    box-shadow: 0 0 20px var(--black-blue);
+}
+
+.modal__convert {
+    display: flex;
+    margin: auto;
+    font-size: 4rem;
+}
+
+.modal__convert--button {
+    width: 250px;
+    height: 50px;
+    margin-top: 30px;
+    color: var(--light);
+    font-size: 30px;
+    background: linear-gradient(90deg, #858AE3 18.2%, #613DC1 103.29%);
+    border: var(--dark-violet) solid 2px;
+    border-radius: 30px 10px;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.modal__convert--button:hover {
+    box-shadow: 0 0 20px var(--grey);
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+/* fin modal*/

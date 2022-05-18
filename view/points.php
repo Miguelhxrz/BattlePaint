@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php require_once('../controller/header_controller.php') ?>
+=======
+<?php require_once('../controller/header_controller.php'); ?>
+>>>>>>> 544f3c9159fcdc90d283595bc1f04e97e9134c8f
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +15,15 @@
   <title>Battle Paint | Points</title>
 </head>
 <body>
+<<<<<<< HEAD
   
   <?php include($header) ?>
+=======
+
+
+<?php include($header);?>
+
+>>>>>>> 544f3c9159fcdc90d283595bc1f04e97e9134c8f
   
   <main class="container">
 

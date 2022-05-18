@@ -1,28 +1,29 @@
 /* |---- Imporatando la fuente ----| */
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
-*{
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px
 }
 
-html{
-  font-size: 62.5%
+html {
+    font-size: 62.5%
 }
 
 :root {
-  --font: 'Righteous', cursive;
-  --black-blue: #0A88C2;
-  --soft-blue: #858AE3;
-  --plump-violet: #613DC1;
-  --blue-violet-soft: #4E148C;
-  --blue-violet-dark: #5B0D6D;
-  --blue-violet-shadow: #2c0036;
-  --light: #ffffff;
-  --dark-violet: #171629;
-  --indigo: #1f1d35;
-  --grey: #202c33;
-  --gradient: linear-gradient(135deg, #613DC1, #0A88C2);
+    --font: 'Righteous', cursive;
+    --black-blue: #0A88C2;
+    --soft-blue: #858AE3;
+    --plump-violet: #613DC1;
+    --blue-violet-soft: #4E148C;
+    --blue-violet-dark: #5B0D6D;
+    --blue-violet-shadow: #2c0036;
+    --light: #ffffff;
+    --dark-violet: #171629;
+    --indigo: #1f1d35;
+    --grey: #202c33;
+    --gradient: linear-gradient(135deg, #613DC1, #0A88C2);
 }
 
 body {
@@ -35,157 +36,179 @@ body {
     background-color: var(--dark-violet);
 }
 
+
+/* header */
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 75px;
-  padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    padding: 0px 20px;
+    margin-bottom: 50px;
 }
 
 .header__name {
-  display: flex;
-  align-items: center;
-  color: var(--light);
-  font-size: 2.5rem;
-  letter-spacing: 5px;
-  text-shadow: 0 0 10px var(--blue-violet-soft), 0 0 40px var(--blue-violet-soft), 0 0 80px var(--blue-violet-soft);
-  width: 50%;
-  height: 100%;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px var(--blue-violet-soft), 0 0 40px var(--blue-violet-soft), 0 0 80px var(--blue-violet-soft);
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
 }
 
 .menu__user {
-  width: 50%;
-  height: 100%;
+    width: 50%;
+    height: 100%;
 }
 
 .menu__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
 }
 
 .menu {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }
 
 .menu__select {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu__user {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-
-.menu__item a{
-  position: relative;
-  display: inline-block;
-  padding: 10px 22px;
-  color: #fff;
-  letter-spacing: 2px;
-  font-size: 15px;
-  overflow: hidden;
-  text-decoration: none;
-  margin-right: 20px;
-  transition: 0.2s;
-}
-
-.menu__item a:hover{
-  background-color: var(--blue-violet-soft);
-  box-shadow:  0 0 25px var(--blue-violet-soft), 
-               0 0 50px var(--blue-violet-soft), 
-               0 0 75px var(--blue-violet-soft);
-  transition-delay: 1s;
-}
-
-a span {
-  position: absolute;
-  display: block;
-}
-
-a .neon1 {
-  top: 0%;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background-image: linear-gradient( 90deg, transparent, var(--blue-violet-soft) );
-}
-
-.menu__item a:hover .neon1 {
-  left: 100%;
-  transition: 1s;
-}
-
-a .neon2 {
-  top: -100%;
-  right: 0%;
-  width: 2px;
-  height: 100%;
-  background-image: linear-gradient( 180deg, transparent, var(--blue-violet-soft) );
-}
-
-.menu__item a:hover .neon2 {
-  top: 100%;
-  transition: 1s;
-  transition-delay: .25s;
-}
-
-a .neon3 {
-  bottom: 0%;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background-image: linear-gradient( 2700deg, transparent, var(--blue-violet-soft) );
-}
-
-.menu__item a:hover .neon3 {
-  right: 100%;
-  transition: 1s;
-  transition-delay: .5s;
-}
-
-a .neon4 {
-  bottom: -100%;
-  left: 0%;
-  width: 2px;
-  height: 100%;
-  background-image: linear-gradient( 360deg, transparent, var(--blue-violet-soft) );
-}
-
-.menu__item a:hover .neon4 {
-  bottom: 100%;
-  transition: 1s;
-  transition-delay: .75s;
-}
-
-.menu__container {
-  width: 100%;
-  height: 100%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .menu__item a {
-  color: var(--light);
-  text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px 22px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.2s;
 }
-/* |---- Fin del menu ----| */
+
+.menu__item a:hover {
+    background-color: var(--blue-violet-soft);
+    box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
+    transition-delay: 1s;
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a .neon1 {
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon1 {
+    left: 100%;
+    transition: 1s;
+}
+
+a .neon2 {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(180deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+}
+
+a .neon3 {
+    bottom: 0%;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(2700deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+}
+
+a .neon4 {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(360deg, transparent, var(--blue-violet-soft));
+}
+
+.menu__item a:hover .neon4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+}
+
+.menu__container {
+    width: 100%;
+    height: 100%;
+}
+
+.menu__item a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.logo_admin {
+    width: 50px;
+    height: 50px;
+}
+
+.menu__item_admin {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__item_admin h5 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+/* end header */
 
 .main {
     display: flex;
@@ -199,7 +222,6 @@ a .neon4 {
     background-size: cover;
     background-position-y: -129px;
     margin-top: 30px;
-    
 }
 
 .register {
@@ -218,31 +240,31 @@ a .neon4 {
 }
 
 .register__block {
-  width: 50%;
+    width: 50%;
 }
 
 .one {
-  float: left;
+    float: left;
 }
 
 .two {
-  float: right;
+    float: right;
 }
 
 .register__group {
-  width: 100%;
-  height: 100px;
-  margin: 10px 0;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
 }
 
 label {
-  display: flex;
-  padding: 5px 10px 10px 60px;
-  cursor: pointer;
+    display: flex;
+    padding: 5px 10px 10px 60px;
+    cursor: pointer;
 }
 
 .group__input {
-  position: relative;
+    position: relative;
 }
 
 .register__block--input[type='text'],
@@ -259,8 +281,8 @@ label {
 }
 
 [type='file'] {
-  margin-top: 15px;
-  background-color: transparent;  
+    margin-top: 15px;
+    background-color: transparent;
 }
 
 select {
@@ -284,51 +306,51 @@ select::placeholder {
 }
 
 .register__input--error {
-  margin-top: 10px;
-  font-size: 12px;
-  display: none;
+    margin-top: 10px;
+    font-size: 12px;
+    display: none;
 }
 
 .register__input--error-active {
-  display: block;
+    display: block;
 }
 
 .form__validation--state {
-  position: relative;
-right: 35px;
-z-index: 100;
-font-size: 16px;
-  opacity: 0;
+    position: relative;
+    right: 35px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
 }
 
 .register__message {
-  width: 80%;
-  height: 40px;
-  line-height: 40px;
-  margin: 10px auto;
-  background-color: #bb2929;
-  border-radius: 5px;
-  display: none;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px auto;
+    background-color: #bb2929;
+    border-radius: 5px;
+    display: none;
 }
 
 .register__message-active {
-  display: block;
+    display: block;
 }
 
 .register__block--cta {
     float: right;
     width: 55%;
     text-align: center;
-  }
-  
-  .register__block--link {
+}
+
+.register__block--link {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px solid var(--light);
     background-color: transparent;
-  }
-  
-  .register__block--button {
+}
+
+.register__block--button {
     width: 20rem;
     height: 5rem;
     padding: 0.5rem;
@@ -341,34 +363,41 @@ font-size: 16px;
 }
 
 .register__complete {
-  width: 80%;
-  height: 50px;
-  line-height: 40px;
-  margin: 0 auto;
-  background-color: #1ed12d;
-  border-radius: 5px;
-  display: none;
+    width: 80%;
+    height: 50px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-color: #1ed12d;
+    border-radius: 5px;
+    display: none;
 }
 
 .register__complete-active {
-  display: block;
+    display: block;
 }
 
+
 /* styles for validations */
+
 .register__group--correct .form__validation--state {
-  color: #1ed12d;
-  opacity: 1;
+    color: #1ed12d;
+    opacity: 1;
 }
 
 .register__group--incorrect .register__block--label {
-  color: #bb2929;
+    color: #bb2929;
 }
 
 .register__group--incorrect .form__validation--state {
+<<<<<<< HEAD
   color: #bb2929;
   opacity: 1;
 }
 
 .form__hidden {
   display: none;
+=======
+    color: #bb2929;
+    opacity: 1;
+>>>>>>> 544f3c9159fcdc90d283595bc1f04e97e9134c8f
 }

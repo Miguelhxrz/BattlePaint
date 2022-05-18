@@ -13,7 +13,9 @@
 </head>
 
 <body>
+    
     <?php include($header) ?>
+
     <main class="main">
         <form action="" class="update" id="update">
             <section class="register">
