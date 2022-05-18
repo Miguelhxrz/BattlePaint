@@ -81,13 +81,13 @@
           <p class="register__input--error" id="register__input--error">The owner must be 4 to 15 characters long, without special characters or numbers.</p>
         </div>
 
-        <!-- image -->
-        <div class="register__group" id="register__image">
-          <label for="nft">
-              <p>Imagen del NFT</p>
-              <input type="file" name="nft_image" id="nft_image" class="register__block--input">
-            </label>
-          </div>
+        <!-- id -->
+        <div class="register__group" id="register__id">
+            <label for="id" class="register__block--label">Assigned ID</label>
+            <div id="group__input">
+                <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
+            </div>
+        </div>
       </section>
       
       <section class="register__block three">
@@ -95,7 +95,7 @@
         <div class="register__group" id="register__class">
           <label for="class">choose class</label>
           <select name="class" id="class_nft">
-          <option value="" select disabled>Select class</option>
+          <option selected disabled value="">Select a class</option>
             <option value="tank">Tank</option>
             <option value="shooter">Shooter</option>
             <option value="assassin">Assassin</option>

@@ -91,7 +91,6 @@ var_dump($_SESSION['password']);
                     <div class="group__input">
                         <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
                     </div>
-                    <p class="register__input--error">Username must be 6 to 16 characters (only a-z, 0-9, _).</p>
                 </div>
 
                 <!-- password -->
@@ -100,7 +99,6 @@ var_dump($_SESSION['password']);
                     <div class="group__input">
                         <input type="password" name="password" id="password" placeholder="Password" class="login__block--input">
                     </div>
-                    <p class="register__input--error">The password must be from 8 to 20 digits.</p>
                 </div>
             </section>
 
