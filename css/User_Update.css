@@ -523,10 +523,11 @@ select::placeholder {
 }
 
 .register__message {
-    width: 100%;
+    width: 40%;
     height: 40px;
     line-height: 40px;
-    margin: 10px auto;
+    margin: 50px auto 0;
+    font-size: 1.5rem;
     background-color: #bb2929;
     border-radius: 5px;
     display: none;
@@ -537,17 +538,17 @@ select::placeholder {
 }
 
 .register__block--cta {
+    width: 100%;
+    padding: 50px;
     text-align: center;
     align-items: center;
 }
 
 .register__block--button {
     height: 40px;
-    width: 400px;
-    left: 576px;
-    top: 599px;
+    width: 40%;
     border-radius: 20px;
-    margin-top: 65px;
+    margin: auto;
     background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
     font-size: 17px;
     color: var(--light);
@@ -561,10 +562,11 @@ select::placeholder {
 }
 
 .register__complete {
-    width: 100%;
+    width: 50%;
     height: 40px;
     line-height: 40px;
-    margin: 0 auto;
+    margin: 20px auto 0;
+    font-size: 1.5rem;
     background-color: #1ed12d;
     border-radius: 5px;
     display: none;

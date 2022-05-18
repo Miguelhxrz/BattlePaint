@@ -23,22 +23,6 @@ const fields = {
     password: false,
 }
 
-const validateForm = (event) => {
-    switch (event.target.name) {
-        case "username":
-            validateFields(expressions.username, event.target, event.target.name);
-        break;
-
-        case "email":
-            validateFields(expressions.email, event.target, event.target.name);
-        break;
-
-        case "password":
-            validateFields(expressions.password, event.target, event.target.name);
-        break;
-    }
-}
-
 const validateFields = (expression, input, field) => {
     if(expression.test(input.value)) {
         document.getElementById(`register__${field}`).classList.remove('register__group--incorrect');
@@ -61,6 +45,22 @@ const validateFields = (expression, input, field) => {
     }
 }
 
+const validateForm = (event) => {
+    switch (event.target.name) {
+        case "username":
+            validateFields(expressions.username, event.target, event.target.name);
+        break;
+
+        case "email":
+            validateFields(expressions.email, event.target, event.target.name);
+        break;
+
+        case "password":
+            validateFields(expressions.password, event.target, event.target.name);
+        break;
+    }
+}
+
 inputs.forEach((input) => {
     input.addEventListener('keyup', validateForm);
     input.addEventListener('blur', validateForm);
@@ -69,7 +69,7 @@ inputs.forEach((input) => {
 register.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    if(fields.username && fields.birth && fields.gender && fields.email && fields.password) {
+    if (fields.username && fields.email && fields.password) {
         register.reset();
 
         document.getElementById('register__complete').classList.add('register__complete-active');
@@ -96,7 +96,7 @@ register.addEventListener('submit', (event) => {
 
             // window.location.reload();
 
-        }, 3000)
+        }, 3000);
 
 
 
