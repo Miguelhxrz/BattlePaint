@@ -342,9 +342,11 @@ a .neon4 {
     margin: auto;
     place-items: center;
     padding: 3em 2.5em;
-    background-image: linear-gradient(180deg, var(--dark-violet) 20%, var(--black-blue) 100%);
-    border: 3px solid var(--black-blue);
-    border-radius: 50px 15px;
+    background-color: rgba( 167, 15, 253, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .container_buy {
   display: flex;
