@@ -622,17 +622,6 @@ label {
 
 .container_converter {
     width: 40%;
-    height: 430px;
-    margin-left: 50px;
-    padding-top: 30px;
-    color: var(--cta);
-    border: 3px solid var(--blue-violet-soft);
-    border-radius: 30px 15px;
-    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
-}
-
-.container_converter {
-    width: 40%;
     height: 400px;
     margin-left: 50px;
     padding-top: 30px;
@@ -650,13 +639,14 @@ label {
 .balance {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
+    height: 180px;
+    margin: auto;
+    padding: 10px;
     color: var(--cta);
+    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
     border: 3px solid var(--blue-violet-soft);
     border-radius: 30px 15px;
-    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--blue-violet-soft) 100%);
-    display: flex;
-    margin: auto;
 }
 
 .balance_a {
@@ -668,7 +658,8 @@ label {
 }
 
 .balance_a h4 {
-    font-size: 6rem;
+    margin: auto;
+    font-size: 4rem;
 }
 
 .your_coins {
@@ -679,6 +670,7 @@ label {
 .moneda_1 {
     height: 60px;
     width: 60px;
+    margin: auto;
 }
 
 .balance_b {
@@ -690,8 +682,12 @@ label {
 }
 
 .balance_b h4 {
-    display: flex;
-    font-size: 6rem;
+    margin: auto;
+    font-size: 4rem;
+}
+
+.balance_b img {
+    margin: auto;
 }
 
 .valor {
