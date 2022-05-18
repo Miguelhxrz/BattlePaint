@@ -45,11 +45,31 @@
       
     </section>
     <article class="actions">
-        <button> Buy <?php echo $_SESSION['nft_price'] ?> <img src="../source/img/svg/paint-backets.svg" alt="paint buckets icon"></button>
+        <button class="modal__cta--btn"> Buy <?php echo $_SESSION['nft_price'] ?> <img src="../source/img/svg/paint-backets.svg" alt="paint buckets icon"></button>
       </article>
   </main>
   <footer>
 
   </footer>
+
+  <section class="modal" id="modal">
+    <article class="modal__container">
+        <form action="" method="" class="modal-form" id="modal-form">
+          <img class="modal__close" src="../source/img/close.png" alt="close">
+          <p class="modal__title">BUY NFT</p>
+          
+          <div class="img">
+            <img class="modal__image--nft" src="../source/img/Characters/test5.png" alt="PP">
+          </div>
+
+          <div class="price">
+            <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
+            <p class="modal__price">1200</p>
+          </div>
+
+          <input class="modal__convert--button" type="submit" value="BUY">
+        </form>
+    </article>
+  </section>
 </body>
 </html>
