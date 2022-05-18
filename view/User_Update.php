@@ -103,14 +103,14 @@
 
                     <!-- error message -->
                     <div class="register__message" id="register__message">
-                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> </p>
                     </div>
 
                     <div class="register__block--cta">
                         <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
 
                         <!-- registration complete -->
-                        <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+                        <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Your details have been changed!</p>
                     </div>
                 </div>
 
@@ -122,9 +122,25 @@
             <input type="text" name="new_password" id="new_password">
         </form>
         </div>
+        <?php 
+
+        
+        if(isset($_POST['new_username']) && isset($_POST['new_email']) && isset($_POST['new_password'])) {
+
+            $_SESSION['username'] = $_POST['new_username'];
+            $_SESSION['email'] = $_POST['new_email'];
+            $_SESSION['password'] = $_POST['new_password'];
+
+        }
+        
+        
+        
+        
+        
+        ?>
 
         <script src="./js/redirect.js"></script>
-        <script src="../js/user_update-validations.js"></script>
+        <script src="../js/update-validations.js"></script>
         <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
     </main>
 </body>

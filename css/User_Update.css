@@ -562,7 +562,7 @@ select::placeholder {
 }
 
 .register__complete {
-    width: 50%;
+    width: 40%;
     height: 40px;
     line-height: 40px;
     margin: 20px auto 0;
@@ -591,4 +591,8 @@ select::placeholder {
 .register__group--incorrect .form__validation--state {
     color: #bb2929;
     opacity: 1;
+}
+
+.form__hidden {
+    display: none;
 }

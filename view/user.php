@@ -1,6 +1,5 @@
 <?php 
     require_once('../controller/header_controller.php');
-    var_dump($_SESSION['balance']);
 ?>
 
 <!DOCTYPE html>

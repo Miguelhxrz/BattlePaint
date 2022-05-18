@@ -31,7 +31,7 @@ const GenerateID = () => {
 
     let id = '';
 
-    for (let i = 0; i < 22; i++) {
+    for (let i = 0; i < 9; i++) {
         id += characters.charAt(Math.floor(Math.random() * characters.length))
     }
     
@@ -134,22 +134,13 @@ registerNft.addEventListener('submit', (event) => {
         nft_class.value = input_class.value;
         nft_rank.value = input_rank.value;
         nft_owner.value = input_owner.value;
-        nft_price.value = input_price.value;
-
-
-        console.log(`token: ${token}`);
-        console.log(`name: ${nft_name.value}`);
-        console.log(`power: ${nft_power.value}`);
-        console.log(`class: ${nft_class.value}`);
-        console.log(`rank: ${nft_rank.value}`);
-        console.log(`owner: ${nft_owner.value}`);
-        console.log(`price: ${nft_price.value}`);      
+        nft_price.value = input_price.value;      
 
         setTimeout(() => { 
 
             document.querySelector('.form__hidden').submit();
 
-            // window.location.href = '../view/marketplace.php';
+            window.location.href = '../view/character_view.php';
         
         },3000); 
 

@@ -112,14 +112,14 @@
 
           <!-- error message -->
           <div class="register__message" id="register__message">
-            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> </p>
           </div>
 
           <div class="register__block--cta">
             <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
 
             <!-- registration complete -->
-            <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+            <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Your details have been changed!</p>
           </div>
         </div>
 
@@ -127,7 +127,7 @@
     </form>
     </div>
     <script src="./js/redirect.js"></script>
-    <script src="../js/admin_update-validations.js"></script>
+    <script src="../js/update-validations.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 

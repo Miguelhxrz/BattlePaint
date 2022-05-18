@@ -142,12 +142,19 @@
 
         $nft_token = $nft->getToken();
         $nft_name = $nft->getName();
-        $nft_Power = $nft->getPower();
+        $nft_power = $nft->getPower();
         $nft_class = $nft->getClass();
         $nft_rank = $nft->getRank();
         $nft_owner = $nft->getOwner();
         $nft_price = $nft->getPrice();
 
+        $_SESSION['nft_token'] = $nft_token;
+        $_SESSION['nft_name'] = $nft_name;
+        $_SESSION['nft_power'] = $nft_power;
+        $_SESSION['nft_class'] = $nft_class;
+        $_SESSION['nft_rank'] = $nft_rank;
+        $_SESSION['nft_owner'] = $nft_owner;
+        $_SESSION['nft_price'] = $nft_price;
 
       }
     
