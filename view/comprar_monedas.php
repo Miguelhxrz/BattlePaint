@@ -1,3 +1,4 @@
+<?php require_once('../controller/header_controller.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,71 +13,8 @@
 </head>
 
 <body>
-    <header class="header">
 
-        <a class="header__name" href="../index.php">
-            <h1 class="header__name">Battle Paint</h1>
-        </a>
-
-        <nav class="menu__container">
-
-            <ul class="menu">
-
-                <div class="menu__select">
-
-                    <li class="menu__item">
-                        <a href="marketplace.php" title="Buy">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Buy
-                        </a>
-                    </li>
-
-                    <li class="menu__item">
-                        <a href="marketplace.php" title="Rent">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Rent
-                        </a>
-                    </li>
-
-                    <li class="menu__item">
-                        <a href="points.php" title="Points">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Points
-                        </a>
-                    </li>
-                </div>
-
-                <div class="menu__user">
-
-                    <li class="menu__item">
-                        <a href="#" title="Support">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Support
-                        </a>
-                    </li>
-
-                    <li class="menu__item">
-                        <a href="marketplace.php" title="Connect">
-                            <span class="neon1"></span>
-                            <span class="neon2"></span>
-                            <span class="neon3"></span>
-                            <span class="neon4"></span> Marketplace
-                        </a>
-                    </li>
-
-                </div>
-            </ul>
-        </nav>
-
-    </header>
+    <?php include($header) ?>
 
     <main class="main">
         <form action="" class="login__container" id="login__container">
