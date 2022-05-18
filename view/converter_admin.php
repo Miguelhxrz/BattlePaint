@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Normalize.css">
     <link rel="stylesheet" href="../css/converter_admin.css">
     <link rel="shortcut icon" href="../source/img/logoBattlePaint1.png" type="image/x-icon">
     <script src="../js/redirect.js"></script>
@@ -79,7 +80,7 @@
     </header>
 
     <main class="main">
-        <form action="" class="register">
+        <section class="register">
             <div class="register__block one">
                 <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
@@ -104,11 +105,11 @@
                 <div class="line"></div>
                 <div class="update_info">
                     <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                    <a href="#" class="link_update">Update info</a>
+                    <a href="./admin_update.php" class="link_update">Update info</a>
                 </div>
                 <div class="my_nft">
                     <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                    <a href="admin.php" class="link_update">My NFTs</a>
+                    <a href="./admin.php" class="link_update">My NFTs</a>
                 </div>
                 <div class="my_balance">
                     <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
@@ -165,46 +166,108 @@
                         <article class="line_converter"></article>
 
                         <article class="container_converter">
-                            <div class="converter">
-                                <h3>Converter</h3>
-                                <form action="">
-                                    <label for="You send">
-                                        You sent
-                                        <div class="container_select">
-                                            <input type="number" class="register__block--input">
-                                            <select name="select_coin" id="rank" class="register__block--input">
-                                                <option disabled>Select a coin</option>
-                                                <option value="Paint Backets">Paint Backet<img src="" class="moneda_5" alt=""></option>
-                                                <option value="Paint Points">Paint Points<img src="" class="moneda_6" alt=""></option>
-                                            </select>
-                                        </div>
-                                    </label>
-
-                                    <label for="You Got">
-                                        You Got
-                                        <div class="container_select">
-                                            <input type="number" class="register__block--input">
-                                            <select name="select_coin" class="register__block--input">
-                                                <option disabled>Select a coin</option>
-                                                <option value="Paint Backets">Paint Backets
-                                                    <img src="../source/img/svg/paint-backets.svg" class="moneda_7" alt="">
-                                                </option>
-                                                <option value="Paint Points">Paint Points
-                                                    <img src="../source/img/svg/paint-point.svg" class="moneda_8" alt="">
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </label>
-                                    <input type="submit" value="Converter" class="button_converter">
+                            <div class="select_converter">
+                                <div class="select_1">
+                                    <a class="modal1__cta" id="" href="#">
+                                        <h4>Converter PP to PB</h4>
+                                    </a>
+                                </div>
+                                <div class="select_2">
+                                    <a class="modal2__cta" id="" href="#">
+                                        <h4>Converter PB to USD</h4>
+                                    </a>
+                                </div>
+                                <div class="select_3">
+                                    <a class="modal3__cta" id="" href="#">
+                                        <h4>Converter USD to PB</h4>
+                                    </a>
+                                </div>
                             </div>
                         </article>
-
                     </section>
-
                 </div>
             </div>
-        </form>
+        </section>
         </div>
-</body>
 
+        <!-- modal PP to PB -->
+        <section class="modal1" id="modal1">
+            <article class="modal__container">
+                <form action="" method="" class="modal-form" id="modal-form">
+                    <img class="modal__close" src="../source/img/close.png" alt="close">
+                    <p class="modal__title">Convert PP to PB</p>
+                    <div class="modal__container--son">
+                        <img class="modal__image" src="../source/img/svg/paint-point.svg" alt="PP">
+                        <div class="modal__container--field">
+                            <label class="modal__container--label" for="input__quantity">Quantity</label>
+                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="modal__container--son">
+                        <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
+                        <p class="modal__convert">0</p>
+                    </div>
+
+                    <input class="modal__convert--button" type="submit" value="Convert">
+                </form>
+            </article>
+        </section>
+
+        <!-- modal PB to USD -->
+        <section class="modal2" id="modal2">
+            <article class="modal__container">
+                <form action="" method="" class="modal-form" id="modal-form">
+                    <img class="modal2__close" src="../source/img/close.png" alt="close">
+                    <p class="modal__title">Convert PB to USD</p>
+                    <div class="modal__container--son">
+                        <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
+                        <div class="modal__container--field">
+                            <label class="modal__container--label" for="input__quantity">Quantity</label>
+                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="modal__container--son">
+                        <img class="modal__image" src="../source/img/usd.png" alt="USD">
+                        <p class="modal__convert">0</p>
+                    </div>
+
+                    <input class="modal__convert--button" type="submit" value="Convert">
+                </form>
+            </article>
+        </section>
+
+        <!-- Modal USD to PB -->
+        <section class="modal3" id="modal3">
+            <article class="modal__container">
+                <form action="" method="" class="modal-form" id="modal-form">
+                    <img class="modal3__close" src="../source/img/close.png" alt="close">
+                    <p class="modal__title">Convert USD to PB</p>
+                    <div class="modal__container--son">
+                        <img class="modal__image" src="../source/img/usd.png" alt="USD">
+                        <div class="modal__container--field">
+                            <label class="modal__container--label" for="input__quantity">Quantity</label>
+                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="modal__container--son">
+                        <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
+                        <p class="modal__convert">0</p>
+                    </div>
+
+                    <input class="modal__convert--button" type="submit" value="Convert">
+                </form>
+            </article>
+        </section>
+
+        <script src="../js/modal_converter.js"></script>
+</body>
 </html>

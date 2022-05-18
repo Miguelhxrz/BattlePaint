@@ -79,7 +79,7 @@
     </header>
 
     <main class="main">
-        <form action="" class="register">
+        <section class="register">
             <div class="register__block one">
                 <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
@@ -158,45 +158,28 @@
                         <article class="line_converter"></article>
 
                         <article class="container_converter">
-                            <div class="converter">
-                                <h3>Converter</h3>
-                                <form action="">
-                                    <label for="You send">
-                                        You sent
-                                        <div class="container_select">
-                                            <input type="number" class="register__block--input">
-                                            <select name="select_coin" id="rank" class="register__block--input">
-                                                <option disabled>Select a coin</option>
-                                                <option value="Paint Backets">Paint Backet<img src="" class="moneda_5" alt=""></option>
-                                                <option value="Paint Points">Paint Points<img src="" class="moneda_6" alt=""></option>
-                                            </select>
-                                        </div>
-                                    </label>
-
-                                    <label for="You Got">
-                                        You Got
-                                        <div class="container_select">
-                                            <input type="number" class="register__block--input">
-                                            <select name="select_coin" class="register__block--input">
-                                                <option disabled>Select a coin</option>
-                                                <option value="Paint Backets">Paint Backets
-                                                    <img src="../source/img/svg/paint-backets.svg" class="moneda_7" alt="">
-                                                </option>
-                                                <option value="Paint Points">Paint Points
-                                                    <img src="../source/img/svg/paint-point.svg" class="moneda_8" alt="">
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </label>
-                                    <input type="submit" value="Converter" class="button_converter">
+                            <div class="select_converter">
+                                <div class="select_1">
+                                    <a href="./comprar_monedas.php">
+                                        <h4>Converter PP a PB</h4>
+                                    </a>
+                                </div>
+                                <div class="select_2">
+                                    <a href="./comprar_monedas.php">
+                                        <h4>Converter PB a USD</h4>
+                                    </a>
+                                </div>
+                                <div class="select_3">
+                                    <a href="./comprar_monedas.php">
+                                        <h4>Converter USD a PB</h4>
+                                    </a>
+                                </div>
                             </div>
                         </article>
-
                     </section>
-
                 </div>
             </div>
-        </form>
+        </section>
         </div>
 </body>
 

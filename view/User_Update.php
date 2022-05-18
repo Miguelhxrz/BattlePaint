@@ -113,7 +113,7 @@
                     </div>
                     <div class="my_balance">
                         <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                        <a href="./converter.php" class="link_update">Balance</a>
+                        <a href="converter_user.php" class="link_update">Balance</a>
                     </div>
                     <div class="logout">
                         <img src="../source/img/svg/logout_white_24dp.svg" alt="logout" class="icon_logout">

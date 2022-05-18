@@ -454,7 +454,7 @@ form {
 .two {
     padding-top: 3rem;
     background-color: transparent;
-    height: 500px;
+    height: 550px;
     width: 1031px;
     left: 311px;
     margin-right: 35px;
@@ -471,37 +471,14 @@ form {
     margin-top: 20px;
 }
 
-label {
-    display: block;
-    width: 50%;
-    padding: .5rem;
-    background-color: transparent;
-    font-size: 15px;
-}
 
 ::-webkit-calendar-picker-indicator {
     background-color: white;
     border-radius: .3rem;
 }
 
-select {
-    width: 20rem;
-    height: 3rem;
-    padding: 0.5rem;
-    color: var(--cta);
-    background-color: rgba(255, 255, 255, 20%);
-    box-shadow: .3rem .3rem .2rem rgba(0, 0, 0, 20%);
-    border-color: white;
-}
 
-select option {
-    padding: 0.5rem;
-    color: black;
-}
 
-select::placeholder {
-    color: white;
-}
 
 .user_update {
     display: flex;
@@ -550,9 +527,80 @@ select::placeholder {
     width: 50%;
 }
 
+.select_converter {
+    margin-top: 45px;
+}
+
+.select_1 {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
+    height: 60px;
+    width: 250px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 30px 10px;
+}
+
+.select_1 a {
+    text-decoration: none;
+    margin: auto;
+}
+
+.select_1 h4 {
+    font-size: 15px;
+    color: var(--light);
+    margin: auto;
+}
+.select_2 {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
+    height: 60px;
+    width: 250px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 30px 10px;
+}
+
+.select_2 a {
+    text-decoration: none;
+    margin: auto;
+}
+
+.select_2 h4 {
+    font-size: 15px;
+    color: var(--light);
+    margin: auto;
+}
+.select_3 {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0A88C2 18.2%, #613DC1 103.29%);
+    height: 60px;
+    width: 250px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 30px 10px;
+}
+
+.select_3 a {
+    text-decoration: none;
+    margin: auto;
+}
+
+.select_3 h4 {
+    font-size: 15px;
+    color: var(--light);
+    margin: auto;
+}
+
 .container_converter {
     width: 40%;
-    height: 400px;
+    height: 430px;
     margin-left: 50px;
     padding-top: 30px;
     color: var(--cta);
@@ -671,7 +719,7 @@ select::placeholder {
 
 .line_converter {
     width: 3px;
-    height: 400px;
+    height: 440px;
     margin-right: 10px;
     background-color: #fff;
 }

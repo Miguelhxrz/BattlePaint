@@ -135,7 +135,7 @@
                     <div class="user_update">
                         <div class="register__block--son">
                             <div class="register__block--cta">
-                                <a href="../source/reports/report-users.pdf" target="_blank" class="register__block--button">usuarios registrados</a>
+                                <a href="../source/reports/report-users.pdf" target="_blank" class="register__block--button">Usuarios registrados</a>
                             </div>
 
                             <div class="register__block--cta">
