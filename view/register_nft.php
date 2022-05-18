@@ -109,7 +109,7 @@
           <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
         </div>
         
-        <input type="submit" name="btn_submit" class="register__block--button" value="Create Account">
+        <input type="submit" name="btn_submit" class="register__block--button" value="Register NFT">
           <!-- registration complete -->
           <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
         </div>

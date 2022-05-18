@@ -1,6 +1,7 @@
 
 const registerNft = document.getElementById('register');
 const inputsNft = document.querySelectorAll('#register input');
+const input_token = document.getElementById('id');
 const input_name = document.getElementById('name_nft');
 const input_power = document.getElementById('power_nft');
 const input_rank = document.getElementById('rank_nft');
@@ -19,7 +20,7 @@ const nft_owner = document.querySelector('#nft_owner');
 const nft_price = document.querySelector('#nft_price');
 const nft_img = document.querySelector('#nft_img');
 
-console.log(input_img.value);
+
 
 
 
@@ -39,6 +40,8 @@ const GenerateID = () => {
 }
 
 let token = GenerateID();
+
+input_token.value = token;
 
 
 const expressionsNFT = {
@@ -125,7 +128,7 @@ registerNft.addEventListener('submit', (event) => {
             icon.classList.remove('register__group--correct');
         });
 
-        nft_token.value = token;
+        nft_token.value = input_token.value;
         nft_name.value = input_name.value;
         nft_power.value = input_power.value;
         nft_class.value = input_class.value;
