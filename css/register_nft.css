@@ -368,3 +368,7 @@ font-size: 16px;
   color: #bb2929;
   opacity: 1;
 }
+
+.form__hidden {
+  display: none;
+}

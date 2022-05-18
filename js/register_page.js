@@ -40,15 +40,9 @@ input_id.value = id_user;
 
 // regular expressions
 const expressions = {
-<<<<<<< HEAD
     username: /^[a-zA-Z0-9\_\-]{6,16}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^.{8,20}$/
-=======
-    username: /^[a-zA-Z0-9\_\-]{8,15}$/,
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password: /^.{8,12}$/
->>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
 }
 
 const fields = {

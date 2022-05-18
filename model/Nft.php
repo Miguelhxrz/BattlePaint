@@ -14,11 +14,11 @@ class Nft {
 
   function __construct() {
 
-    $db = new db_connect();
+    // $db = new db_connect();
   
   }
 
-  #setters
+  #•-•-Setters•-•-
   
   function setToken($token) {
     $this->token = $token;
@@ -48,12 +48,42 @@ class Nft {
     $this->price = $price;
   }
 
+  #•-•-Getters•-•-
 
-  #DataBase Methods
+  function getToken() {
+    return $this->token;
+  }
+
+  function getName() {
+    return $this->name;
+  }
+
+  function getPower() {
+    return $this->power;
+  }
+
+  function getClass() {
+    return $this->nft_class;
+  }
+
+  function getRank() {
+    return $this->nft_rank;
+  }
+
+  function getOwner() {
+    return $this->owner;
+  }
+
+  function getPrice() {
+    return $this->price;
+  }
+
+
+  #•-•-DataBase•-•-
 
   function addNft() {
 
-    $query = "INSERT INTO `nft`(`token`, `name`, `skin`, `class`, `rank`, `owner`, `price`) VALUES ('".$this->token."','".$this->name."','".$this->skin."','".$this->nft_class."','".$this->nft_rank."','".$this->owner."','".$this->price."')";
+    $query = "INSERT INTO `nft`(`token`, `name`, `power`, `skin`, `class`, `rank`, `owner`, `price`) VALUES ('".$this->token."','".$this->name."','".$this->power."','".$this->skin."','".$this->nft_class."','".$this->nft_rank."','".$this->owner."','".$this->price."')";
 
     $send = $this->db->sendQuery($query);
 

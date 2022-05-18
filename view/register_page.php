@@ -76,11 +76,7 @@
                         <input type="password" name="password" id="password" placeholder="Password" class="register__block--input">
                         <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
-<<<<<<< HEAD
                     <p class="register__input--error" id="register__input--error">The password must be from 8 to 20 digits.</p>
-=======
-                    <p class="register__input--error" id="register__input--error">The password must be from 8 to 15 digits.</p>
->>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
                 </div>
 
                 <!-- group id -->                   
@@ -89,10 +85,6 @@
                     <div id="group__input">
                         <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
                     </div>
-<<<<<<< HEAD
-                    <!-- <p class="register__input--error" id="register__input--error">The password must be from 8 to 20 digits.</p> -->
-=======
->>>>>>> 00c4532e8a88634848375c6e793cfe55432adc66
                 </div>
             </section>
                     
@@ -131,10 +123,6 @@
                 $user_email = $_POST['user_email'];
                 $user_birth = $_POST['user_birth'];
                 $user_gender = $_POST['user_gender'];
-
-                echo $_POST['user_username'];
-
-                
 
                 $_SESSION['username'] = $_POST['user_username'];
                 $_SESSION['password'] = $user_password;

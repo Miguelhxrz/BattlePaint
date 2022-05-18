@@ -7,17 +7,21 @@ const input_rank = document.getElementById('rank_nft');
 const input_class = document.getElementById('class_nft');
 const input_price = document.getElementById('price_nft');
 const input_owner = document.getElementById('owner_nft');
+const input_img = document.getElementById('nft_image');
 
 /* |---- for PHP ----|*/
-const nft_token = document.querySelector('#nft__token');
-const nft_name = document.querySelector('#nft__name');
-const nft_power = document.querySelector('#nft__power');
-const nft_class = document.querySelector('#nft__class');
-const nft_rank = document.querySelector('#nft__rank');
-const nft_owner = document.querySelector('#nft__owner');
-const nft_price = document.querySelector('#nft__price');
+const nft_token = document.querySelector('#nft_token');
+const nft_name = document.querySelector('#nft_name');
+const nft_power = document.querySelector('#nft_power');
+const nft_class = document.querySelector('#nft_class');
+const nft_rank = document.querySelector('#nft_rank');
+const nft_owner = document.querySelector('#nft_owner');
+const nft_price = document.querySelector('#nft_price');
+const nft_img = document.querySelector('#nft_img');
 
-console.log(input_price.value);
+console.log(input_img.value);
+
+
 
 /* |---- Function token ----|*/
 const GenerateID = () => {
@@ -107,10 +111,10 @@ inputsNft.forEach((input) => {
 });
 
 registerNft.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     if(fieldsInitial.name && fieldsInitial.power && fieldsInitial.price && fieldsInitial.owner) {
-        registerNft.reset();
+        // registerNft.reset();
 
         document.getElementById('register__complete').classList.add('register__complete-active');
         setTimeout(() => {
@@ -121,11 +125,30 @@ registerNft.addEventListener('submit', (event) => {
             icon.classList.remove('register__group--correct');
         });
 
+        nft_token.value = token;
+        nft_name.value = input_name.value;
+        nft_power.value = input_power.value;
+        nft_class.value = input_class.value;
+        nft_rank.value = input_rank.value;
+        nft_owner.value = input_owner.value;
+        nft_price.value = input_price.value;
+
+
+        console.log(`token: ${token}`);
+        console.log(`name: ${nft_name.value}`);
+        console.log(`power: ${nft_power.value}`);
+        console.log(`class: ${nft_class.value}`);
+        console.log(`rank: ${nft_rank.value}`);
+        console.log(`owner: ${nft_owner.value}`);
+        console.log(`price: ${nft_price.value}`);      
+
         setTimeout(() => { 
 
-            window.location.href = '../view/marketplace.php';
+            document.querySelector('.form__hidden').submit();
+
+            // window.location.href = '../view/marketplace.php';
         
-        },3000)
+        },3000); 
 
 
     } else {

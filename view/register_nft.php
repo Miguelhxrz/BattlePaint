@@ -1,3 +1,4 @@
+<?php require_once('../model/Nft.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,9 +115,9 @@
         
         <!-- rank -->
         <div class="register__group" id="register__rank">
-          <label for="rank">Rank</label>
+          <label for="rank">Choose rank</label>
           <select name="rank" id="rank_nft" class="register__block--input">
-              <option disabled>Select a rang</option>
+              <option selected disabled value="">Select a rank</option>
               <option value="s">S</option>
               <option value="a">A</option>
               <option value="b">B</option>
@@ -158,8 +159,9 @@
       <section class="register__block three">
         <!-- class -->
         <div class="register__group" id="register__class">
-          <label for="class">Class</label>
+          <label for="class">choose class</label>
           <select name="class" id="class_nft">
+          <option value="" select disabled>Select class</option>
             <option value="tank">Tank</option>
             <option value="shooter">Shooter</option>
             <option value="assassin">Assassin</option>
@@ -179,6 +181,51 @@
         </div>
       </form>
     </div>
+
+    <form action="" method="POST" name='Form_hidden' class="form__hidden">
+      <input type="text" name='nft_token' id="nft_token">
+      <input type="text" name='nft_name' id="nft_name">
+      <input type="text" name='nft_power' id="nft_power">
+      <input type="text" name='nft_class' id="nft_class">
+      <input type="text" name='nft_rank' id="nft_rank">
+      <input type="text" name='nft_owner' id="nft_owner">
+      <input type="text" name='nft_price' id="nft_price">
+    </form>
+
+    <?php 
+
+      var_dump($_POST['nft_image']);
+      
+
+      if(isset($_POST['nft_token']) && isset($_POST['nft_name']) && isset($_POST['nft_power']) && isset($_POST['nft_class']) && isset($_POST['nft_rank']) && isset($_POST['nft_owner']) && isset($_POST['nft_price'])) {
+
+        $nft = new Nft();
+
+        $nft->setToken($_POST['nft_token']);
+        $nft->setName($_POST['nft_name']);
+        $nft->setPower($_POST['nft_power']);
+        $nft->setClass($_POST['nft_class']);
+        $nft->setRank($_POST['nft_rank']);
+        $nft->setOwner($_POST['nft_owner']);
+        $nft->setPrice($_POST['nft_price']);
+
+        $nft_token = $nft->getToken();
+        $nft_name = $nft->getName();
+        $nft_Power = $nft->getPower();
+        $nft_class = $nft->getClass();
+        $nft_rank = $nft->getRank();
+        $nft_owner = $nft->getOwner();
+        $nft_price = $nft->getPrice();
+
+        
+
+      }
+    
+    
+    
+    
+    
+    ?>
 
     <script src="../js/redirect.js"></script>
     <script src="../js/register_nft.js"></script>
