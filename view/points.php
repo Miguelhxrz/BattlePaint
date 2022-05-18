@@ -56,7 +56,7 @@
               <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PP">
               <div class="modal__container--field">
                 <label class="modal__container--label" for="input__quantity">Quantity</label>
-                <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity">
+                <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity" min="1" max="100" require>
               </div>
             </div>
 
