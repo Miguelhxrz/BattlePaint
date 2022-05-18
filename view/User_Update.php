@@ -103,7 +103,7 @@
 
                     <!-- error message -->
                     <div class="register__message" id="register__message">
-                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> </p>
                     </div>
 
                     <div class="register__block--cta">
@@ -140,7 +140,7 @@
         ?>
 
         <script src="./js/redirect.js"></script>
-        <script src="../js/user_update-validations.js"></script>
+        <script src="../js/update-validations.js"></script>
         <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
     </main>
 </body>
