@@ -1,10 +1,20 @@
 const register = document.getElementById('update');
 const inputs = document.querySelectorAll('#update input');
 
+const input_username = document.getElementById('username');
+const input_email = document.getElementById('email');
+const input_password = document.getElementById('password');
+
+/* |---- for php ----|*/
+const new_username = document.querySelector('#new_username');
+const new_email = document.querySelector('#new_email');
+const new_password = document.querySelector('#new_password');
+
+
 const expressions = {
-    username: /^[a-zA-Z0-9\_\-]{4,16}$/,
+    username: /^[a-zA-Z0-9\_\-]{6,16}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password: /^.{4,12}$/
+    password: /^.{8,20}$/ 
 }
 
 const fields = {
@@ -70,6 +80,27 @@ register.addEventListener('submit', (event) => {
         document.querySelectorAll('.register__group--correct').forEach((icon) => {
             icon.classList.remove('register__group--correct');
         });
+
+        new_username.value = input_username.value;
+        new_email.value = input_email.value;
+        new_password.value = input_password.value;
+
+        setTimeout( () => {
+            
+            document.querySelector('.form__hidden').submit();
+
+            console.log(new_username.value);
+            console.log(new_email.value);
+            console.log(new_password.value);
+
+
+            // window.location.reload();
+
+        }, 3000)
+
+
+
+
     } else {
         document.getElementById('register__message').classList.add('register__message-active');
         setTimeout(() => {

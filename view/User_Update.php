@@ -116,11 +116,17 @@
 
             </section>
         </form>
+        <form action="" method="post" class="form__hidden">
+            <input type="text" name="new_username" id="new_username">
+            <input type="text" name="new_email" id="new_email">
+            <input type="text" name="new_password" id="new_password">
+        </form>
         </div>
 
         <script src="./js/redirect.js"></script>
         <script src="../js/user_update-validations.js"></script>
         <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
+    </main>
 </body>
 
 </html>
