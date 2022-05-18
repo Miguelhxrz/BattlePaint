@@ -1,6 +1,7 @@
 /* |---- Imporatando la fuente ----| */
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -870,7 +871,27 @@ form {
     font-size: 4rem;
 }
 
+.modal__convert2 {
+    display: flex;
+    margin: auto;
+    font-size: 4rem;
+}
+
+
 .modal__convert--button {
+    width: 250px;
+    height: 50px;
+    margin-top: 30px;
+    color: var(--light);
+    font-size: 30px;
+    background: linear-gradient(90deg, #858AE3 18.2%, #613DC1 103.29%);
+    border: var(--dark-violet) solid 2px;
+    border-radius: 30px 10px;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.modal__convert--button2 {
     width: 250px;
     height: 50px;
     margin-top: 30px;
@@ -887,9 +908,14 @@ form {
     box-shadow: 0 0 20px var(--grey);
 }
 
+.modal__convert--button2:hover {
+    box-shadow: 0 0 20px var(--grey);
+}
+
 .modal--show {
     opacity: 1;
     pointer-events: unset;
     transition: opacity .6s;
 }
+
 /* fin modal*/
