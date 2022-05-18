@@ -1,8 +1,5 @@
 <?php 
 require_once('../controller/login_controller.php');
-var_dump($_SESSION['id']);
-var_dump($_SESSION['username']);
-var_dump($_SESSION['password']);
 
 ?>
 <!DOCTYPE html>
