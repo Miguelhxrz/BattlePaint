@@ -608,7 +608,6 @@ textarea::placeholder {
 
 .nft__img {
     position: absolute;
-    width: 290px;
     z-index: 0;
 }
 
