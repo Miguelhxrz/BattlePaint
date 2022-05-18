@@ -110,7 +110,7 @@
                         <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
 
                         <!-- registration complete -->
-                        <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+                        <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Your details have been changed!</p>
                     </div>
                 </div>
 
@@ -122,6 +122,22 @@
             <input type="text" name="new_password" id="new_password">
         </form>
         </div>
+        <?php 
+
+        
+        if(isset($_POST['new_username']) && isset($_POST['new_email']) && isset($_POST['new_password'])) {
+
+            $_SESSION['username'] = $_POST['new_username'];
+            $_SESSION['email'] = $_POST['new_email'];
+            $_SESSION['password'] = $_POST['new_password'];
+
+        }
+        
+        
+        
+        
+        
+        ?>
 
         <script src="./js/redirect.js"></script>
         <script src="../js/user_update-validations.js"></script>

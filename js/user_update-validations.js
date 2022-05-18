@@ -70,7 +70,6 @@ register.addEventListener('submit', (event) => {
     event.preventDefault();
 
     if (fields.username && fields.email && fields.password) {
-        register.reset();
 
         document.getElementById('register__complete').classList.add('register__complete-active');
         setTimeout(() => {
@@ -85,19 +84,16 @@ register.addEventListener('submit', (event) => {
         new_email.value = input_email.value;
         new_password.value = input_password.value;
 
+        console.log(new_username.value);
+        console.log(new_email.value);
+        console.log(new_password.value);
+
         setTimeout( () => {
             
             document.querySelector('.form__hidden').submit();
 
-            console.log(new_username.value);
-            console.log(new_email.value);
-            console.log(new_password.value);
-
-
-            // window.location.reload();
 
         }, 3000);
-
 
 
 
