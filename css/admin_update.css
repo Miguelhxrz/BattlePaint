@@ -573,7 +573,7 @@ select::placeholder {
     font-size: 1.5rem;
     background-color: #bb2929;
     border-radius: 5px;
-    /* display: none; */
+    display: none;
 }
 
 .register__message-active {
