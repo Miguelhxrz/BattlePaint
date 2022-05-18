@@ -80,94 +80,93 @@
           </div>
 
           <div class="user_update">
+
             <section class="nft__container">
-
               <article class="nft__card">
-                <figure class="nft__img">
-                  <img src="../source/img/Characters/test.png" alt="Shanna">
-                </figure>
-                <div class="nft__rank a">
-                  <h4>A</h4>
-                </div>
-                <div class="nft__name a">
-                  <h3>Shanna</h3>
-                  <p>• Dinasty's Ranger •</p>
-                </div>
-                <div class="nft__price">
-                  <article class="price">
-                    <h4>Price PB:</h4>
-                    <div class="price__pay">
-                      <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                      <h4>????</h4>
-                    </div>
-                  </article>
-                  <article class="price">
-                    <h4>Price USD:</h4>
-                    <div class="price__pay">
-                      <img src="../source/img/usd.png" alt="paint bucket icon">
-                      <h4>????</h4>
-                    </div>
-                  </article>
-                </div>
+                  <figure class="nft__img">
+                      <img src="../source/img/Characters/test.png" alt="Shanna">
+                  </figure>
+                  <div class="nft__rank a">
+                      <h4>A</h4>
+                  </div>
+                  <div class="nft__name a">
+                      <h3>Shanna</h3>
+                      <p>• Dinasty's Ranger •</p>
+                  </div>
+                  <div class="nft__price">
+                      <article class="price">
+                          <h4>Price PB:</h4>
+                          <div class="price__pay">
+                              <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
+                              <h4>????</h4>
+                          </div>
+                      </article>
+                      <article class="price">
+                          <h4>Price USD:</h4>
+                          <div class="price__pay">
+                              <img src="../source/img/usd.png" alt="paint bucket icon">
+                              <h4>????</h4>
+                          </div>
+                      </article>
+                  </div>
               </article>
 
               <article class="nft__card">
-                <figure class="nft__img">
-                  <img src="../source/img/Characters/test2.png" alt="Raidon">
-                </figure>
-                <div class="nft__rank ">
-                  <h4>S</h4>
-                </div>
-                <div class="nft__name">
-                  <h3>Raidon</h3>
-                  <p>• Galaxy Ranger •</p>
-                </div>
-                <div class="nft__price">
-                  <article class="price">
-                    <h4>Price PB:</h4>
-                    <div class="price__pay">
-                      <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                      <h4>????</h4>
-                    </div>
-                  </article>
-                  <article class="price">
-                    <h4>Price USD:</h4>
-                    <div class="price__pay">
-                      <img src="../source/img/usd.png" alt="paint bucket icon">
-                      <h4>????</h4>
-                    </div>
-                  </article>
-                </div>
+                  <figure class="nft__img">
+                      <img src="../source/img/Characters/test2.png" alt="Raidon">
+                  </figure>
+                  <div class="nft__rank ">
+                      <h4>S</h4>
+                  </div>
+                  <div class="nft__name">
+                      <h3>Raidon</h3>
+                      <p>• Galaxy Ranger •</p>
+                  </div>
+                  <div class="nft__price">
+                      <article class="price">
+                          <h4>Price PB:</h4>
+                          <div class="price__pay">
+                              <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
+                              <h4>????</h4>
+                          </div>
+                      </article>
+                      <article class="price">
+                          <h4>Price USD:</h4>
+                          <div class="price__pay">
+                              <img src="../source/img/usd.png" alt="paint bucket icon">
+                              <h4>????</h4>
+                          </div>
+                      </article>
+                  </div>
               </article>
 
               <article class="nft__card">
-                <figure class="nft__img">
-                  <img src="../source/img/Characters/test3.png" alt="Veinka">
-                </figure>
-                <div class="nft__rank ">
-                  <h4>B</h4>
-                </div>
-                <div class="nft__name">
-                  <h3>Veinka</h3>
-                  <p>• The protective gunner •</p>
-                </div>
-                <div class="nft__price">
-                  <article class="price">
-                    <h4>Price PB:</h4>
-                    <div class="price__pay">
-                      <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                      <h4>????</h4>
-                    </div>
-                  </article>
-                  <article class="price">
-                    <h4>Price USD:</h4>
-                    <div class="price__pay">
-                      <img src="../source/img/usd.png" alt="paint bucket icon">
-                      <h4>????</h4>
-                    </div>
-                  </article>
-
-                </div>
+                  <figure class="nft__img">
+                      <img src="../source/img/Characters/test3.png" alt="Veinka">
+                  </figure>
+                  <div class="nft__rank ">
+                      <h4>B</h4>
+                  </div>
+                  <div class="nft__name">
+                      <h3>Veinka</h3>
+                      <p>• The protective gunner •</p>
+                  </div>
+                  <div class="nft__price">
+                      <article class="price">
+                          <h4>Price PB:</h4>
+                          <div class="price__pay">
+                              <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
+                              <h4>????</h4>
+                          </div>
+                      </article>
+                      <article class="price">
+                          <h4>Price USD:</h4>
+                          <div class="price__pay">
+                              <img src="../source/img/usd.png" alt="paint bucket icon">
+                              <h4>????</h4>
+                          </div>
+                      </article>
+                  </div>
               </article>
             </section>
           </div>
