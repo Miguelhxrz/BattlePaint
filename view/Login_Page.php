@@ -27,8 +27,6 @@
                     <label for="username" class="register__block--label"> Username </label>
                     <div class="group__input">
                         <input type="text" name="username" id="username" placeholder="Username" class="register__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
-                        <!-- <img class="form__validation--state"  alt="circle-xmark-solid"> -->
                     </div>
                     <p class="register__input--error">Username must be 6 to 16 characters (only a-z, 0-9, _).</p>
                 </div>
@@ -38,7 +36,6 @@
                     <label for="password" class="register__block--label"> Password </label>
                     <div class="group__input">
                         <input type="password" name="password" id="password" placeholder="Password" class="login__block--input">
-                        <i class="form__validation--state fa-solid fa-circle-xmark"></i>
                     </div>
                     <p class="register__input--error">The password must be from 8 to 20 digits.</p>
                 </div>
@@ -48,7 +45,7 @@
                 <div class="login__block--cta">
                     <!-- error message -->
                     <div class="register__message" id="register__message">
-                        <p><i class="fa-solid fa-triangle-exclamation"></i> ¡Access error!</p>
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> ¡Access error! Unregistered user.</p>
                     </div>
 
                     <input type="submit" value=" LOGIN " class="login__block--button">

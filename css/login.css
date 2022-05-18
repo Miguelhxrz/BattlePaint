@@ -274,24 +274,6 @@ a .neon4 {
     font-size: 1.4rem;
 }
 
-.register__input--error {
-    margin-top: 10px;
-    font-size: 12px;
-    display: none;
-  }
-  
-  .register__input--error-active {
-    display: block;
-  }
-  
-  .form__validation--state {
-    position: relative;
-    right: 35px;
-    z-index: 100;
-    font-size: 16px;
-    opacity: 0;
-  }
-  
   .register__message {
     width: 100%;
     height: 40px;
@@ -329,12 +311,7 @@ a .neon4 {
     letter-spacing: 2px;
 }
   
-/* styles for validations */
-.register__group--correct .form__validation--state {
-    color: #1ed12d;
-    opacity: 1;
-}
-  
+/* styles for validations */  
 .register__group--incorrect .register__block--label {
     color: #bb2929;
 }
@@ -343,10 +320,3 @@ a .neon4 {
     color: #bb2929;
     opacity: 1;
 }
-
-/* icons */
-/* .circle-xmark-solid {
-    width: 20px;
-    background-image: url('../source/img/svg/circle-xmark-solid.svg');
-    background-repeat: no-repeat;
-} */
