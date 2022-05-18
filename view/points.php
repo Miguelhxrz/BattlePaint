@@ -1,6 +1,7 @@
 <?php require_once('../controller/header_controller.php') ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,11 @@
   <script src="./js/redirect.js"></script>
   <title>Battle Paint | Points</title>
 </head>
+
 <body>
-  
+
   <?php include($header) ?>
-  
+
   <main class="container">
 
     <section class="explain__container">
@@ -21,9 +23,9 @@
       <p class="explain__utility"> The Paint Buckets is the main token in this game,<br> its function is its use as currency, for the purchase of characters. </p>
     </section>
 
-    <section class="buy__container">
+    <section class="buy__container ">
 
-      <article class="buy__card">
+      <article class="buy__card" id="modal__point">
         <img src="../source/img/svg/paint-backets.svg" alt="" class="buy__img">
 
         <img src="../source/img/card_text.png" alt="" class="buy__background--img">
@@ -37,11 +39,44 @@
           <h5 class="amount">????</h5>
         </div>
 
+
       </article>
-      
-    
     </section>
-      
+
+
+
+    <!-- modal points     -->
+    <section class="modal1" id="modal1">
+      <article class="modal__container">
+        <form action="" method="" class="modal-form" id="modal-form">
+          <img class="modal__close" src="../source/img/close.png" alt="close">
+          <p class="modal__title">Buy coins</p>
+          <div class="container_buy">
+            <div class="modal__container--son">
+              <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PP">
+              <div class="modal__container--field">
+                <label class="modal__container--label" for="input__quantity">Quantity</label>
+                <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity">
+              </div>
+            </div>
+
+            <img src="../source/img/svg/change.svg" class="modal__converter" alt="">
+
+            <div class="modal__container--son">
+              <img class="modal__image" src="../source/img/usd.png" alt="PB">
+              <p class="modal__convert">0</p>
+            </div>
+          </div>
+
+          <input class="modal__convert--button" type="submit" value="Buy">
+        </form>
+      </article>
+    </section>
+
+
+
   </main>
+  <script src="../js/modal_point.js"></script>
 </body>
+
 </html>
