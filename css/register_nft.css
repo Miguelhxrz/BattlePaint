@@ -228,7 +228,7 @@ a .neon4 {
 
 .register {
     width: 60%;
-    height: 550px;
+    height: 650px;
     padding: 20px;
     border: 3px solid var(--blue-violet-soft);
     border-radius: 50px 15px;
@@ -273,7 +273,9 @@ label {
 .register__block--input[type='text'],
 .register__block--input[type='number'],
 .register__block--input[type='text'],
-.register__block--input[type='text'] {
+.register__block--input[type='text'],
+.register__block--input[type='file'],
+.register__block--input[type='file'] {
     width: 80%;
     height: 4rem;
     padding: 0.5rem;
