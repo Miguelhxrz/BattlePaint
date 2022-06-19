@@ -228,8 +228,7 @@ require_once('../controller/register_nft-controller.php');
 
         $_SESSION['nft_token'] = $nft_id;
 
-        echo "<script>window.location.href = './character_view.php'</script>";
-
+        echo "<script>window.location.href = './marketplace.php'</script>";
 
       }
 

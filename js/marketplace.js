@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+  
+  const card = document.getElementsByClassName('nft__card');
 
-  const card = document.querySelector('.nft__card');
+  const nft_cards = Array.from(card);
 
-  const nft__rank = document.querySelector('.nft__rank').textContent.trim();
+  const nft__rank = document.getElementsByClassName('nft__rank');
+
+  const nft_ranks = Array.from(nft__rank);
 
   const rank_style = {
     'S': 'tier-s',
@@ -10,7 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
     'B': 'tier-b'
   }
 
-  card.classList.add(rank_style[nft__rank]);
+
+for (let i = 0; i < nft_cards.length; i++) {
+  nft_cards[i].classList.add(rank_style[nft_ranks[i].textContent.trim()]);
+
+  console.log(nft_cards[i].classList);
+}
+  
+
+
+ /*  card.addEventListener( 'click', () => {
+
+    document.querySelector('.form__hidden').submit();
+
+  }) */
 
 
 

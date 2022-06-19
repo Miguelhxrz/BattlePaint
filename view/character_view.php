@@ -5,7 +5,11 @@
 
   $lastUrl = $_SERVER["HTTP_REFERER"];
 
-  if( stristr( $lastUrl, '/register_nft.php') === false ){
+  
+
+  // var_dump(stristr( $lastUrl, '/marketplace.php') === '/marketplace.php');
+
+  /* if( stristr( $lastUrl, '/register_nft.php') === false ){
 
 
   }else if( stristr( $lastUrl, '/register_nft.php') === '/register_nft.php' ){
@@ -16,7 +20,17 @@
 
     $nfts = $nft->NFTSByToken( $token );
 
-  }
+  }else if( (stristr( $lastUrl, '/marketplace.php') === '/marketplace.php') === true ) {
+
+    $token = $_POST['nft_token'];
+
+    var_dump($token);
+
+    $nft = new Nft();
+
+    $nfts = $nft->NFTSByToken( $token );
+
+  } */
 
 ?>
 

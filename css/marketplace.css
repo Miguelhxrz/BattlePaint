@@ -428,7 +428,7 @@ a .neon4 {
 
 .nft__container {
     display: grid;
-    grid-template: repeat(1, 360px)/ repeat(4, 290px);
+    grid-template: repeat(3, 360px)/ repeat(4, 290px);
     gap: 32px;
     width: 1255px;
     height: auto;
@@ -489,6 +489,7 @@ a .neon4 {
     width: 290px;
     z-index: 0;
 }
+
 
 .nft__card .nft__name {
     position: relative;

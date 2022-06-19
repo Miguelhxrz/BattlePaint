@@ -107,16 +107,25 @@
 
         <section class="nft__container">
             <?php foreach ( $nfts as $nft ) { ?>
+                
                 <article class="nft__card">
+                
+                    <form action="./character_view.php" method="post" class="form__hidden">
+                        <input type="hidden" name="nft_token" value="<?php echo $nft['token']  ?>">
+                    </form>
+                    
                     <figure class="nft__img">
                         <img src="<?php echo $nft['img_c'] ?>" alt="nft_img">
                     </figure>
+                    
                     <div class="nft__rank">
                         <h4><?php echo $nft['rank'] ?></h4>
                     </div>
+                    
                     <div class="nft__name ">
                         <h3><?php echo $nft['name'] ?></h3>
                     </div>
+                    
                     <div class="nft__price">
                         <article class="price">
                             <h4>Price PB:</h4>
@@ -125,6 +134,7 @@
                                 <h4><?php echo $nft['price'] ?></h4>
                             </div>
                         </article>
+                    
                         <article class="price">
                             <h4>Price USD:</h4>
                             <div class="price__pay">
@@ -138,8 +148,11 @@
                                     echo $price_usd;
                                     ?></h4>
                             </div>
+                        
                         </article>
+                    
                     </div>
+                
                 </article>
             <?php } ?> 
 
