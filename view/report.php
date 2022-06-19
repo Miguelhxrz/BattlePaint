@@ -61,9 +61,22 @@
                         <a href="#" class="link_update">Reports</a>
                     </div>
                     <div class="logout">
-                        <img src="../source/img/svg/logout_white_24dp.svg" alt="logout" class="icon_logout">
-                        <a href="../index.php" class="link_update">Logouts</a>
-                    </div>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                    </form>
+                    <?php 
+                    
+                    if(isset($_POST['log-out'])) {
+                        session_destroy();
+
+                        echo "<script>window.location.href = '../index.php';</script>";
+                    }
+            
+                    
+                    
+                    ?>
+
+                </div>
 
                 </div>
 

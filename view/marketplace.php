@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/marketplace.css">
-    <script src="./js/redirect.js"></script>
+    <script src="../js/redirect.js"></script>
     <title>Battle Paint | Marketplace</title>
 </head>
 

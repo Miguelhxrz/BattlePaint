@@ -1,7 +1,4 @@
-<?php 
-require_once('../controller/login_controller.php');
-
-?>
+<?php require_once('../controller/login_controller.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,16 +111,21 @@ require_once('../controller/login_controller.php');
         <?php 
 
 
-            if(isset($_POST['submit'])){ 
+        if(isset($_POST['submit'])){ 
 
-                if(($_SESSION['username'] === $_POST['username']) && ($_SESSION['password'] === $_POST['password'])) {
+            $user_username = $_POST[ 'username' ];
 
-                    echo "<script> window.location.href = './marketplace.php'; </script>";
+            $user_password = $_POST[ 'password' ];
+        
+            $user = new User();
 
-                }
+            $login = $user->Login( $user_username, $user_password );
 
+            $_SESSION['username'] = $_POST[ 'username' ];
 
-            }
+            echo $login;
+
+        }
 
         
         

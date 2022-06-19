@@ -14,7 +14,7 @@ class Nft {
 
   function __construct() {
 
-    // $db = new db_connect();
+    $db = new db_connect();
   
   }
 

@@ -1,4 +1,40 @@
-<?php require_once('../controller/header_controller.php') ?>
+<?php 
+require_once('../controller/header_controller.php');
+
+  if(empty($_SESSION['nft_token'])) {
+    $_SESSION['nft_token'] = 'Please register an NFT';
+  }else if (empty($_SESSION['nft_name'])){
+
+    $_SESSION['nft_name'] = 'Please register an NFT';
+  
+  }else if (empty($_SESSION['nft_power'])){
+
+    $_SESSION['nft_power'] = 'Please register an NFT';
+  
+  }else if (empty($_SESSION['nft_class'])){
+  
+    $_SESSION['nft_class'] = 'Please register an NFT';
+    
+
+  }else if (empty($_SESSION['nft_rank'])){
+    
+    $_SESSION['nft_rank'] = 'Please register an NFT';
+    
+  }else if (empty($_SESSION['nft_owner'])){
+    
+    $_SESSION['nft_owner'] = 'Please register an NFT';
+
+  }else if (empty($_SESSION['nft_price'])){
+
+    $_SESSION['nft_price'] = 'Please register an NFT';
+
+  }
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +44,7 @@
   <link rel="stylesheet" href="../css/character_view.css">
   <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
   <script src="../js/redirect.js"></script>
+  <script src="../js/modal_nft.js"></script>
   <title>Battle Paint | Marketplace</title>
 </head>
 <body>

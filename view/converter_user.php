@@ -52,8 +52,21 @@
                     <a href="./converter.php" class="link_update">Balance</a>
                 </div>
                 <div class="logout">
-                    <img src="../source/img/svg/logout_white_24dp.svg" alt="logout" class="icon_logout">
-                    <a href="../index.php" class="link_update">Logouts</a>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                    </form>
+                    <?php 
+                    
+                    if(isset($_POST['log-out'])) {
+                        session_destroy();
+
+                        echo "<script>window.location.href = '../index.php';</script>";
+                    }
+            
+                    
+                    
+                    ?>
+
                 </div>
 
             </div>
@@ -71,11 +84,11 @@
                                         </h3>
                                     </div>
                                     <div class="balance_a">
-                                        <h4>10</h4>
+                                        <h4>5</h4>
                                         <img src="../source/img/svg/paint-backets.svg" class="moneda_1" alt="Paint Backets">
                                     </div>
                                     <div class="balance_b">
-                                        <h4>1000</h4>
+                                        <h4>250</h4>
                                         <img src="../source/img/usd.png" alt="">
                                     </div>
                                 </div>

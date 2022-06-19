@@ -139,8 +139,6 @@ registerNft.addEventListener('submit', (event) => {
         setTimeout(() => { 
 
             document.querySelector('.form__hidden').submit();
-
-            window.location.href = '../view/character_view.php';
         
         },3000); 
 

@@ -17,7 +17,7 @@
     <?php include($header) ?>
 
     <main class="main">
-        <form action="" class="update" id="update">
+        <section>
             <section class="register">
 
                 <div class="register__block one">
@@ -55,9 +55,22 @@
                         <a href="converter_user.php" class="link_update">Balance</a>
                     </div>
                     <div class="logout">
-                        <img src="../source/img/svg/logout_white_24dp.svg" alt="logout" class="icon_logout">
-                        <a href="../index.php" class="link_update">Logouts</a>
-                    </div>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                    </form>
+                    <?php 
+                    
+                    if(isset($_POST['log-out'])) {
+                        session_destroy();
+
+                        echo "<script>window.location.href = '../index.php';</script>";
+                    }
+            
+                    
+                    
+                    ?>
+
+                </div>
 
                 </div>
 
@@ -66,6 +79,7 @@
                         <h2>Update info</h2>
                     </div>
                     <div class="user_update">
+
                         <!-- group username -->
                         <div class="register__group" id="register__username">
                             <label for="username" class="register__block--label">Username</label>
@@ -115,7 +129,7 @@
                 </div>
 
             </section>
-        </form>
+        </section>
         <form action="" method="post" class="form__hidden">
             <input type="text" name="new_username" id="new_username">
             <input type="text" name="new_email" id="new_email">

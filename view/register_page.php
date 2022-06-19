@@ -194,6 +194,8 @@
                 var_dump($_SESSION['id']);
                 var_dump($_SESSION['username']);
 
+                echo "<script>window.location.href = '../view/login_page.php';</script>";
+
             }
                 
         ?>

@@ -163,8 +163,6 @@ register.addEventListener('submit', (event) => {
         setTimeout(() => { 
 
             document.querySelector('.form__hidden').submit();
-
-            window.location.href = '../view/login_page.php';
         
         },3000)
 

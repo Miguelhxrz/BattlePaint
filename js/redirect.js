@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  const card = document.getElementsByClassName('nft__card ');
+  const card = document.getElementsByClassName('nft__card');
 
   const card_arr = [...card];
 

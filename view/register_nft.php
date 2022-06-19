@@ -156,6 +156,8 @@
         $_SESSION['nft_owner'] = $nft_owner;
         $_SESSION['nft_price'] = $nft_price;
 
+        echo "<script>window.location.href = './character_view.php'</script>";
+
       }
     
     
