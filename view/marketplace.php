@@ -1,5 +1,10 @@
 <?php 
     require_once('../controller/header_controller.php');
+    require_once('../controller/marketplace-controller.php');
+
+    $nft = new Nft();
+
+    $nfts = $nft->showNFTS();
 ?>
       
 <!DOCTYPE html>
@@ -12,6 +17,7 @@
     <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/marketplace.css">
     <script src="../js/redirect.js"></script>
+    <script src="../js/marketplace.js"></script>
     <title>Battle Paint | Marketplace</title>
 </head>
 
@@ -100,123 +106,43 @@
         </section>
 
         <section class="nft__container">
+            <?php foreach ( $nfts as $nft ) { ?>
+                <article class="nft__card">
+                    <figure class="nft__img">
+                        <img src="<?php echo $nft['img_c'] ?>" alt="nft_img">
+                    </figure>
+                    <div class="nft__rank">
+                        <h4><?php echo $nft['rank'] ?></h4>
+                    </div>
+                    <div class="nft__name ">
+                        <h3><?php echo $nft['name'] ?></h3>
+                    </div>
+                    <div class="nft__price">
+                        <article class="price">
+                            <h4>Price PB:</h4>
+                            <div class="price__pay">
+                                <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
+                                <h4><?php echo $nft['price'] ?></h4>
+                            </div>
+                        </article>
+                        <article class="price">
+                            <h4>Price USD:</h4>
+                            <div class="price__pay">
+                                <img src="../source/img/usd.png" alt="paint bucket icon">
+                                <h4><?php 
+                                    $pb = intval($nft['price']);
+                                    $usd = 50;
+                                    
+                                    $price_usd = $pb * $usd;
+                                     
+                                    echo $price_usd;
+                                    ?></h4>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            <?php } ?> 
 
-            <article class="nft__card">
-                <figure class="nft__img">
-                    <img src="../source/img/Characters/test.png" alt="Shanna">
-                </figure>
-                <div class="nft__rank a">
-                    <h4>A</h4>
-                </div>
-                <div class="nft__name a">
-                    <h3>Shanna</h3>
-                    <p>• Dinasty's Ranger •</p>
-                </div>
-                <div class="nft__price">
-                    <article class="price">
-                        <h4>Price PB:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                    <article class="price">
-                        <h4>Price USD:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/usd.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                </div>
-            </article>
-
-            <article class="nft__card">
-                <figure class="nft__img">
-                    <img src="../source/img/Characters/test2.png" alt="Raidon">
-                </figure>
-                <div class="nft__rank ">
-                    <h4>S</h4>
-                </div>
-                <div class="nft__name">
-                    <h3>Raidon</h3>
-                    <p>• Galaxy Ranger •</p>
-                </div>
-                <div class="nft__price">
-                    <article class="price">
-                        <h4>Price PB:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                    <article class="price">
-                        <h4>Price USD:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/usd.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                </div>
-            </article>
-
-            <article class="nft__card">
-                <figure class="nft__img">
-                    <img src="../source/img/Characters/test3.png" alt="Veinka">
-                </figure>
-                <div class="nft__rank ">
-                    <h4>B</h4>
-                </div>
-                <div class="nft__name">
-                    <h3>Veinka</h3>
-                    <p>• The protective gunner •</p>
-                </div>
-                <div class="nft__price">
-                    <article class="price">
-                        <h4>Price PB:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                    <article class="price">
-                        <h4>Price USD:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/usd.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                </div>
-            </article>
-
-
-            <article class="nft__card">
-                <figure class="nft__img">
-                    <img src="../source/img/Characters/test4.png" alt="Mary">
-                </figure>
-                <div class="nft__rank ">
-                    <h4>A</h4>
-                </div>
-                <div class="nft__name">
-                    <h3>Mary</h3>
-                    <p>• The Forgotten noble •</p>
-                </div>
-                <div class="nft__price">
-                    <article class="price">
-                        <h4>Price PB:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                    <article class="price">
-                        <h4>Price USD:</h4>
-                        <div class="price__pay">
-                            <img src="../source/img/usd.png" alt="paint bucket icon">
-                            <h4>????</h4>
-                        </div>
-                    </article>
-                </div>
-            </article>
         </section>
         <section class="return__container">
             <a href="../index.php">
