@@ -114,6 +114,25 @@ class Nft {
 
   }
 
+   function nftByName( $name ) {
+
+    $query = "SELECT * FROM `nft` WHERE 'name' = '".$name."'";
+
+    $send = $this->db->sendQuery($query);
+
+    $nfts = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($nfts,$rows);
+      }
+      return $nfts;
+    }else {
+      return 0;
+    }
+
+   }
+
    function nftByOwner ( $owner ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$owner."'";

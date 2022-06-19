@@ -31,7 +31,7 @@
         <div class="register__group" id="register__name">
           <label for="name" class="register__block--label">Name</label>
           <div id="group__input">
-            <input type="text" name="name" id="name_nft" class="register__block--input">
+            <input type="text" name="name" id="name_nft" class="register__block--input" tabindex="1">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
           <p class="register__input--error" id="register__input--error">The name must be from 8 to 15 characters, no special characters or numbers.</p>
@@ -41,7 +41,7 @@
         <div class="register__group" id="register__power">
           <label for="battle_power" class="register__block--label">Battle power</label>
           <div id="group__input">
-            <input type="number" name="power" id="power_nft" class="register__block--input">
+            <input type="number" name="power" id="power_nft" class="register__block--input" tabindex="2">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
           <p class="register__input--error" id="register__input--error">You must enter a valid power of attorney.</p>
@@ -50,7 +50,7 @@
         <!-- rank -->
         <div class="register__group" id="register__rank">
           <label for="rank">Choose rank</label>
-          <select name="rank" id="rank_nft" class="register__block--input">
+          <select name="rank" id="rank_nft" class="register__block--input" tabindex="3">
               <option selected disabled value="">Select a rank</option>
               <option value="s">S</option>
               <option value="a">A</option>
@@ -65,7 +65,7 @@
         <div class="register__group" id="register__price">
           <label for="price" class="register__block--label">Price</label>
           <div id="group__input">
-            <input type="number" name="price" id="price_nft" class="register__block--input">
+            <input type="number" name="price" id="price_nft" class="register__block--input" tabindex="5">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
           <p class="register__input--error" id="register__input--error">The price must have a value greater than or equal to zero and contain only numbers and dots.</p>
@@ -75,7 +75,7 @@
         <div class="register__group" id="register__owner">
           <label for="owner" class="register__block--label">Owner</label>
           <div class="group__input">
-            <input type="text" name="owner" id="owner_nft" class="register__block--input">
+            <input type="text" name="owner" id="owner_nft" class="register__block--input" tabindex="6" value="<?php echo $_SESSION['username'] ?>" readonly>
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
           <p class="register__input--error" id="register__input--error">The owner must be 4 to 15 characters long, without special characters or numbers.</p>
@@ -85,7 +85,7 @@
         <div class="register__group" id="register__id">
             <label for="id" class="register__block--label">Assigned ID</label>
             <div id="group__input">
-                <input type="text" name="id" id="id" readonly value='' onmousedown="return false" class="register__block--input">
+                <input type="text" name="id" id="id" readonly  class="register__block--input">
             </div>
         </div>
       </section>
@@ -94,7 +94,7 @@
         <!-- class -->
         <div class="register__group" id="register__class">
           <label for="class">choose class</label>
-          <select name="class" id="class_nft">
+          <select name="class" id="class_nft" tabindex="4">
           <option selected disabled value="">Select a class</option>
             <option value="tank">Tank</option>
             <option value="shooter">Shooter</option>

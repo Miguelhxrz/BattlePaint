@@ -5,8 +5,6 @@
     $user_balance = 'Please login to continue!';
   }else {
     $username = $_SESSION['username'];
-    $user_id = $_SESSION['id'];
-    $user_balance = $_SESSION['balance'];
   }
 ?>
 <header class="header">

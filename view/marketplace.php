@@ -1,5 +1,5 @@
 <?php 
-    require_once('../controller/header_controller.php'); 
+    require_once('../controller/header_controller.php');
 ?>
       
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
 
         <section class="filter__container">
 
-            <form action="" class="filter__form">
+            <form action="POST" name='filter__form' class="filter__form">
 
                 <section class="filter__search filter">
 
@@ -48,21 +48,21 @@
 
                     <input type="checkbox" name="rank-s" id="rank-s">
                     <label for="rank-s">
-              <div class="rank__check"></div>
-              <p class="rank s">S</p>
-            </label>
+                        <div class="rank__check"></div>
+                        <p class="rank s">S</p>
+                    </label>
 
                     <input type="checkbox" name="rank-a" id="rank-a">
                     <label for="rank-a">
-              <div class="rank__check"></div>
-              <p class="rank a">A</p>
-            </label>
+                        <div class="rank__check"></div>
+                        <p class="rank a">A</p>
+                    </label>
 
                     <input type="checkbox" name="rank-b" id="rank-b">
                     <label for="rank-b">
-              <div class="rank__check"></div>
-              <p class="rank b">B</p>
-            </label>
+                        <div class="rank__check"></div>
+                        <p class="rank b">B</p>
+                    </label>
 
                 </section>
 
@@ -70,24 +70,27 @@
 
                     <h3 class="form__title">Level:</h3>
                     <input type="number" name="level" id="level" placeholder="30">
+
                 </section>
 
                 <section class="filter__level">
 
                     <h3 class="form__title">Battles:</h3>
                     <input type="number" name="level" id="level" placeholder="30">
+
                 </section>
 
                 <section class="filter__price">
 
                     <h3 class="form__title">Price:</h3>
                     <label for="from__price">From
-            <input type="number" name="from__price" 
-            id="level" placeholder="30">
-          </label>
+                        <input type="number" name="from__price" id="level" placeholder="30">
+                    </label>
+
                     <label for="from__price">To
-            <input type="number" name="to__price"   id="level" placeholder="30">
-          </label>
+                        <input type="number" name="to__price"   id="level" placeholder="30">
+                    </label>
+                    
                 </section>
 
                 <input type="submit" value="Search" class="filter__search-btn">
