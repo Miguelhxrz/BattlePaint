@@ -29,20 +29,6 @@ closeModal2.addEventListener('click', (event) => {
     modal2.classList.remove('modal--show');
 });
 
-// Modal USD to PB
-const showModal3 = document.querySelector('.modal3__cta');
-const closeModal3 = document.querySelector('.modal3__close');
-const modal3 = document.querySelector('.modal3');
-
-showModal3.addEventListener('click', (event) => {
-    event.preventDefault();
-    modal3.classList.add('modal--show');
-});
-
-closeModal3.addEventListener('click', (event) => {
-    event.preventDefault();
-    modal3.classList.remove('modal--show');
-});
 
 //convertidor de paint point a paint backet
 const converter = document.getElementById('input__quantity1');
@@ -79,19 +65,3 @@ resultado = converter2.value*50;
 showConverter2.innerHTML = resultado;
 })
 
-//convertidor de paint backet a usd
-const converter3 = document.getElementById('input__quantity3');
-const button3 = document.querySelector('.modal__convert--button3');
-const showConverter3 = document.querySelector('.modal__convert3');
-converter3.addEventListener('keyup', (event) => {
-    converter3.value = event.target.value;
-
-})
-
-button3.addEventListener('click', (event) => {
-event.preventDefault();
-let resultado = 0;
-
-resultado = converter3.value/50;
-showConverter3.innerHTML = resultado;
-})

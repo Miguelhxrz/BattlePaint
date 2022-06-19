@@ -113,11 +113,6 @@
                                         <h4>Converter PB a USD</h4>
                                     </a>
                                 </div>
-                                <div class="select_3">
-                                    <a class="modal3__cta" id="" href="#">
-                                        <h4>Converter USD a PB</h4>
-                                    </a>
-                                </div>
                             </div>
                         </article>
                     </section>
@@ -126,6 +121,7 @@
         </section>
         </div>
 
+     
         <!-- modal PP to PB -->
         <section class="modal1" id="modal1">
             <article class="modal__container">
@@ -136,32 +132,7 @@
                         <img class="modal__image" src="../source/img/svg/paint-point.svg" alt="PP">
                         <div class="modal__container--field">
                             <label class="modal__container--label" for="input__quantity">Quantity</label>
-                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity1">
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="modal__container--son">
-                        <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
-                        <p class="modal__convert">0</p>
-                    </div>
-
-                    <input class="modal__convert--button" type="submit" value="Convert">
-                </form>
-            </article>
-        </section>
-        <!-- modal PP to PB -->
-        <section class="modal1" id="modal1">
-            <article class="modal__container">
-                <form action="" method="" class="modal-form" id="modal-form">
-                    <img class="modal__close" src="../source/img/close.png" alt="close">
-                    <p class="modal__title">Convert PP to PB</p>
-                    <div class="modal__container--son">
-                        <img class="modal__image" src="../source/img/svg/paint-point.svg" alt="PP">
-                        <div class="modal__container--field">
-                            <label class="modal__container--label" for="input__quantity">Quantity</label>
-                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity2">
+                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity1" min="1" max="100" require>
                         </div>
                     </div>
 
@@ -187,7 +158,7 @@
                         <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
                         <div class="modal__container--field">
                             <label class="modal__container--label" for="input__quantity">Quantity</label>
-                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity2">
+                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity2" min="1" max="100" require>
                         </div>
                     </div>
 
@@ -199,32 +170,6 @@
                     </div>
 
                     <input class="modal__convert--button2" type="submit" value="Convert">
-                </form>
-            </article>
-        </section>
-
-        <!-- Modal USD to PB -->
-        <section class="modal3" id="modal3">
-            <article class="modal__container">
-                <form action="" method="post" class="modal-form" id="modal-form">
-                    <img class="modal3__close" src="../source/img/close.png" alt="close">
-                    <p class="modal__title">Convert USD to PB</p>
-                    <div class="modal__container--son">
-                        <img class="modal__image" src="../source/img/usd.png" alt="USD">
-                        <div class="modal__container--field">
-                            <label class="modal__container--label" for="input__quantity">Quantity</label>
-                            <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity3">
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="modal__container--son">
-                        <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
-                        <p class="modal__convert3">0</p>
-                    </div>
-
-                    <input class="modal__convert--button3" type="submit" value="Convert">
                 </form>
             </article>
         </section>
