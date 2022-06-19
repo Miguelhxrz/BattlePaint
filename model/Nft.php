@@ -11,10 +11,17 @@ class Nft {
   private $nft_rank;
   private $owner;
   private $price;
+  private $img_p;
+  private $img_c;
+
+
+  #data base
+  private $db;
+
 
   function __construct() {
 
-    $db = new db_connect();
+    $this->db = new db_connect();
   
   }
 
@@ -46,6 +53,14 @@ class Nft {
 
   function setPrice($price) {
     $this->price = $price;
+  }
+
+  function setImgP($imgp) {
+    $this->img_p = $imgp;
+  }
+
+  function setImgC($imgc) {
+    $this->img_c = $imgc;
   }
 
   #•-•-Getters•-•-
@@ -83,7 +98,7 @@ class Nft {
 
   function addNft() {
 
-    $query = "INSERT INTO `nft`(`token`, `name`, `power`, `skin`, `class`, `rank`, `owner`, `price`) VALUES ('".$this->token."','".$this->name."','".$this->power."','".$this->skin."','".$this->nft_class."','".$this->nft_rank."','".$this->owner."','".$this->price."')";
+    $query = "INSERT INTO `nft`(`token`, `name`, `power`, `class`, `rank`, `owner`, `price`, `img_c`, `img_p`) VALUES ('".$this->token."','".$this->name."','".$this->power."','".$this->nft_class."','".$this->nft_rank."','".$this->owner."','".$this->price."','".$this->img_c."','".$this->img_p."')";
 
     $send = $this->db->sendQuery($query);
 
@@ -114,7 +129,26 @@ class Nft {
 
   }
 
-   function nftByName( $name ) {
+  function NFTSByToken ( $token ) {
+
+    $query = "SELECT * FROM `nft` Where `token` = '".$token."'";
+
+    $send = $this->db->sendQuery($query);
+
+    $nfts = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($nfts,$rows);
+      }
+      return $nfts;
+    }else {
+      return 0;
+    }
+
+  }
+
+   function NFTSByName( $name ) {
 
     $query = "SELECT * FROM `nft` WHERE 'name' = '".$name."'";
 
@@ -133,7 +167,7 @@ class Nft {
 
    }
 
-   function nftByOwner ( $owner ) {
+   function NFTSByOwner ( $owner ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$owner."'";
 
@@ -153,7 +187,7 @@ class Nft {
   
   }
 
-  function nftByPrice ( $price ) {
+  function NFTSByPrice ( $price ) {
 
     $query = "SELECT * FROM `nft` WHERE `price` = '".$price."'";
 
@@ -174,7 +208,7 @@ class Nft {
   }
 
 
-  function nftByRank ( $rank ) {
+  function NFTSByRank ( $rank ) {
 
     $query = "SELECT * FROM `nft` WHERE `rank` = '".$rank."'";
 
@@ -194,7 +228,7 @@ class Nft {
   
   }
 
-  function nftByBattles ( $battles ) {
+  function NFTSByBattles ( $battles ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$battles."'";
 
@@ -214,7 +248,7 @@ class Nft {
   
   }
 
-  function nftByLevel ( $level ) {
+  function NFTSByLevel ( $level ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$level."'";
 

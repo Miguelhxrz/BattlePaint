@@ -1,16 +1,18 @@
+const input_token = document.getElementById('id');
 
+/* 
 const registerNft = document.getElementById('register');
 const inputsNft = document.querySelectorAll('#register input');
-const input_token = document.getElementById('id');
 const input_name = document.getElementById('name_nft');
 const input_power = document.getElementById('power_nft');
 const input_rank = document.getElementById('rank_nft');
 const input_class = document.getElementById('class_nft');
 const input_price = document.getElementById('price_nft');
 const input_owner = document.getElementById('owner_nft');
-const input_img = document.getElementById('nft_image');
+const input_img_p = document.getElementById('p_img_p');
+const input_img_c = document.getElementById('p_img_c');
 
-/* |---- for PHP ----|*/
+
 const nft_token = document.querySelector('#nft_token');
 const nft_name = document.querySelector('#nft_name');
 const nft_power = document.querySelector('#nft_power');
@@ -18,7 +20,10 @@ const nft_class = document.querySelector('#nft_class');
 const nft_rank = document.querySelector('#nft_rank');
 const nft_owner = document.querySelector('#nft_owner');
 const nft_price = document.querySelector('#nft_price');
-const nft_img = document.querySelector('#nft_img');
+const nft_img_p = document.querySelector('#nft_img_p');
+const nft_img_c = document.querySelector('#nft_img_c');
+ */
+
 
 
 
@@ -44,7 +49,7 @@ let token = GenerateID();
 input_token.value = token;
 
 
-const expressionsNFT = {
+/* const expressionsNFT = {
     name: /^[a-zA-Z]{4,15}$/,
     power: /^[0-9]{3,4}$/,
     price: /^[0-9]{2,5}$/,
@@ -99,14 +104,14 @@ const validateFieldsNFT = (expressionNFT, inputNFT, fieldNFT) => {
     }
 }
 
-// function validateImage() {
-//     let archive = document.getElementById('nft_image').value,
-//         extension = archive.substring(archive.lastIndexOf('.'), archivo.length);
+function validateImage() {
+    let archive = document.getElementById('nft_image').value,
+        extension = archive.substring(archive.lastIndexOf('.'), archivo.length);
 
-//     if(document.getElementById('nft_image').getAttribute('accept').split(',').indexOf(extension) < 0) {
-//         alert('Archivo inválido. No se permite la extensión ' + extension);
-//     }
-// }
+    if(document.getElementById('nft_image').getAttribute('accept').split(',').indexOf(extension) < 0) {
+        alert('Archivo inválido. No se permite la extensión ' + extension);
+    }
+}
 
 inputsNft.forEach((input) => {
     input.addEventListener('keyup', validateFormNfts);
@@ -114,7 +119,7 @@ inputsNft.forEach((input) => {
 });
 
 registerNft.addEventListener('submit', (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     if(fieldsInitial.name && fieldsInitial.power && fieldsInitial.price && fieldsInitial.owner) {
         // registerNft.reset();
@@ -134,11 +139,22 @@ registerNft.addEventListener('submit', (event) => {
         nft_class.value = input_class.value;
         nft_rank.value = input_rank.value;
         nft_owner.value = input_owner.value;
-        nft_price.value = input_price.value;      
+        nft_price.value = input_price.value;
+
+        let ruta = input_img_p;
+        let rInputImg = new FileReader();
+        
+        let aver = rInputImg.readAsDataURL(ruta);
+
+        // console.log( document.querySelector('#register') );
+        console.log(aver);
+        
 
         setTimeout(() => { 
 
-            document.querySelector('.form__hidden').submit();
+            // document.querySelector('.form__hidden').submit();
+            document.querySelector('#register').submit();
+
         
         },3000); 
 
@@ -149,4 +165,4 @@ registerNft.addEventListener('submit', (event) => {
             document.getElementById('register__message').classList.remove('register__message-active');
         }, 3000);
     }
-});
+}); */

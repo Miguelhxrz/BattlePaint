@@ -256,10 +256,8 @@ a .neon4 {
 
 .character__container img {
     position: relative;
-    left: 0px;
-    top: 50px;
-    width: auto;
-    height: 380px;
+    left: 387px;
+    top: 0px;
     z-index: 4;
 }
 
