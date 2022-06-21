@@ -1,5 +1,7 @@
 <?php 
     require_once('../controller/header_controller.php');
+
+    require_once('../controller/user_controller.php');
 ?>
 
 <!DOCTYPE html>
@@ -25,19 +27,21 @@
 
                 <div class="line"></div>
                 <div class="info__user">
+                    <?php foreach( $user_conf as $user) {?>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                        <h3><?php echo $username ?></h3>
+                        <h3><?php echo $user['username'] ?></h3>
                     </div>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                        <h3><?php echo $user_id ?></h3>
+                        <h3><?php echo $user['id'] ?></h3>
                     </div>
                     <div class="username">
                         <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                        <h3><?php echo $user_balance ?></h3>
+                        <h3><?php echo $user['balance'] ?></h3>
                     </div>
                 </div>
+                <?php } ?>
                 <div class="acount">
                     <h3>ACCOUNT</h3>
                 </div>
@@ -54,6 +58,7 @@
                     <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
                     <a href="./converter_user.php" class="link_update">Balance</a>
                 </div>
+
                 <div class="logout">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                         <input type="submit" name='log-out' class="log-out__btn" value="Logout">
@@ -91,7 +96,6 @@
                             </div>
                             <div class="nft__name a">
                                 <h3>Shanna</h3>
-                                <p>• Dinasty's Ranger •</p>
                             </div>
                             <div class="nft__price">
                                 <article class="price">
@@ -110,66 +114,6 @@
                                 </article>
                             </div>
                         </article>
-
-                        <article class="nft__card">
-                            <figure class="nft__img">
-                                <img src="../source/img/Characters/test2.png" alt="Raidon">
-                            </figure>
-                            <div class="nft__rank ">
-                                <h4>S</h4>
-                            </div>
-                            <div class="nft__name">
-                                <h3>Raidon</h3>
-                                <p>• Galaxy Ranger •</p>
-                            </div>
-                            <div class="nft__price">
-                                <article class="price">
-                                    <h4>Price PB:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                                <article class="price">
-                                    <h4>Price USD:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/usd.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                            </div>
-                        </article>
-
-                        <article class="nft__card">
-                            <figure class="nft__img">
-                                <img src="../source/img/Characters/test4.png" alt="Veinka">
-                            </figure>
-                            <div class="nft__rank ">
-                                <h4>B</h4>
-                            </div>
-                            <div class="nft__name">
-                                <h3>Veinka</h3>
-                                <p>• The protective gunner •</p>
-                            </div>
-                            <div class="nft__price">
-                                <article class="price">
-                                    <h4>Price PB:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                                <article class="price">
-                                    <h4>Price USD:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/usd.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
-                            </div>
-                        </article>
-                    </section>
-
                 </div>
             </div>
         </section>
