@@ -37,9 +37,14 @@
         </div>
 
         <div class="menu__user">
+          <li class="menu__item_admin">
+            <a href="./user.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
+            <h5 class="menu__texts"> PB </h5>
+          </li>
+
           <li class="menu__item_admin" >
             <a href="./admin.php"><img src="../source/img/svg/admin.svg" alt="Logo Admin" class="logo_admin"></a>
-            <h5><?php echo $username  ?></h5>
+            <h5 class="menu__texts"><?php echo $username  ?></h5>
           </li>
         </div>
       </ul>

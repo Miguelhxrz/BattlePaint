@@ -1,5 +1,4 @@
 /* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
@@ -38,9 +37,7 @@ body {
     height: 100%;
 }
 
-
 /* header */
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -197,19 +194,18 @@ a .neon4 {
 }
 
 .menu__item_admin {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
 }
 
-.menu__item_admin h5 {
-    font-size: 2rem;
+.menu__texts {
+    font-size: 1.5rem;
     color: #ffffff;
 }
-
-
 /* end header */
 
 .main {

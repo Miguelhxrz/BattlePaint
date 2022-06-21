@@ -109,10 +109,11 @@ require_once('../model/User.php');
                     <label for="gender" class="register__block--label">Gender</label>
                     <div id="group__input">
                         <select name="gender" id="gender" class="register__block--input">
-                            <option disabled>Select a gender</option>
-                            <option value="other">Other</option>
-                            <option value="Female">Female</option>
-                            <option value="Male">Male</option>
+                            <optgroup label="Select an option">
+                                <option value="other">Other</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                            </optgroup>
                         </select>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 /* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
@@ -46,9 +45,7 @@ body {
     background-repeat: no-repeat;
 }
 
-
 /* header */
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -205,19 +202,18 @@ a .neon4 {
 }
 
 .menu__item_admin {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
 }
 
-.menu__item_admin h5 {
-    font-size: 2rem;
+.menu__texts {
+    font-size: 1.5rem;
     color: #ffffff;
 }
-
-
 /* end header */
 
 form {
@@ -251,7 +247,7 @@ form {
 
 .one {
     width: 271.74px;
-    height: 760px;
+    height: 725px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
@@ -278,7 +274,7 @@ form {
 }
 
 .info__user {
-    height: 156px;
+    height: 120px;
     width: 240px;
     border-radius: 5px;
     margin: auto;
@@ -301,14 +297,6 @@ form {
 .username .icon_user {
     margin-left: 30px;
     margin-right: 20px;
-    margin-top: 10px;
-}
-
-.username .icon_pb {
-    width: 30px;
-    height: 32px;
-    margin-left: 35px;
-    margin-right: 25px;
     margin-top: 10px;
 }
 
@@ -639,7 +627,7 @@ select::placeholder {
 .log-out__btn  {
     font-size: 1.5rem;
     color: white;
-    font-size: var(--font);
+    font-family: var(--font);
     position: relative;
     bottom: 10px;
     display: flex;

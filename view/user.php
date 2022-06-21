@@ -36,10 +36,10 @@
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
                         <h3><?php echo $user['id'] ?></h3>
                     </div>
-                    <div class="username">
+                    <!-- <div class="username">
                         <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                        <h3><?php echo $user['balance'] ?></h3>
-                    </div>
+                        <h3><?php //echo $user['balance'] ?></h3>
+                    </div> -->
                 </div>
                 <?php } ?>
                 <div class="acount">
