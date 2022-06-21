@@ -94,7 +94,7 @@ require_once('../controller/register_nft-controller.php');
         <div class="register_group" id="register_id">
           <label for="object_image" class="label-name">Presentation image</label>
           <div>
-            <input type="file" name="nft_p_img" id='p_img' accept="image/png,image/jpeg" readonly class="register__block--input" tabindex="6">
+            <input type="file" name="nft_p_img" id='p_img' accept="image/png,image/jpeg" readonly tabindex="6">
           </div>
         </div>
 
@@ -102,7 +102,7 @@ require_once('../controller/register_nft-controller.php');
         <div class="register_group" id="register_id">
           <label for="object_image" class="label-name">Card image</label>
           <div>
-            <input type="file" name="nft_c_img" id='c_img' accept="image/png,image/jpeg" readonly class="register__block--input" tabindex="7">
+            <input type="file" name="nft_c_img" id='c_img' accept="image/png,image/jpeg" readonly tabindex="7">
           </div>
         </div>
       </section>
