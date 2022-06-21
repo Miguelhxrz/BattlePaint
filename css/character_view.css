@@ -217,33 +217,17 @@ a .neon4 {
     padding: 10px;
 }
 
+
 .character__container {
     display: flex;
     position: relative;
     width: 1200px;
     height: 450px;
-    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-b) 0% 95%, transparent 95%);
     z-index: 1;
     border-radius: 5px;
 }
 
-.character__container::after {
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: linear-gradient(-26deg, rgba(132, 25, 34, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(132, 25, 34, 1) 100%);
-    left: 0px;
-    top: 200px;
-    right: 0px;
-    z-index: 3;
-    width: 100%;
-    height: 150px;
-}
-
-.character__container::before {
-    /* content: url('../source/img/fondoNuevo.png'); */
-    content: '';
-    background-image: linear-gradient(-26deg, transparent 5%, var(--indigo) 0% 95%, transparent 95%);
+.character__container--before {
     left: 2px;
     right: 2px;
     bottom: 2px;
@@ -254,10 +238,22 @@ a .neon4 {
     z-index: 2;
 }
 
+.character__container--after {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    right: 0px;
+    z-index: 3;
+    width: 100%;
+    height: 150px;
+}
+
 .character__container img {
     position: relative;
-    left: 387px;
-    top: 0px;
+    height: 450px;
+    left: 183px;
+    bottom: 7px;
     z-index: 4;
 }
 
@@ -271,7 +267,6 @@ a .neon4 {
     top: 20px;
     width: 450px;
     height: 250px;
-    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-b) 0% 95%, transparent 95%);
     z-index: 5;
     border-radius: 5px;
     color: var(--light);
@@ -313,7 +308,6 @@ a .neon4 {
 }
 
 .character__stats::after {
-    /* content: url('../source/img/fondoNuevo.png'); */
     content: '';
     background-image: linear-gradient(-26deg, transparent 5%, var(--dark-violet) 0% 95%, transparent 95%);
     left: 2px;
@@ -522,3 +516,61 @@ button img {
     transition: opacity .6s;
 }
 /* fin modal*/
+
+
+/* |---- TIER S ----| */
+
+.tier-s {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-s) 0% 95%, transparent 95%);
+}
+
+.tier-s .character__container--before {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--indigo) 0% 95%, transparent 95%);
+}
+
+.tier-s .character__container--after {
+    background-image: linear-gradient(-26deg, rgba(219, 165, 20, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(219, 165, 20, 1) 100%);
+}
+
+.tier-s .character__stats {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-s) 0% 95%, transparent 95%);
+}
+
+
+/* |---- Tier-a ----| */
+
+.tier-a {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-a) 0% 95%, transparent 95%);
+}
+
+.tier-a .character__container--before {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--indigo) 0% 95%, transparent 95%);
+}
+
+.tier-a .character__container--after {
+    background-image: linear-gradient(-26deg, rgba(78, 20, 140, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(78, 20, 140, 1) 100%);
+}
+
+.tier-a .character__stats {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-a) 0% 95%, transparent 95%);
+}
+
+
+/* |---- TIER B ----| */
+
+.tier-b{
+    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-b) 0% 95%, transparent 95%);
+}
+
+.tier-b .character__container--before {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--indigo) 0% 95%, transparent 95%);
+}
+
+.tier-b .character__container--after {
+    background-image: linear-gradient(-26deg, rgba(132, 25, 34, 1) 10%, rgba(255, 255, 255, 0) 50%, rgba(132, 25, 34, 1) 100%);
+}
+
+.tier-b .character__stats {
+    background-image: linear-gradient(-26deg, transparent 5%, var(--tier-b) 0% 95%, transparent 95%);
+}
+
