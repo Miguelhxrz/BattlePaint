@@ -139,20 +139,45 @@ class User {
     $query = "SELECT * FROM `users` WHERE `username` = '".$user."'";
 
     $send = $this->db->sendQuery($query);
+
+    $users = array();
     
     if(mysqli_num_rows($send) > 0) {
 
       while($rows =  mysqli_fetch_array($send)) {
-        array_push($nfts,$rows);
+        array_push($users,$rows);
       }
 
-      return $nfts;
+      return $users;
 
     }else {
       return 0;
     }
 
 
+  }
+
+  function UserInventory ( $user_id ) {
+
+    $query = "SELECT `id_nft` FROM `inventory`	WHERE ";
+
+    $send = $this->db->sendQuery($query);
+
+    $inventory = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($inventory,$rows);
+      }
+
+      return $inventory;
+
+    }else {
+      return 0;
+    }
+
+ 
   }
 
 

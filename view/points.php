@@ -64,7 +64,7 @@
 
             <div class="modal__container--son">
               <img class="modal__image" src="../source/img/usd.png" alt="PB">
-              <p class="modal__convert">0</p>
+              <p class="modal__convert" id="pice">0</p>
             </div>
           </div>
 
