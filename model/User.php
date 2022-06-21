@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../model/db_connect.php');
+include('../model/db_connect.php');
 
 class User {
 
@@ -11,15 +11,13 @@ class User {
   private $birth;
   private $gender;
 
-  #data base
-  private $db;
-
-
-  function __construct() {
-
-    $this->db = new db_connect();
+   #database
+   private $db;
   
-  }
+   #constructor
+   function __construct() {
+    $this->db= new db_connect();
+   }
 
   #setters
 

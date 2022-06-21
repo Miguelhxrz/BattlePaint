@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php 
+session_start();
+require_once('../model/User.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -189,6 +192,17 @@
                 $_SESSION['gender'] = $user_gender;
                 $_SESSION['id'] = $_POST['user_id'];
                 $_SESSION['balance'] = '0';
+
+                $user = new User();
+
+                $user->setID($user_id);
+                $user->setUsername($user_username);
+                $user->setPassword($user_password);
+                $user->setEmail($user_email);
+                $user->setBirth($user_birth);
+                $user->setGender($user_gender);
+
+                $user->addUser();
 
                 var_dump($_SESSION['balance']);
                 var_dump($_SESSION['id']);
