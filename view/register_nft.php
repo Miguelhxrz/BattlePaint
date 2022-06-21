@@ -20,7 +20,7 @@ require_once('../controller/register_nft-controller.php');
 
   <main class="main">
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" name='register_nft' method='POST' class="register" id="register" enctype="multipart/form-data">
+    <form action="<?=$_SERVER["PHP_SELF"];?>" name='register_nft' method='POST' class="register" id="register" enctype="multipart/form-data">
 
       <section class="register__title">
         <h2> NFTs Register </h2>
@@ -28,27 +28,27 @@ require_once('../controller/register_nft-controller.php');
 
       <section class="register__block one">
         <!-- name -->
-        <div class="register__group" id="register__name">
+        <div class="register_group" id="register_nft_name">
           <label for="name" class="register__block--label">Name</label>
-          <div id="group__input">
+          <div>
             <input type="text" name="nft_name" id="name_nft" class="register__block--input" tabindex="1">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
-          <p class="register__input--error" id="register__input--error">The name must be from 8 to 15 characters, no special characters or numbers.</p>
+          <p class="register__input--error" id="register__nft_name">The name must be from 8 to 15 characters, no special characters or numbers.</p>
         </div>
 
         <!-- power -->
-        <div class="register__group" id="register__power">
+        <div class="register_group" id="register_nft_power">
           <label for="battle_power" class="register__block--label">Battle power</label>
-          <div id="group__input">
+          <div>
             <input type="number" name="nft_power" id="power_nft" class="register__block--input" tabindex="2">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
-          <p class="register__input--error" id="register__input--error">You must enter a valid power of attorney.</p>
+          <p class="register__input--error" id="register__nft_power">You must enter a valid power of attorney.</p>
         </div>
 
         <!-- rank -->
-        <div class="register__group" id="register__rank">
+        <div class="register_group" id="register_rank">
           <label for="rank">Choose rank</label>
           <select name="nft_rank" id="rank_nft" class="register__block--input" tabindex="3">
             <option selected disabled value="">Select a rank</option>
@@ -59,13 +59,13 @@ require_once('../controller/register_nft-controller.php');
         </div>
 
         <!-- price -->
-        <div class="register__group" id="register__price">
+        <div class="register_group" id="register_nft_price">
           <label for="price" class="register__block--label">Price</label>
-          <div id="group__input">
+          <div>
             <input type="number" name="nft_price" id="price_nft" class="register__block--input" tabindex="4">
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
-          <p class="register__input--error" id="register__input--error">The price must have a value greater than or equal to zero and contain only numbers and dots.</p>
+          <p class="register__input--error" id="register__nft_price">The price must have a value greater than or equal to zero and contain only numbers and dots.</p>
         </div>
       </section>
 
@@ -73,35 +73,35 @@ require_once('../controller/register_nft-controller.php');
 
 
         <!-- owner -->
-        <div class="register__group" id="register__owner">
+        <div class="register_group" id="register_nft_owner">
           <label for="owner" class="register__block--label">Owner</label>
           <div class="group__input">
             <input type="text" name="nft_owner" id="owner_nft" class="register__block--input" value="<?php echo $_SESSION['username'] ?>" readonly>
             <i class="form__validation--state fa-solid fa-circle-xmark"></i>
           </div>
-          <p class="register__input--error" id="register__input--error">The owner must be 4 to 15 characters long, without special characters or numbers.</p>
+          <p class="register__input--error" id="register__nft_owner">The owner must be 4 to 15 characters long, without special characters or numbers.</p>
         </div>
 
         <!-- id -->
-        <div class="register__group" id="register__id">
+        <div class="register_group" id="register_id">
           <label for="id" class="register__block--label">Assigned ID</label>
-          <div id="group__input">
+          <div>
             <input type="text" name="nft_id" id="id" readonly class="register__block--input">
           </div>
         </div>
 
         <!-- img presentation -->
-        <div class="register__group" id="register__id">
+        <div class="register_group" id="register_id">
           <label for="object_image" class="label-name">Presentation image</label>
-          <div id="group__input">
+          <div>
             <input type="file" name="nft_p_img" id='p_img' accept="image/png,image/jpeg" readonly class="register__block--input" tabindex="6">
           </div>
         </div>
 
         <!-- img card -->
-        <div class="register__group" id="register__id">
+        <div class="register_group" id="register_id">
           <label for="object_image" class="label-name">Card image</label>
-          <div id="group__input">
+          <div>
             <input type="file" name="nft_c_img" id='c_img' accept="image/png,image/jpeg" readonly class="register__block--input" tabindex="7">
           </div>
         </div>
@@ -109,7 +109,7 @@ require_once('../controller/register_nft-controller.php');
 
       <section class="register__block three">
         <!-- class -->
-        <div class="register__group" id="register__class">
+        <div class="register_group" id="register_class">
           <label for="class">choose class</label>
           <select name="nft_class" id="class_nft" tabindex="5">
             <option selected disabled value="">Select a class</option>
@@ -122,13 +122,13 @@ require_once('../controller/register_nft-controller.php');
 
       <div class="register__block--cta">
         <!-- error message -->
-        <div class="register__message" id="register__message">
+        <div class="register__message" id="register_message">
           <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Fill in all registration fields correctly.</p>
         </div>
 
         <input type="submit" name="btn_submit"  class="register__block--button" value="Register NFT" tabindex="8">
         <!-- registration complete -->
-        <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
+        <p class="register__complete" id="register_complete"><i class="fa-solid fa-check"></i> Registration successfully completed!</p>
       </div>
     </form>
     </div>
@@ -145,7 +145,7 @@ require_once('../controller/register_nft-controller.php');
 
     <?php
        
-    if(isset($_POST['btn_submit'])) {
+    if(isset($_POST['nft_name'])) {
 
       $nft_id = $_POST['nft_id'];
       $nft_name = $_POST['nft_name'];
@@ -229,7 +229,6 @@ require_once('../controller/register_nft-controller.php');
         $_SESSION['nft_token'] = $nft_id;
 
         echo "<script>window.location.href = './marketplace.php'</script>";
-
       }
 
 
@@ -238,11 +237,10 @@ require_once('../controller/register_nft-controller.php');
 
 
 
-
     ?>
 
     <script src="../js/redirect.js"></script>
-    <script src="../js/register_nft.js"></script>
+    <script src="../js/register_nftcopy.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>
 
