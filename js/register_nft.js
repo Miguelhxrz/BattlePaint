@@ -13,7 +13,6 @@ const input_img_c = document.getElementById('c_img');
 
 /* |---- Function token ----|*/
 const GenerateID = () => {
-
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
     let id = '';
@@ -23,12 +22,12 @@ const GenerateID = () => {
     }
 
     return id;
-
 }
 
 let token = GenerateID();
 
 input_token.value = token;
+
 
 // expresiones regulares
 const expressionsNFT = {
@@ -41,8 +40,8 @@ const expressionsNFT = {
 const fieldsInitial = {
     name: false,
     power: false,
-    // rank: false,
-    // class: false,
+    rank: true,
+    class: true,
     price: false,
     owner: false
 }
@@ -58,9 +57,6 @@ const validateFormNfts = (event) => {
         case "nft_price":
             validateFieldsNFT(expressionsNFT.price, event.target);
             break;
-        // case "nft_rank":
-        //     validateSelect(event.target)
-        //     break;
     }
 }
 
@@ -96,14 +92,6 @@ function validateImage() {
     }
 }
 
-// function validateSelect(option) {
-//     if (option.value == 0 || option.value == "") {
-//         fieldsInitial[option] = false;
-//     } else {
-//         fieldsInitial[option] = false;
-//     }
-// }
-
 inputsNft.forEach((input) => {
     input.addEventListener('keyup', validateFormNfts);
     input.addEventListener('blur', validateFormNfts);
@@ -111,7 +99,7 @@ inputsNft.forEach((input) => {
 
 registerNft.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (fieldsInitial.name && fieldsInitial.power && fieldsInitial.price /*&& fieldsInitial.rank && fieldsInitial.class*/) {
+    if (fieldsInitial.name && fieldsInitial.power && fieldsInitial.price && fieldsInitial.rank && fieldsInitial.class) {
         // registerNft.reset();
 
         document.getElementById('register_complete').classList.add('register_complete-active');
@@ -123,8 +111,6 @@ registerNft.addEventListener('submit', (event) => {
             icon.classList.remove('register__group--correct');
         });
 
-
-
         let ruta = input_img_p.files[0];
         let rInputImg = new FileReader();
 
@@ -133,13 +119,8 @@ registerNft.addEventListener('submit', (event) => {
         // console.log( document.querySelector('#register') );
         console.log(aver);
 
-
-
         // document.querySelector('.form__hidden').submit();
         document.querySelector('#register').submit();
-
-
-
 
     } else {
         document.getElementById('register_message').classList.add('register__message-active');

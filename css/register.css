@@ -280,6 +280,10 @@ select::placeholder {
     color: white;
 }
 
+optgroup {
+    color: black;
+}
+
 .register__input--error {
     margin-top: 10px;
     font-size: 12px;
