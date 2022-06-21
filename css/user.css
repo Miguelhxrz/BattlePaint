@@ -200,19 +200,18 @@ a .neon4 {
 }
 
 .menu__item_admin {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
 }
 
-.menu__item_admin h5 {
-    font-size: 2rem;
+.menu__texts {
+    font-size: 1.5rem;
     color: #ffffff;
 }
-
-
 /* end header */
 
 form {
@@ -579,9 +578,7 @@ textarea::placeholder {
     color: var(--light);
 }
 
-
 /* cards NFTs */
-
 .nft__container {
     display: grid;
     grid-template: repeat(1, 360px)/ repeat(4, 290px);
@@ -739,13 +736,11 @@ textarea::placeholder {
     color: #c52634;
 }
 
-
 /* fin cards NFTs */
-
 .log-out__btn  {
     font-size: 1.5rem;
     color: white;
-    font-size: var(--font);
+    font-family: var(--font);
     position: relative;
     bottom: 10px;
     display: flex;
