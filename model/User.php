@@ -1,6 +1,6 @@
 <?php 
 
-include('../model/db_connect.php');
+require_once('../model/db_connect.php');
 
 class User {
 
