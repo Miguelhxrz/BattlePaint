@@ -597,7 +597,7 @@ select::placeholder {
     display: none;
 }
 
-.log-out__btn  {
+.log-out__btn {
     font-size: 1.6rem;
     color: white;
     font-size: var(--font);

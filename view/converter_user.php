@@ -1,4 +1,6 @@
-<?php require_once('../controller/header_controller.php') ?>
+<?php require_once('../controller/header_controller.php');
+    require_once('../controller/user_controller.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,25 +18,27 @@
 <body>
     <?php include($header) ?>
     <main class="main">
-        <section class="register">
+    <section class="register">
             <div class="register__block one">
                 <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
                 <div class="line"></div>
                 <div class="info__user">
+                    <?php foreach( $user_conf as $user) {?>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                        <h3>Username</h3>
+                        <h3><?php echo $user['username'] ?></h3>
                     </div>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                        <h3>ID de usuario</h3>
+                        <h3><?php echo $user['id'] ?></h3>
                     </div>
                     <div class="username">
                         <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                        <h3>Balance</h3>
+                        <h3><?php echo $user['balance'] ?></h3>
                     </div>
                 </div>
+                <?php } ?>
                 <div class="acount">
                     <h3>ACCOUNT</h3>
                 </div>
@@ -49,8 +53,9 @@
                 </div>
                 <div class="my_balance">
                     <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                    <a href="./converter.php" class="link_update">Balance</a>
+                    <a href="./converter_user.php" class="link_update">Balance</a>
                 </div>
+
                 <div class="logout">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                         <input type="submit" name='log-out' class="log-out__btn" value="Logout">
@@ -70,6 +75,7 @@
                 </div>
 
             </div>
+
 
             <div class="register__block two">
                 <div class="user_update">
