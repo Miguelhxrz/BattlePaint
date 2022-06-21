@@ -196,6 +196,10 @@ a .neon4 {
     height: 50px;
 }
 
+.logo_admin.pp {
+    width: 40px;
+}
+
 .menu__item_admin {
     display: flex;
     align-items: center;

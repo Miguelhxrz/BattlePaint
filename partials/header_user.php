@@ -53,8 +53,13 @@
 
     <div class="menu__user">
       <li class="menu__item_admin">
+        <a href="./user.php"><img src="../source/img/paint-point2.png" alt="paint-backets" class="logo_admin pp"></a>
+        <h5 class="menu__texts">PP</h5>
+      </li>
+
+      <li class="menu__item_admin">
         <a href="./user.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
-        <h5 class="menu__texts">coins</h5>
+        <h5 class="menu__texts">PB</h5>
       </li>
 
       <li class="menu__item_admin" >

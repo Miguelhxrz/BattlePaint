@@ -187,6 +187,10 @@ a .neon4 {
     height: 50px;
 }
 
+.logo_admin.pp {
+    width: 40px;
+}
+
 .menu__item_admin {
     display: flex;
     align-items: center;
@@ -243,12 +247,11 @@ form {
 
 .one {
     width: 271.74px;
-    height: 760px;
+    height: 725px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 153px;
     background-color: var(--indigo);
     border: 2px solid var(--black-blue);
     border-radius: 10px;
@@ -270,7 +273,7 @@ form {
 }
 
 .info__user {
-    height: 156px;
+    height: 120px;
     width: 240px;
     border-radius: 5px;
     margin: auto;
@@ -753,7 +756,6 @@ select::placeholder {
     width: 80%;
     height: 80%;
 }
-
 /* fin cards NFTs */
 
 .log-out__btn  {

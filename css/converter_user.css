@@ -203,6 +203,10 @@ a .neon4 {
     height: 50px;
 }
 
+.logo_admin.pp {
+    width: 40px;
+}
+
 .menu__item_admin {
     display: flex;
     align-items: center;
@@ -249,7 +253,7 @@ form {
 
 .one {
     width: 271.74px;
-    height: 640px;
+    height: 600px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
@@ -275,7 +279,7 @@ form {
 }
 
 .info__user {
-    height: 156px;
+    height: 120px;
     width: 240px;
     border-radius: 5px;
     margin: auto;
@@ -298,14 +302,6 @@ form {
 .username .icon_user {
     margin-left: 30px;
     margin-right: 20px;
-    margin-top: 10px;
-}
-
-.username .icon_pb {
-    width: 30px;
-    height: 32px;
-    margin-left: 35px;
-    margin-right: 25px;
     margin-top: 10px;
 }
 

@@ -1,6 +1,5 @@
 const input_token = document.getElementById('id');
 
-
 const registerNft = document.getElementById('register');
 const inputsNft = document.querySelectorAll('#register input');
 const input_name = document.getElementById('name_nft');
@@ -11,12 +10,6 @@ const input_price = document.getElementById('price_nft');
 const input_owner = document.getElementById('owner_nft');
 const input_img_p = document.getElementById('p_img');
 const input_img_c = document.getElementById('c_img');
-
-
-
-
-
-
 
 /* |---- Function token ----|*/
 const GenerateID = () => {
@@ -37,7 +30,7 @@ let token = GenerateID();
 
 input_token.value = token;
 
-
+// expresiones regulares
 const expressionsNFT = {
     name: /^[a-zA-Z]{4,15}$/,
     power: /^[0-9]{3,4}$/,
@@ -48,8 +41,8 @@ const expressionsNFT = {
 const fieldsInitial = {
     name: false,
     power: false,
-    rank: true,
-    class: true,
+    // rank: false,
+    // class: false,
     price: false,
     owner: false
 }
@@ -65,9 +58,11 @@ const validateFormNfts = (event) => {
         case "nft_price":
             validateFieldsNFT(expressionsNFT.price, event.target);
             break;
+        // case "nft_rank":
+        //     validateSelect(event.target)
+        //     break;
     }
 }
-
 
 const validateFieldsNFT = (expressionNFT, inputNFT) => {
 
@@ -101,6 +96,14 @@ function validateImage() {
     }
 }
 
+// function validateSelect(option) {
+//     if (option.value == 0 || option.value == "") {
+//         fieldsInitial[option] = false;
+//     } else {
+//         fieldsInitial[option] = false;
+//     }
+// }
+
 inputsNft.forEach((input) => {
     input.addEventListener('keyup', validateFormNfts);
     input.addEventListener('blur', validateFormNfts);
@@ -108,7 +111,7 @@ inputsNft.forEach((input) => {
 
 registerNft.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (fieldsInitial.name && fieldsInitial.power && fieldsInitial.price) {
+    if (fieldsInitial.name && fieldsInitial.power && fieldsInitial.price /*&& fieldsInitial.rank && fieldsInitial.class*/) {
         // registerNft.reset();
 
         document.getElementById('register_complete').classList.add('register_complete-active');

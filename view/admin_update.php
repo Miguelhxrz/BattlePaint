@@ -34,10 +34,6 @@
               <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
               <h3>ID de usuario</h3>
             </div>
-            <div class="username">
-              <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-              <h3>Balance</h3>
-            </div>
           </div>
           <div class="acount">
             <h3>ACCOUNT</h3>
