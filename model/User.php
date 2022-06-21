@@ -10,6 +10,7 @@ class User {
   private $email;
   private $birth;
   private $gender;
+  private $coins;
 
    #database
    private $db;
@@ -45,11 +46,15 @@ class User {
     $this->gender = $gender;
   }
 
+  function setCoins() {
+    $this -> coins = $coins;
+  }
+
   #DataBase Methods
 
    function addUser() {
 
-    $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `birth`, `gender`) VALUES ('".$this->id."','".$this->username."','".$this->password."','".$this->email."','".$this->birth."','".$this->gender."')";
+    $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `birth`, `gender`, `coins`) VALUES ('".$this->id."','".$this->username."','".$this->password."','".$this->email."','".$this->birth."','".$this->gender."','".$this->coins."')";
 
     $send = $this->db->sendQuery($query);
     
@@ -177,6 +182,8 @@ class User {
 
  
   }
+
+  
 
 
   

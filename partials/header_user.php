@@ -7,6 +7,13 @@
     $username = $_SESSION['username'];
   }
 ?>
+
+<?php
+  // if (empty($_SESSION[]) && empty() && empty()) {
+
+  // }
+?>
+
 <header class="header">
 
 <a class="header__name" href="../index.php">
@@ -45,9 +52,14 @@
     </div>
 
     <div class="menu__user">
+      <li class="menu__item_admin">
+        <a href="./user.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
+        <h5 class="menu__texts">coins</h5>
+      </li>
+
       <li class="menu__item_admin" >
         <a href="./user.php"><img src="../source/img/svg/user.svg" alt="Logo Admin" class="logo_admin"></a>
-        <h5><?php echo $username ?></h5>
+        <h5 class="menu__texts"><?php echo $username ?></h5>
       </li>
     </div>
   </ul>

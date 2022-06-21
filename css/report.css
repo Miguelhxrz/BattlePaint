@@ -104,11 +104,12 @@ body {
 }
 
 .menu__user {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 
 
@@ -204,6 +205,24 @@ a .neon4 {
     text-decoration: none;
 }
 
+.logo_admin {
+    width: 50px;
+    height: 50px;
+}
+
+.menu__item_admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
+}
+
+.menu__texts {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
 /* |---- Fin del menu ----| */
 
 form {
