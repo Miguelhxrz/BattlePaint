@@ -1,4 +1,6 @@
-const input_token = document.getElementById('nft_id');
+const input_token = document.getElementById('id');
+
+
 const registerNft = document.getElementById('register');
 const inputsNft = document.querySelectorAll('#register input');
 const input_name = document.getElementById('name_nft');
@@ -8,7 +10,12 @@ const input_class = document.getElementById('class_nft');
 const input_price = document.getElementById('price_nft');
 const input_owner = document.getElementById('owner_nft');
 const input_img_p = document.getElementById('p_img');
-const input_img_c = document.getElementById('p_img');
+const input_img_c = document.getElementById('c_img');
+
+
+
+
+
 
 
 /* |---- Function token ----|*/
@@ -23,10 +30,13 @@ const GenerateID = () => {
     }
 
     return id;
+
 }
 
+let token = GenerateID();
 
-input_token.value = GenerateID();
+input_token.value = token;
+
 
 const expressionsNFT = {
     name: /^[a-zA-Z]{4,15}$/,
@@ -58,24 +68,25 @@ const validateFormNfts = (event) => {
     }
 }
 
+
 const validateFieldsNFT = (expressionNFT, inputNFT) => {
 
     if (expressionNFT.test(inputNFT.value)) {
-        document.getElementById(`register__${inputNFT.name}`).classList.remove('register__group--incorrect');
-        document.getElementById(`register__${inputNFT.name}`).classList.add('register__group--correct');
-        document.querySelector(`#register__${inputNFT.name}`).classList.remove('fa-circle-xmark');
-        document.querySelector(`#register__${inputNFT.name}`).classList.add('fa-circle-check');
+        document.getElementById(`register_${inputNFT.name}`).classList.remove('register__group--incorrect');
+        document.getElementById(`register_${inputNFT.name}`).classList.add('register__group--correct');
+        document.querySelector(`#register_${inputNFT.name} i`).classList.remove('fa-circle-xmark');
+        document.querySelector(`#register_${inputNFT.name} i`).classList.add('fa-circle-check');
 
-        document.querySelector(`#register__${inputNFT.name} .register__input--error`).classList.remove('register__input--error-active');
+        document.querySelector(`#register__${inputNFT.name}`).classList.remove('register__input--error-active');
 
         fieldsInitial[inputNFT.name.slice(4)] = true;
     } else {
-        document.getElementById(`register__${inputNFT.name}`).classList.add('register__group--incorrect');
-        document.getElementById(`register__${inputNFT.name}`).classList.remove('register__group--correct');
-        document.querySelector(`#register__${inputNFT.name}`).classList.add('fa-circle-xmark');
-        document.querySelector(`#register__${inputNFT.name}`).classList.remove('fa-circle-check');
+        document.getElementById(`register_${inputNFT.name}`).classList.add('register__group--incorrect');
+        document.getElementById(`register_${inputNFT.name}`).classList.remove('register__group--correct');
+        document.querySelector(`#register_${inputNFT.name} i`).classList.add('fa-circle-xmark');
+        document.querySelector(`#register_${inputNFT.name} i`).classList.remove('fa-circle-check');
 
-        document.querySelector(`#register__${inputNFT.name} .register__input--error`).classList.add('register__input--error-active');
+        document.querySelector(`#register__${inputNFT.name}`).classList.add('register__input--error-active');
 
         fieldsInitial[inputNFT.name.slice(4)] = false;
     }
@@ -96,25 +107,41 @@ inputsNft.forEach((input) => {
 });
 
 registerNft.addEventListener('submit', (event) => {
-
-    event.preventDefault()
-
+    event.preventDefault();
     if (fieldsInitial.name && fieldsInitial.power && fieldsInitial.price) {
         // registerNft.reset();
 
-        document.getElementById('register__complete').classList.add('register__complete-active');
+        document.getElementById('register_complete').classList.add('register_complete-active');
         setTimeout(() => {
-            document.getElementById('register__complete').classList.remove('register__complete-active');
+            document.getElementById('register_complete').classList.remove('register_complete-active');
         }, 3000);
 
         document.querySelectorAll('.register__group--correct').forEach((icon) => {
             icon.classList.remove('register__group--correct');
         });
 
+
+
+        let ruta = input_img_p.files[0];
+        let rInputImg = new FileReader();
+
+        let aver = rInputImg.readAsDataURL(ruta);
+
+        // console.log( document.querySelector('#register') );
+        console.log(aver);
+
+
+
+        // document.querySelector('.form__hidden').submit();
+        document.querySelector('#register').submit();
+
+
+
+
     } else {
-        document.getElementById('register__message').classList.add('register__message-active');
+        document.getElementById('register_message').classList.add('register__message-active');
         setTimeout(() => {
-            document.getElementById('register__message').classList.remove('register__message-active');
+            document.getElementById('register_message').classList.remove('register__message-active');
         }, 3000);
     }
 });
