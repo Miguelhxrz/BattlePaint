@@ -21,9 +21,9 @@ converter.addEventListener('keyup', (event) => {
 })
 
 button.addEventListener('click', (event) => {
-event.preventDefault();
-let resultado = 0;
+    event.preventDefault();
+    let resultado = 0;
 
-resultado = converter.value*50;
-showConverter.innerHTML = resultado;
+    resultado = converter.value * 50;
+    showConverter.innerHTML = resultado;
 })
