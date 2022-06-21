@@ -34,9 +34,9 @@
 
         <div class="buy__price">
           <h5 class="title__price">Price</h5>
-          <h5 class="price">????</h5>
+          <h5 class="price"><img src="../source/img/usd.png" alt="paint bucket icon">50</h5>
           <h5 class="price__amount">Amount</h5>
-          <h5 class="amount">????</h5>
+          <h5 class="amount"><img src="../source/img/paint-backets2.png" alt="paint bucket icon">1</h5>
         </div>
 
 
@@ -64,7 +64,7 @@
 
             <div class="modal__container--son">
               <img class="modal__image" src="../source/img/usd.png" alt="PB">
-              <p class="modal__convert">0</p>
+              <p class="modal__convert" id="pice">0</p>
             </div>
           </div>
 
