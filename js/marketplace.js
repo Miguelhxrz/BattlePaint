@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+  const forms = document.getElementsByClassName('form__hidden');
+
+  const nft_forms = Array.from(forms);
   
   const card = document.getElementsByClassName('nft__card');
 
@@ -14,21 +18,28 @@ document.addEventListener('DOMContentLoaded', function() {
     'B': 'tier-b'
   }
 
+  console.log(nft_forms);
 
-for (let i = 0; i < nft_cards.length; i++) {
+  for (let i = 0; i < nft_cards.length; i++) {
+
   nft_cards[i].classList.add(rank_style[nft_ranks[i].textContent.trim()]);
 
-  console.log(nft_cards[i].classList);
-}
+  }
+
+  for (let i = 0; i < nft_cards.length; i++) {
+
+    nft_cards[i].addEventListener('click', () => {
+
+      nft_forms[i].submit();
+
+    } )
+
+
+  }
+
+
   
 
 
- /*  card.addEventListener( 'click', () => {
-
-    document.querySelector('.form__hidden').submit();
-
-  }) */
-
-
-
 })
+

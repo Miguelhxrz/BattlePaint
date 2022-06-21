@@ -129,6 +129,7 @@ class Nft {
 
   }
 
+
   function NFTSByToken ( $token ) {
 
     $query = "SELECT * FROM `nft` Where `token` = '".$token."'";
@@ -148,9 +149,10 @@ class Nft {
 
   }
 
+
    function NFTSByName( $name ) {
 
-    $query = "SELECT * FROM `nft` WHERE 'name' = '".$name."'";
+    $query = "SELECT * FROM `nft` WHERE `name` = '".$name."'";
 
     $send = $this->db->sendQuery($query);
 
@@ -161,17 +163,21 @@ class Nft {
         array_push($nfts,$rows);
       }
       return $nfts;
+
     }else {
       return 0;
     }
 
    }
 
+
    function NFTSByOwner ( $owner ) {
 
     $query = "SELECT * FROM `nft` WHERE `owner` = '".$owner."'";
 
     $send = $this->db->sendQuery($query);
+
+    $nfts = array();
     
     if(mysqli_num_rows($send) > 0) {
 
@@ -186,6 +192,7 @@ class Nft {
     }
   
   }
+
 
   function NFTSByPrice ( $price ) {
 
@@ -210,72 +217,25 @@ class Nft {
 
   function NFTSByRank ( $rank ) {
 
+    var_dump($rank);
+
     $query = "SELECT * FROM `nft` WHERE `rank` = '".$rank."'";
 
     $send = $this->db->sendQuery($query);
+
+    $nfts = array();
     
     if(mysqli_num_rows($send) > 0) {
-
       while($rows =  mysqli_fetch_array($send)) {
         array_push($nfts,$rows);
       }
-
       return $nfts;
-
     }else {
       return 0;
     }
+
   
   }
-
-  function NFTSByBattles ( $battles ) {
-
-    $query = "SELECT * FROM `nft` WHERE `owner` = '".$battles."'";
-
-    $send = $this->db->sendQuery($query);
-    
-    if(mysqli_num_rows($send) > 0) {
-
-      while($rows =  mysqli_fetch_array($send)) {
-        array_push($nfts,$rows);
-      }
-
-      return $nfts;
-
-    }else {
-      return 0;
-    }
-  
-  }
-
-  function NFTSByLevel ( $level ) {
-
-    $query = "SELECT * FROM `nft` WHERE `owner` = '".$level."'";
-
-    $send = $this->db->sendQuery($query);
-    
-    if(mysqli_num_rows($send) > 0) {
-
-      while($rows =  mysqli_fetch_array($send)) {
-        array_push($nfts,$rows);
-      }
-
-      return $nfts;
-
-    }else {
-      return 0;
-    }
-  
-  }
-
-
-
-  
-
-
-
-
-
 
 
 
