@@ -1,17 +1,17 @@
 <?php
-  if(empty($_SESSION['username']) && empty($_SESSION['id']) && empty($_SESSION['balance']) ){
+  require_once( '../model/User.php' );
+
+  $user = new User();
+
+  $user_conf = $user->userByUsername( $_SESSION['username'] );
+
+  if ( empty( $_SESSION['username'] ) && empty( $_SESSION ['id'] ) && empty( $_SESSION ['balance'] ) ) {
     $username = 'Please login to continue!';
     $user_id = 'Please login to continue!';
     $user_balance = 'Please login to continue!';
-  }else {
-    $username = $_SESSION['username'];
+  } else {
+    $username = $_SESSION [ 'username' ];
   }
-?>
-
-<?php
-  // if (empty($_SESSION[]) && empty() && empty()) {
-
-  // }
 ?>
 
 <header class="header">
@@ -53,18 +53,13 @@
 
     <div class="menu__user">
       <li class="menu__item_admin">
-        <a href="./user.php"><img src="../source/img/paint-point2.png" alt="paint-backets" class="logo_admin pp"></a>
-        <h5 class="menu__texts">PP</h5>
-      </li>
-
-      <li class="menu__item_admin">
         <a href="./user.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
-        <h5 class="menu__texts"> <?php echo $user_balance ?> </h5>
+        <h5 class="menu__texts"> <? echo $user_balance ?> </h5>
       </li>
 
       <li class="menu__item_admin" >
         <a href="./user.php"><img src="../source/img/svg/user.svg" alt="Logo Admin" class="logo_admin"></a>
-        <h5 class="menu__texts"><?php echo $username ?></h5>
+        <h5 class="menu__texts"> <?php echo $username ?> </h5>
       </li>
     </div>
   </ul>
