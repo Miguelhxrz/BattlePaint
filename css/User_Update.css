@@ -7,12 +7,6 @@
     padding: 0px
 }
 
-
-/* a {
-  color: white;
-  text-decoration: none;
-} */
-
 html {
     font-size: 62.5%
 }
@@ -577,7 +571,6 @@ select::placeholder {
 
 
 /* styles for validations */
-
 .register__group--correct .form__validation--state {
     color: #1ed12d;
     opacity: 1;
@@ -597,9 +590,9 @@ select::placeholder {
 }
 
 .log-out__btn  {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: white;
-    font-size: var(--font);
+    font-family: var(--font);
     position: relative;
     bottom: 10px;
     display: flex;

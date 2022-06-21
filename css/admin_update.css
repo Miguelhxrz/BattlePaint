@@ -1,5 +1,4 @@
 /* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
@@ -636,7 +635,7 @@ select::placeholder {
 .log-out__btn  {
     font-size: 1.5rem;
     color: white;
-    font-size: var(--font);
+    font-family: var(--font);
     position: relative;
     bottom: 10px;
     display: flex;
