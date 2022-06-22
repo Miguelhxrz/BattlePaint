@@ -155,7 +155,7 @@ class Nft {
     $nfts = array();
     
     if(mysqli_num_rows($send) > 0) {
-      while($rows =  mysqli_fetch_array($send)) {
+      while($rows =  mysqli_fetch_assoc($send)) {
         array_push($nfts,$rows);
       }
       return $nfts;

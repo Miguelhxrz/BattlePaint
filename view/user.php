@@ -86,7 +86,10 @@
                 <div class="user_update">
 
                     <section class="nft__container">
-                    <?php foreach( $nfts_inventory as $items) { ?>
+                    <?php 
+                        if (!empty( $nfts_inventory )) {
+                            
+                        foreach( $nfts_inventory as $items) { ?>
                             <article class="nft__card">
 
                                 <input type="hidden" name="rank" id="nft__rank" value="<?php echo $items['rank']?>">
@@ -127,7 +130,9 @@
                                
                             </div>
                         </article>
-                        <?php  } ?>                
+                        <?php  
+                            }
+                            } ?>                
                     </div>
             </div>
         </section>
