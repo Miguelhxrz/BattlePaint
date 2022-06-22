@@ -110,6 +110,22 @@ class Nft {
 
   }
 
+  function addMarketPlace( $token ) {
+
+    $query = "INSERT INTO `marketplace`(`nft_token`) VALUES ('".$token."')";
+
+    $send = $this->db->sendQuery($query);
+
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+
+  }
+
+
   function showNFTS () {
 
     $query = "SELECT * FROM `nft`";
@@ -130,17 +146,41 @@ class Nft {
   }
 
 
+  function showNFTSMarket () {
+
+    $query = "SELECT * FROM `marketplace` INNER JOIN nft ON  marketplace.nft_token = nft.token";
+
+    $send = $this->db->sendQuery($query);
+    
+    $nfts = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($nfts,$rows);
+      }
+      return $nfts;
+  
+    }else {
+  
+      return 0;
+  
+    }
+
+  }
+
+
+
   function NFTSByToken ( $token ) {
 
-    $query = "SELECT * FROM `nft` Where `token` = '".$token."'";
+    $query = "SELECT * FROM `nft` Where `token` = '".$token."'";  
 
     $send = $this->db->sendQuery($query);
 
     $nfts = array();
     
     if(mysqli_num_rows($send) > 0) {
-      while($rows =  mysqli_fetch_array($send)) {
-        array_push($nfts,$rows);
+      while($rows =  mysqli_fetch_assoc($send)) {
+        $nfts = $rows;
       }
       return $nfts;
     }else {
@@ -217,8 +257,6 @@ class Nft {
 
   function NFTSByRank ( $rank ) {
 
-    var_dump($rank);
-
     $query = "SELECT * FROM `nft` WHERE `rank` = '".$rank."'";
 
     $send = $this->db->sendQuery($query);
@@ -237,6 +275,39 @@ class Nft {
   
   }
 
+  function GetPriceToken( $token ) {
+
+    $query = "SELECT `price` FROM `nft` WHERE `token` = '".$token."'";
+
+    $send = $this->db->sendQuery($query);
+
+    $price = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($price,$rows);
+      }
+      return $price[0]['price'];
+    }else {
+      return 0;
+    }
+
+
+  }
+
+  function NFTBuy( $token ) {
+
+    $query = "DELETE FROM `marketplace` WHERE `nft_token` = '".$token."'";
+
+    $send = $this->db->sendQuery($query);
+
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+  }
 
 
 

@@ -559,7 +559,11 @@ textarea::placeholder {
 
 .user_update {
     display: flex;
+    height: 382px;
     margin-top: 30px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .register__block--button {
@@ -577,7 +581,7 @@ textarea::placeholder {
 /* cards NFTs */
 .nft__container {
     display: grid;
-    grid-template: repeat(1, 360px)/ repeat(4, 290px);
+    grid-template: repeat(4, 360px)/ repeat(3, 290px);
     gap: 32px;
     width: 0px;
     height: auto;
@@ -591,7 +595,7 @@ textarea::placeholder {
     height: 100%;
     border: 3px solid var(--blue-violet-soft);
     border-radius: 30px 15px;
-    background-image: linear-gradient(180deg, rgba(97, 61, 193, 0) 0%, rgba(97, 61, 193, 1) 100%);
+    /* background-image: linear-gradient(180deg, rgba(97, 61, 193, 0) 0%, rgba(97, 61, 193, 1) 100%); */
     cursor: pointer;
 }
 
@@ -687,50 +691,81 @@ textarea::placeholder {
     font-size: 1.8rem;
 }
 
-.nft__card:nth-child(2) {
+/* |---- Tier-a ----| */
+
+.tier-a {
+    border-color: var(--blue-violet-soft);
+    background-image: linear-gradient(180deg, rgba(97, 61, 193, 0) 0%, rgba(97, 61, 193, 1) 100%);
+}
+
+
+.tier-a:hover {
+    box-shadow: 0 0 25px var(--blue-violet-soft), 0 0 50px var(--blue-violet-soft), 0 0 75px var(--blue-violet-soft);
+}
+
+
+.tier-a .nft__name  {
+    background-image: linear-gradient(180deg, rgba(97, 61, 193, 0) 0%, rgba(97, 61, 193, 1) 100%);
+}
+
+
+
+.tier-a .nft__rank {
+    border-color: var(--blue-violet-soft);
+    background-image: linear-gradient(180deg, rgba(97, 61, 193, 0) 0%, rgba(97, 61, 193, 1) 100%);
+}
+
+
+
+/* |---- TIER S ----| */
+
+.tier-s {
     background-image: linear-gradient(180deg, rgba(219, 165, 20, 0) 0%, rgba(252, 194, 1, 1) 100%);
-    ;
     border: 3px solid #dba514;
 }
 
-.nft__card:nth-child(2):hover {
+.tier-s:hover {
     box-shadow: 0 0 25px #dba514, 0 0 50px #dba514, 0 0 75px #dba514;
 }
 
-.nft__card:nth-child(2) .nft__rank {
+.tier-s .nft__rank {
     border: 3px solid #dba514;
     background-image: linear-gradient(180deg, rgba(219, 165, 20, 0) 0%, rgba(252, 194, 1, 1) 100%);
 }
 
-.nft__card:nth-child(2) .nft__name {
+.tier-s .nft__name {
     background-image: linear-gradient(180deg, rgba(219, 165, 20, 0) 0%, rgba(252, 194, 1, 1) 100%);
 }
 
-.nft__card:nth-child(2) .nft__name p {
+.tier-s .nft__name p {
     color: #856a20;
 }
 
-.nft__card:nth-child(3) {
+/* |---- TIER B ----| */
+
+.tier-b {
     background-image: linear-gradient(180deg, rgba(203, 9, 9, 0) 0%, rgba(132, 25, 34, 1) 100%);
     border: 3px solid #841922;
 }
 
-.nft__card:nth-child(3):hover {
+.tier-b:hover {
     box-shadow: 0 0 25px #841922, 0 0 50px #841922, 0 0 75px #841922;
 }
 
-.nft__card:nth-child(3) .nft__rank {
+.tier-b .nft__rank {
     background-image: linear-gradient(180deg, rgba(203, 9, 9, 0) 0%, rgba(132, 25, 34, 1) 100%);
     border: 3px solid #841922;
 }
 
-.nft__card:nth-child(3) .nft__name {
+.tier-b .nft__name {
     background-image: linear-gradient(180deg, rgba(203, 9, 9, 0) 0%, rgba(132, 25, 34, 1) 100%);
 }
 
-.nft__card:nth-child(3) .nft__name p {
+.tier-b .nft__name p {
     color: #c52634;
 }
+
+
 
 /* fin cards NFTs */
 .log-out__btn  {
