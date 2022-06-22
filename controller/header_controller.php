@@ -17,10 +17,10 @@ function getHeader(){
 
 $header = getHeader();
 
-$user = new User();
-$username = $_SESSION [ 'username' ];
 
-$user_conf = $user->userByUsername( $_SESSION['username'] );
-
+if(isset($_SESSION [ 'username' ])){
+  $user = new User();
+  $user_conf = $user->userByUsername( $_SESSION['username'] );
+}
 
 ?>
