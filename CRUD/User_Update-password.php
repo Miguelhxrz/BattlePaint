@@ -35,13 +35,11 @@ require_once('../model/User.php')
                             </div>
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php // echo $user_id 
-                                    ?></h3>
+                                <h3><?php echo $user_id ?></h3>
                             </div>
                             <div class="username">
                                 <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                                <h3><?php //echo $user_balance 
-                                    ?></h3>
+                                <h3><?php echo $user_balance ?></h3>
                             </div>
                         </div>
                         <div class="acount">
@@ -90,38 +88,81 @@ require_once('../model/User.php')
                             <div class="register__group" id="register__username">
                                 <label for="username" class="register__block--label">Username</label>
                                 <div id="group__input">
-                                    <h4 class="respuesta"><?php echo $row['username']; ?></h4>
-                                    <a href="../CRUD/User_Update-username.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar contraseña"></a>
+                                    <!-- group username -->
+                                    <div class="register__group" id="register__username">
+                                        <label for="username" class="register__block--label">Username</label>
+                                        <div id="group__input">
+                                            <h4>Username:</h4>
+                                            <h4 class="respuesta"><?php echo $row['username']; ?></h4>
+                                            <a href="../view/User_Updatecopy.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar contraseña"></a>
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
+
+
+                                <!-- group email -->
+                                <div class="register__group" id="register__email">
+                                    <label for="email" class="register__block--label">Email</label>
+                                    <div id="group__input">
+                                        <h4>Email:</h4>
+                                        <h4 class="respuesta"><?php echo $row['email']; ?></h4>
+                                    </div>
+                                    <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
+                                </div>
+
+                                <!-- group password -->
+                                <div class="register__group" id="register__password">
+                                    <label for="password" class="register__block--label">Password</label>
+                                    <div id="group__input">
+
+                                        <h4>Password:</h4>
+                                        <form method="POST">
+                                            <input type="password" name="password" value="" maxlength="8" size="8">
+                                            <input type="submit" class="btn-edit" name="btn-edit" value="Editar">
+                                            <a href="../view/User_Update.php" class="volver">Volver</a>
+                                        </form>
+                                        <?php
+                                        if (isset($_POST['password'])) {
+                                    
+                                        $errores = array();
+                                        if (isset($_POST['btn-edit'])) {
+                                            $password = $_POST['password'];
+                                            if (strlen($password) < 3) {
+                                              
+                                                array_push($errores, "Error 067:La contraseña debe ser mayor o igual a 3 digitos.");
+                                            } else {
+                                                $sesion = $_SESSION['username'];
+
+                                                $update = $user->UpdatePassword($password, $sesion);
+                                                if ($update == true) {
+                                                    echo '<meta http-equiv="refresh" content="0;url=../view/User_Update.php">';
+                                                }
+                                            }
+                                        }
+                                    }
+                                        ?>
+
+                                    </div>
+                                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                                </div>
+                            <?php }; ?>
                             </div>
 
 
-                            <!-- group email -->
-                            <div class="register__group" id="register__email">
-                                <label for="email" class="register__block--label">Email</label>
-                                <div id="group__input">
-                                    <h4 class="respuesta"><?php echo $row['email']; ?></h4>
-                                    <a href="../CRUD/User_Update-email.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar email"></a>
-                                </div>
-                                <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
+
+                            <!-- error message -->
+                            <div class="register__message" id="register__message">
+                                <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> </p>
                             </div>
 
-                            <!-- group password -->
-                            <div class="register__group" id="register__password">
-                                <label for="password" class="register__block--label">Password</label>
-                                <div id="group__input">
-                                    <h4 class="respuesta"><?php echo $row['password']; ?></h4>
-                                    <a href="../CRUD/User_Update-password.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar email"></a>
-                                </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                            <div class="register__block--cta">
+                                <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
+
+                                <!-- registration complete -->
+                                <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Your details have been changed!</p>
                             </div>
-
-
-                        <?php }; ?>
                         </div>
-
-                    </div>
 
                 </section>
             </section>

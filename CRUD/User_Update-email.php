@@ -35,13 +35,11 @@ require_once('../model/User.php')
                             </div>
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php // echo $user_id 
-                                    ?></h3>
+                                <h3><?php echo $user_id ?></h3>
                             </div>
                             <div class="username">
                                 <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                                <h3><?php //echo $user_balance 
-                                    ?></h3>
+                                <h3><?php echo $user_balance ?></h3>
                             </div>
                         </div>
                         <div class="acount">
@@ -90,6 +88,7 @@ require_once('../model/User.php')
                             <div class="register__group" id="register__username">
                                 <label for="username" class="register__block--label">Username</label>
                                 <div id="group__input">
+                                    <h4>Username:</h4>
                                     <h4 class="respuesta"><?php echo $row['username']; ?></h4>
                                     <a href="../CRUD/User_Update-username.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar contraseña"></a>
                                 </div>
@@ -101,27 +100,60 @@ require_once('../model/User.php')
                             <div class="register__group" id="register__email">
                                 <label for="email" class="register__block--label">Email</label>
                                 <div id="group__input">
-                                    <h4 class="respuesta"><?php echo $row['email']; ?></h4>
-                                    <a href="../CRUD/User_Update-email.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar email"></a>
+                                    <h4>Email:</h4>
+                                    <form method="POST">
+                                        <input type="email" name="email" value="" maxlength="45" size="45">
+                                        <input type="submit" class="btn-edit" name="btn-edit" value="Editar">
+                                        <a href="../view/User_Update.php" class="volver">Volver</a>
+                                    </form>
+                                    <?php
+                                    if (isset($_POST['email'])) {
+                                        $errores = array();
+                                        $email = $_POST['email'];
+                                        $submit = $_POST['btn-edit'];
+                                        $patron_email = "/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+/";
+                                        if (isset($_POST['btn-edit'])) {
+                                            if (empty($email)) {
+                                                array_push($errores, "Error 014: No puedes dejar el campo de email vacio.");
+                                            } else {
+                                                $session = $_SESSION['username'];
+                                                $update = $user->UpdateEmail($email, $session);
+                                                if (isset($update)) {
+                                                    echo '<meta http-equiv="refresh" content="0;url=../view/User_Update.php">';
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ?>
+
                                 </div>
-                                <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
+
+                                <!-- group password -->
+                                <div class="register__group" id="register__password">
+                                    <label for="password" class="register__block--label">Password</label>
+                                    <div id="group__input">
+                                        <h4>Password:</h4>
+                                        <h4 class="respuesta"><?php echo $row['password']; ?></h4>
+                                    </div>
+                                    <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                                </div>
+                            <?php }; ?>
                             </div>
 
-                            <!-- group password -->
-                            <div class="register__group" id="register__password">
-                                <label for="password" class="register__block--label">Password</label>
-                                <div id="group__input">
-                                    <h4 class="respuesta"><?php echo $row['password']; ?></h4>
-                                    <a href="../CRUD/User_Update-password.php"><img src="../assets/icons/bx-edit-alt.svg" alt="editar" title="editar email"></a>
-                                </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+
+
+                            <!-- error message -->
+                            <div class="register__message" id="register__message">
+                                <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> </p>
                             </div>
 
+                            <div class="register__block--cta">
+                                <input type="submit" value="SAVE NEW CHANGES" class="register__block--button">
 
-                        <?php }; ?>
+                                <!-- registration complete -->
+                                <p class="register__complete" id="register__complete"><i class="fa-solid fa-check"></i> Your details have been changed!</p>
+                            </div>
                         </div>
-
-                    </div>
 
                 </section>
             </section>

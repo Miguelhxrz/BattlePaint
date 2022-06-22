@@ -107,6 +107,14 @@ class User {
     }
 
   }
+
+  function GetByUsername($username){
+    $query_send = "SELECT `username`, `password`, `email` FROM `users` WHERE  `username` = '$username'";
+
+    $question = $this->db->sendQuery($query_send);
+
+    return $question;
+  }
   
 
   function Login( $username, $password ) {
@@ -180,12 +188,39 @@ class User {
  
   }
 
-
   
 
+  function UpdatePassword($password,$session){
+    $query_send = "UPDATE `users` SET `password` = '$password'  WHERE  `username` = '$session'";
 
+    $question = $this->db->sendQuery($query_send);
 
+    return $question;
+  }
 
+  function UpdateEmail($email,$session){
+    $query_send = "UPDATE `users` SET `email` = '$email'  WHERE  `username` = '$session'";
+
+    $question = $this->db->sendQuery($query_send);
+
+    return $question;
+  }
+
+  function UpdateBinance($email,$session){
+    $query_send = "UPDATE `users` SET `email` = '$email'  WHERE  `username` = '$session'";
+
+    $question = $this->db->sendQuery($query_send);
+
+    return $question;
+  }
+
+  function UpdateUsername($username,$session){
+    $query_send = "UPDATE `users` SET `username` = '$username' WHERE  `username` = '$session'";
+
+    $question = $this->db->sendQuery($query_send);
+
+    return $question;
+  }
 
 
 }

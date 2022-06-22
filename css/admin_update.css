@@ -547,6 +547,11 @@ select::placeholder {
     margin-top: 70px;
 }
 
+.user_update1 {
+    display: flex;
+    margin-top: 50px;
+}
+
 .register__input--error {
     margin-top: 10px;
     font-size: 12px;
