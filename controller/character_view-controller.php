@@ -18,5 +18,10 @@ $balance = $user->GetBalance( $username );
 
 $nfts = $nft->NFTSByToken( $token );
 
+// var_dump($nfts);
+
+// echo "<h2>".$nfts['name']."</h2>";
+
 $price_nft = intval($nft->GetPriceToken( $token ));
+
 ?>

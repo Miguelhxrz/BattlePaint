@@ -16,21 +16,20 @@
 
   $inventory = $user->getInventory( $user_id );
 
-  $nfts_inventory = array();
-
-  // var_dump($inventory);
+  if( !empty($inventory) ) {
   
-  foreach( $inventory as $item){
+    $nfts_inventory = array();
+  
+    foreach( $inventory as $item){
 
-    array_push($nfts_inventory,$nft->NFTSByToken( $item ));
+      array_push($nfts_inventory,$nft->NFTSByToken( $item ));
+
+    }
 
   }
 
 
-  // var_dump($nfts_inventory[0]);
-
-
-/*   if( !empty( $_POST['buy_price'] ) && !empty( $_POST['buy_token'] ) ){
+  if( !empty( $_POST['buy_price'] ) && !empty( $_POST['buy_token'] ) ){
 
     $nft_price = $_POST['buy_price'];
 
@@ -46,7 +45,7 @@
 
     $delete = $nft->NFTBuy( $nft_token );
 
-  } */
+  }
 
 
 

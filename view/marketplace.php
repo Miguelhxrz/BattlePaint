@@ -2,23 +2,6 @@
     require_once('../controller/header_controller.php');
     require_once('../controller/marketplace-controller.php');
 
-
-    if( isset( $_POST['search'] ) ) {
-
-        $nft_filter_name = $_POST['es_search'];
-
-        if( isset( $nft_filter_name ) && !empty( $nft_filter_name )){
-
-            $nfts = $nft->NFTSByName( $nft_filter_name );
-
-        }
-    
-    }else {
-
-        $nfts = $nft->showNFTS();
-
-    }
-
 ?>
       
 <!DOCTYPE html>
