@@ -1,5 +1,5 @@
 <?php 
-
+  require_once( '../model/User.php' );
 session_start();
 
 function getHeader(){
@@ -17,6 +17,10 @@ function getHeader(){
 
 $header = getHeader();
 
+$user = new User();
+$username = $_SESSION [ 'username' ];
+
+$user_conf = $user->userByUsername( $_SESSION['username'] );
 
 
 ?>

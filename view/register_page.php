@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php 
+session_start();
+require_once('../model/User.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -106,10 +109,11 @@
                     <label for="gender" class="register__block--label">Gender</label>
                     <div id="group__input">
                         <select name="gender" id="gender" class="register__block--input">
-                            <option disabled>Select a gender</option>
-                            <option value="other">Other</option>
-                            <option value="Female">Female</option>
-                            <option value="Male">Male</option>
+                            <optgroup label="Select an option">
+                                <option value="other">Other</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                            </optgroup>
                         </select>
                     </div>
                 </div>
@@ -189,6 +193,17 @@
                 $_SESSION['gender'] = $user_gender;
                 $_SESSION['id'] = $_POST['user_id'];
                 $_SESSION['balance'] = '0';
+
+                $user = new User();
+
+                $user->setID($user_id);
+                $user->setUsername($user_username);
+                $user->setPassword($user_password);
+                $user->setEmail($user_email);
+                $user->setBirth($user_birth);
+                $user->setGender($user_gender);
+
+                $user->addUser();
 
                 var_dump($_SESSION['balance']);
                 var_dump($_SESSION['id']);

@@ -1,5 +1,4 @@
 /* |---- Imporatando la fuente ----| */
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
@@ -24,6 +23,8 @@ html {
     --indigo: #1f1d35;
     --grey: #202c33;
     --gradient: linear-gradient(135deg, #613DC1, #0A88C2);
+    --campos: rgba(0, 0, 0, 30%);
+    --sombra-campos: rgba(255, 255, 255, 50%);
 }
 
 body {
@@ -46,9 +47,7 @@ body {
     background-repeat: no-repeat;
 }
 
-
 /* header */
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -205,19 +204,18 @@ a .neon4 {
 }
 
 .menu__item_admin {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
 }
 
-.menu__item_admin h5 {
-    font-size: 2rem;
+.menu__texts {
+    font-size: 1.5rem;
     color: #ffffff;
 }
-
-
 /* end header */
 
 form {
@@ -251,7 +249,7 @@ form {
 
 .one {
     width: 271.74px;
-    height: 760px;
+    height: 725px;
     left: 20px;
     top: 21px;
     margin-left: 10px;
@@ -278,7 +276,7 @@ form {
 }
 
 .info__user {
-    height: 156px;
+    height: 120px;
     width: 240px;
     border-radius: 5px;
     margin: auto;
@@ -304,15 +302,14 @@ form {
     margin-top: 10px;
 }
 
-.username .icon_pb {
+.username .icon_pp {
     width: 30px;
     height: 32px;
     margin-left: 35px;
     margin-right: 25px;
     margin-top: 10px;
 }
-
-.username .icon_pp {
+.username .icon_pb {
     width: 30px;
     height: 32px;
     margin-left: 35px;
@@ -489,11 +486,15 @@ form {
 }
 
 .register__group {
-    width: 80%;
+    width: 45%;
     margin-left: auto;
     margin-right: auto;
-    background-color: transparent;
     margin-top: 20px;
+    padding: 10px;
+    background-color: var(--campos);
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    box-shadow: 0 0 10x var(--sombra-campos);
 }
 
 label {
@@ -547,7 +548,7 @@ select::placeholder {
     margin-top: 70px;
 }
 
-.user_update1 {
+.user_update2 {
     display: flex;
     margin-top: 50px;
 }
@@ -641,10 +642,41 @@ select::placeholder {
     opacity: 1;
 }
 
+.register__block--label {
+    display: block;
+    width: 30%;
+    padding: 5px;
+    font-size: 1.8rem;
+}
+
+.group__input {
+    display: flex;
+    width: 100%;
+}
+
+.respuesta {
+    display: block;
+    width: 50%;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.icon {
+    display: block;
+    width: 50%;
+    text-decoration: none;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.edit {
+    font-size: 3rem;
+}
+
 .log-out__btn  {
     font-size: 1.5rem;
     color: white;
-    font-size: var(--font);
+    font-family: var(--font);
     position: relative;
     bottom: 10px;
     display: flex;
@@ -657,5 +689,57 @@ select::placeholder {
     border: 3px solid var(--black-blue);
     border-radius: 30px 15px;
     background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--black-blue) 100%);
+    cursor: pointer;
+}
+
+/* CRUD */
+.form__edit {
+    width: 100%;
+    display: flex;
+}
+
+.edit__group {
+    width: 50%;
+}
+
+.group__input-username {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.input__crud {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    height: 3rem;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    background-color: var(--campos);
+}
+
+.btn-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 3rem;
+    margin: 5px auto;
+    font-size: 1.5rem;
+    color: white;
+    font-family: var(--font);
+    border: 3px solid var(--black-blue);
+    border-radius: 30px 15px;
+    background-image: linear-gradient(180deg, var(--dark-violet) 0%, var(--black-blue) 100%);
+    cursor: pointer;
+}
+
+.volver {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--black-blue);
+    text-decoration: underline;
     cursor: pointer;
 }

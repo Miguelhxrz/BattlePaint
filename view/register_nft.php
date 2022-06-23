@@ -51,10 +51,11 @@ require_once('../controller/register_nft-controller.php');
         <div class="register_group" id="register_rank">
           <label for="rank">Choose rank</label>
           <select name="nft_rank" id="rank_nft" class="register__block--input" tabindex="3">
-            <option selected disabled value="">Select a rank</option>
-            <option value="S">S</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
+            <optgroup label="Select a rank">
+              <option value="S">S</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </optgroup>
           </select>
         </div>
 
@@ -94,7 +95,7 @@ require_once('../controller/register_nft-controller.php');
         <div class="register_group" id="register_id">
           <label for="object_image" class="label-name">Presentation image</label>
           <div>
-            <input type="file" name="nft_p_img" id='p_img' accept="image/png,image/jpeg" readonly class="register__block--input" tabindex="6">
+            <input type="file" name="nft_p_img" id='p_img' accept="image/png,image/jpeg" readonly tabindex="6">
           </div>
         </div>
 
@@ -102,7 +103,7 @@ require_once('../controller/register_nft-controller.php');
         <div class="register_group" id="register_id">
           <label for="object_image" class="label-name">Card image</label>
           <div>
-            <input type="file" name="nft_c_img" id='c_img' accept="image/png,image/jpeg" readonly class="register__block--input" tabindex="7">
+            <input type="file" name="nft_c_img" id='c_img' accept="image/png,image/jpeg" readonly tabindex="7">
           </div>
         </div>
       </section>
@@ -112,10 +113,11 @@ require_once('../controller/register_nft-controller.php');
         <div class="register_group" id="register_class">
           <label for="class">choose class</label>
           <select name="nft_class" id="class_nft" tabindex="5">
-            <option selected disabled value="">Select a class</option>
-            <option value="tank">Tank</option>
-            <option value="shooter">Shooter</option>
-            <option value="assassin">Assassin</option>
+            <optgroup label="Select a class">
+              <option value="tank">Tank</option>
+              <option value="shooter">Shooter</option>
+              <option value="assassin">Assassin</option>
+            </optgroup>
           </select>
         </div>
       </section>

@@ -196,19 +196,18 @@ a .neon4 {
 }
 
 .menu__item_admin {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
 }
 
-.menu__item_admin h5 {
-    font-size: 2rem;
+.menu__texts {
+    font-size: 1.5rem;
     color: #ffffff;
 }
-
-
 /* end header */
 
 .main {
@@ -243,6 +242,8 @@ a .neon4 {
 
 .register__block {
     width: 50%;
+    margin-top: 5px;
+    text-align: center;
 }
 
 .one {
@@ -253,11 +254,11 @@ a .neon4 {
     float: right;
 }
 
-.register__group {
+.register_group {
     width: 100%;
     height: 100px;
     margin: 10px 0;
-    padding: 0 0 0 50px;
+    padding: 0;
 }
 
 label {
@@ -286,7 +287,7 @@ label {
 }
 
 .register__block--input[type='file'] {
-    margin-top: 15px;
+    margin-top: 20px;
     background-color: transparent;
 }
 
@@ -308,6 +309,10 @@ select option {
 
 select::placeholder {
     color: white;
+}
+
+optgroup {
+    color: black;
 }
 
 .register__input--error {
@@ -332,7 +337,7 @@ select::placeholder {
     width: 80%;
     height: 40px;
     line-height: 40px;
-    margin: 10px auto;
+    margin: 0 auto 10px;
     background-color: #bb2929;
     border-radius: 5px;
     display: none;
@@ -345,7 +350,6 @@ select::placeholder {
 .register__block--cta {
     float: right;
     width: 55%;
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -373,6 +377,7 @@ select::placeholder {
     height: 50px;
     line-height: 40px;
     margin: 0 auto;
+    padding: 5px;
     background-color: #1ed12d;
     border-radius: 5px;
     display: none;
@@ -382,9 +387,7 @@ select::placeholder {
     display: block;
 }
 
-
 /* styles for validations */
-
 .register__group--correct .form__validation--state {
     color: #1ed12d;
     opacity: 1;

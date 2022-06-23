@@ -67,8 +67,6 @@ require_once('../model/User.php')
                             echo "<script>window.location.href = '../index.php';</script>";
                         }
 
-
-
                         ?>
 
                     </div>
@@ -106,11 +104,21 @@ require_once('../model/User.php')
                             <!-- group password -->
                             <div class="register__group" id="register__password">
                                 <label for="password" class="register__block--label">Password</label>
+                                <div id="group__input" class="group__input">
+                                    <h4 class="respuesta"><?php echo $row['password']; ?></h4>
+                                    <a href="../CRUD/User_Update-password.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
+                                </div>
+                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
+                            </div>
+
+                            <!-- group wallet -->
+                            <div class="register__group" id="register__password">
+                                <label for="username" class="register__block--label">Binance Email</label>
                                 <div id="group__input">
                                     <form method="POST" class="form__edit">
                                         <div class="edit__group">
-                                            <h4 class="group__input-username">Password:</h4>
-                                            <input type="password" name="password" value="" maxlength="8" size="8" class="input__crud">
+                                            <h4 class="group__input-username">Binance:</h4>
+                                            <input type="email" name="binance" value="" maxlength="45" size="45" class="input__crud">
                                         </div>
 
                                         <div class="edit__group">
@@ -119,37 +127,30 @@ require_once('../model/User.php')
                                         </div>
                                     </form>
                                     <?php
-                                    if (isset($_POST['password'])) {
-
+                                    if (isset($_POST['binance'])) {
                                         $errores = array();
+                                        $binance = $_POST['binance'];
+                                        $patron_email = "/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+/";
                                         if (isset($_POST['btn-edit'])) {
-                                            $password = $_POST['password'];
-                                            if (strlen($password) < 3) {
-
-                                                array_push($errores, "Error 067:La contraseÃ±a debe ser mayor o igual a 3 digitos.");
+                                            if (empty($binance)) {
+                                                array_push($errores, "Error 014: No puedes dejar el campo de email vacio.");
                                             } else {
-                                                $sesion = $_SESSION['username'];
-
-                                                $update = $user->UpdatePassword($password, $sesion);
-                                                if ($update == true) {
+                                                $session = $_SESSION['username'];
+                                                $update = $user->UpdateBinance($binance, $session);
+                                                if (isset($update)) {
                                                     echo '<meta http-equiv="refresh" content="0;url=../view/User_Update.php">';
                                                 }
                                             }
                                         }
                                     }
                                     ?>
-                                </div>
-                            </div>
 
-                            <!-- group wallet -->
-                            <div class="register__group" id="register__password">
-                                <label for="username" class="register__block--label">Binance Email</label>
-                                <div id="group__input" class="group__input">
-                                    <h4 class="respuesta"><?php echo $row['binance']; ?></h4>
-                                    <a href="../CRUD/User_Update-binance.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
                                 <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
+
+
+
                         <?php }; ?>
                         </div>
 
@@ -157,27 +158,7 @@ require_once('../model/User.php')
 
                 </section>
             </section>
-            <form action="" method="post" class="form__hidden">
-                <input type="text" name="new_username" id="new_username">
-                <input type="text" name="new_email" id="new_email">
-                <input type="text" name="new_password" id="new_password">
-            </form>
-            </div>
-            <?php
 
-
-            if (isset($_POST['new_username']) && isset($_POST['new_email']) && isset($_POST['new_password'])) {
-
-                $_SESSION['username'] = $_POST['new_username'];
-                $_SESSION['email'] = $_POST['new_email'];
-                $_SESSION['password'] = $_POST['new_password'];
-            }
-
-
-
-
-
-            ?>
 
             <script src="./js/redirect.js"></script>
             <script src="../js/update-validations.js"></script>

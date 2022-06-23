@@ -11,15 +11,13 @@ class User {
   private $birth;
   private $gender;
 
-  #data base
-  private $db;
-
-
-  function __construct() {
-
-    $this->db = new db_connect();
+   #database
+   private $db;
   
-  }
+   #constructor
+   function __construct() {
+    $this->db= new db_connect();
+   }
 
   #setters
 
@@ -109,7 +107,7 @@ class User {
   }
 
   function GetByUsername($username){
-    $query_send = "SELECT `username`, `password`, `email` FROM `users` WHERE  `username` = '$username'";
+    $query_send = "SELECT `username`, `password`, `email`, `binance` FROM `users` WHERE  `username` = '$username'";
 
     $question = $this->db->sendQuery($query_send);
 
@@ -206,8 +204,8 @@ class User {
     return $question;
   }
 
-  function UpdateBinance($email,$session){
-    $query_send = "UPDATE `users` SET `email` = '$email'  WHERE  `username` = '$session'";
+  function UpdateBinance($binance,$session){
+    $query_send = "UPDATE `users` SET `binance` = '$binance'  WHERE  `username` = '$session'";
 
     $question = $this->db->sendQuery($query_send);
 
