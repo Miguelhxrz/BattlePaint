@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
  const rank = document.getElementById('nft__rank').textContent;
 
-//  console.log(rank_style[]);
 
  character_container.classList.add( rank_style[rank.trim()] );
 

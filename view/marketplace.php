@@ -2,24 +2,6 @@
     require_once('../controller/header_controller.php');
     require_once('../controller/marketplace-controller.php');
 
-    $nft = new Nft();
-
-    if( isset( $_POST['search'] ) ) {
-
-        $nft_filter_name = $_POST['es_search'];
-
-        if( isset( $nft_filter_name ) && !empty( $nft_filter_name )){
-
-            $nfts = $nft->NFTSByName( $nft_filter_name );
-
-        }
-    
-    }else {
-
-        $nfts = $nft->showNFTS();
-
-    }
-
 ?>
       
 <!DOCTYPE html>
@@ -74,8 +56,9 @@
                 
                 <article class="nft__card">
                 
-                    <form action="" method="POST" class="form__hidden">
+                    <form action="./character_view.php" method="POST" class="form__hidden">
                         <input type="hidden" name="nft_token" value="<?php echo $nft['token']  ?>">
+                        <input type="hidden" name="nft_owner" value="<?php echo $nft['owner']  ?>">
                     </form>
                     
                     <figure class="nft__img">

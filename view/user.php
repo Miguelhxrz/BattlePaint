@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/user.css">
     <link rel="shortcut icon" href="../source/img/logoBattlePaint1.png" type="image/x-icon">
-    <script src="../js/redirect.js"></script>
+    <script src="../js/user.js"></script>
     <title>Battle Paint | User Page</title>
 </head>
 
@@ -27,7 +27,7 @@
 
                 <div class="line"></div>
                 <div class="info__user">
-                    <?php foreach( $user_conf as $user) {?>
+                <?php foreach( $user_conf as $user) {?>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
                         <h3><?php echo $user['username'] ?></h3>
@@ -86,35 +86,54 @@
                 <div class="user_update">
 
                     <section class="nft__container">
+                    <?php 
+                        if (!empty( $nfts_inventory )) {
+                            
+                        foreach( $nfts_inventory as $items) { ?>
+                            <article class="nft__card">
 
-                        <article class="nft__card">
-                            <figure class="nft__img">
-                                <img src="../source/img/Characters/test3.png" alt="Shanna">
-                            </figure>
-                            <div class="nft__rank a">
-                                <h4>A</h4>
-                            </div>
-                            <div class="nft__name a">
-                                <h3>Shanna</h3>
-                            </div>
-                            <div class="nft__price">
-                                <article class="price">
-                                    <h4>Price PB:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
+                                <input type="hidden" name="rank" id="nft__rank" value="<?php echo $items['rank']?>">
+
+                                <figure class="nft__img">
+                                    <img src="<?php echo $items['img_c']?>" alt="nft_img">
+                                </figure>
+                                <div class="nft__rank">
+                                    <h4><?php echo $items['rank'] ?></h4>
+                                </div>
+                                <div class="nft__name">
+                                    <h3><?php echo $items['name'] ?></h3>
+                                </div>
+                                <div class="nft__price">
+                                    <article class="price">
+                                        <h4>Price PB:</h4>
+                                        <div class="price__pay">
+                                            <img src="../source/img/paint-backets2.png" alt="paint bucket icon">
+                                            <h4><?php echo $items['price'] ?></h4>
+                                        </div>
+                                    </article>
+                                    <article class="price">
+                                        <h4>Price USD:</h4>
+                                        <div class="price__pay">
+                                            <img src="../source/img/usd.png" alt="paint bucket icon">
+                                            <h4><?php 
+                                                    $pb = $items['price'];
+                                                    $usd = 50;
+                                    
+                                                    $price_usd = $pb * $usd;
+                                     
+                                                    echo $price_usd;
+                                            
+                                                    ?></h4>
+                                        </div>
+                                     
                                 </article>
-                                <article class="price">
-                                    <h4>Price USD:</h4>
-                                    <div class="price__pay">
-                                        <img src="../source/img/usd.png" alt="paint bucket icon">
-                                        <h4>????</h4>
-                                    </div>
-                                </article>
+                               
                             </div>
                         </article>
-                </div>
+                        <?php  
+                            }
+                            } ?>                
+                    </div>
             </div>
         </section>
         </div>

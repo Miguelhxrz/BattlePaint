@@ -128,4 +128,4 @@ registerNft.addEventListener('submit', (event) => {
             document.getElementById('register_message').classList.remove('register__message-active');
         }, 3000);
     }
-});
+}); 

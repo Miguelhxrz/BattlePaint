@@ -165,7 +165,7 @@ class User {
 
   function UserInventory ( $user_id ) {
 
-    $query = "SELECT `id_nft` FROM `inventory`	WHERE ";
+    $query = "SELECT `id_nft` FROM `inventory` WHERE `id_user` = '".$user_id."'";
 
     $send = $this->db->sendQuery($query);
 
@@ -174,7 +174,7 @@ class User {
     if(mysqli_num_rows($send) > 0) {
 
       while($rows =  mysqli_fetch_array($send)) {
-        array_push($inventory,$rows);
+        $inventory = $rows;
       }
 
       return $inventory;
@@ -195,6 +195,125 @@ class User {
 
     return $question;
   }
+  function GetId ( $username ) {
+
+    $query = "SELECT `id` FROM `users` WHERE `username` = '".$username."'";
+    
+    $send = $this->db->sendQuery($query);
+
+    $id = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($id,$rows);
+      }
+
+      return $id[0]['id'];
+
+    }else {
+      return 0;
+    }
+
+  }
+
+
+  function GetBalance( $username ) {
+
+    $query = "SELECT `balance` FROM `users` WHERE `username` = '".$username."'";
+    
+    $send = $this->db->sendQuery($query);
+
+    $balance = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($balance,$rows);
+      }
+
+      return $balance[0]['balance'];
+
+    }else {
+      return 0;
+    }
+
+
+    }
+
+  function Buy ( $username, $balance, $price ) {
+
+    $new_balance = $balance - $price;
+
+    $query = "UPDATE `users` SET `balance`= $new_balance WHERE `username` = '".$username."'";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+  }
+
+  function BuyCoins ( $username, $balance, $price ) {
+
+    $new_balance = $balance + $price;
+
+    $query = "UPDATE `users` SET `balance`= $new_balance WHERE `username` = '".$username."'";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+  }
+  
+  
+  function AddInventory ( $user_id, $nft_token ){
+
+    $query = "INSERT INTO `inventory`(`id_user`, `id_nft`) VALUES ('".$user_id."','".$nft_token."')";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+  }
+
+  function getInventory( $user_id ) {
+
+    $query = "SELECT `id_nft` FROM `inventory` WHERE `id_user` = '".$user_id."'";
+    
+    $send = $this->db->sendQuery($query);
+
+    $items = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_array($send)) {
+        array_push($items,$rows['id_nft']);
+      }
+      return $items;
+  
+    }else {
+  
+      return 0;
+  
+    }
+
+
+
+
+
+  }
+
 
   function UpdateEmail($email,$session){
     $query_send = "UPDATE `users` SET `email` = '$email'  WHERE  `username` = '$session'";

@@ -20,7 +20,7 @@ require_once('../controller/register_nft-controller.php');
 
   <main class="main">
 
-    <form action="<?=$_SERVER["PHP_SELF"];?>" name='register_nft' method='POST' class="register" id="register" enctype="multipart/form-data">
+    <form action="<?=$_SERVER['PHP_SELF'] ?>" name='register_nft' method='POST' class="register" id="register" enctype="multipart/form-data">
 
       <section class="register__title">
         <h2> NFTs Register </h2>
@@ -135,75 +135,24 @@ require_once('../controller/register_nft-controller.php');
     </form>
     </div>
 
-    <!-- <form action="" method="POST" name='Form_hidden' class="form__hidden">
-      <input type="text" name='nft_token' id="nft_token">
-      <input type="text" name='nft_name' id="nft_name">
-      <input type="text" name='nft_power' id="nft_power">
-      <input type="text" name='nft_class' id="nft_class">
-      <input type="text" name='nft_rank' id="nft_rank">
-      <input type="text" name='nft_owner' id="nft_owner">
-      <input type="text" name='nft_price' id="nft_price">
-    </form> -->
-
     <?php
        
     if(isset($_POST['nft_name'])) {
 
-      $nft_id = $_POST['nft_id'];
-      $nft_name = $_POST['nft_name'];
-      $nft_power = $_POST['nft_power'];
-      $nft_rank = $_POST['nft_rank'];
-      $nft_price = $_POST['nft_price'];
-      $nft_class = $_POST['nft_class'];
-      $nft_owner = $_POST['nft_owner'];
-      $nft_img_p = $_FILES['nft_p_img'];
-      $nft_img_c = $_FILES['nft_c_img'];
+        $nft_id = $_POST['nft_id'];
+        $nft_name = $_POST['nft_name'];
+        $nft_power = $_POST['nft_power'];
+        $nft_rank = $_POST['nft_rank'];
+        $nft_price = $_POST['nft_price'];
+        $nft_class = $_POST['nft_class'];
+        $nft_owner = $_POST['nft_owner'];
+        $nft_img_p = $_FILES['nft_p_img'];
+        $nft_img_c = $_FILES['nft_c_img'];
 
-      $errors = array();
 
-      if( !isset( $nft_name ) && empty( $nft_name ) ) {
+        var_dump($nft_id);
 
-        array_push($errors, 'name');
-
-      }else if( !isset( $nft_power ) && empty( $nft_power ) ) {
-
-        array_push($errors, 'power');
-
-      }else if( !isset( $nft_rank ) && empty( $nft_rank ) ) {
-
-        array_push($errors, 'rank');
-
-      }else if( !isset( $nft_price ) && empty( $nft_price ) ) {
-
-        array_push($errors, 'price vacio');
-
-      }else if( $nft_price < 100 ) {
-
-        array_push($errors, 'price low');
-
-      }else if( !isset( $nft_class ) && empty( $nft_class ) ) {
-
-        array_push($errors, 'class');
-
-      }else if( !isset( $nft_img_p ) && empty( $nft_img_p ) ) {
-
-        array_push($errors, 'img presentation');
-
-      }else if( !isset( $nft_img_c ) && empty( $nft_img_c ) ) {
-
-        array_push($errors, 'img card');
-
-      }else if(  $nft_img_p['type'] !== 'image/png' ) {
-
-        array_push($errors, 'img presentation no png');
-
-      }else if(  $nft_img_c['type'] !== 'image/png' ) {
-
-        array_push($errors, 'img card no png');
-
-      }
-
-      if( count($errors) < 1 ) {
+    
 
         $nft = new Nft();
 
@@ -228,20 +177,17 @@ require_once('../controller/register_nft-controller.php');
 
         $nft->addNft();
 
-        $_SESSION['nft_token'] = $nft_id;
+        $nft->addMarketPlace($nft_id);
 
         echo "<script>window.location.href = './marketplace.php'</script>";
-      }
-
-
     }
+
 
 
 
 
     ?>
 
-    <script src="../js/redirect.js"></script>
     <script src="../js/register_nftcopy.js"></script>
     <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
 </body>

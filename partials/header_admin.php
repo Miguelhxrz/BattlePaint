@@ -1,4 +1,4 @@
-<?php $username = $_SESSION['username']; ?>
+<?php foreach( $user_conf as $user) {?>
 <header class="header">
 
     <a class="header__name" href="../index.php">
@@ -17,14 +17,7 @@
             </a>
           </li>
 
-          <li class="menu__item">
-            <a href="marketplace.php" title="Rent">
-              <span class="neon1"></span>
-              <span class="neon2"></span>
-              <span class="neon3"></span>
-              <span class="neon4"></span> Rent
-            </a>
-          </li>
+          
 
           <li class="menu__item">
             <a href="points.php" title="Conversion">
@@ -39,12 +32,12 @@
         <div class="menu__user">
           <li class="menu__item_admin">
             <a href="./user.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
-            <h5 class="menu__texts"> PB </h5>
+            <h5 class="menu__texts"><?php echo $user['balance']; ?></h5>
           </li>
 
           <li class="menu__item_admin" >
             <a href="./admin.php"><img src="../source/img/svg/admin.svg" alt="Logo Admin" class="logo_admin"></a>
-            <h5 class="menu__texts"><?php echo $username  ?></h5>
+            <h5 class="menu__texts"><?php echo $user['username'];}?></h5>
           </li>
         </div>
       </ul>

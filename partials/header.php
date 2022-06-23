@@ -26,14 +26,7 @@
                 </a>
             </li>
 
-            <li class="menu__item">
-                <a href="#" title="Rent">
-                    <span class="neon1"></span>
-                    <span class="neon2"></span>
-                    <span class="neon3"></span>
-                    <span class="neon4"></span> Rent
-                </a>
-            </li>
+            
 
             <li class="menu__item">
                 <a href="points.php" title="Points">

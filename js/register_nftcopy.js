@@ -14,10 +14,6 @@ const input_img_c = document.getElementById('c_img');
 
 
 
-
-
-
-
 /* |---- Function token ----|*/
 const GenerateID = () => {
 
