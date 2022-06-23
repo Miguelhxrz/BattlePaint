@@ -34,58 +34,57 @@ require_once('../model/User.php')
                             </div>
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php // echo $user_id ?></h3>
+                                <h3><?php // echo $user_id 
+                                    ?></h3>
                             </div>
                         </div>
 
-                    <div class="acount">
-                        <h3>ACCOUNT</h3>
-                    </div>
+                        <div class="acount">
+                            <h3>ACCOUNT</h3>
+                        </div>
 
-                    <div class="line"></div>
-                    <div class="update_info">
-                        <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                        <a href="#" class="link_update">Update info</a>
-                    </div>
+                        <div class="line"></div>
+                        <div class="update_info">
+                            <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
+                            <a href="#" class="link_update">Update info</a>
+                        </div>
 
-                    <div class="my_nft">
-                        <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="./admin.php" class="link_update">My NFTs</a>
-                    </div>
+                        <div class="my_nft">
+                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                            <a href="../view/admin.php" class="link_update">My NFTs</a>
+                        </div>
 
-                    <div class="my_balance">
-                        <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                        <a href="./converter_admin.php" class="link_update">Balance</a>
-                    </div>
+                        <div class="my_balance">
+                            <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
+                            <a href="../view/converter_admin.php" class="link_update">Balance</a>
+                        </div>
 
-                    <div class="register_nft">
-                        <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="Register_Nft.php" class="link_update">NFT registration</a>
-                    </div>
+                        <div class="register_nft">
+                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                            <a href="../view/register_nft.php" class="link_update">NFT registration</a>
+                        </div>
 
-                    <div class="report">
-                        <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="report.php" class="link_update">Reports</a>
-                    </div>
+                        <div class="report">
+                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                            <a href="../view/report.php" class="link_update">Reports</a>
+                        </div>
 
-                    <div class="logout">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                            <input type="submit" name='log-out' class="log-out__btn" value="Logout">
-                        </form>
-                        <?php
+                        <div class="logout">
+                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                                <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                            </form>
+                            <?php
 
-                        if (isset($_POST['log-out'])) {
+                            if (isset($_POST['log-out'])) {
 
-                            session_destroy();
+                                session_destroy();
 
-                            echo "<script>window.location.href = '../index.php';</script>";
-                        }
+                                echo "<script>window.location.href = '../index.php';</script>";
+                            }
 
+                            ?>
 
-
-                        ?>
-
-                    </div>
+                        </div>
                     </section>
 
                     <div class="register__block two">
@@ -101,20 +100,29 @@ require_once('../model/User.php')
                                     <h4 class="respuesta"><?php echo $row['username']; ?></h4>
                                     <a href="../CRUD/admin_Update-username.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">Username must be 4 to 15 characters (only a-z, 0-9, _).</p>
                             </div>
 
 
                             <!-- group email -->
-                            <div class="register__group" id="register__email">
-                                <label for="email" class="register__block--label">Email</label>
+                            <div class="register__group" id="register__username">
+                                <label for="username" class="register__block--label">Email</label>
                                 <div id="group__input">
-                                    <form method="POST" class="form__edit">
-                                        <div class="edit__group">
-                                            <h4 class="group__input-username">Email:</h4>
-                                            <input type="email" name="email" value="" maxlength="45" size="45" class="input__crud">
+                                    <!-- form email -->
+                                    <form method="POST" class="form__edit" id="form__edit">
+                                        <div class="edit__group input" id="group__name">
+                                            <label for="name" class="group__input-username">Email:</label>
+                                            <div class="form__group-input">
+                                                <input type="email" class="input__crud" id="name" name="name" placeholder="New email">
+                                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                                            </div>
                                         </div>
-                                        <div class="edit__group">
+
+                                        <!-- error message -->
+                                        <div class="register__message" id="register__message">
+                                            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Invalid user.</p>
+                                        </div>
+                                        
+                                        <div class="edit__group submit">
                                             <input type="submit" class="btn-edit" name="btn-edit" value="Editar">
                                             <a href="../view/admin_update.php" class="volver">Volver</a>
                                         </div>
@@ -138,7 +146,6 @@ require_once('../model/User.php')
                                         }
                                     }
                                     ?>
-
                                 </div>
                             </div>
                         </div>
@@ -153,7 +160,6 @@ require_once('../model/User.php')
                                     <h4 class="respuesta"><?php echo $row['password']; ?></h4>
                                     <a href="../CRUD/admin_Update-password.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
 
                             <!-- group wallet -->
@@ -163,7 +169,6 @@ require_once('../model/User.php')
                                     <h4 class="respuesta"><?php echo $row['binance']; ?></h4>
                                     <a href="../CRUD/admin_Update-binance.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
                         <?php }; ?>
                         </div>
@@ -173,8 +178,7 @@ require_once('../model/User.php')
             </section>
 
 
-            <script src="./js/redirect.js"></script>
-            <script src="../js/update-validations.js"></script>
+            <script src="../js/validations_crud/user_update-email.js"></script>
             <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
         </main>
 </body>

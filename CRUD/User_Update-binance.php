@@ -35,41 +35,43 @@ require_once('../model/User.php')
                             </div>
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php // echo $user_id ?></h3>
+                                <h3><?php // echo $user_id 
+                                    ?></h3>
                             </div>
                         </div>
-                    <div class="acount">
-                        <h3>ACCOUNT</h3>
-                    </div>
-                    <div class="line"></div>
-                    <div class="update_info">
-                        <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                        <a href="./User_Update.php" class="link_update">Update info</a>
-                    </div>
-                    <div class="my_nft">
-                        <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="./user.php" class="link_update">My NFTs</a>
-                    </div>
-                    <div class="my_balance">
-                        <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                        <a href="./converter_user.php" class="link_update">Balance</a>
-                    </div>
+                        <div class="acount">
+                            <h3>ACCOUNT</h3>
+                        </div>
+                        <div class="line"></div>
+                        <div class="update_info">
+                            <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
+                            <a href="" class="link_update">Update info</a>
+                        </div>
+                        <div class="my_nft">
+                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                            <a href="user.php" class="link_update">My NFTs</a>
+                        </div>
+                        <div class="my_balance">
+                            <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
+                            <a href="converter_user.php" class="link_update">Balance</a>
+                        </div>
+                        <div class="logout">
+                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                                <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                            </form>
+                            <?php
 
-                    <div class="logout">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                            <input type="submit" name='log-out' class="log-out__btn" value="Logout">
-                        </form>
-                        <?php
+                            if (isset($_POST['log-out'])) {
+                                session_destroy();
 
-                        if (isset($_POST['log-out'])) {
-                            session_destroy();
+                                echo "<script>window.location.href = '../index.php';</script>";
+                            }
 
-                            echo "<script>window.location.href = '../index.php';</script>";
-                        }
 
-                        ?>
 
-                    </div>
+                            ?>
+
+                        </div>
 
                     </div>
 
@@ -111,11 +113,11 @@ require_once('../model/User.php')
                                 <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
 
-                            <!-- group wallet -->
-                            <div class="register__group" id="register__password">
-                                <label for="username" class="register__block--label">Binance Email</label>
-                                <div id="group__input">
-                                    <form method="POST" class="form__edit">
+                              <!-- group wallet -->
+                              <div class="register__group" id="register__password">
+                              <label for="username" class="register__block--label">Binance Email</label>
+                              <div id="group__input">
+                                  <form method="POST" class="form__edit">
                                         <div class="edit__group">
                                             <h4 class="group__input-username">Binance:</h4>
                                             <input type="email" name="binance" value="" maxlength="45" size="45" class="input__crud">
@@ -130,6 +132,7 @@ require_once('../model/User.php')
                                     if (isset($_POST['binance'])) {
                                         $errores = array();
                                         $binance = $_POST['binance'];
+                                        $submit = $_POST['btn-edit'];
                                         $patron_email = "/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+/";
                                         if (isset($_POST['btn-edit'])) {
                                             if (empty($binance)) {
@@ -158,10 +161,30 @@ require_once('../model/User.php')
 
                 </section>
             </section>
+            <form action="" method="post" class="form__hidden">
+                <input type="text" name="new_username" id="new_username">
+                <input type="text" name="new_email" id="new_email">
+                <input type="text" name="new_password" id="new_password">
+            </form>
+            </div>
+            <?php
 
+
+            if (isset($_POST['new_username']) && isset($_POST['new_email']) && isset($_POST['new_password'])) {
+
+                $_SESSION['username'] = $_POST['new_username'];
+                $_SESSION['email'] = $_POST['new_email'];
+                $_SESSION['password'] = $_POST['new_password'];
+            }
+
+
+
+
+
+            ?>
 
             <script src="./js/redirect.js"></script>
-            <script src="../js/update-validations.js"></script>
+            <script src="../js/validations_crud/user_update-email.js"></script>
             <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
         </main>
 </body>

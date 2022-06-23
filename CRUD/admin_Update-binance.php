@@ -50,22 +50,22 @@ require_once('../model/User.php')
 
                     <div class="my_nft">
                         <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="./admin.php" class="link_update">My NFTs</a>
+                        <a href="../view/admin.php" class="link_update">My NFTs</a>
                     </div>
 
                     <div class="my_balance">
                         <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                        <a href="./converter_admin.php" class="link_update">Balance</a>
+                        <a href="../view/converter_admin.php" class="link_update">Balance</a>
                     </div>
 
                     <div class="register_nft">
                         <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="Register_Nft.php" class="link_update">NFT registration</a>
+                        <a href="../view/register_nft.php" class="link_update">NFT registration</a>
                     </div>
 
                     <div class="report">
                         <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="report.php" class="link_update">Reports</a>
+                        <a href="../view/report.php" class="link_update">Reports</a>
                     </div>
 
                     <div class="logout">
@@ -124,11 +124,11 @@ require_once('../model/User.php')
                                 <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
 
-                            <!-- group wallet -->
-                            <div class="register__group" id="register__password">
-                                <label for="username" class="register__block--label">Binance Email</label>
-                                <div id="group__input">
-                                    <form method="POST" class="form__edit">
+                              <!-- group wallet -->
+                              <div class="register__group" id="register__password">
+                              <label for="username" class="register__block--label">Binance Email</label>
+                              <div id="group__input">
+                                  <form method="POST" class="form__edit">
                                         <div class="edit__group">
                                             <h4 class="group__input-username">Binance:</h4>
                                             <input type="email" name="binance" value="" maxlength="45" size="45" class="input__crud">
@@ -143,6 +143,7 @@ require_once('../model/User.php')
                                     if (isset($_POST['binance'])) {
                                         $errores = array();
                                         $binance = $_POST['binance'];
+                                        $submit = $_POST['btn-edit'];
                                         $patron_email = "/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+/";
                                         if (isset($_POST['btn-edit'])) {
                                             if (empty($binance)) {
@@ -172,8 +173,7 @@ require_once('../model/User.php')
                 </section>
             </section>
 
-            <script src="./js/redirect.js"></script>
-            <script src="../js/update-validations.js"></script>
+            <script src="../js/validations_crud/user_update-email.js"></script>
             <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
         </main>
 </body>

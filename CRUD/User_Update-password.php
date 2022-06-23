@@ -35,43 +35,43 @@ require_once('../model/User.php')
                             </div>
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php // echo $user_id ?></h3>
+                                <h3><?php // echo $user_id 
+                                    ?></h3>
                             </div>
                         </div>
-                    <div class="acount">
-                        <h3>ACCOUNT</h3>
-                    </div>
-                    <div class="line"></div>
-                    <div class="update_info">
-                        <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                        <a href="./User_Update.php" class="link_update">Update info</a>
-                    </div>
-                    <div class="my_nft">
-                        <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                        <a href="./user.php" class="link_update">My NFTs</a>
-                    </div>
-                    <div class="my_balance">
-                        <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                        <a href="./converter_user.php" class="link_update">Balance</a>
-                    </div>
+                        <div class="acount">
+                            <h3>ACCOUNT</h3>
+                        </div>
+                        <div class="line"></div>
+                        <div class="update_info">
+                            <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
+                            <a href="" class="link_update">Update info</a>
+                        </div>
+                        <div class="my_nft">
+                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                            <a href="user.php" class="link_update">My NFTs</a>
+                        </div>
+                        <div class="my_balance">
+                            <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
+                            <a href="converter_user.php" class="link_update">Balance</a>
+                        </div>
+                        <div class="logout">
+                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                                <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                            </form>
+                            <?php
 
-                    <div class="logout">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                            <input type="submit" name='log-out' class="log-out__btn" value="Logout">
-                        </form>
-                        <?php
+                            if (isset($_POST['log-out'])) {
+                                session_destroy();
 
-                        if (isset($_POST['log-out'])) {
-                            session_destroy();
-
-                            echo "<script>window.location.href = '../index.php';</script>";
-                        }
-
+                                echo "<script>window.location.href = '../index.php';</script>";
+                            }
 
 
-                        ?>
 
-                    </div>
+                            ?>
+
+                        </div>
 
                     </div>
 
@@ -104,17 +104,26 @@ require_once('../model/User.php')
                         <div class="user_update2">
 
                             <!-- group password -->
-                            <div class="register__group" id="register__password">
-                                <label for="password" class="register__block--label">Password</label>
+                            <div class="register__group" id="register__username">
+                                <label for="" class="register__block--label">Password</label>
                                 <div id="group__input">
-                                    <form method="POST" class="form__edit">
-                                        <div class="edit__group">
-                                            <h4 class="group__input-username">Password:</h4>
-                                            <input type="password" name="password" value="" maxlength="8" size="8" class="input__crud">
+                                    <!-- form password -->
+                                    <form method="POST" class="form__edit" id="form__edit">
+                                        <div class="edit__group input" id="group__name">
+                                            <label for="name" class="group__input-username">Password:</label>
+                                            <div class="form__group-input">
+                                                <input type="password" id="name" name="name" class="input__crud" placeholder="New password">
+                                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                                            </div>
                                         </div>
 
-                                        <div class="edit__group">
-                                            <input type="submit" class="btn-edit" name="btn-edit" value="Editar">
+                                        <!-- error message -->
+                                        <div class="register__message" id="register__message">
+                                            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Invalid user.</p>
+                                        </div>
+
+                                        <div class="edit__group submit">
+                                            <input type="submit" class="btn-edit" name="btn-edit" id="btn-edit" value="Editar">
                                             <a href="../view/User_Update.php" class="volver">Volver</a>
                                         </div>
                                     </form>
@@ -126,7 +135,7 @@ require_once('../model/User.php')
                                             $password = $_POST['password'];
                                             if (strlen($password) < 3) {
 
-                                                array_push($errores, "Error 067:La contraseÃ±a debe ser mayor o igual a 3 digitos.");
+                                                array_push($errores, "Error 067:La contraseña debe ser mayor o igual a 3 digitos.");
                                             } else {
                                                 $sesion = $_SESSION['username'];
 
@@ -179,8 +188,9 @@ require_once('../model/User.php')
 
             ?>
 
-            <script src="./js/redirect.js"></script>
-            <script src="../js/update-validations.js"></script>
+            <!-- <script src="./js/redirect.js"></script> -->
+            <script src="../js/validations_crud/user_update-password.js"></script>
+            <!-- <script src="../js/update-validations.js"></script> -->
             <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
         </main>
 </body>

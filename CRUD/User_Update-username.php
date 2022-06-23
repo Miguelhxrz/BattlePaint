@@ -10,7 +10,7 @@ require_once('../model/User.php')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/user_update.css">
     <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
-    <script src="./js/redirect.js"></script>
+    <!-- <script src="../js/redirect.js"></script> -->
     <title>Battle Paint | User update</title>
 </head>
 
@@ -84,14 +84,23 @@ require_once('../model/User.php')
                             <div class="register__group" id="register__username">
                                 <label for="username" class="register__block--label">Username</label>
                                 <div id="group__input">
-                                    <form method="POST" class="form__edit">
-                                        <div class="edit__group">
-                                            <h4 class="group__input-username">Username:</h4>
-                                            <input type="text" name="name" value="" maxlength="8" size="8" class="input__crud">
+                                    <!-- form username -->
+                                    <form method="POST" class="form__edit" id="form__edit">
+                                        <div class="edit__group input" id="group__name">
+                                            <label for="name" class="group__input-username">Username:</label>
+                                            <div class="form__group-input">
+                                                <input type="text" class="input__crud" id="name" name="name" placeholder="New username">
+                                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                                            </div>
                                         </div>
 
-                                        <div class="edit__group">
-                                            <input type="submit" class="btn-edit" name="btn-edit" value="Editar">
+                                        <!-- error message -->
+                                        <div class="register__message" id="register__message">
+                                            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Invalid user.</p>
+                                        </div>
+
+                                        <div class="edit__group submit">
+                                            <input type="submit" class="btn-edit" name="btn-edit" id="btn-edit" value="Editar">
                                             <a href="../view/User_Update.php" class="volver">Volver</a>
                                         </div>
                                     </form>
@@ -127,7 +136,6 @@ require_once('../model/User.php')
                                     <h4 class="respuesta"><?php echo $row['email']; ?></h4>
                                     <a href="../CRUD/User_Update-email.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">Mail can only contain letters, numbers, dots, hyphens and underscores.</p>
                             </div>
                         </div>
 
@@ -140,7 +148,6 @@ require_once('../model/User.php')
                                     <h4 class="respuesta"><?php echo $row['password']; ?></h4>
                                     <a href="../CRUD/User_Update-password.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
 
                             <!-- group wallet -->
@@ -150,7 +157,6 @@ require_once('../model/User.php')
                                     <h4 class="respuesta"><?php echo $row['binance']; ?></h4>
                                     <a href="../CRUD/User_Update-binance.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
                                 </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
                         <?php }; ?>
                         </div>
@@ -162,11 +168,33 @@ require_once('../model/User.php')
 
                 </section>
             </section>
+            <form action="" method="post" class="form__hidden">
+                <input type="text" name="new_username" id="new_username">
+                <input type="text" name="new_email" id="new_email">
+                <input type="text" name="new_password" id="new_password">
+            </form>
+            </div>
+            <?php
 
 
-            <script src="./js/redirect.js"></script>
-            <script src="../js/update-validations.js"></script>
+            if (isset($_POST['new_username']) && isset($_POST['new_email']) && isset($_POST['new_password'])) {
+
+                $_SESSION['username'] = $_POST['new_username'];
+                $_SESSION['email'] = $_POST['new_email'];
+                $_SESSION['password'] = $_POST['new_password'];
+            }
+
+
+
+
+
+            ?>
+
+            <!-- <script src="../js/redirect.js"></script> -->
+            <!-- <script src="../js/update-validations.js"></script> -->
             <script src="https://kit.fontawesome.com/095148edc4.js" crossorigin="anonymous"></script>
+            
+            <script src="../js/validations_crud/user_update-name.js"></script>
         </main>
 </body>
 
