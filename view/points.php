@@ -1,4 +1,10 @@
-<?php require_once('../controller/header_controller.php') ?>
+<?php 
+
+require_once('../controller/header_controller.php');
+
+require_once('../controller/points-controller.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +15,7 @@
   <link rel="stylesheet" href="../css/points.css">
   <link rel="shortcut icon" href="../source/img/svg/logoBattlePaint1.svg" type="image/x-icon">
   <script src="./js/redirect.js"></script>
+  <script src="../js/points.js"></script>
   <title>Battle Paint | Points</title>
 </head>
 
@@ -48,7 +55,7 @@
     <!-- modal points     -->
     <section class="modal1" id="modal1">
       <article class="modal__container">
-        <form action="" method="" class="modal-form" id="modal-form">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" class="modal-form" id="modal-form">
           <img class="modal__close" src="../source/img/close.png" alt="close">
           <p class="modal__title">Buy coins</p>
           <div class="container_buy">
@@ -56,6 +63,9 @@
               <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PP">
               <div class="modal__container--field">
                 <label class="modal__container--label" for="input__quantity">Quantity</label>
+
+                  <input type="hidden" name="buy_coins" id="toBuy">
+                
                 <input class="modal__input--quantity" type="number" name="input__quantity" id="input__quantity" min="1" max="100" require>
               </div>
             </div>
@@ -68,7 +78,7 @@
             </div>
           </div>
 
-          <input class="modal__convert--button" type="submit" value="Buy">
+          <input class="modal__convert--button" type="submit" value="Buy" id="buy__button">
         </form>
       </article>
     </section>

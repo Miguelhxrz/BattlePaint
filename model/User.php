@@ -241,7 +241,21 @@ class User {
       return 0;
     }
 
+  }
 
+  function BuyCoins ( $username, $balance, $price ) {
+
+    $new_balance = $balance + $price;
+
+    $query = "UPDATE `users` SET `balance`= $new_balance WHERE `username` = '".$username."'";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
 
   }
   
