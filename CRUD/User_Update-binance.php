@@ -24,7 +24,7 @@ require_once('../model/User.php')
             <section>
                 <section class="register">
 
-                    <div class="register__block one">
+                <div class="register__block one">
                         <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
                         <div class="line"></div>
@@ -49,11 +49,11 @@ require_once('../model/User.php')
                         </div>
                         <div class="my_nft">
                             <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                            <a href="user.php" class="link_update">My NFTs</a>
+                            <a href="../view/user.php" class="link_update">My NFTs</a>
                         </div>
                         <div class="my_balance">
                             <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                            <a href="converter_user.php" class="link_update">Balance</a>
+                            <a href="../view/converter_user.php" class="link_update">Balance</a>
                         </div>
                         <div class="logout">
                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -113,11 +113,11 @@ require_once('../model/User.php')
                                 <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
 
-                              <!-- group wallet -->
-                              <div class="register__group" id="register__password">
-                              <label for="username" class="register__block--label">Binance Email</label>
-                              <div id="group__input">
-                                  <form method="POST" class="form__edit">
+                            <!-- group wallet -->
+                            <div class="register__group" id="register__password">
+                                <label for="username" class="register__block--label">Binance Email</label>
+                                <div id="group__input">
+                                    <form method="POST" class="form__edit">
                                         <div class="edit__group">
                                             <h4 class="group__input-username">Binance:</h4>
                                             <input type="email" name="binance" value="" maxlength="45" size="45" class="input__crud">
