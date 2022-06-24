@@ -107,7 +107,7 @@ class User {
   }
 
   function GetByUsername($username){
-    $query_send = "SELECT `username`, `password`, `email`, `binance` FROM `users` WHERE  `username` = '$username'";
+    $query_send = "SELECT `username`,`id`, `password`, `email`, `binance` FROM `users` WHERE  `username` = '$username'";
 
     $question = $this->db->sendQuery($query_send);
 

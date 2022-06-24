@@ -31,12 +31,11 @@ require_once('../model/User.php')
                         <div class="info__user">
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php echo $username ?></h3>
+                                <h3><?php echo $row['username']; ?></h3>
                             </div>
                             <div class="username">
                                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php // echo $user_id 
-                                    ?></h3>
+                                <h3><?php echo $row['id']; ?></h3>
                             </div>
                         </div>
                         <div class="acount">
