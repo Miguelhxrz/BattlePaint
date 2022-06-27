@@ -16,6 +16,7 @@ class User {
   
    #constructor
    function __construct() {
+    
     $this->db= new db_connect();
    }
 
@@ -339,5 +340,24 @@ class User {
     return $question;
   }
 
+  function AllUsers(){
+    $query_send = "SELECT `id`, `username`, `password`, `email`, `birth`, `gender`, `fecha`  FROM `users`  ORDER BY `fecha` DESC";
+        
+    $question = $this->db->sendQuery($query_send);
+  
+    $result = array();
+  
+    if(mysqli_num_rows($question) > 0){
+      while($rows = mysqli_fetch_array($question)){
+        array_push($result, $rows);
+      }
+      return $result;
+      }else {
+        return 0;
+      }
+  
+  }
+
 
 }
+

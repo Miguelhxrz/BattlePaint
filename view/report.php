@@ -90,15 +90,15 @@
                     <div class="user_update">
                         <div class="register__block--son">
                             <div class="register__block--cta">
-                                <a href="../source/reports/report-users.pdf" target="_blank" class="register__block--button">Usuarios registrados</a>
+                                <a href="../view/reportes_users.php" target="_blank" class="register__block--button">Usuarios registrados</a>
                             </div>
 
                             <div class="register__block--cta">
-                                <a href="../source/reports/report-nfts.pdf" target="_blank" class="register__block--button">NFTs registradas</a>
+                                <a href="../view/reportes_nft.php" target="_blank" class="register__block--button">NFTs registradas</a>
                             </div>
 
                             <div class="register__block--cta">
-                                <a href="../source/reports/report-points.pdf" target="_blank" class="register__block--button">Monedas compradas</a>
+                                <a href="../view/reportes_coins.php" target="_blank" class="register__block--button">Monedas compradas</a>
                             </div>
                         </div>
 

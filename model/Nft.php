@@ -309,6 +309,24 @@ class Nft {
 
   }
 
+  function AllNFTs(){
+    $query_send = "SELECT `token`, `name`, `power`, `class`, `rank`, `owner`, `price`, `fecha`  FROM `nft`  ORDER BY `fecha` DESC";
+        
+    $question = $this->db->sendQuery($query_send);
+  
+    $result = array();
+  
+    if(mysqli_num_rows($question) > 0){
+      while($rows = mysqli_fetch_array($question)){
+        array_push($result, $rows);
+      }
+      return $result;
+      }else {
+        return 0;
+      }
+  
+  }
+
 
 
 
