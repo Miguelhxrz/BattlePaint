@@ -19,12 +19,12 @@
     <?php include($header) ?>
     <main class="main">
     <section class="register">
-            <div class="register__block one">
+    <div class="register__block one">
                 <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
                 <div class="line"></div>
                 <div class="info__user">
-                    <?php foreach( $user_conf as $user) {?>
+                <?php foreach( $user_conf as $user) {?>
                     <div class="username">
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
                         <h3><?php echo $user['username'] ?></h3>
@@ -33,7 +33,10 @@
                         <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
                         <h3><?php echo $user['id'] ?></h3>
                     </div>
-                   
+                    <!-- <div class="username">
+                        <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
+                        <h3><?php //echo $user['balance'] ?></h3>
+                    </div> -->
                 </div>
                 <?php } ?>
                 <div class="acount">

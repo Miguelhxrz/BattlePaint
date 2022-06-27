@@ -48,7 +48,7 @@
 
         <div class="my_nft">
           <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-          <a href="#" class="link_update">My NFTs</a>
+          <a href="./admin.php" class="link_update">My NFTs</a>
         </div>
 
         <div class="my_balance">
