@@ -274,6 +274,7 @@ class User {
 
   }
 
+
   function getInventory( $user_id ) {
 
     $query = "SELECT `id_nft` FROM `inventory` WHERE `id_user` = '".$user_id."'";
@@ -294,7 +295,19 @@ class User {
   
     }
 
+  }
 
+  function SellNFT ( $id_nft ) {
+
+    $query = "";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
 
 
 

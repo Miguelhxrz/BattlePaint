@@ -41,7 +41,7 @@
                         <h3><?php //echo $user['balance'] ?></h3>
                     </div> -->
                 </div>
-                <?php } ?>
+                <?php #} ?>
                 <div class="acount">
                     <h3>ACCOUNT</h3>
                 </div>
@@ -92,6 +92,10 @@
                         foreach( $nfts_inventory as $items) { ?>
                             <article class="nft__card">
 
+                                <form action="../view/character_view.php" method="post" class="form__hidden">
+                                    <input type="hidden" name="nft_token-sell" id=""  value=" <?php echo $items['token']?>">
+                                    <input type="hidden" name="nft_owner-sell" id=""  value=" <?php echo $items['owner']?>">
+                                </form>
                                 <input type="hidden" name="rank" id="nft__rank" value="<?php echo $items['rank']?>">
 
                                 <figure class="nft__img">
@@ -99,6 +103,24 @@
                                 </figure>
                                 <div class="nft__rank">
                                     <h4><?php echo $items['rank'] ?></h4>
+                                </div>
+                                <div class="nft__sell">
+                                    <img src="<?php   
+                                        if( $items['rank'] === 'S' ){
+                                        
+                                            echo '../source/img/svg/shopping-cart-tier-s.svg';
+                                        
+                                        }else if( $items['rank'] === 'B' ) {
+
+                                            echo '../source/img/svg/shopping-cart-tier-b.svg';
+
+                                        }else if( $items['rank'] === 'A' ) {
+
+                                            echo '../source/img/svg/shopping-cart-tier-a.svg';
+
+                                        }
+                                    
+                                    ?>" alt="" class="sell__img">
                                 </div>
                                 <div class="nft__name">
                                     <h3><?php echo $items['name'] ?></h3>
@@ -132,7 +154,9 @@
                         </article>
                         <?php  
                             }
-                            } ?>                
+                        }
+                    } 
+                        ?>                
                     </div>
             </div>
         </section>

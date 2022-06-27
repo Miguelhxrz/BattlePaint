@@ -172,7 +172,7 @@ class Nft {
 
   function NFTSByToken ( $token ) {
 
-    $query = "SELECT * FROM `nft` Where `token` = '".$token."'";  
+    $query = "SELECT * FROM `nft` WHERE `token` = '".str_replace(" ","",$token)."'";  
 
     $send = $this->db->sendQuery($query);
 
@@ -180,11 +180,11 @@ class Nft {
     
     if(mysqli_num_rows($send) > 0) {
       while($rows =  mysqli_fetch_assoc($send)) {
-        $nfts = $rows;
+        array_push($nfts,$rows);
       }
       return $nfts;
     }else {
-      return 0;
+      return 'Nope';
     }
 
   }
@@ -309,6 +309,43 @@ class Nft {
 
   }
 
+  function NFTSByToken_inventory ( $token ) {
+
+    $query = "SELECT * FROM `nft` WHERE `token` = '".$token."'";  
+
+    $send = $this->db->sendQuery($query);
+
+    $nfts = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_assoc($send)) {
+        $nfts = $rows;
+      }
+      return $nfts;
+    }else {
+      return 0;
+    }
+
+  }
+
+
+  function UpdateOwner ( $username, $nft_token ){
+
+    $query = "UPDATE `nft` SET `owner` = '".$username."' WHERE `token` = '".$nft_token."'";
+
+    $send = $this->db->sendQuery($query);
+
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+
+
+
+
+  }
 
 
 
