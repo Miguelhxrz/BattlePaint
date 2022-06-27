@@ -62,16 +62,15 @@
       <article class="actions">
         <?php if( ($owner !== $username) || ( $owner !== $username) ) { ?>
         <button class="modal__cta--btn"> Buy <?php echo $nft['price'] ?> <img src="../source/img/svg/paint-backets.svg" alt="paint buckets icon"></button>
-        <?php }else {
-          echo "<article class='alert'> <h3>You are the owner of this NFT</h3></article>";
-        } ?>
+        <?php }else { ?>
+          <button class="modal__cta--btn"> Sell NFT <?php echo $nft['price'] ?><img src="../source/img/svg/paint-backets.svg" alt="paint buckets icon"></button>
+        <?php }; ?>
       </article>
   </main>
-  <footer>
 
-  </footer>
-
-  <?php foreach ( $nfts as $nft ) { ?>
+  <?php 
+    if(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ) === false ){
+    foreach ( $nfts as $nft ) { ?>
     <section class="modal" id="modal">
       <article class="modal__container">
           <form action="./user.php" method="POST" class="modal-form" id="modal-form">
@@ -97,6 +96,38 @@
           </form>
       </article>
     </section>
-  <?php } ?>
+  <?php
+    }
+  }else {
+    foreach ( $nfts as $nft ) { ?>
+      <section class="modal" id="modal">
+        <article class="modal__container">
+            <form action="./user.php" method="POST" class="modal-form" id="modal-form">
+              <img class="modal__close" src="../source/img/close.png" alt="close">
+              <p class="modal__title">Confirm to sell</p>
+              
+              <div class="img">
+                <img class="modal__image--nft" src="<?php echo $nft['img_p'] ?>" alt="PP">
+              </div>
+  
+              <div class="price">
+                <img class="modal__image" src="../source/img/svg/paint-backets.svg" alt="PB">
+                <p class="modal__price"><?php echo $nft['price'] ?></p>
+              </div>
+  
+              <input type="hidden" name="buy_token" value="<?php echo $nft['token']?>">
+              <input type="hidden" name="buy_price" value="<?php echo $nft['price']?>">
+  
+  
+              <input class="modal__convert--button" name='confirm' type="submit" value="Confirm">
+  
+  
+            </form>
+        </article>
+      </section>
+
+
+ <<?php  } 
+    }?>
 </body>
 </html>

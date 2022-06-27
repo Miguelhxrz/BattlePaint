@@ -104,24 +104,6 @@
                                 <div class="nft__rank">
                                     <h4><?php echo $items['rank'] ?></h4>
                                 </div>
-                                <div class="nft__sell">
-                                    <img src="<?php   
-                                        if( $items['rank'] === 'S' ){
-                                        
-                                            echo '../source/img/svg/shopping-cart-tier-s.svg';
-                                        
-                                        }else if( $items['rank'] === 'B' ) {
-
-                                            echo '../source/img/svg/shopping-cart-tier-b.svg';
-
-                                        }else if( $items['rank'] === 'A' ) {
-
-                                            echo '../source/img/svg/shopping-cart-tier-a.svg';
-
-                                        }
-                                    
-                                    ?>" alt="" class="sell__img">
-                                </div>
                                 <div class="nft__name">
                                     <h3><?php echo $items['name'] ?></h3>
                                 </div>
