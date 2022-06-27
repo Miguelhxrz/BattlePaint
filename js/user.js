@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const send_to = Array.from(send);
 
-  console.log(send_to);
+  const sell = document.getElementsByClassName( 'sell__img' );
+
+  const sell_btn = Array.from(sell);
 
   const rank_style = {
     'S': 'tier-s',
@@ -35,6 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
     } )
   
   }
+
+  for (let i = 0; i < sell_btn.length; i++) {
+    
+    sell_btn[i].addEventListener();
+    
+  }
+
+
+
+
+  })
   
   
   

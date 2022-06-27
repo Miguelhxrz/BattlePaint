@@ -31,7 +31,7 @@
 
         <div class="menu__user">
           <li class="menu__item_admin">
-            <a href="./user.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
+            <a href="./points.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
             <h5 class="menu__texts"><?php echo $user['balance']; ?></h5>
           </li>
 

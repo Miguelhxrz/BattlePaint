@@ -1,8 +1,13 @@
-<?php 
+<?php
+
+use LDAP\Result;
 
 require_once('../model/User.php');
+require_once('../model/coins.php');
 
 $user = new User();
+
+$coin = new Coin();
 
 if( !empty( $_POST['input__quantity'] ) ) {
 
@@ -14,6 +19,9 @@ if( !empty( $_POST['input__quantity'] ) ) {
 
   $result = $user->BuyCoins( $_SESSION['username'], $balance, $pb);
 
+  $userid = $user->GetId( $_SESSION['username'] );
+
+    $coin->addCoin($userid, $pb);
 }
 
 ?>
