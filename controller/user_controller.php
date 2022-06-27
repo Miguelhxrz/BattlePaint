@@ -16,13 +16,15 @@
 
   $inventory = $user->getInventory( $user_id );
 
+  
+
   if( !empty($inventory) ) {
   
     $nfts_inventory = array();
   
     foreach( $inventory as $item){
 
-      array_push($nfts_inventory,$nft->NFTSByToken( $item ));
+      array_push($nfts_inventory,$nft->NFTSByToken_inventory( $item ));
 
     }
 
@@ -33,15 +35,20 @@
 
     $nft_price = $_POST['buy_price'];
 
-    $nft_token =$_POST['buy_token'];
+    $nft_token = $_POST['buy_token'];
 
     $balance = intval($balance);
 
     $nft_price = intval($nft_price);
 
+    #Se actualiza el dinero del user
     $new_balance = $user->Buy($_SESSION['username'], $balance, $nft_price );
 
     $result = $user->AddInventory( $user_id, $nft_token );
+
+    $change_owner = $nft->UpdateOwner( $_SESSION['username'], $nft_token );
+
+    var_dump($change_owner);
 
     $delete = $nft->NFTBuy( $nft_token );
 

@@ -16,7 +16,54 @@ require_once('../model/User.php')
 
 <body>
     <!-- Header -->
-    <?php include($header);
+     <!-- Header -->
+     <?php foreach( $user_conf as $user) {?>
+           
+           <header class="header">
+           
+           <a class="header__name" href="../index.php">
+             <h1 class="header__name">Battle Paint</h1>
+           </a>
+           
+           <nav class="menu__container">
+             <ul class="menu">
+               <div class="menu__select">
+                 <li class="menu__item">
+                   <a href="../view/marketplace.php" title="Buy">
+                     <span class="neon1"></span>
+                     <span class="neon2"></span>
+                     <span class="neon3"></span>
+                     <span class="neon4"></span> Buy
+                   </a>
+                 </li>
+           
+                 
+           
+                 <li class="menu__item">
+                   <a href="../view/points.php" title="Conversion">
+                     <span class="neon1"></span>
+                     <span class="neon2"></span>
+                     <span class="neon3"></span>
+                     <span class="neon4"></span> Points
+                   </a>
+                 </li>
+               </div>
+           
+               <div class="menu__user">
+                 <li class="menu__item_admin">
+                   <a href="../view/points.php"><img src="../source/img/paint-backets2.png" alt="paint-backets" class="logo_admin"></a>
+                   <h5 class="menu__texts"><?php echo $user['balance']; ?></h5>
+                 </li>
+           
+                 <li class="menu__item_admin" >
+                   <a href="../view/user.php"><img src="../source/img/svg/user.svg" alt="Logo Admin" class="logo_admin"></a>
+                   <h5 class="menu__texts"><?php echo $user['username'];}?></h5>
+                 </li>
+               </div>
+             </ul>
+           </nav>
+           </header>
+    <?php 
     $user = new user;
     $question = $user->GetByUsername($_SESSION['username']);
     while ($row = mysqli_fetch_array($question)) { ?>
@@ -24,67 +71,72 @@ require_once('../model/User.php')
             <section>
                 <section class="register">
 
-                    <section class="register__block one">
-                        <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
-                        <div class="line"></div>
-                        <div class="info__user">
-                            <div class="username">
-                                <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php echo $row['username']; ?></h3>
-                            </div>
-                            <div class="username">
-                                <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                <h3><?php echo $row['id']; ?></h3>
-                            </div>
-                        </div>
+                <section class="register__block one">
+          <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
+          <div class="line"></div>
+          <div class="info__user">
+            <?php foreach ($user_conf as $user) { ?>
+              <div class="username">
+                <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
+                <h3><?php echo $user['username'] ?></h3>
+              </div>
+              <div class="username">
+                <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
+                <h3><?php echo $user['id'] ?></h3>
+              </div>
+              
+          </div>
+        <?php } ?>
 
-                        <div class="acount">
-                            <h3>ACCOUNT</h3>
-                        </div>
+        <div class="acount">
+          <h3>ACCOUNT</h3>
+        </div>
 
-                        <div class="line"></div>
-                        <div class="update_info">
-                            <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                            <a href="#" class="link_update">Update info</a>
-                        </div>
+        <div class="line"></div>
+        <div class="update_info">
+          <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
+          <a href="../view/admin_update.php" class="link_update">Update info</a>
+        </div>
 
-                        <div class="my_nft">
-                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                            <a href="../view/admin.php" class="link_update">My NFTs</a>
-                        </div>
+        <div class="my_nft">
+          <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+          <a href="../view/admin.php" class="link_update">My NFTs</a>
+        </div>
 
-                        <div class="my_balance">
-                            <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                            <a href="../view/converter_admin.php" class="link_update">Balance</a>
-                        </div>
+        <div class="my_balance">
+          <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
+          <a href="../view/converter_admin.php" class="link_update">Balance</a>
+        </div>
 
-                        <div class="register_nft">
-                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                            <a href="../view/register_nft.php" class="link_update">NFT registration</a>
-                        </div>
+        <div class="register_nft">
+          <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+          <a href="../view/register_nft.php" class="link_update">NFT registration</a>
+        </div>
 
-                        <div class="report">
-                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                            <a href="../view/report.php" class="link_update">Reports</a>
-                        </div>
+        <div class="report">
+          <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+          <a href="../view/report.php" class="link_update">Reports</a>
+        </div>
 
-                        <div class="logout">
-                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                                <input type="submit" name='log-out' class="log-out__btn" value="Logout">
-                            </form>
-                            <?php
+        <div class="logout">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+          </form>
+          <?php
 
-                            if (isset($_POST['log-out'])) {
+          if (isset($_POST['log-out'])) {
 
-                                session_destroy();
+            session_destroy();
 
-                                echo "<script>window.location.href = '../index.php';</script>";
-                            }
+            echo "<script>window.location.href = './index.php';</script>";
+          }
 
-                            ?>
 
-                        </div>
-                    </section>
+
+          ?>
+
+        </div>
+        </section>
 
                     <div class="register__block two">
                         <div class="register__title">

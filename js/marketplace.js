@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     'B': 'tier-b'
   }
 
-  console.log(nft_forms);
 
   for (let i = 0; i < nft_cards.length; i++) {
 

@@ -32,11 +32,7 @@
                 <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
                 <h3><?php echo $user['id'] ?></h3>
               </div>
-              <!-- <div class="username">
-                        <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                        <h3><?php //echo $user['balance'] 
-                            ?></h3>
-                    </div> -->
+              
           </div>
         <?php } ?>
 
@@ -52,7 +48,7 @@
 
         <div class="my_nft">
           <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-          <a href="#" class="link_update">My NFTs</a>
+          <a href="./admin.php" class="link_update">My NFTs</a>
         </div>
 
         <div class="my_balance">

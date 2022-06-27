@@ -16,6 +16,7 @@ class User {
   
    #constructor
    function __construct() {
+    
     $this->db= new db_connect();
    }
 
@@ -288,6 +289,7 @@ class User {
 
   }
 
+
   function getInventory( $user_id ) {
 
     $query = "SELECT `id_nft` FROM `inventory` WHERE `id_user` = '".$user_id."'";
@@ -308,7 +310,19 @@ class User {
   
     }
 
+  }
 
+  function SellNFT ( $id_nft ) {
+
+    $query = "";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
 
 
 
@@ -339,5 +353,24 @@ class User {
     return $question;
   }
 
+  function AllUsers(){
+    $query_send = "SELECT `id`, `username`, `password`, `email`, `birth`, `gender`, `fecha`  FROM `users`  ORDER BY `fecha` DESC";
+        
+    $question = $this->db->sendQuery($query_send);
+  
+    $result = array();
+  
+    if(mysqli_num_rows($question) > 0){
+      while($rows = mysqli_fetch_array($question)){
+        array_push($result, $rows);
+      }
+      return $result;
+      }else {
+        return 0;
+      }
+  
+  }
+
 
 }
+

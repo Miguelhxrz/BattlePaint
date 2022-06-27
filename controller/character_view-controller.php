@@ -8,20 +8,36 @@ $nft = new Nft();
 
 $user = new User();
 
-$token = $_POST['nft_token'];
-
 $username =  $_SESSION['username'];
 
-$owner = $_POST['nft_owner'];
+// var_dump($username);
 
-$balance = $user->GetBalance( $username );
+// var_dump(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ));
 
-$nfts = $nft->NFTSByToken( $token );
 
-// var_dump($nfts);
+if(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ) === false ) {
+  
+  $balance = $user->GetBalance( $username );
+ 
+  $token = $_POST['nft_token'];
+  
+  $owner = $_POST['nft_owner'];
+  
+  $nfts = $nft->NFTSByToken( $token );
 
-// echo "<h2>".$nfts['name']."</h2>";
+  $price_nft = intval($nft->GetPriceToken( $token ));
+  
+}else {
 
-$price_nft = intval($nft->GetPriceToken( $token ));
+  $token = $_POST['nft_token-sell'];
+
+  $owner = str_replace(" ","",$_POST['nft_owner-sell']);
+
+  $nfts = $nft->NFTSByToken( $token );
+
+  $price_nft = intval($nft->GetPriceToken( $token ));
+
+}
+
 
 ?>
