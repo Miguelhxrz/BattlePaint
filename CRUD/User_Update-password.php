@@ -24,7 +24,7 @@ require_once('../model/User.php')
             <section>
                 <section class="register">
 
-                <div class="register__block one">
+                    <div class="register__block one">
                         <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
                         <div class="line"></div>
@@ -123,15 +123,15 @@ require_once('../model/User.php')
 
                                         <div class="edit__group submit">
                                             <input type="submit" class="btn-edit" name="btn-edit" id="btn-edit" value="Editar">
-                                            <a href="../view/User_Update.php" class="volver">Volver</a>
+                                            <a href="../view/admin_update.php" class="volver">Volver</a>
                                         </div>
                                     </form>
                                     <?php
-                                    if (isset($_POST['password'])) {
+                                    if (isset($_POST['name'])) {
 
                                         $errores = array();
                                         if (isset($_POST['btn-edit'])) {
-                                            $password = $_POST['password'];
+                                            $password = $_POST['name'];
                                             if (strlen($password) < 3) {
 
                                                 array_push($errores, "Error 067:La contraseña debe ser mayor o igual a 3 digitos.");
@@ -140,7 +140,7 @@ require_once('../model/User.php')
 
                                                 $update = $user->UpdatePassword($password, $sesion);
                                                 if ($update == true) {
-                                                    echo '<meta http-equiv="refresh" content="0;url=../view/User_Update.php">';
+                                                    echo '<meta http-equiv="refresh" content="0;url=../view/admin_update.php">';
                                                 }
                                             }
                                         }

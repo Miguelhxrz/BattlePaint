@@ -139,11 +139,11 @@ require_once('../model/User.php')
                                         </div>
                                     </form>
                                     <?php
-                                    if (isset($_POST['password'])) {
+                                    if (isset($_POST['name'])) {
 
                                         $errores = array();
                                         if (isset($_POST['btn-edit'])) {
-                                            $password = $_POST['password'];
+                                            $password = $_POST['name'];
                                             if (strlen($password) < 3) {
 
                                                 array_push($errores, "Error 067:La contraseña debe ser mayor o igual a 3 digitos.");
