@@ -27,62 +27,62 @@
             <section>
                 <section class="register">
 
-                    <div class="register__block one">
-                        <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
+                <div class="register__block one">
+                <img src="../source/img/svg/logoBattlePaint1.svg" alt="logoBattlePaint" class="header__logo"> <br><br>
 
-                        <div class="line"></div>
-                        <div class="info__user">
-                            <?php foreach ($user_conf as $user) { ?>
-                                <div class="username">
-                                    <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                    <h3><?php echo $user['username'] ?></h3>
-                                </div>
-                                <div class="username">
-                                    <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
-                                    <h3><?php echo $user['id'] ?></h3>
-                                </div>
-                                <!-- <div class="username">
-                        <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
-                        <h3><?php //echo $user['balance'] 
-                            ?></h3>
-                    </div> -->
-                        </div>
-                    <?php } ?>
-                        <div class="acount">
-                            <h3>ACCOUNT</h3>
-                        </div>
-                        <div class="line"></div>
-                        <div class="update_info">
-                            <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
-                            <a href="" class="link_update">Update info</a>
-                        </div>
-                        <div class="my_nft">
-                            <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
-                            <a href="user.php" class="link_update">My NFTs</a>
-                        </div>
-                        <div class="my_balance">
-                            <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                            <a href="converter_user.php" class="link_update">Balance</a>
-                        </div>
-                        <div class="logout">
-                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                                <input type="submit" name='log-out' class="log-out__btn" value="Logout">
-                            </form>
-                            <?php
-
-                            if (isset($_POST['log-out'])) {
-                                session_destroy();
-
-                                echo "<script>window.location.href = '../index.php';</script>";
-                            }
-
-
-
-                            ?>
-
-                        </div>
-
+                <div class="line"></div>
+                <div class="info__user">
+                <?php foreach( $user_conf as $user) {?>
+                    <div class="username">
+                        <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
+                        <h3><?php echo $user['username'] ?></h3>
                     </div>
+                    <div class="username">
+                        <img src="../source/img/svg/user.svg" alt="user" class="icon_user">
+                        <h3><?php echo $user['id'] ?></h3>
+                    </div>
+                    <!-- <div class="username">
+                        <img src="../source/img/paint-backets2.png" alt="user" class="icon_pb">
+                        <h3><?php //echo $user['balance'] ?></h3>
+                    </div> -->
+                </div>
+                <?php } ?>
+                <div class="acount">
+                    <h3>ACCOUNT</h3>
+                </div>
+                <div class="line"></div>
+                <div class="update_info">
+                    <img src="../source/img/svg/update.svg" alt="update" class="icon_update">
+                    <a href="./User_Update.php" class="link_update">Update info</a>
+                </div>
+                <div class="my_nft">
+                    <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
+                    <a href="./user.php" class="link_update">My NFTs</a>
+                </div>
+                <div class="my_balance">
+                    <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
+                    <a href="./converter_user.php" class="link_update">Balance</a>
+                </div>
+
+                <div class="logout">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <input type="submit" name='log-out' class="log-out__btn" value="Logout">
+                    </form>
+                    <?php 
+                    
+                    if(isset($_POST['log-out'])) {
+                        session_destroy();
+
+                        echo "<script>window.location.href = '../index.php';</script>";
+                    }
+            
+                    
+                    
+                    ?>
+
+                </div>
+
+            </div>
 
                     <div class="register__block two">
                         <div class="register__title">

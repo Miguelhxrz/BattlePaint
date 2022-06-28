@@ -136,7 +136,7 @@ require_once('../model/User.php')
                                             <label for="name" class="group__input-username">Username:</label>
                                             <div class="form__group-input">
                                                 <input type="text" class="input__crud" id="name" name="name" placeholder="New username">
-                                                <i class="form__validation--state fa-solid fa-circle-xmark"></i>
+                                                <!-- <i class="form__validation--state fa-solid fa-circle-xmark"></i> -->
                                             </div>
                                         </div>
 

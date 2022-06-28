@@ -162,9 +162,9 @@ require_once('../model/User.php')
                                         </div>
                                     </form>
                                     <?php
-                                    if (isset($_POST['email'])) {
+                                    if (isset($_POST['name'])) {
                                         $errores = array();
-                                        $email = $_POST['email'];
+                                        $email = $_POST['name'];
                                         $submit = $_POST['btn-edit'];
                                         $patron_email = "/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+/";
                                         if (isset($_POST['btn-edit'])) {
