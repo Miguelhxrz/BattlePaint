@@ -51,10 +51,6 @@
           <a href="./admin.php" class="link_update">My NFTs</a>
         </div>
 
-        <div class="my_balance">
-          <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-          <a href="./converter_admin.php" class="link_update">Balance</a>
-        </div>
 
         <div class="register_nft">
           <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">

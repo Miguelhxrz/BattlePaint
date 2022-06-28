@@ -97,10 +97,7 @@ require_once('../model/User.php')
                             <img src="../source/img/svg/buy.svg" alt="nft" class="icon_update">
                             <a href="../view/user.php" class="link_update">My NFTs</a>
                         </div>
-                        <div class="my_balance">
-                            <img src="../source/img/svg/buy.svg" alt="balance" class="icon_update">
-                            <a href="../view/converter_user.php" class="link_update">Balance</a>
-                        </div>
+                        
                         <div class="logout">
                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                                 <input type="submit" name='log-out' class="log-out__btn" value="Logout">
