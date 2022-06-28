@@ -1,7 +1,4 @@
 <?php
-
-use LDAP\Result;
-
 require_once('../model/User.php');
 require_once('../model/coins.php');
 
