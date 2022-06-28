@@ -24,12 +24,19 @@
     <main class="container">
 
         <section class="notice__container">
+
             <article class="notice__article">
-                <div class="controls__container">
-                    <div class="control"></div>
-                    <div class="control"></div>
-                    <div class="control"></div>
-                </div>
+                <ul class="slides">
+                    <li class="slide1" id="slide1"><img src="../source/img/slide1.png"></li>
+                    <li id="slide2"><img src="../source/img/slide2.png"></li>
+                    <li id="slide3"><img src="../source/img/slide3.png"></li>
+                </ul>
+
+                <ul class="controls__container">
+                    <a href="#slide1" class="control"></a>
+                    <a href="#slide2" class="control"></a>
+                    <a href="#slide3" class="control"></a>
+                </ul>
             </article>
 
         </section>
