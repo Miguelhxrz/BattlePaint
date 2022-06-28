@@ -179,15 +179,22 @@ require_once('../model/User.php')
                               <div class="register__group" id="register__password">
                               <label for="username" class="register__block--label">Binance Email</label>
                               <div id="group__input">
-                                  <form method="POST" class="form__edit">
-                                        <div class="edit__group">
-                                            <h4 class="group__input-username">Binance:</h4>
-                                            <input type="email" name="binance" value="" maxlength="45" size="45" class="input__crud">
+                                  <form method="POST" class="form__edit" id="form__edit">
+                                        <div for="name" class="group__input-username">
+                                            <label for="name" class="group__input-username">Binance:</label>
+                                            <div class="form__group-input">
+                                              <input type="email" class="input__crud" id="name" name="name" placeholder="Binance">
+                                            </div>
                                         </div>
 
-                                        <div class="edit__group">
-                                            <input type="submit" class="btn-edit" name="btn-edit" value="Editar">
-                                            <a href="../view/admin_update.php" class="volver">Volver</a>
+                                        <!-- error message -->
+                                        <div class="register__message" id="register__message">
+                                            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Invalid user.</p>
+                                        </div>
+
+                                        <div class="edit__group submit">
+                                            <input type="submit" class="btn-edit" name="btn-edit" id="btn-edit" value="Editar">
+                                            <a href="../view/User_Update.php" class="volver">Volver</a>
                                         </div>
                                     </form>
                                     <?php

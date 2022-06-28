@@ -342,10 +342,41 @@ class Nft {
     }
 
 
+  }
 
+  function VerifyNFTInventory ( $nft_token ) {
 
+    $query = "SELECT `id_nft` FROM `inventory` WHERE `id_nft` = '".$nft_token."'";  
+
+    $send = $this->db->sendQuery($query);
+
+    $nfts = array();
+    
+    if(mysqli_num_rows($send) > 0) {
+      while($rows =  mysqli_fetch_assoc($send)) {
+        $nfts = $rows;
+      }
+      return count($nfts);
+    }else {
+      return 0;
+    }
+  
+  }
+
+  function UpdateInventory ( $user_id, $nft_token ) {
+
+    $query = "UPDATE `inventory` SET `id_user`= '".$user_id."' WHERE `id_nft` = '".$nft_token."'";
+
+    $send = $this->db->sendQuery($query);
+
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
 
   }
+
   
   function AllNFTs(){
     $query_send = "SELECT `token`, `name`, `power`, `class`, `rank`, `owner`, `price`, `fecha`  FROM `nft`  ORDER BY `fecha` DESC";

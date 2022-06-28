@@ -187,24 +187,22 @@ a .neon4 {
 }
 
 .logo_admin {
-    width: 50px;
-    height: 50px;
+    width: 40px;
 }
 
 .menu__item_admin {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
 }
 
-.menu__item_admin h5 {
-    font-size: 2rem;
+.menu__texts {
+    font-size: 1.5rem;
     color: #ffffff;
 }
-
-
 /* end header */
 
 .container {
@@ -509,6 +507,120 @@ button img {
 .modal__convert--button:hover {
     box-shadow: 0 0 20px var(--grey);
 }
+
+
+.modal__sell {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: var(--light);
+    background-color: #111111bd;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.modal__sell--container {
+    width: 70%;
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba( 158, 53, 247, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    align-self: center;
+    padding: 10px;
+}
+
+.modal__header {
+    display: flex;
+    width: 100%;
+    height: 32px;
+}
+
+.modal__sell-img__container {
+    width: 50%;
+    height: 100%;
+}
+
+.modal__sell-img__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal__sell-title {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.modal__sell:hover {
+    box-shadow: 0 0 20px var(--grey);
+}
+
+.modal__sell-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.modal__paragraph-confirm, .modal__names-confirm {
+ font-size: 1.8rem;
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+/* From uiverse.io by @nikk7007 */
+.modal__sell--button {
+ padding: 0.8em 1.8em;
+ border: 2px solid #17C3B2;
+ position: relative;
+ overflow: hidden;
+ background-color: transparent;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 16px;
+ transition: .3s;
+ z-index: 1;
+ font-family: inherit;
+ color: #17C3B2;
+ cursor: pointer;
+}
+   
+.modal__sell--button::before {
+ content: '';
+ width: 0;
+ height: 300%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(45deg);
+ background: #17C3B2;
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+   
+.modal__sell--button::before:hover {
+ width: 105%;
+}
+   
+.modal__sell--button:hover {
+ color: var(--tier-s);
+}
+
 
 .modal--show {
     opacity: 1;

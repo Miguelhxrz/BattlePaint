@@ -10,9 +10,6 @@ $user = new User();
 
 $username =  $_SESSION['username'];
 
-// var_dump($username);
-
-// var_dump(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ));
 
 
 if(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ) === false ) {
@@ -37,7 +34,10 @@ if(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ) === false ) {
 
   $price_nft = intval($nft->GetPriceToken( $token ));
 
+
+
 }
+
 
 
 ?>

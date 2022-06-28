@@ -44,13 +44,26 @@
     #Se actualiza el dinero del user
     $new_balance = $user->Buy($_SESSION['username'], $balance, $nft_price );
 
-    $result = $user->AddInventory( $user_id, $nft_token );
+    $verify = $nft->VerifyNFTInventory( $nft_token );
+    
+    if( $verify === 0 ) {
 
-    $change_owner = $nft->UpdateOwner( $_SESSION['username'], $nft_token );
+      $result = $user->AddInventory( $user_id, $nft_token );
 
-    var_dump($change_owner);
+      $change_owner = $nft->UpdateOwner( $_SESSION['username'], $nft_token );
 
-    $delete = $nft->NFTBuy( $nft_token );
+      $delete = $nft->NFTBuy( $nft_token );
+    
+    }else {
+
+      $nft->UpdateInventory( $user_id, $nft_token);
+
+      $change_owner = $nft->UpdateOwner( $_SESSION['username'], $nft_token );
+
+      $delete = $nft->NFTBuy( $nft_token );
+
+    }
+
 
   }
 
