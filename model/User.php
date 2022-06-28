@@ -196,6 +196,7 @@ class User {
 
     return $question;
   }
+
   function GetId ( $username ) {
 
     $query = "SELECT `id` FROM `users` WHERE `username` = '".$username."'";
@@ -312,9 +313,24 @@ class User {
 
   }
 
+  function QuitNft ( $nft_token ) {
+
+    $query = "INSERT INTO `marketplace`(`nft_token`) VALUES ('".$nft_token."')";
+
+    $send = $this->db->sendQuery($query);
+    
+    if(isset( $send )) {
+      return 1;
+    }else {
+      return 0;
+    }
+
+
+  }
+
   function SellNFT ( $id_nft ) {
 
-    $query = "";
+    $query = "INSERT INTO `marketplace`(`nft_token`) VALUES ('".$id_nft."')";
 
     $send = $this->db->sendQuery($query);
     

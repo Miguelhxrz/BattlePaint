@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   const character_container = document.querySelector('.character__container');
-  
-  
+
+
   const rank_style = {
     'S': 'tier-s',
     'A': 'tier-a',

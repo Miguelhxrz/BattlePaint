@@ -1,5 +1,8 @@
 <?php 
   require_once('../model/Nft.php');
+  require_once('../model/User.php');
+
+  $user = new User();
 
   $nft = new Nft();
 
@@ -17,7 +20,17 @@
 
 }
 
+  if(isset($_POST['sell_token']) && !empty($_POST['sell_token'])) {
+    
+    $user->SellNFT( $_POST['sell_token'] );
+
+  }
+
+
   $nfts = $nft->showNFTSMarket();
+
+
+
 
 
 
