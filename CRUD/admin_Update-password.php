@@ -209,15 +209,6 @@ require_once('../model/User.php')
                                 </div>
                             </div>
 
-                            <!-- group wallet -->
-                            <div class="register__group" id="register__password">
-                                <label for="username" class="register__block--label">Binance Email</label>
-                                <div id="group__input" class="group__input">
-                                    <h4 class="respuesta"><?php echo $row['binance']; ?></h4>
-                                    <a href="../CRUD/admin_Update-binance.php" class="icon" title="edit"> <i class="edit fa-solid fa-pen-to-square"></i> </a>
-                                </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
-                            </div>
                         <?php }; ?>
                         </div>
 

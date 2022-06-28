@@ -154,55 +154,6 @@ require_once('../model/User.php')
                                 </div>
                                 <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
                             </div>
-
-                            <!-- group wallet -->
-                            <div class="register__group" id="register__password">
-                                <label for="username" class="register__block--label">Binance Email</label>
-                                <div id="group__input">
-                                    <form method="POST" class="form__edit" id="form__edit">
-                                        <div class="edit__group input" id="group__name">
-                                            <label for="name" class="group__input-username">Binance:</label>
-                                            <div class="form__group-input">
-                                                <input type="email" class="input__crud" id="name" name="name" placeholder="Binance">
-                                            </div>
-                                        </div>
-
-                                        <!-- error message -->
-                                        <div class="register__message" id="register__message">
-                                            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>¡Error!</b> Invalid user.</p>
-                                        </div>
-
-                                        <div class="edit__group submit">
-                                            <input type="submit" class="btn-edit" name="btn-edit" id="btn-edit" value="Editar">
-                                            <a href="../view/User_Update.php" class="volver">Volver</a>
-                                        </div>
-                                    </form>
-                                    <?php
-                                    if (isset($_POST['binance'])) {
-                                        $errores = array();
-                                        $binance = $_POST['binance'];
-                                        $submit = $_POST['btn-edit'];
-                                        $patron_email = "/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+/";
-                                        if (isset($_POST['btn-edit'])) {
-                                            if (empty($binance)) {
-                                                array_push($errores, "Error 014: No puedes dejar el campo de email vacio.");
-                                            } else {
-                                                $session = $_SESSION['username'];
-                                                $update = $user->UpdateBinance($binance, $session);
-                                                if (isset($update)) {
-                                                    echo '<meta http-equiv="refresh" content="0;url=../view/User_Update.php">';
-                                                }
-                                            }
-                                        }
-                                    }
-                                    ?>
-
-                                </div>
-                                <p class="register__input--error" id="register__input--error">The password must be from 4 to 15 digits.</p>
-                            </div>
-
-
-
                         <?php }; ?>
                         </div>
 
