@@ -353,13 +353,6 @@ class User {
     return $question;
   }
 
-  function UpdateBinance($binance,$session){
-    $query_send = "UPDATE `users` SET `binance` = '$binance'  WHERE  `username` = '$session'";
-
-    $question = $this->db->sendQuery($query_send);
-
-    return $question;
-  }
 
   function UpdateUsername($username,$session){
     $query_send = "UPDATE `users` SET `username` = '$username' WHERE  `username` = '$session'";
