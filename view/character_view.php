@@ -66,11 +66,13 @@
       </section>
       
       <article class="actions">
-        <?php if( ($owner !== $username) || ( $owner !== $username) ) { ?>
+        <?php if( ($owner !== $username) && ($balance > $nft['price']) ) { ?>
         <button class="modal__cta--btn"> Buy <?php echo $nft['price'] ?> <img src="../source/img/svg/paint-backets.svg" alt="paint buckets icon"></button>
-        <?php }else { ?>
+        <?php }else if( $balance < $nft['price']) {
+            echo "<p class='error'> ERROR: You dont have PB to buy this nft, please recharge your PB and buy </p>";
+          }else { ?>
           <button class="modal__sell--btn"> Sell NFT <?php echo $nft['price'] ?><img src="../source/img/svg/paint-backets.svg" alt="paint buckets icon"></button>
-        <?php }; ?>
+        <?php } ?>
       </article>
   </main>
 

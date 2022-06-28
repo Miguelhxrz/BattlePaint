@@ -629,6 +629,13 @@ button img {
 }
 /* fin modal*/
 
+.error {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+
 
 /* |---- TIER S ----| */
 

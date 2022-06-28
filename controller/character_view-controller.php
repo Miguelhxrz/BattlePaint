@@ -10,11 +10,14 @@ $user = new User();
 
 $username =  $_SESSION['username'];
 
+$balance = $user->GetBalance( $username );
+
+
 
 
 if(strpos( $_SERVER["HTTP_REFERER"], 'user.php' ) === false ) {
   
-  $balance = $user->GetBalance( $username );
+  
  
   $token = $_POST['nft_token'];
   
