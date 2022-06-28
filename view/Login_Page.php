@@ -99,9 +99,10 @@
                     <input type="submit" value=" LOGIN " name='submit' class="login__block--button">
                     <p class="login__register">You don't have an account yet? <a href="register_page.php"> Resgister now</a></p>
                 </div>
+
+                
             </section>
-        </form>
-        <?php 
+            <?php 
 
 
         if(isset($_POST['submit'])){ 
@@ -119,12 +120,10 @@
             echo $login;
 
         }
-
-        
-        
-        
         
         ?>
+        </form>
+        
     </main>
 
     <!-- <script src="../js/redirect.js"></script>
