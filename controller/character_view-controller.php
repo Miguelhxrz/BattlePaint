@@ -8,7 +8,13 @@ $nft = new Nft();
 
 $user = new User();
 
-$username =  $_SESSION['username'];
+if( empty($_SESSION['username']) || !isset($_SESSION['username']) ){
+  
+}else {
+  $username =  $_SESSION['username'];
+}
+
+
 
 $balance = $user->GetBalance( $username );
 
